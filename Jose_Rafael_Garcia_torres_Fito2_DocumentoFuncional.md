@@ -15,7 +15,7 @@ Esta segunda versión corrixe as observacións da avaliación do Fito 2. Os camb
 
 - **Reducín o catálogo** de 15 a **8 vehículos de exemplo**. Os 15 eran demasiados para unha demostración: abonda para que os filtros teñan sentido e non infla o traballo de imaxes e datos. Son unha mestura de gasolina, eléctricos e híbridos para que os filtros se vexan funcionar.
 - **Déixame de marcar o repositorio como "pendente"**: inicialicei Git no proxecto. A URL pública engádese ao subir a GitHub.
-- **O tema dos formularios era o máis flojo do documento anterior** e de feito era o que tiña menos claro. Decideino despois de mirar como o fan concesionarios de verdade (AutoScout24, coches.net e as webs de Porsche e BMW): normalmente non hai un formulario único, senón **un formulario por contexto**, co vehículo xa sabido. Explícoo na sección 6.
+- **O tema dos formularios era o máis flojo do documento anterior** e de feito era o que tiña menos claro. Decideino despois de mirar como o fan concesionarios de verdade (AutoScout24, coches.net e as webs de Porsche e BMW): normalmente non hai un formulario único, senón **un formulario por contexto**, co vehículo xa sabido. Na avaliación suxeriuse ademais un formulario na propia ficha para concertar a proba; optei finalmente por facelo como **páxina filla da ficha** porque así cumpriamos o requisito de ter dúas páxinas fillas e o formulario podía ter pasos e resumo propios, que nunha ficha xa chea de contido ían pegar mal. Explícoo na sección 6.
 - **Reordenei a xerarquía de páxinas**: a ficha de vehículo é páxina filla do catálogo, e a solicitude de proba de condución é filla da ficha. No documento anterior dicía que "non había subpáxinas", o cal era un erro: o propio sitemap xa as tiña. (sección 2)
 - **Engadín unha sección de RGPD** (sección 9.1), que me faltaba por desenvolver.
 - **Concretéi o que son supostos** que aínda non me confirmou o cliente (entrega a domicilio, certificación, garantía, financiamento, vehículo de substitución, prazos dos recambios). Están marcados como tales na sección 9.4.
@@ -112,7 +112,20 @@ Porta de entrada: presentar a marca, captar a atención dunha clientela de alto 
 
 ### 3.2 Catálogo (`catalogo.html`)
 
-Amosar os 8 vehículos en grella e permitir filtralos.
+Amosar os 8 vehículos de exemplo en grella e permitir filtralos. Son estes (datos e prezos ficticios):
+
+| Vehículo | Combustible | Tipo |
+|---|---|---|
+| Ferrari 12 Cilindri | Gasolina | Deportivo |
+| Porsche 911 Targa 4S | Gasolina | Deportivo |
+| Audi Q8 | Gasolina | SUV de luxo |
+| Lamborghini Revuelto | Híbrido | Deportivo |
+| Lamborghini Urus | Híbrido | SUV de luxo |
+| Porsche Taycan | Eléctrico | Deportivo |
+| Mercedes EQS | Eléctrico | Berlina de luxo |
+| Mercedes AMG EQE | Eléctrico | Berlina de luxo |
+
+A mestura de combustibles e tipos é intencionada: con só 8 coches, os filtros de marca, combustible e prezo teñen de que distinguir sen que a demostración se faga inmanexable.
 
 1. **Cabeceira.** Titular, descrición breve e número de vehículos dispoñibles.
 2. **Barra de filtros.** Por **marca**, **combustible** e **prezo** (rango), e ordenación por prezo (ascendente/descendente) e ano. Os filtros combínanse entre si e a grella actualízase ao momento.
