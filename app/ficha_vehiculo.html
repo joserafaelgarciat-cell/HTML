@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadatos SEO (se actualizarán dinámicamente con JS según el vehículo) -->
+    <title>Ficha del vehículo – Superautos Carballo</title>
+    <meta name="description" content="Ficha completa del vehículo: precio, año, kilometraje, datos técnicos y equipamiento. Solicita información o reserva una prueba.">
+    <link rel="canonical" href="https://www.superautoscarballo.es/ficha_vehiculo.html">
+
+    <!-- Open Graph (se actualizará con JS) -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Ficha del vehículo – Superautos Carballo">
+    <meta property="og:site_name" content="Superautos Carballo">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+    <!-- Enlace saltar al contenido (C08) -->
+    <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
+
+    <!-- CABECERA (C01) -->
+    <header class="site-header">
+        <div class="contenedor">
+            <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
+                <span class="logo-texto">Superautos Carballo</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu-principal" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="catalogo.html" role="menuitem" aria-current="page">Catálogo</a></li>
+                    <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="recambios.html" role="menuitem">Recambios</a></li>
+                    <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="contacto.html?motivo=prueba" class="btn-cta-header">Reservar cita</a>
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- =============================================
+         CONTENIDO PRINCIPAL: FICHA DEL VEHÍCULO (P02.1)
+         Página hija del catálogo. Plantilla reutilizable
+         que se rellena según el vehículo seleccionado.
+         El id se lee de la URL: ficha_vehiculo.html?id=<id>
+    ============================================= -->
+    <main id="contenido-principal">
+
+        <!-- =========================================
+             BREADCRUMB (C06)
+             Jerarquía: Inicio > Catálogo > [Vehículo]
+        ========================================= -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li aria-current="page" id="breadcrumb-vehiculo">Vehículo</li>
+            </ol>
+        </nav>
+
+        <!-- =========================================
+             GALERÍA DEL VEHÍCULO
+             Imagen principal con miniaturas clicables.
+             Navegable por teclado. El lightbox de
+             ampliación se implementará con JS.
+        ========================================= -->
+        <section class="galeria-vehiculo" aria-label="Galería de imágenes">
+            <div class="contenedor">
+                <!-- Imagen principal (se actualizará con JS) -->
+                <div class="imagen-principal-galeria">
+                    <img id="imagen-principal" src="../assets/img/Ferrari/ferrari_12_cilindri@3x.webp" alt="Ferrari 12 Cilindri" width="900" height="500">
+                </div>
+                <!-- Miniaturas de la galería -->
+                <div class="miniaturas-galeria" role="list">
+                    <button type="button" class="miniatura activa" role="listitem" aria-label="Mostrar imagen 1">
+                        <img src="../assets/img/Ferrari/ferrari_12_cilindri.webp" alt="Ferrari 12 Cilindri – Vista lateral" width="100" height="66">
+                    </button>
+                    <button type="button" class="miniatura" role="listitem" aria-label="Mostrar imagen 2">
+                        <img src="../assets/img/Ferrari/ferrari_12_cilindri@2x.webp" alt="Ferrari 12 Cilindri – Vista frontal" width="100" height="66">
+                    </button>
+                    <button type="button" class="miniatura" role="listitem" aria-label="Mostrar imagen 3">
+                        <img src="../assets/img/Ferrari/ferrari_12_cilindri@3x.webp" alt="Ferrari 12 Cilindri – Vista trasera" width="100" height="66">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             RESUMEN Y PRECIO
+             Marca, modelo, precio y etiquetas de datos
+             básicos (año, km, combustible, cambio, CV).
+        ========================================= -->
+        <section class="resumen-vehiculo" aria-label="Resumen del vehículo">
+            <div class="contenedor">
+                <div class="fila-resumen">
+                    <div class="datos-principales">
+                        <h1 id="nombre-vehiculo">Ferrari 12 Cilindri</h1>
+                        <p class="precio-grande" id="precio-vehiculo">650.000 €</p>
+                        <!-- Etiquetas de datos básicos -->
+                        <ul class="etiquetas-vehiculo-detalle">
+                            <li id="etiqueta-año">2024</li>
+                            <li id="etiqueta-km">0 km</li>
+                            <li id="etiqueta-combustible">Gasolina</li>
+                            <li id="etiqueta-cambio">Automático</li>
+                            <li id="etiqueta-potencia">830 CV</li>
+                        </ul>
+                    </div>
+
+                    <!-- Botones de acción (CTA) -->
+                    <div class="acciones-vehiculo">
+                        <!-- Solicitar información: lleva a contacto con el vehículo preseleccionado -->
+                        <a id="btn-solicitar-info" href="contacto.html?vehiculo=ferrari-12-cilindri&motivo=informacion" class="btn-principal">Solicitar información</a>
+                        <!-- Solicitar prueba: lleva a proba_conduccion con el vehículo preseleccionado -->
+                        <a id="btn-solicitar-prueba" href="proba_conduccion.html?vehiculo=ferrari-12-cilindri" class="btn-secundario">Solicitar prueba de conducción</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             DATOS TÉCNICOS
+             Garantía, equipamiento, estado y
+             disponibilidad del vehículo.
+        ========================================= -->
+        <section class="datos-tecnicos" aria-label="Datos técnicos">
+            <div class="contenedor">
+                <h2>Datos técnicos</h2>
+                <dl class="lista-datos-tecnicos">
+                    <dt>Garantía</dt>
+                    <dd id="dato-garantia">24 meses</dd>
+
+                    <dt>Estado</dt>
+                    <dd id="dato-estado">En stock</dd>
+
+                    <dt>Disponibilidad</dt>
+                    <dd id="dato-disponibilidad">Disponible inmediatamente</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- =========================================
+             EQUIPAMIENTO
+             Listado de extras incluidos en el vehículo.
+        ========================================= -->
+        <section class="equipamiento-vehiculo" aria-label="Equipamiento">
+            <div class="contenedor">
+                <h2>Equipamiento</h2>
+                <ul class="lista-equipamiento" id="lista-equipamiento">
+                    <li>Asientos deportivos</li>
+                    <li>Techo panorámico</li>
+                    <li>Sistema de sonido premium</li>
+                    <li>Navegación GPS</li>
+                    <li>Cámara 360°</li>
+                    <li>Asistente de conducción</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- =========================================
+             BLOQUE DE CONFIANZA (C09)
+             Certificación, revisión y garantía del
+             vehículo para reforzar la seguridad del
+             comprador.
+        ========================================= -->
+        <section class="seccion-confianza" aria-label="Garantía y certificación">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Tu compra con total confianza</h2>
+                <div class="fila-confianza">
+                    <article class="bloque-confianza">
+                        <div class="icono-confianza" aria-hidden="true">&#128275;</div>
+                        <h3>Certificación</h3>
+                        <p>Cada vehículo pasa un control de calidad de más de 100 puntos.</p>
+                    </article>
+                    <article class="bloque-confianza">
+                        <div class="icono-confianza" aria-hidden="true">&#9881;</div>
+                        <h3>Revisión completa</h3>
+                        <p>Vehículo revisado y preparado para su entrega con todas las revisiones al día.</p>
+                    </article>
+                    <article class="bloque-confianza">
+                        <div class="icono-confianza" aria-hidden="true">&#128737;</div>
+                        <h3>Garantía 24 meses</h3>
+                        <p>Hasta 24 meses de garantía para que conduzcas sin preocupaciones.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             AVISO DE ID INEXISTENTE
+             Se muestra con JS si el parámetro id de la
+             URL no corresponde a ningún vehículo del
+             catálogo.
+        ========================================= -->
+        <section class="aviso-no-encontrado" id="aviso-no-encontrado" hidden aria-label="Vehículo no encontrado">
+            <div class="contenedor">
+                <h2>Vehículo no encontrado</h2>
+                <p>El vehículo que buscas no existe o ya no está disponible en nuestro catálogo.</p>
+                <a href="catalogo.html" class="btn-principal">Volver al catálogo</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (C02) -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="fila-footer">
+                <div class="columna-footer">
+                    <h3>Superautos Carballo</h3>
+                    <p>Tu concesionario de confianza para vehículos de alta gama en Carballo, Galicia.</p>
+                </div>
+                <div class="columna-footer">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="columna-footer">
+                    <h3>Contacto</h3>
+                    <address>
+                        <p>📍 Carballo, A Coruña, Galicia</p>
+                        <p><a href="tel:+34981000000">📞 981 00 00 00</a></p>
+                        <p><a href="mailto:info@superautoscarballo.es">✉️ info@superautoscarballo.es</a></p>
+                        <p>🕐 Lun–Vie: 9:00–14:00 / 16:00–20:00<br>Sáb: 10:00–14:00</p>
+                    </address>
+                </div>
+                <div class="columna-footer">
+                    <h3>Síguenos</h3>
+                    <ul class="redes-sociales">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pie-footer">
+                <p>&copy; 2026 Superautos Carballo. Todos los derechos reservados.</p>
+                <nav aria-label="Legal">
+                    <a href="privacidad.html">Política de privacidad</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

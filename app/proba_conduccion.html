@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadatos SEO -->
+    <title>Solicitar prueba de conducción – Superautos Carballo</title>
+    <meta name="description" content="Solicita una prueba de conducción en Superautos Carballo. Te confirmaremos fecha y hora por teléfono o correo.">
+    <link rel="canonical" href="https://www.superautoscarballo.es/proba_conduccion.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Solicitar prueba de conducción – Superautos Carballo">
+    <meta property="og:description" content="Solicita una prueba de conducción. Te confirmaremos fecha y hora por teléfono o correo.">
+    <meta property="og:url" content="https://www.superautoscarballo.es/proba_conduccion.html">
+    <meta property="og:site_name" content="Superautos Carballo">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+    <!-- Enlace saltar al contenido (C08) -->
+    <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
+
+    <!-- CABECERA (C01) -->
+    <header class="site-header">
+        <div class="contenedor">
+            <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
+                <span class="logo-texto">Superautos Carballo</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu-principal" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="catalogo.html" role="menuitem" aria-current="page">Catálogo</a></li>
+                    <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="recambios.html" role="menuitem">Recambios</a></li>
+                    <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="contacto.html?motivo=prueba" class="btn-cta-header">Reservar cita</a>
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- =============================================
+         CONTENIDO PRINCIPAL: PRUEBA DE CONDUCCIÓN (P02.1.1)
+         Página hija de la ficha. Formulario en 3 pasos
+         para solicitar una prueba de conducción.
+         El vehículo llega prefilled desde la ficha.
+    ============================================= -->
+    <main id="contenido-principal">
+
+        <!-- Breadcrumb (C06): Inicio > Catálogo > [Vehículo] > Solicitar prueba -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="ficha_vehiculo.html" id="breadcrumb-vehiculo">Vehículo</a></li>
+                <li aria-current="page">Solicitar prueba</li>
+            </ol>
+        </nav>
+
+        <!-- Cabecera de la página -->
+        <section class="cabecera-pagina">
+            <div class="contenedor">
+                <h1>Solicitar prueba de conducción</h1>
+                <p>Rellena el formulario para solicitar una prueba. <strong>Esta solicitud no es una reserva automática:</strong> el concesionario te contactará por teléfono o correo para confirmar la fecha y la hora.</p>
+            </div>
+        </section>
+
+        <!-- =========================================
+             AVISO IMPORTANTE
+             Se repite aquí y en el paso 1 del formulario
+             para que el usuario lo vea claramente.
+        ========================================= -->
+        <div class="contenedor">
+            <div class="aviso-importante" role="alert">
+                <p><strong>Aviso:</strong> Tu solicitud está pendiente de confirmación. No se reserva nada automáticamente. El concesionario contactará contigo para confirmar la fecha y la hora de la prueba.</p>
+            </div>
+        </div>
+
+        <!-- =========================================
+             FORMULARIO EN 3 PASOS
+             Paso 1: El vehículo y la cita
+             Paso 2: Tus datos
+             Paso 3: Revisa y envía
+        ========================================= -->
+        <section class="seccion-formulario" aria-label="Formulario de prueba de conducción">
+            <div class="contenedor">
+
+                <!-- Indicador de pasos -->
+                <div class="pasos-formulario" aria-label="Progreso del formulario">
+                    <ol>
+                        <li class="paso-activo" aria-current="step">1. El vehículo y la cita</li>
+                        <li>2. Tus datos</li>
+                        <li>3. Revisa y envía</li>
+                    </ol>
+                </div>
+
+                <form id="form-prueba" class="formulario-prueba" novalidate>
+
+                    <!-- =========================================
+                         PASO 1: EL VEHÍCULO Y LA CITA
+                         Vehículo prefilled (solo lectura), fecha
+                         preferente y franja horaria.
+                    ========================================= -->
+                    <fieldset id="paso-1" class="paso-formulario">
+                        <legend>Paso 1: El vehículo y la cita</legend>
+
+                        <!-- Campo oculto con el id del vehículo -->
+                        <input type="hidden" id="prueba-vehiculo-id" name="vehiculo_id" value="">
+
+                        <!-- Vehículo (prefilled, solo lectura cuando viene de la ficha) -->
+                        <div class="campo-formulario">
+                            <label for="prueba-vehiculo">Vehículo</label>
+                            <input type="text" id="prueba-vehiculo" name="vehiculo" readonly aria-describedby="prueba-vehiculo-ayuda">
+                            <small id="prueba-vehiculo-ayuda" class="ayuda-campo">El vehículo se rellena automáticamente desde la ficha.</small>
+                        </div>
+
+                        <!-- Fecha preferente -->
+                        <div class="campo-formulario">
+                            <label for="prueba-fecha">Fecha preferente <span aria-hidden="true">*</span></label>
+                            <input type="date" id="prueba-fecha" name="fecha" required aria-required="true">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Franja horaria -->
+                        <div class="campo-formulario">
+                            <label for="prueba-franja">Franja horaria <span aria-hidden="true">*</span></label>
+                            <select id="prueba-franja" name="franja" required aria-required="true">
+                                <option value="">Selecciona una franja</option>
+                                <option value="manana">Mañana (9:00 – 14:00)</option>
+                                <option value="tarde">Tarde (15:00 – 20:00)</option>
+                            </select>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Botón avanzar al paso 2 -->
+                        <div class="acciones-formulario">
+                            <button type="button" class="btn-principal btn-siguiente" data-paso="2">Siguiente: Tus datos</button>
+                        </div>
+                    </fieldset>
+
+                    <!-- =========================================
+                         PASO 2: TUS DATOS
+                         Nombre, apellidos, correo y teléfono.
+                    ========================================= -->
+                    <fieldset id="paso-2" class="paso-formulario" hidden>
+                        <legend>Paso 2: Tus datos</legend>
+
+                        <!-- Nombre -->
+                        <div class="campo-formulario">
+                            <label for="prueba-nombre">Nombre <span aria-hidden="true">*</span></label>
+                            <input type="text" id="prueba-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="campo-formulario">
+                            <label for="prueba-apellidos">Apellidos <span aria-hidden="true">*</span></label>
+                            <input type="text" id="prueba-apellidos" name="apellidos" required aria-required="true" autocomplete="family-name" minlength="2">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Correo electrónico -->
+                        <div class="campo-formulario">
+                            <label for="prueba-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                            <input type="email" id="prueba-email" name="email" required aria-required="true" autocomplete="email">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="campo-formulario">
+                            <label for="prueba-telefono">Teléfono <span aria-hidden="true">*</span></label>
+                            <input type="tel" id="prueba-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Botones: volver y avanzar -->
+                        <div class="acciones-formulario">
+                            <button type="button" class="btn-secundario btn-anterior" data-paso="1">Volver</button>
+                            <button type="button" class="btn-principal btn-siguiente" data-paso="3">Siguiente: Revisa</button>
+                        </div>
+                    </fieldset>
+
+                    <!-- =========================================
+                         PASO 3: REVISA Y ENVÍA
+                         Resumen de la solicitud, checkbox RGPD
+                         y botón de envío.
+                    ========================================= -->
+                    <fieldset id="paso-3" class="paso-formulario" hidden>
+                        <legend>Paso 3: Revisa y envía</legend>
+
+                        <!-- Resumen de la solicitud (se rellenará con JS) -->
+                        <div class="resumen-solicitud" id="resumen-solicitud">
+                            <h3>Resumen de tu solicitud</h3>
+                            <dl>
+                                <dt>Vehículo</dt>
+                                <dd id="resumen-vehiculo">—</dd>
+                                <dt>Fecha preferente</dt>
+                                <dd id="resumen-fecha">—</dd>
+                                <dt>Franja horaria</dt>
+                                <dd id="resumen-franja">—</dd>
+                                <dt>Nombre</dt>
+                                <dd id="resumen-nombre">—</dd>
+                                <dt>Correo electrónico</dt>
+                                <dd id="resumen-email">—</dd>
+                                <dt>Teléfono</dt>
+                                <dd id="resumen-telefono">—</dd>
+                            </dl>
+                        </div>
+
+                        <!-- Checkbox RGPD -->
+                        <div class="campo-formulario checkbox-rgpd">
+                            <input type="checkbox" id="prueba-rgpd" name="rgpd" required aria-required="true">
+                            <label for="prueba-rgpd">
+                                He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud. <span aria-hidden="true">*</span>
+                            </label>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Botones: volver y enviar -->
+                        <div class="acciones-formulario">
+                            <button type="button" class="btn-secundario btn-anterior" data-paso="2">Volver</button>
+                            <button type="submit" class="btn-principal">Enviar solicitud</button>
+                        </div>
+                    </fieldset>
+
+                </form>
+
+                <!-- =========================================
+                     ESTADOS DEL FORMULARIO (C07)
+                     Spinner de envío, mensaje de éxito y
+                     mensaje de error general.
+                ========================================= -->
+
+                <!-- Estado: envío en proceso -->
+                <div class="estado-formulario" id="estado-enviando" hidden aria-live="polite">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <p>Enviando tu solicitud...</p>
+                </div>
+
+                <!-- Estado: éxito -->
+                <div class="estado-formulario estado-exito" id="estado-exito" hidden aria-live="polite">
+                    <div class="icono-exito" aria-hidden="true">&#10003;</div>
+                    <h2>Solicitud enviada</h2>
+                    <p>Hemos recibido tu solicitud de prueba. En breve te confirmaremos la fecha y la hora por teléfono o correo electrónico.</p>
+                    <a href="catalogo.html" class="btn-principal">Volver al catálogo</a>
+                </div>
+
+                <!-- Estado: error general -->
+                <div class="estado-formulario estado-error" id="estado-error" hidden aria-live="polite">
+                    <div class="icono-error" aria-hidden="true">&#10007;</div>
+                    <h2>Error al enviar</h2>
+                    <p>Ha habido un problema al enviar tu solicitud. Por favor, revisa los datos e inténtalo de nuevo.</p>
+                    <button type="button" class="btn-principal" id="btn-reintentar">Reintentar</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (C02) -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="fila-footer">
+                <div class="columna-footer">
+                    <h3>Superautos Carballo</h3>
+                    <p>Tu concesionario de confianza para vehículos de alta gama en Carballo, Galicia.</p>
+                </div>
+                <div class="columna-footer">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="columna-footer">
+                    <h3>Contacto</h3>
+                    <address>
+                        <p>📍 Carballo, A Coruña, Galicia</p>
+                        <p><a href="tel:+34981000000">📞 981 00 00 00</a></p>
+                        <p><a href="mailto:info@superautoscarballo.es">✉️ info@superautoscarballo.es</a></p>
+                        <p>🕐 Lun–Vie: 9:00–14:00 / 16:00–20:00<br>Sáb: 10:00–14:00</p>
+                    </address>
+                </div>
+                <div class="columna-footer">
+                    <h3>Síguenos</h3>
+                    <ul class="redes-sociales">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pie-footer">
+                <p>&copy; 2026 Superautos Carballo. Todos los derechos reservados.</p>
+                <nav aria-label="Legal">
+                    <a href="privacidad.html">Política de privacidad</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadatos SEO -->
+    <title>Contacto – Superautos Carballo</title>
+    <meta name="description" content="Escríbenos, llámanos o visita nuestras instalaciones en Carballo. Formulario de contacto y atención personalizada.">
+    <link rel="canonical" href="https://www.superautoscarballo.es/contacto.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contacto – Superautos Carballo">
+    <meta property="og:description" content="Escríbenos, llámanos o visita nuestras instalaciones. Formulario de contacto y atención personalizada.">
+    <meta property="og:url" content="https://www.superautoscarballo.es/contacto.html">
+    <meta property="og:site_name" content="Superautos Carballo">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+    <!-- Enlace saltar al contenido (C08) -->
+    <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
+
+    <!-- CABECERA (C01) -->
+    <header class="site-header">
+        <div class="contenedor">
+            <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
+                <span class="logo-texto">Superautos Carballo</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu-principal" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="catalogo.html" role="menuitem">Catálogo</a></li>
+                    <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="recambios.html" role="menuitem">Recambios</a></li>
+                    <li role="none"><a href="contacto.html" role="menuitem" aria-current="page">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="contacto.html?motivo=prueba" class="btn-cta-header">Reservar cita</a>
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- =============================================
+         CONTENIDO PRINCIPAL: CONTACTO (P05)
+         Formulario con selector de motivo, datos del
+         concesionario, mapa e indicaciones de acceso.
+    ============================================= -->
+    <main id="contenido-principal">
+
+        <!-- Cabecera de la página -->
+        <section class="cabecera-pagina">
+            <div class="contenedor">
+                <h1>Contacto</h1>
+                <p>¿Tienes alguna pregunta o quieres solicitar información? Escríbenos, llámanos o visita nuestras instalaciones en Carballo.</p>
+            </div>
+        </section>
+
+        <div class="contenedor">
+            <div class="fila-contacto">
+
+                <!-- =========================================
+                     FORMULARIO DE CONTACTO CON SELECTOR DE MOTIVO
+                     El motivo es obligatorio y condiciona qué
+                     campos adicionales se muestran. Si el
+                     usuario viene desde la ficha de un vehículo,
+                     el campo del vehículo aparece prefilled.
+                ========================================= -->
+                <section class="formulario-contacto" aria-label="Formulario de contacto">
+                    <h2>Escríbenos</h2>
+
+                    <form id="form-contacto" novalidate>
+
+                        <!-- Nombre -->
+                        <div class="campo-formulario">
+                            <label for="contacto-nombre">Nombre <span aria-hidden="true">*</span></label>
+                            <input type="text" id="contacto-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="campo-formulario">
+                            <label for="contacto-apellidos">Apellidos <span aria-hidden="true">*</span></label>
+                            <input type="text" id="contacto-apellidos" name="apellidos" required aria-required="true" autocomplete="family-name" minlength="2">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Correo electrónico -->
+                        <div class="campo-formulario">
+                            <label for="contacto-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                            <input type="email" id="contacto-email" name="email" required aria-required="true" autocomplete="email">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Teléfono (no obligatorio) -->
+                        <div class="campo-formulario">
+                            <label for="contacto-telefono">Teléfono</label>
+                            <input type="tel" id="contacto-telefono" name="telefono" autocomplete="tel" minlength="9" maxlength="15">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- =========================================
+                             SELECTOR DE MOTIVO (OBLIGATORIO)
+                             Opciones: información, prueba, financiación,
+                             mantenimiento, posventa, consulta general.
+                        ========================================= -->
+                        <div class="campo-formulario">
+                            <label for="contacto-motivo">Motivo de la consulta <span aria-hidden="true">*</span></label>
+                            <select id="contacto-motivo" name="motivo" required aria-required="true">
+                                <option value="">Selecciona un motivo</option>
+                                <option value="informacion">Información sobre un vehículo</option>
+                                <option value="prueba">Reserva de una prueba de conducción</option>
+                                <option value="financiacion">Financiación</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                                <option value="posventa">Posventa</option>
+                                <option value="general">Consulta general</option>
+                            </select>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- =========================================
+                             CAMPOS CONDICIONALES
+                             Se muestran según el motivo seleccionado.
+                             El campo "vehiculo" aparece cuando el motivo
+                             es "informacion" o "prueba".
+                        ========================================= -->
+
+                        <!-- Campo condicional: Vehículo (cuando motivo es información o prueba) -->
+                        <div class="campo-formulario campo-condicional" id="campo-vehiculo" hidden>
+                            <label for="contacto-vehiculo">Vehículo</label>
+                            <input type="text" id="contacto-vehiculo" name="vehiculo" readonly aria-describedby="contacto-vehiculo-ayuda">
+                            <small id="contacto-vehiculo-ayuda" class="ayuda-campo">El vehículo se rellena automáticamente desde la ficha.</small>
+                            <!-- Campo oculto con el id del vehículo para envío -->
+                            <input type="hidden" id="contacto-vehiculo-id" name="vehiculo_id" value="">
+                        </div>
+
+                        <!-- Campo condicional: Fecha preferente (cuando motivo es prueba) -->
+                        <div class="campo-formulario campo-condicional" id="campo-fecha" hidden>
+                            <label for="contacto-fecha">Fecha preferente</label>
+                            <input type="date" id="contacto-fecha" name="fecha_preferente">
+                        </div>
+
+                        <!-- Campo condicional: Franja horaria (cuando motivo es prueba) -->
+                        <div class="campo-formulario campo-condicional" id="campo-franja" hidden>
+                            <label for="contacto-franja">Franja horaria</label>
+                            <select id="contacto-franja" name="franja_horaria">
+                                <option value="">Selecciona una franja</option>
+                                <option value="manana">Mañana (9:00 – 14:00)</option>
+                                <option value="tarde">Tarde (15:00 – 20:00)</option>
+                            </select>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="campo-formulario">
+                            <label for="contacto-mensaje">Mensaje <span aria-hidden="true">*</span></label>
+                            <textarea id="contacto-mensaje" name="mensaje" rows="5" required aria-required="true" minlength="10" maxlength="1000" placeholder="Escribe tu consulta aquí..."></textarea>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Checkbox RGPD obligatorio -->
+                        <div class="campo-formulario checkbox-rgpd">
+                            <input type="checkbox" id="contacto-rgpd" name="rgpd" required aria-required="true">
+                            <label for="contacto-rgpd">
+                                He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta consulta. <span aria-hidden="true">*</span>
+                            </label>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <div class="acciones-formulario">
+                            <button type="submit" class="btn-principal">Enviar mensaje</button>
+                        </div>
+                    </form>
+
+                    <!-- Estado: envío en proceso -->
+                    <div class="estado-formulario" id="estado-enviando" hidden aria-live="polite">
+                        <div class="spinner" aria-hidden="true"></div>
+                        <p>Enviando tu mensaje...</p>
+                    </div>
+
+                    <!-- Estado: éxito -->
+                    <div class="estado-formulario estado-exito" id="estado-exito" hidden aria-live="polite">
+                        <div class="icono-exito" aria-hidden="true">&#10003;</div>
+                        <h2>Mensaje enviado</h2>
+                        <p>Hemos recibido tu consulta. Te responderemos lo antes posible por correo electrónico o teléfono.</p>
+                        <button type="button" class="btn-principal" id="btn-nuevo-mensaje">Enviar otro mensaje</button>
+                    </div>
+
+                    <!-- Estado: error general -->
+                    <div class="estado-formulario estado-error" id="estado-error" hidden aria-live="polite">
+                        <div class="icono-error" aria-hidden="true">&#10007;</div>
+                        <h2>Error al enviar</h2>
+                        <p>Ha habido un problema al enviar tu mensaje. Por favor, revisa los datos e inténtalo de nuevo.</p>
+                        <button type="button" class="btn-principal" id="btn-reintentar">Reintentar</button>
+                    </div>
+                </section>
+
+                <!-- =========================================
+                     DATOS DEL CONCESIONARIO E INDICACIONES
+                     Dirección, teléfono, correo, horario,
+                     mapa incrustado (OpenStreetMap) y botón
+                     "Cómo llegar" con enlace geo:.
+                ========================================= -->
+                <section class="datos-contacto" aria-label="Datos del concesionario">
+                    <h2>Dónde encontrarnos</h2>
+
+                    <!-- Datos de contacto -->
+                    <address class="info-contacto">
+                        <p><strong>Dirección:</strong><br>Carballo, A Coruña, Galicia</p>
+                        <p><strong>Teléfono:</strong><br><a href="tel:+34981000000">981 00 00 00</a></p>
+                        <p><strong>Correo electrónico:</strong><br><a href="mailto:info@superautoscarballo.es">info@superautoscarballo.es</a></p>
+                        <p><strong>Horario:</strong><br>Lunes a viernes: 9:00–14:00 / 16:00–20:00<br>Sábados: 10:00–14:00</p>
+                    </address>
+
+                    <!-- Indicaciones de acceso en texto -->
+                    <div class="indicaciones-acceso">
+                        <h3>Cómo llegar</h3>
+                        <p>Estamos ubicados en Carballo, con fácil acceso desde la AC-552. Dispone de aparcamiento gratuito para clientes.</p>
+                    </div>
+
+                    <!-- Botón "Cómo llegar" que abre la app de navegación -->
+                    <a href="geo:43.2135,-8.6888" class="btn-principal">Cómo llegar</a>
+
+                    <!-- Mapa incrustado: OpenStreetMap (no carga cookies de terceros) -->
+                    <div class="mapa-contenedor" aria-label="Mapa de ubicación de Superautos Carballo">
+                        <iframe
+                            title="Ubicación de Superautos Carballo en Carballo"
+                            width="100%"
+                            height="350"
+                            frameborder="0"
+                            scrolling="no"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-8.695%2C43.210%2C-8.682%2C43.217&layer=mapnik&marker=43.2135%2C-8.6888"
+                            loading="lazy">
+                        </iframe>
+                        <!-- Imagen estática de reserva por si el iframe no carga -->
+                        <noscript>
+                            <p>Consulta la ubicación de Superautos Carballo en <a href="https://www.openstreetmap.org/?mlat=43.2135&mlon=-8.6888#map=16/43.2135/-8.6888">OpenStreetMap</a>.</p>
+                        </noscript>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER (C02) -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="fila-footer">
+                <div class="columna-footer">
+                    <h3>Superautos Carballo</h3>
+                    <p>Tu concesionario de confianza para vehículos de alta gama en Carballo, Galicia.</p>
+                </div>
+                <div class="columna-footer">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="columna-footer">
+                    <h3>Contacto</h3>
+                    <address>
+                        <p>📍 Carballo, A Coruña, Galicia</p>
+                        <p><a href="tel:+34981000000">📞 981 00 00 00</a></p>
+                        <p><a href="mailto:info@superautoscarballo.es">✉️ info@superautoscarballo.es</a></p>
+                        <p>🕐 Lun–Vie: 9:00–14:00 / 16:00–20:00<br>Sáb: 10:00–14:00</p>
+                    </address>
+                </div>
+                <div class="columna-footer">
+                    <h3>Síguenos</h3>
+                    <ul class="redes-sociales">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pie-footer">
+                <p>&copy; 2026 Superautos Carballo. Todos los derechos reservados.</p>
+                <nav aria-label="Legal">
+                    <a href="privacidad.html">Política de privacidad</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
