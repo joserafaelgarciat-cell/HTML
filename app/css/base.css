@@ -1,33 +1,29 @@
 /* ===================================================
-   base.css – Estilos base y mínimos del proyecto
+   base.css – Estilos base del proyecto
    Superautos Carballo
 
-   Este archivo contiene únicamente los estilos
-   imprescindibles para mantener una estructura clara
-   y coherente sin completar el diseño responsive.
-   Los estilos visuales completos se añadirán en la
-   fase de maquetación (Fase 2 del plan).
+   Solo contiene los estilos usados por index.html.
+   Se irán agregando estilos por página conforme se
+   desarrollen.
    =================================================== */
 
 /* -----------------------------------------------
    VARIABLES CSS (Design System – Guía Visual)
-   Tokens extraídos de la guía visual (sección 8
-   del plan.md). Se usarán como variables CSS.
 ----------------------------------------------- */
 :root {
     /* Paleta principal */
-    --color-acento: #0052FF;          /* Azul eléctrico: botones, separadores, bordes, chips */
-    --color-superficie: #FFFFFF;      /* Blanco puro: fondos de tarjetas y superficies */
-    --color-borde: #CFD8E6;           /* Gris borde: fondo, cabecera, contraste */
-    --color-superficie-inversa: #000000; /* Negro puro: fondo principal */
-    --color-texto-secundario: #6B7280;   /* Gris texto: textos secundarios, subtítulos */
-    --color-texto-principal: #000000;     /* Texto principal sobre fondo claro */
-    --color-texto-inverso: #FFFFFF;       /* Textos sobre fondo negro */
+    --color-acento: #0052FF;
+    --color-superficie: #FFFFFF;
+    --color-borde: #CFD8E6;
+    --color-superficie-inversa: #000000;
+    --color-texto-secundario: #6B7280;
+    --color-texto-principal: #000000;
+    --color-texto-inverso: #FFFFFF;
 
     /* Paleta secundaria */
-    --color-acento-hover: #0038B8;    /* Hover activo */
-    --color-peligro: #DC2626;         /* Error: mensajes y bordes inválidos */
-    --color-exito: #16A34A;           /* Éxito: confirmaciones correctas */
+    --color-acento-hover: #0038B8;
+    --color-peligro: #DC2626;
+    --color-exito: #16A34A;
 
     /* Tipografía */
     --fuente-principal: 'Inter', sans-serif;
@@ -53,8 +49,6 @@
 
 /* -----------------------------------------------
    RESET Y ESTILOS BASE
-   Saneamiento básico para garantizar consistencia
-   entre navegadores.
 ----------------------------------------------- */
 *,
 *::before,
@@ -77,7 +71,6 @@ body {
     line-height: 1.6;
 }
 
-/* Respetar la preferencia de movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -86,7 +79,6 @@ body {
 
 /* -----------------------------------------------
    CONTENEDOR
-   Ancho máximo centrado con gutter configurable.
 ----------------------------------------------- */
 .contenedor {
     max-width: var(--contenedor-maximo);
@@ -97,9 +89,7 @@ body {
 }
 
 /* -----------------------------------------------
-   ENLACE "SALTAR AL CONTENIDO" (C08)
-   Oculto visualmente, visible al hacer foco con
-   teclado para accesibilidad (WCAG 2.2).
+   ENLACE "SALTAR AL CONTENIDO"
 ----------------------------------------------- */
 .saltar-al-contenido {
     position: absolute;
@@ -121,14 +111,14 @@ body {
 }
 
 /* -----------------------------------------------
-   CABECERA / HEADER (C01)
-   Contiene logo, menú principal, CTA y botón
-   hamburguesa para móvil.
+   CABECERA / HEADER
 ----------------------------------------------- */
 .site-header {
-    background-color: var(--color-superficie);
-    border-bottom: 1px solid var(--color-borde);
-    padding: var(--espaciado-md) 0;
+    background-color: var(--color-superficie-inversa);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    height: 88px;
+    display: flex;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -139,19 +129,48 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: var(--espaciado-md);
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 50px;
 }
 
 /* Logotipo */
 .logo {
     text-decoration: none;
-    color: var(--color-texto-principal);
+    color: var(--color-texto-inverso);
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-sm);
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 .logo-texto {
-    font-family: var(--fuente-acento);
-    font-weight: 700;
-    font-size: 1.25rem;
-    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-nombre {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-texto-inverso);
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--color-texto-inverso);
+    letter-spacing: 1px;
 }
 
 /* Menú principal de navegación */
@@ -163,7 +182,7 @@ body {
 
 .menu-principal a {
     text-decoration: none;
-    color: var(--color-texto-principal);
+    color: var(--color-texto-inverso);
     font-size: 0.9375rem;
     padding: var(--espaciado-xs) var(--espaciado-sm);
     transition: color 0.15s ease-out;
@@ -171,7 +190,7 @@ body {
 
 .menu-principal a:hover,
 .menu-principal a:focus {
-    color: var(--color-acento);
+    color: var(--color-acento-hover);
 }
 
 .menu-principal a[aria-current="page"] {
@@ -199,7 +218,7 @@ body {
     background-color: var(--color-acento-hover);
 }
 
-/* Botón hamburguesa (móvil) – oculto en escritorio */
+/* Botón hamburguesa (móvil) */
 .btn-hamburguesa {
     display: none;
     background: none;
@@ -214,7 +233,161 @@ body {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--color-texto-principal);
+    background-color: var(--color-texto-inverso);
+}
+
+/* -----------------------------------------------
+   HERO HOME
+----------------------------------------------- */
+.hero-home {
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-home img {
+    width: 100%;
+    height: 720px;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-texto-centro {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    padding: var(--espaciado-xl);
+}
+
+.hero-texto-superior {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0 0 var(--espaciado-sm);
+}
+
+.hero-titulo-impacto {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.1;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0 0 var(--espaciado-md);
+}
+
+.hero-texto-descriptivo {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* -----------------------------------------------
+   TÍTULO "VEHÍCULOS DESTACADOS"
+----------------------------------------------- */
+.titulo-destacados {
+    font-family: var(--fuente-acento);
+    font-size: 1.75rem;
+    text-align: center;
+    padding: var(--espaciado-xl) 0;
+    margin: 0;
+}
+
+/* -----------------------------------------------
+   CARRUSEL BOOTSTRAP 5
+----------------------------------------------- */
+.hero-carrusel {
+    margin-bottom: var(--espaciado-xxl);
+    padding: 0 var(--espaciado-xxl);
+}
+
+.hero-carrusel .carousel-item img {
+    object-fit: cover;
+    height: 702px;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    border-radius: var(--radio-tarjeta);
+}
+
+.hero-carrusel .carousel-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: var(--espaciado-xl);
+    border-radius: 0;
+}
+
+.hero-carrusel .carousel-caption h2 {
+    font-size: 2rem;
+    margin-bottom: var(--espaciado-sm);
+}
+
+.hero-carrusel .carousel-caption p {
+    margin-bottom: var(--espaciado-sm);
+}
+
+.precio-destacado {
+    font-family: var(--fuente-acento);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* -----------------------------------------------
+   CONTROLES INFERIORES DEL CARRUSEL
+----------------------------------------------- */
+.controles-carrusel-abajo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaciado-sm);
+    padding: var(--espaciado-lg) 0 0;
+    background: transparent;
+}
+
+.btn-control-carrusel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.15s ease-out;
+}
+
+.btn-control-carrusel:hover,
+.btn-control-carrusel:focus-visible {
+    background: #333;
+    transform: scale(1.08);
+}
+
+.btn-control-carrusel:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+.btn-control-carrusel:active {
+    transform: scale(0.95);
+}
+
+.btn-pausa {
+    width: 48px;
+    height: 48px;
 }
 
 /* -----------------------------------------------
@@ -242,849 +415,43 @@ body {
     outline-offset: 2px;
 }
 
-.btn-principal:focus-visible {
-    outline: 2px solid var(--color-acento);
-    outline-offset: 2px;
-}
-
-.btn-secundario {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--color-acento);
-    text-decoration: none;
-    padding: 12px var(--espaciado-lg);
-    border-radius: var(--radio-tarjeta);
-    font-family: var(--fuente-acento);
-    font-size: 0.75rem;
-    font-weight: 700;
-    border: 1px solid var(--color-acento);
-    cursor: pointer;
-    transition: background-color 0.15s ease-out, color 0.15s ease-out;
-}
-
-.btn-secundario:hover,
-.btn-secundario:focus {
-    background-color: var(--color-acento);
-    color: var(--color-texto-inverso);
-}
-
 /* -----------------------------------------------
-   TÍTULOS DE SECCIÓN
-   Estilo común para h2 de secciones de la home.
------------------------------------------------ */
-.titulo-seccion {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: var(--espaciado-sm);
-}
-
-.subtitulo-seccion {
-    text-align: center;
-    color: var(--color-texto-secundario);
-    margin-bottom: var(--espaciado-xl);
-}
-
-.texto-centrado {
-    text-align: center;
-    margin-top: var(--espaciado-xl);
-}
-
-/* -----------------------------------------------
-   CABECERA DE PÁGINA
-   Bloque superior con h1 y descripción, usado en
-   catálogo, servicios, recambios, contacto, etc.
------------------------------------------------ */
-.cabecera-pagina {
-    background-color: var(--color-borde);
-    padding: var(--espaciado-seccion) 0 var(--espaciado-xxl);
-    margin-bottom: var(--espaciado-xl);
-}
-
-.cabecera-pagina h1 {
-    font-size: 2.25rem;
-    margin-bottom: var(--espaciado-md);
-}
-
-.cabecera-pagina p {
-    color: var(--color-texto-secundario);
-    max-width: 700px;
-}
-
-/* -----------------------------------------------
-   HERO / CARRUSEL (Home)
------------------------------------------------ */
-.hero-carrusel {
-    margin-bottom: var(--espaciado-xxl);
-}
-
-.hero-carrusel .carousel-item img {
-    object-fit: cover;
-    max-height: 500px;
-}
-
-.hero-carrusel .carousel-caption {
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-    padding: var(--espaciado-xl);
-    border-radius: 0;
-}
-
-.hero-carrusel .carousel-caption h2 {
-    font-size: 2rem;
-    margin-bottom: var(--espaciado-sm);
-}
-
-.hero-carrusel .carousel-caption p {
-    margin-bottom: var(--espaciado-sm);
-}
-
-.precio-destacado {
-    font-family: var(--fuente-acento);
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-/* -----------------------------------------------
-   TARJETAS DE VEHÍCULO (C03)
-   Usadas en home (destacados) y catálogo.
------------------------------------------------ */
-.fila-vehiculos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--espaciado-lg);
-}
-
-.tarjeta-vehiculo {
-    background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
-    border-radius: var(--radio-tarjeta);
-    overflow: hidden;
-    transition: box-shadow 0.2s ease-out;
-}
-
-.tarjeta-vehiculo:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.imagen-vehiculo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.info-vehiculo {
-    padding: var(--espaciado-md);
-}
-
-.info-vehiculo h2,
-.info-vehiculo h3 {
-    font-size: 1.125rem;
-    margin-bottom: var(--espaciado-sm);
-}
-
-.etiquetas-vehiculo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espaciado-sm);
-    list-style: none;
-    margin-bottom: var(--espaciado-md);
-}
-
-.etiquetas-vehiculo li {
-    background-color: var(--color-borde);
-    padding: 2px var(--espaciado-sm);
-    border-radius: var(--radio-input);
-    font-size: 0.75rem;
-    color: var(--color-texto-secundario);
-}
-
-.precio-vehiculo {
-    font-family: var(--fuente-acento);
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: var(--espaciado-md);
-}
-
-/* -----------------------------------------------
-   SECCIÓN DE SERVICIOS (Home)
------------------------------------------------ */
-.seccion-servicios {
-    padding: var(--espaciado-seccion) 0;
-}
-
-.fila-servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: var(--espaciado-lg);
-}
-
-.bloque-servicio {
-    text-align: center;
-    padding: var(--espaciado-lg);
-}
-
-.icono-servicio {
-    font-size: 2.5rem;
-    margin-bottom: var(--espaciado-md);
-}
-
-/* -----------------------------------------------
-   SECCIÓN DE CONFIANZA (C09)
-   "Por qué elegirnos" en home y ficha.
------------------------------------------------ */
-.seccion-confianza {
-    padding: var(--espaciado-seccion) 0;
-    background-color: var(--color-borde);
-}
-
-.fila-confianza {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--espaciado-lg);
-}
-
-.bloque-confianza {
-    text-align: center;
-    padding: var(--espaciado-md);
-}
-
-.icono-confianza {
-    font-size: 2rem;
-    margin-bottom: var(--espaciado-sm);
-}
-
-/* -----------------------------------------------
-   CTA FINAL
------------------------------------------------ */
-.seccion-cta-final {
-    padding: var(--espaciado-seccion) 0;
-    text-align: center;
-}
-
-.seccion-cta-final h2 {
-    margin-bottom: var(--espaciado-md);
-}
-
-.seccion-cta-final p {
-    margin-bottom: var(--espaciado-lg);
-}
-
-.datos-contacto-rapidos {
-    margin-top: var(--espaciado-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaciado-sm);
-    align-items: center;
-}
-
-.datos-contacto-rapidos a {
-    text-decoration: none;
-    color: var(--color-texto-secundario);
-}
-
-/* -----------------------------------------------
-   SECCIÓN DESTACADOS (Home)
------------------------------------------------ */
-.seccion-destacados {
-    padding: var(--espaciado-seccion) 0;
-}
-
-/* -----------------------------------------------
-   FILTROS DEL CATÁLOGO
------------------------------------------------ */
-.barra-filtros {
-    padding: var(--espaciado-lg) 0;
-    margin-bottom: var(--espaciado-lg);
-}
-
-.form-filtros {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espaciado-md);
-    align-items: flex-end;
-}
-
-.campo-filtro {
-    flex: 1;
-    min-width: 180px;
-}
-
-.campo-filtro label {
-    display: block;
-    font-size: 0.8125rem;
-    margin-bottom: var(--espaciado-xs);
-    color: var(--color-texto-secundario);
-}
-
-.campo-filtro select {
-    width: 100%;
-    padding: var(--espaciado-sm) var(--espaciado-md);
-    border: 1px solid var(--color-borde);
-    border-radius: var(--radio-input);
-    font-family: var(--fuente-principal);
-    font-size: 0.875rem;
-    background-color: var(--color-superficie);
-}
-
-.btn-limpiar-filtros {
-    background: none;
-    border: none;
-    color: var(--color-acento);
-    cursor: pointer;
-    font-size: 0.875rem;
-    padding: var(--espaciado-sm) var(--espaciado-md);
-    font-family: var(--fuente-principal);
-}
-
-.contador-resultados {
-    color: var(--color-texto-secundario);
-    font-size: 0.875rem;
-    margin-top: var(--espaciado-sm);
-}
-
-/* -----------------------------------------------
-   ESTADO VACÍO (Catálogo)
------------------------------------------------ */
-.estado-vacio {
-    text-align: center;
-    padding: var(--espaciado-xxl) 0;
-}
-
-.estado-vacio[hidden] {
-    display: none;
-}
-
-/* -----------------------------------------------
-   SECCIÓN CATÁLOGO
------------------------------------------------ */
-.seccion-catalogo {
-    padding-bottom: var(--espaciado-seccion);
-}
-
-/* -----------------------------------------------
-   BREADCRUMB (C06)
------------------------------------------------ */
-.breadcrumb {
-    padding: var(--espaciado-md) 0;
-    font-size: 0.875rem;
-}
-
-.breadcrumb ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: var(--espaciado-sm);
-}
-
-.breadcrumb li:not(:last-child)::after {
-    content: " / ";
-    color: var(--color-texto-secundario);
-}
-
-.breadcrumb a {
-    color: var(--color-acento);
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb [aria-current="page"] {
-    color: var(--color-texto-secundario);
-}
-
-/* -----------------------------------------------
-   GALERÍA DE LA FICHA
------------------------------------------------ */
-.galeria-vehiculo {
-    padding-bottom: var(--espaciado-xl);
-}
-
-.imagen-principal-galeria img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radio-tarjeta);
-    object-fit: cover;
-}
-
-.miniaturas-galeria {
-    display: flex;
-    gap: var(--espaciado-sm);
-    margin-top: var(--espaciado-md);
-    flex-wrap: wrap;
-}
-
-.miniatura {
-    background: none;
-    border: 2px solid transparent;
-    padding: 0;
-    cursor: pointer;
-    border-radius: var(--radio-input);
-    overflow: hidden;
-}
-
-.miniatura.activa {
-    border-color: var(--color-acento);
-}
-
-.miniatura img {
-    display: block;
-    width: 80px;
-    height: 53px;
-    object-fit: cover;
-}
-
-/* -----------------------------------------------
-   RESUMEN DE LA FICHA
------------------------------------------------ */
-.resumen-vehiculo {
-    padding: var(--espaciado-xl) 0;
-}
-
-.fila-resumen {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: var(--espaciado-xl);
-    flex-wrap: wrap;
-}
-
-.datos-principales h1 {
-    font-size: 2rem;
-    margin-bottom: var(--espaciado-sm);
-}
-
-.precio-grande {
-    font-family: var(--fuente-acento);
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: var(--espaciado-md);
-}
-
-.etiquetas-vehiculo-detalle {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espaciado-sm);
-    list-style: none;
-    margin-bottom: var(--espaciado-lg);
-}
-
-.etiquetas-vehiculo-detalle li {
-    background-color: var(--color-borde);
-    padding: var(--espaciado-xs) var(--espaciado-md);
-    border-radius: var(--radio-input);
-    font-size: 0.875rem;
-}
-
-.acciones-vehiculo {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaciado-md);
-    min-width: 250px;
-}
-
-/* -----------------------------------------------
-   DATOS TÉCNICOS Y EQUIPAMIENTO (Ficha)
------------------------------------------------ */
-.datos-tecnicos,
-.equipamiento-vehiculo {
-    padding: var(--espaciado-xl) 0;
-    border-top: 1px solid var(--color-borde);
-}
-
-.lista-datos-tecnicos {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--espaciado-sm) var(--espaciado-lg);
-}
-
-.lista-datos-tecnicos dt {
-    font-weight: 700;
-    color: var(--color-texto-secundario);
-}
-
-.lista-equipamiento {
-    columns: 2;
-    column-gap: var(--espaciado-xl);
-    list-style: disc inside;
-}
-
-.lista-equipamiento li {
-    margin-bottom: var(--espaciado-sm);
-}
-
-/* -----------------------------------------------
-   AVISO NO ENCONTRADO (Ficha)
------------------------------------------------ */
-.aviso-no-encontrado {
-    text-align: center;
-    padding: var(--espaciado-xxl) 0;
-}
-
-.aviso-no-encontrado[hidden] {
-    display: none;
-}
-
-/* -----------------------------------------------
-   FORMULARIOS (C07)
-   Estilos básicos para campos, mensajes de error
-   y estados de envío.
------------------------------------------------ */
-.seccion-formulario {
-    padding: var(--espaciado-xl) 0 var(--espaciado-seccion);
-}
-
-.formulario-prueba,
-.formulario-recambios,
-.formulario-contacto {
-    max-width: 700px;
-}
-
-.campo-formulario {
-    margin-bottom: var(--espaciado-lg);
-}
-
-.campo-formulario label {
-    display: block;
-    margin-bottom: var(--espaciado-xs);
-    font-size: 0.9375rem;
-}
-
-.campo-formulario input[type="text"],
-.campo-formulario input[type="email"],
-.campo-formulario input[type="tel"],
-.campo-formulario input[type="date"],
-.campo-formulario input[type="number"],
-.campo-formulario select,
-.campo-formulario textarea {
-    width: 100%;
-    padding: var(--espaciado-sm) var(--espaciado-md);
-    border: 1px solid var(--color-borde);
-    border-radius: var(--radio-input);
-    font-family: var(--fuente-principal);
-    font-size: 0.9375rem;
-    background-color: var(--color-superficie);
-}
-
-.campo-formulario input:focus,
-.campo-formulario select:focus,
-.campo-formulario textarea:focus {
-    outline: 2px solid var(--color-acento);
-    outline-offset: 1px;
-    border-color: var(--color-acento);
-}
-
-/* Campo con error */
-.campo-formulario.error input,
-.campo-formulario.error select,
-.campo-formulario.error textarea {
-    border-color: var(--color-peligro);
-}
-
-.mensaje-error {
-    display: block;
-    color: var(--color-peligro);
-    font-size: 0.8125rem;
-    margin-top: var(--espaciado-xs);
-    min-height: 1.2em;
-}
-
-.ayuda-campo {
-    display: block;
-    color: var(--color-texto-secundario);
-    font-size: 0.8125rem;
-    margin-top: var(--espaciado-xs);
-}
-
-/* Checkbox RGPD */
-.checkbox-rgpd {
-    display: flex;
-    gap: var(--espaciado-sm);
-    align-items: flex-start;
-}
-
-.checkbox-rgpd input[type="checkbox"] {
-    margin-top: 4px;
-    flex-shrink: 0;
-}
-
-.checkbox-rgpd label {
-    font-size: 0.8125rem;
-}
-
-/* Botones del formulario */
-.acciones-formulario {
-    display: flex;
-    gap: var(--espaciado-md);
-    flex-wrap: wrap;
-    margin-top: var(--espaciado-lg);
-}
-
-/* Campo condicional (oculto por defecto) */
-.campo-condicional[hidden] {
-    display: none;
-}
-
-/* -----------------------------------------------
-   ESTADOS DEL FORMULARIO (C07)
-   Spinner de envío, éxito y error general.
------------------------------------------------ */
-.estado-formulario {
-    text-align: center;
-    padding: var(--espaciado-xxl) 0;
-    max-width: 700px;
-}
-
-.estado-formulario[hidden] {
-    display: none;
-}
-
-.spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid var(--color-borde);
-    border-top-color: var(--color-acento);
-    border-radius: 50%;
-    margin: 0 auto var(--espaciado-md);
-    animation: girar 0.8s linear infinite;
-}
-
-@keyframes girar {
-    to { transform: rotate(360deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .spinner {
-        animation: none;
-    }
-}
-
-.icono-exito {
-    font-size: 3rem;
-    color: var(--color-exito);
-    margin-bottom: var(--espaciado-md);
-}
-
-.icono-error {
-    font-size: 3rem;
-    color: var(--color-peligro);
-    margin-bottom: var(--espaciado-md);
-}
-
-/* -----------------------------------------------
-   PASOS DEL FORMULARIO (Prueba de conducción)
------------------------------------------------ */
-.pasos-formulario {
-    margin-bottom: var(--espaciado-xl);
-}
-
-.pasos-formulario ol {
-    display: flex;
-    list-style: none;
-    gap: var(--espaciado-lg);
-    flex-wrap: wrap;
-}
-
-.pasos-formulario li {
-    font-size: 0.9375rem;
-    color: var(--color-texto-secundario);
-}
-
-.pasos-formulario .paso-activo {
-    color: var(--color-acento);
-    font-weight: 700;
-}
-
-.paso-formulario legend {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: var(--espaciado-lg);
-    padding-bottom: var(--espaciado-sm);
-    border-bottom: 2px solid var(--color-acento);
-}
-
-.paso-formulario[hidden] {
-    display: none;
-}
-
-/* Resumen de la solicitud (Paso 3) */
-.resumen-solicitud {
-    background-color: var(--color-borde);
-    padding: var(--espaciado-lg);
-    border-radius: var(--radio-tarjeta);
-    margin-bottom: var(--espaciado-xl);
-}
-
-.resumen-solicitud h3 {
-    margin-bottom: var(--espaciado-md);
-}
-
-.resumen-solicitud dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--espaciado-sm) var(--espaciado-lg);
-}
-
-.resumen-solicitud dt {
-    font-weight: 700;
-    color: var(--color-texto-secundario);
-}
-
-/* -----------------------------------------------
-   AVISO IMPORTANTE (Prueba de conducción)
------------------------------------------------ */
-.aviso-importante {
-    background-color: #FEF3C7;
-    border-left: 4px solid #F59E0B;
-    padding: var(--espaciado-md) var(--espaciado-lg);
-    border-radius: 0 var(--radio-input) var(--radio-input) 0;
-    margin-bottom: var(--espaciado-xl);
-}
-
-/* -----------------------------------------------
-   SERVICIOS – DETALLE
------------------------------------------------ */
-.seccion-servicio-detalle {
-    padding: var(--espaciado-xl) 0;
-    border-top: 1px solid var(--color-borde);
-}
-
-.fila-servicio-detalle {
-    max-width: 800px;
-}
-
-.icono-servicio-grande {
-    font-size: 3rem;
-    margin-bottom: var(--espaciado-md);
-}
-
-.lista-servicios {
-    list-style: disc inside;
-    margin: var(--espaciado-md) 0;
-}
-
-.lista-servicios li {
-    margin-bottom: var(--espaciado-sm);
-}
-
-/* -----------------------------------------------
-   PROCESO DE RECAMBIOS
------------------------------------------------ */
-.proceso-recambios {
-    padding: var(--espaciado-xl) 0;
-}
-
-.lista-proceso {
-    list-style: decimal inside;
-    display: grid;
-    gap: var(--espaciado-lg);
-    max-width: 700px;
-}
-
-/* -----------------------------------------------
-   CONTACTO – FILA
------------------------------------------------ */
-.fila-contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--espaciado-xxl);
-    padding-bottom: var(--espaciado-seccion);
-}
-
-.info-contacto p {
-    margin-bottom: var(--espaciado-md);
-}
-
-.indicaciones-acceso {
-    margin: var(--espaciado-lg) 0;
-}
-
-.mapa-contenedor {
-    margin-top: var(--espaciado-lg);
-    border-radius: var(--radio-tarjeta);
-    overflow: hidden;
-}
-
-.mapa-contenedor iframe {
-    display: block;
-}
-
-/* -----------------------------------------------
-   PÁGINA 404
------------------------------------------------ */
-.pagina-404 {
-    text-align: center;
-    padding: var(--espaciado-seccion) 0;
-}
-
-.pagina-404 h1 {
-    font-size: 6rem;
-    color: var(--color-acento);
-    margin-bottom: var(--espaciado-md);
-}
-
-.pagina-404 h2 {
-    font-size: 1.5rem;
-    margin-bottom: var(--espaciado-md);
-}
-
-.acciones-404 {
-    display: flex;
-    gap: var(--espaciado-md);
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: var(--espaciado-lg);
-}
-
-/* -----------------------------------------------
-   CONTENIDO LEGAL (Privacidad)
------------------------------------------------ */
-.contenido-legal {
-    padding-bottom: var(--espaciado-seccion);
-}
-
-.contenido-legal article {
-    margin-bottom: var(--espaciado-xl);
-}
-
-.contenido-legal h2 {
-    font-size: 1.25rem;
-    margin-bottom: var(--espaciado-md);
-}
-
-.contenido-legal p {
-    margin-bottom: var(--espaciado-md);
-}
-
-.contenido-legal ul {
-    margin: var(--espaciado-md) 0;
-    padding-left: var(--espaciado-lg);
-}
-
-.contenido-legal li {
-    margin-bottom: var(--espaciado-sm);
-}
-
-/* -----------------------------------------------
-   PIE DE PÁGINA / FOOTER (C02)
+   FOOTER
 ----------------------------------------------- */
 .site-footer {
     background-color: var(--color-superficie-inversa);
     color: var(--color-texto-inverso);
-    padding: var(--espaciado-xxl) 0 var(--espaciado-lg);
+    height: 382px;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 0 0;
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.site-footer .contenedor {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .fila-footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--espaciado-xl);
-    margin-bottom: var(--espaciado-xl);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--espaciado-xxl);
+    flex: 1 1 auto;
+    align-content: start;
 }
 
 .columna-footer h3 {
-    font-size: 1rem;
-    margin-bottom: var(--espaciado-md);
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-acento);
+    margin: 0 0 var(--espaciado-md);
 }
 
 .columna-footer ul {
@@ -1093,36 +460,1253 @@ body {
 
 .columna-footer li {
     margin-bottom: var(--espaciado-sm);
+    line-height: 1.4;
 }
 
 .columna-footer a {
-    color: var(--color-texto-inverso);
+    color: var(--color-texto-secundario);
     text-decoration: none;
-    opacity: 0.8;
+    font-weight: 400;
+    font-size: 14px;
 }
 
-.columna-footer a:hover {
-    opacity: 1;
-    text-decoration: underline;
+.columna-footer a:hover,
+.columna-footer a:focus {
+    color: var(--color-texto-inverso);
 }
 
 .columna-footer address {
     font-style: normal;
 }
 
+/* Columna de marca */
+.columna-marca {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-md);
+    align-items: flex-start;
+}
+
+.footer-brand {
+    font-family: var(--fuente-acento);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--color-texto-inverso);
+    margin: 0;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-texto-secundario);
+    margin: 0;
+}
+
+/* Barra inferior */
 .pie-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: var(--espaciado-lg);
+    height: 58px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: var(--espaciado-md);
-    font-size: 0.75rem;
-    opacity: 0.7;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer-copyright {
+    color: var(--color-texto-secundario);
+    margin: 0;
 }
 
 .redes-sociales {
     display: flex;
+    gap: var(--espaciado-sm);
+    align-items: center;
+}
+
+.redes-sociales a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: var(--color-texto-inverso);
+}
+
+.redes-sociales a:hover,
+.redes-sociales a:focus {
+    color: var(--color-acento);
+}
+
+/* -----------------------------------------------
+   FOCO VISIBLE (WCAG 2.2 AA)
+----------------------------------------------- */
+:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* -----------------------------------------------
+   TRANSICIONES GENERALES
+----------------------------------------------- */
+a, button {
+    transition: color 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+/* -----------------------------------------------
+   HERO DEL CATÁLOGO (P02)
+   Fondo Porsche Targa 4S, 560px de alto.
+   Título con tipografía de impacto y texto base.
+----------------------------------------------- */
+.hero-catalogo {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+    background-color: var(--color-superficie-inversa);
+}
+
+.hero-catalogo > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-catalogo-contenido {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Sombreado inferior para garantizar legibilidad */
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.45) 45%,
+        rgba(0, 0, 0, 0) 70%
+    );
+}
+
+.hero-catalogo-contenido h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.05;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 0 0 var(--espaciado-md);
+}
+
+.hero-catalogo-contenido p {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    max-width: 46ch;
+    margin: 0;
+}
+
+/* -----------------------------------------------
+   INTRODUCCIÓN DEL CATÁLOGO
+   Contenedor de texto alineado a la izquierda,
+   alto 235px. "Nuestra flota" en negrita, título
+   "Catálogo" en impacto y descripción base.
+----------------------------------------------- */
+.intro-catalogo {
+    background-color: var(--color-superficie);
+}
+
+.intro-catalogo .contenedor {
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro-etiqueta {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-acento);
+    margin: 0 0 var(--espaciado-sm);
+}
+
+.intro-titulo {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--color-texto-principal);
+    margin: 0 0 var(--espaciado-md);
+}
+
+.intro-descripcion {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-texto-secundario);
+    max-width: 62ch;
+    margin: 0;
+}
+
+/* -----------------------------------------------
+   CUADRÍCULA DE CATÁLOGO (C03)
+   Cuadrícula Bootstrap (row + col-*), 3 columnas
+   en escritorio. Cada cuadro: 387px de ancho y
+   463px de alto.
+----------------------------------------------- */
+.seccion-catalogo {
+    padding: 0 0 var(--espaciado-seccion);
+    background-color: var(--color-borde);
+}
+
+.cuadricula-catalogo {
+    height: 1534px;
+    margin-top: var(--espaciado-xxl);
+    --bs-gutter-x: var(--espaciado-lg);
+}
+
+.cuadro-vehiculo {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-tarjeta);
+    width: 100%;
+    max-width: 387px;
+    height: 463px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: box-shadow 0.15s ease-out;
+}
+
+.cuadro-vehiculo:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cuadro-imagen {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    background-color: var(--color-superficie);
+}
+
+.cuadro-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform 0.15s ease-out;
+}
+
+.cuadro-vehiculo:hover .cuadro-imagen img {
+    transform: scale(1.04);
+}
+
+.cuadro-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--espaciado-md) var(--espaciado-md) 0;
+}
+
+.cuadro-info h2 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--color-texto-principal);
+    margin: 0 0 var(--espaciado-sm);
+}
+
+.cuadro-info > p {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-texto-secundario);
+    margin: 0 0 var(--espaciado-sm);
+}
+
+.cuadro-precio {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--color-texto-principal);
+    margin-top: auto;
+    margin-bottom: var(--espaciado-sm) !important;
+}
+
+.cuadro-info .btn-principal {
+    align-self: flex-start;
+    margin-bottom: var(--espaciado-md);
+}
+
+/* -----------------------------------------------
+   FICHA DEL VEHÍCULO (P02.1)
+   Fondo del body en gris borde, según la guía.
+----------------------------------------------- */
+.ficha-body {
+    background-color: var(--color-borde);
+}
+
+/* -----------------------------------------------
+   FICHA – FOTO + INFORMACIÓN
+   Izquierda: foto 650 x 430 px. Derecha: recuadro
+   de texto de 526 px de alto con fondo gris borde.
+----------------------------------------------- */
+.ficha-presentacion {
+    padding: var(--espaciado-xxl) 0;
+}
+
+.ficha-presentacion-fila {
+    display: grid;
+    grid-template-columns: 650px 1fr;
+    gap: var(--espaciado-xl);
+    align-items: stretch;
+}
+
+.ficha-foto {
+    width: 650px;
+    height: 430px;
+    background-color: var(--color-superficie);
+    border-radius: var(--radio-tarjeta);
+    overflow: hidden;
+}
+
+.ficha-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.ficha-info {
+    height: 526px;
+    background-color: var(--color-borde);
+    border-radius: var(--radio-tarjeta);
+    border: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--espaciado-xl);
+}
+
+.ficha-certificado {
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FF9800;
+    margin: 0 0 var(--espaciado-md);
+}
+
+.ficha-info h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    color: var(--color-texto-principal);
+    margin: 0 0 var(--espaciado-md);
+}
+
+.ficha-descripcion {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-texto-secundario);
+    max-width: 46ch;
+    margin: 0 0 var(--espaciado-xl);
+}
+
+/* -----------------------------------------------
+   FICHA – DATOS TÉCNICOS
+   Contenedor 370 px de alto, fondo gris borde.
+   Cuadrícula 3 x 2 (1fr 1fr 1fr x 1fr 1fr),
+   cada celda 385 x 92 px, fondo blanco puro.
+----------------------------------------------- */
+.datos-tecnicos {
+    background-color: var(--color-borde);
+    padding: var(--espaciado-xl) 0;
+}
+
+.datos-tecnicos > .contenedor {
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.datos-tecnicos h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--color-texto-principal);
+    margin: 0 0 var(--espaciado-lg);
+}
+
+.cuadricula-datos {
+    display: grid;
+    grid-template-columns: repeat(3, 385px);
+    grid-template-rows: repeat(2, 92px);
+    row-gap: 2px;
+    column-gap: var(--espaciado-lg);
+    justify-content: center;
+}
+
+.celda-dato {
+    width: 385px;
+    height: 92px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-input);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--espaciado-md);
+}
+
+.dato-etiqueta {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--espaciado-xs);
+}
+
+.dato-valor {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-texto-principal);
+}
+
+/* -----------------------------------------------
+   FICHA – EQUIPAMIENTO
+   Contenedor 341 px de alto, fondo gris borde.
+   Cuadrícula 3 x 2 (1fr 1fr 1fr x 1fr 1fr),
+   cada casilla 385 x 51 px.
+----------------------------------------------- */
+.equipamiento {
+    background-color: var(--color-borde);
+    padding: 0 0 var(--espaciado-seccion);
+}
+
+.equipamiento > .contenedor {
+    height: 341px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.equipamiento h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--color-texto-principal);
+    margin: 0 0 var(--espaciado-lg);
+}
+
+.cuadricula-equipamiento {
+    display: grid;
+    grid-template-columns: repeat(3, 385px);
+    grid-template-rows: repeat(2, 51px);
+    row-gap: 2px;
+    column-gap: var(--espaciado-md);
+    justify-content: center;
+}
+
+.celda-equip {
+    width: 385px;
+    height: 51px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-input);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--espaciado-md);
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-texto-principal);
+}
+
+/* -----------------------------------------------
+   SERVICIOS (P03)
+   4 heroes de 577 px de alto: el primero como
+   presentación (fondo oscuro) y los tres siguientes
+   con imagen de fondo y texto encima.
+----------------------------------------------- */
+.hero-servicio {
+    position: relative;
+    width: 100%;
+    height: 577px;
+    overflow: hidden;
+    background-color: var(--color-superficie-inversa);
+}
+
+.hero-servicio > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-servicio-contenido {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hero 1 (presentación): fondo oscuro sin imagen */
+.hero-servicio-intro {
+    background: linear-gradient(
+        135deg,
+        #000000 0%,
+        #1a1a1a 100%
+    );
+}
+
+.hero-servicio-intro .hero-servicio-contenido {
+    background: none;
+}
+
+.hero-servicio-etiqueta {
+    font-family: var(--fuente-acento);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-acento);
+    margin: 0 0 var(--espaciado-md);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.hero-servicio-titulo {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 var(--espaciado-md);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.hero-servicio-texto {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    max-width: 52ch;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
+/* -----------------------------------------------
+   HERO RECAMBIOS (P04)
+   Fondo posventa@3x.png, 560px de alto.
+   Texto centrado encima de la imagen:
+   marca en negrita, título de impacto y descripción.
+----------------------------------------------- */
+.hero-recambios {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+    background-color: var(--color-superficie-inversa);
+}
+
+.hero-recambios > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-recambios-contenido {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--espaciado-xl);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.35) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+.hero-recambios-titulo {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 var(--espaciado-sm);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.hero-recambios-subtitulo {
+    font-family: var(--fuente-acento);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 var(--espaciado-md);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.hero-recambios-texto {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    max-width: 62ch;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
+/* -----------------------------------------------
+   FORMULARIO RECAMBIOS (P04)
+   Formulario con dos cuadrículas 2x2 y caja de
+   comentarios ancha (1400px).
+----------------------------------------------- */
+.seccion-formulario-recambios {
+    padding: var(--espaciado-seccion) 0;
+    background-color: var(--color-superficie);
+}
+
+/* Contenedor ampliado a 1400px: las casillas de la
+   cuadrícula 2x2 miden exactamente 688px
+   (688px x 2 + 24px de separación = 1400px). */
+.seccion-formulario-recambios .contenedor {
+    max-width: 1400px;
+}
+
+.formulario-recambios {
+    width: 100%;
+}
+
+.grupo-campos-recambios {
+    border: none;
+    padding: 0;
+    margin: 0 0 var(--espaciado-xl);
+}
+
+.titulo-grupo-recambios {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-texto-secundario);
+    padding: 0;
+    margin: 0 0 var(--espaciado-lg);
+}
+
+.cuadricula-recambios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: var(--espaciado-lg);
+    row-gap: 28px;
+    justify-content: center;
+}
+
+.campo-formulario-recambio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 688px;
+    margin: 0 auto;
+}
+
+.campo-formulario-recambio label {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--espaciado-sm);
+}
+
+.campo-formulario-recambio input {
+    width: 100%;
+    height: 54px;
+    padding: 0 var(--espaciado-md);
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-input);
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-texto-principal);
+    transition: border-color 0.15s ease-out;
+}
+
+.campo-formulario-recambio input:hover {
+    border-color: var(--color-acento);
+}
+
+.campo-formulario-recambio input:focus,
+.campo-formulario-recambio input:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+    border-color: var(--color-acento);
+}
+
+.campo-formulario-recambio input::placeholder {
+    color: var(--color-texto-secundario);
+}
+
+/* Caja de comentarios: ancho 1400px, alto 135px */
+.campo-comentarios-recambio {
+    max-width: 1400px;
+    margin-top: var(--espaciado-xl);
+    text-align: left;
+}
+
+.campo-comentarios-recambio textarea {
+    width: 100%;
+    height: 135px;
+    padding: var(--espaciado-md);
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-input);
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-texto-principal);
+    resize: vertical;
+    transition: border-color 0.15s ease-out;
+}
+
+.campo-comentarios-recambio textarea:hover {
+    border-color: var(--color-acento);
+}
+
+.campo-comentarios-recambio textarea:focus,
+.campo-comentarios-recambio textarea:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+    border-color: var(--color-acento);
+}
+
+/* Checkbox RGPD */
+.checkbox-rgpd-recambio {
+    display: flex;
+    align-items: flex-start;
     gap: var(--espaciado-md);
+    max-width: 1400px;
+    margin-top: var(--espaciado-lg);
+    text-align: left;
+}
+
+.checkbox-rgpd-recambio input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 2px 0 0;
+    accent-color: var(--color-acento);
+    cursor: pointer;
+}
+
+.checkbox-rgpd-recambio label {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-texto-principal);
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-rgpd-recambio label a {
+    color: var(--color-acento);
+}
+
+.checkbox-rgpd-recambio label a:hover,
+.checkbox-rgpd-recambio label a:focus {
+    color: var(--color-acento-hover);
+}
+
+/* Acciones del formulario */
+.acciones-formulario-recambios {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--espaciado-xl);
+}
+
+/* ===============================================
+   RESPONSIVE – TABLET (≤ 768px)
+   =============================================== */
+@media (max-width: 768px) {
+
+    :root {
+        --gutter: 16px;
+        --espaciado-seccion: 48px;
+    }
+
+    /* Header: menú colapsado, hamburguesa visible */
+    .menu-principal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-superficie-inversa);
+        flex-direction: column;
+        padding: var(--espaciado-md);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        gap: var(--espaciado-md);
+        z-index: 99;
+    }
+
+    .menu-principal.abierto {
+        display: flex;
+    }
+
+    .menu-principal a {
+        font-size: 1rem;
+        padding: var(--espaciado-sm) 0;
+    }
+
+    .btn-hamburguesa {
+        display: flex;
+    }
+
+    .btn-cta-header {
+        display: none;
+    }
+
+    /* Hero */
+    .hero-home {
+        height: 480px;
+    }
+
+    .hero-home img {
+        height: 480px;
+    }
+
+    .hero-texto-centro {
+        padding: var(--espaciado-md);
+    }
+
+    .hero-titulo-impacto {
+        font-size: 40px;
+        white-space: normal;
+    }
+
+    .hero-texto-descriptivo {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    /* Carrusel */
+    .hero-carrusel {
+        padding: 0 var(--espaciado-md);
+    }
+
+    .hero-carrusel .carousel-item img {
+        height: 500px;
+        width: calc(100% - 40px);
+    }
+
+    .hero-carrusel .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .precio-destacado {
+        font-size: 1.25rem;
+    }
+
+    .btn-control-carrusel {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-pausa {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Footer: 2 columnas */
+    .fila-footer {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--espaciado-lg);
+    }
+
+    /* Catálogo: hero y cuadrícula en tablet */
+    .hero-catalogo {
+        height: 400px;
+    }
+
+    .hero-catalogo > img {
+        height: 400px;
+    }
+
+    .hero-catalogo-contenido h1 {
+        font-size: 40px;
+    }
+
+    .intro-catalogo .contenedor {
+        height: auto;
+        padding: var(--espaciado-xl) var(--gutter);
+    }
+
+    .cuadricula-catalogo {
+        height: auto;
+        margin-top: var(--espaciado-lg);
+    }
+
+    .cuadro-vehiculo {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: var(--espaciado-sm);
+    }
+
+    /* Ficha: presentación apilada en tablet */
+    .ficha-presentacion-fila {
+        grid-template-columns: 1fr;
+    }
+
+    .ficha-foto {
+        width: 100%;
+    }
+
+    .ficha-info {
+        height: auto;
+        min-height: 430px;
+    }
+
+    .cuadricula-datos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .celda-dato {
+        width: 100%;
+    }
+
+    .cuadricula-equipamiento {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 51px);
+    }
+
+    .celda-equip {
+        width: 100%;
+    }
+
+    .datos-tecnicos > .contenedor,
+    .equipamiento > .contenedor {
+        height: auto;
+        padding: var(--espaciado-large, 24px) 0;
+    }
+
+    /* Servicios: heroes en tablet */
+    .hero-servicio {
+        height: 420px;
+    }
+
+    .hero-servicio-titulo {
+        font-size: 40px;
+    }
+
+    .hero-servicio-texto {
+        font-size: 15px;
+    }
+
+    /* Recambios: hero y formulario en tablet */
+    .hero-recambios {
+        height: 400px;
+    }
+
+    .hero-recambios > img {
+        height: 400px;
+    }
+
+    .hero-recambios-subtitulo {
+        font-size: 40px;
+    }
+
+    .hero-recambios-texto {
+        font-size: 15px;
+    }
+
+    .cuadricula-recambios {
+        column-gap: var(--espaciado-md);
+        row-gap: var(--espaciado-lg);
+    }
+
+    .campo-formulario-recambio {
+        max-width: 100%;
+    }
+}
+
+/* ===============================================
+   RESPONSIVE – MÓVIL (≤ 480px)
+   =============================================== */
+@media (max-width: 480px) {
+
+    .hero-home {
+        height: 360px;
+    }
+
+    .hero-home img {
+        height: 360px;
+    }
+
+    .hero-titulo-impacto {
+        font-size: 28px;
+        white-space: normal;
+    }
+
+    .hero-texto-descriptivo {
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    /* Footer: apilado y altura flexible para móvil */
+    .site-footer {
+        height: auto;
+        padding-top: var(--espaciado-xxl);
+    }
+
+    .fila-footer {
+        grid-template-columns: 1fr;
+        gap: var(--espaciado-lg);
+    }
+
+    .pie-footer {
+        height: auto;
+        padding: var(--espaciado-lg) 0;
+    }
+
+    /* Carrusel */
+    .hero-carrusel {
+        padding: 0 var(--espaciado-sm);
+    }
+
+    .hero-carrusel .carousel-item img {
+        height: 400px;
+        width: 100%;
+        border-radius: var(--radio-input);
+    }
+
+    .hero-carrusel .carousel-caption {
+        padding: var(--espaciado-md);
+    }
+
+    .hero-carrusel .carousel-caption h2 {
+        font-size: 1.25rem;
+    }
+
+    .controles-carrusel-abajo {
+        gap: 6px;
+    }
+
+    .btn-control-carrusel {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btn-control-carrusel svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .btn-pausa {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Catálogo: hero y cuadrícula en móvil */
+    .hero-catalogo {
+        height: 320px;
+    }
+
+    .hero-catalogo > img {
+        height: 320px;
+    }
+
+    .hero-catalogo-contenido h1 {
+        font-size: 28px;
+    }
+
+    .hero-catalogo-contenido p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .intro-etiqueta {
+        font-size: 13px;
+    }
+
+    .intro-titulo {
+        font-size: 28px;
+    }
+
+    .intro-descripcion {
+        font-size: 14px;
+    }
+
+    .cuadricula-catalogo {
+        height: auto;
+        margin-top: var(--espaciado-lg);
+    }
+
+    .cuadro-vehiculo {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: var(--espaciado-sm);
+    }
+
+    /* Ficha: tamaños en móvil */
+    .ficha-foto {
+        height: 300px;
+    }
+
+    .ficha-info h1 {
+        font-size: 28px;
+    }
+
+    .ficha-certificado {
+        font-size: 11px;
+    }
+
+    .ficha-descripcion {
+        font-size: 15px;
+    }
+
+    .cuadricula-datos {
+        grid-template-columns: 1fr;
+    }
+
+    .celda-dato {
+        width: 100%;
+    }
+
+    .datos-tecnicos h1,
+    .equipamiento h1 {
+        font-size: 28px;
+    }
+
+    .cuadricula-equipamiento {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 51px);
+    }
+
+    .celda-equip {
+        width: 100%;
+    }
+
+    /* Servicios: heroes en móvil */
+    .hero-servicio {
+        height: 320px;
+    }
+
+    .hero-servicio-etiqueta {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .hero-servicio-titulo {
+        font-size: 30px;
+    }
+
+    .hero-servicio-texto {
+        font-size: 14px;
+    }
+
+    /* Recambios: hero y formulario en móvil */
+    .hero-recambios {
+        height: 320px;
+    }
+
+    .hero-recambios > img {
+        height: 320px;
+    }
+
+    .hero-recambios-contenido {
+        padding: var(--espaciado-md);
+    }
+
+    .hero-recambios-titulo {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .hero-recambios-subtitulo {
+        font-size: 26px;
+    }
+
+    .hero-recambios-texto {
+        font-size: 14px;
+    }
+
+    .seccion-formulario-recambios {
+        padding: var(--espaciado-xxl) 0;
+    }
+
+    .cuadricula-recambios {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        row-gap: var(--espaciado-lg);
+    }
+
+    .campo-formulario-recambio input {
+        font-size: 15px;
+    }
+
+    .campo-comentarios-recambio textarea {
+        font-size: 15px;
+    }
 }
