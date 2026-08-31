@@ -1,0 +1,72 @@
+/* ============================================================
+   PALETA DE COLORES
+   ============================================================ */
+
+   /* --- COLORES PRIMARIOS ---
+    * | COLOR         | HEX       | USO                                         |
+    * |---------------|-----------|---------------------------------------------|
+    * | BLANCO        | #FFFFFF   | Fondos, tarjetas, superficies                |
+    * | GRIS BORDE    | #CFD8E6   | Fondo home, cabecera, contraste              |
+    * | AZUL ELECTRICO| #0052FF   | Acento principal, botones, enlaces           |
+    */
+
+   /* --- COLORES SECUNDARIOS ---
+    * | COLOR         | HEX       | USO                                         |
+    * |---------------|-----------|---------------------------------------------|
+    * | TEXT GRAY     |           | Texto secundario                            |
+    * | HOVER ACTIVO  | #0038B8   | Estado hover y activo de botones y enlaces   |
+    * | ERROR         | #DC2626   | Mensajes de error, validación               |
+    * | ÉXITO         | #16A34A   | Mensajes de éxito, confirmación             |
+    */
+
+/* ============================================================
+   TIPOGRAFÍA
+   ============================================================ */
+
+   /* tipografia
+    *
+    * | Rol                        | Fuente     | Peso  | Tamaño |
+    * |----------------------------|------------|-------|--------|
+    * | Título Gigante / Impacto   | Inter      | 400   | 64 px  |
+    * | Título Impactante          | Inter      | 700   | 40 px  |
+    * | Título Principal H1        | Inter      | 700   | 36 px  |
+    * | Subtítulo H2               | Inter      | 700   | 24 px  |
+    * | Apartado H3                | Inter      | 700   | 20 px  |
+    * | Texto Base                 | Inter      | 700   | 16 px  |
+    * | Párrafo Resaltado          | Inter      | 700   | 16 px  |
+    * | Texto Secundario           | Inter      | 700   | 14 px  |
+    * | Texto Negrita              | Montserrat | 700   | 16 px  |
+    * | Texto Botón                | Montserrat | 400   | 12 px  |
+    * | Notas / Pie de página      | Inter      | 400   | 12 px  |
+    *
+    * Reglas: Inter es la fuente principal para títulos y cuerpo.
+    *         Montserrat se usa para <strong>/<b> y botones.
+    */
+
+/* ============================================================
+   /* | Estado     | Botones                  | Campos                     | Tarjetas              |
+    * |------------|--------------------------|----------------------------|-----------------------|
+    * | Normal     | Fondo #0052FF / outline  | Borde #CFD8E6              | Borde #CFD8E6         |
+    * | Hover      | Fondo #0038B8 (primario) | Borde #6B7280              | Elevación + sombra    |
+    * | Foco       | Anillo 2 px contrastado  | Anillo 2 px #0052FF/negro  | Anillo 2 px           |
+    * | Activo     | Acento #0038B8           | aria-invalid si aplica     | —                     |
+    * | Desactivado| Opacidad 50 %            | Opacidad 50 %              | —                     |
+    * | Error      | —                        | Borde #DC2626 + alert      | —                     |
+    */
+
+/* ============================================================
+   ACCESIBILIDAD (WCAG 2.2 AA)
+   ============================================================ */
+
+   /* Contraste:
+    * - Blanco/negro ≈ 21:1
+    * - Blanco/#0052FF ≈ 8,6:1
+    * - #6B7280/blanco ≈ 4,9:1
+    * - #0052FF sobre blanco supera AA para texto normal
+    *
+    * Foco visible: anillo 2 px con contraste suficiente (:focus-visible)
+    * Objetivos táctiles: mínimo 24×24 px (en práctica 44–48 px)
+    * Movimiento reducido: respetar prefers-reduced-motion
+    */
+
+    

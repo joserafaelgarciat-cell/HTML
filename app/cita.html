@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadatos SEO -->
+    <title>Solicitar cita – Superautos Carballo</title>
+    <meta name="description" content="Solicita tu cita en Superautos Carballo seleccionando el vehículo y la fecha preferente. Te confirmaremos por teléfono o correo.">
+    <link rel="canonical" href="https://www.superautoscarballo.es/cita.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Solicitar cita – Superautos Carballo">
+    <meta property="og:description" content="Solicita tu cita en Superautos Carballo y elige el vehículo y la fecha preferente.">
+    <meta property="og:url" content="https://www.superautoscarballo.es/cita.html">
+    <meta property="og:site_name" content="Superautos Carballo">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuentes: Anton + Inter + Montserrat de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos base del proyecto -->
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+    <!-- Enlace saltar al contenido (C08) -->
+    <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
+
+    <!-- =============================================
+         CABECERA / HEADER (C01)
+    ============================================= -->
+    <header class="site-header">
+        <div class="contenedor">
+            <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
+                <img src="assets/img/logo.jpg" alt="Superautos Carballo" class="logo-img">
+                <div class="logo-texto">
+                    <span class="logo-nombre">SUPERAUTOS</span>
+                    <span class="logo-sub">CARBALLO</span>
+                </div>
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="menu-principal" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="catalogo.html" role="menuitem" aria-current="page">Catálogo</a></li>
+                    <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="recambios.html" role="menuitem">Recambios</a></li>
+                    <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <a href="contacto.html?motivo=prueba" class="btn-cta-header">Reservar cita</a>
+
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- =============================================
+         PROGRESO DE LA SOLICITUD
+         Tres pasos: vehículo y cita, tus datos,
+         revisa y envía. El punto naranja avanza
+         al completar cada paso.
+    ============================================= -->
+    <nav class="pasos-cita" aria-label="Progreso de la solicitud">
+        <div class="contenedor">
+            <ol class="lista-pasos-cita">
+                <li class="paso-cita-item" data-paso="1">
+                    <span class="paso-circulo" aria-hidden="true">1</span>
+                    <span class="paso-etiqueta">Vehículo y cita</span>
+                </li>
+                <li class="paso-cita-item" data-paso="2">
+                    <span class="paso-circulo" aria-hidden="true">2</span>
+                    <span class="paso-etiqueta">Tus datos</span>
+                </li>
+                <li class="paso-cita-item" data-paso="3">
+                    <span class="paso-circulo" aria-hidden="true">3</span>
+                    <span class="paso-etiqueta">Revisa y envía</span>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- =============================================
+         CONTENIDO PRINCIPAL: SOLICITAR CITA (P02.1.1)
+         Paso 1: El vehículo y la cita.
+         La casilla del vehículo se rellena desde la
+         ficha (?vehiculo=<id>); es de solo lectura.
+    ============================================= -->
+    <main id="contenido-principal">
+
+        <section class="paso-cita" aria-label="Paso 1: El vehículo y la cita">
+            <div class="contenedor">
+
+                <form id="form-cita" novalidate>
+
+                    <!-- =========================================
+                         PASO 1: EL VEHÍCULO Y LA CITA
+                         Vehículo (desde ficha), fecha y hora.
+                    ========================================= -->
+                    <fieldset id="paso-1" class="paso-cita-caja">
+                        <h1 class="titulo-paso-cita">1. El vehículo y la cita</h1>
+
+                        <div class="campo-cita">
+                            <label for="cita-vehiculo" class="etiqueta-cita">Vehículo</label>
+                            <div class="caja-cita-vehiculo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                <input type="text" id="cita-vehiculo" name="vehiculo" readonly placeholder="Selecciona un vehículo">
+                            </div>
+                            <small class="ayuda-campo" id="cita-vehiculo-ayuda">El vehículo se rellena automáticamente desde la ficha.</small>
+                            <input type="hidden" id="cita-vehiculo-id" name="vehiculo_id" value="">
+                        </div>
+
+                        <!-- Fila: fecha de la cita + hora de la cita (2 casillas 550 x 50 px) -->
+                        <div class="fila-cita">
+                            <div class="campo-cita">
+                                <label for="cita-fecha" class="etiqueta-cita">Fecha de la cita <span aria-hidden="true">*</span></label>
+                                <div class="caja-cita">
+                                    <input type="date" id="cita-fecha" name="fecha" required aria-required="true">
+                                </div>
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-cita">
+                                <label for="cita-hora" class="etiqueta-cita">Hora de la cita <span aria-hidden="true">*</span></label>
+                                <div class="caja-cita">
+                                    <input type="time" id="cita-hora" name="hora" required aria-required="true">
+                                </div>
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+                        </div>
+
+                        <!-- Avanzar al paso 2 -->
+                        <div class="acciones-cita">
+                            <button type="button" class="btn-principal btn-siguiente" data-paso="2">Siguiente: Tus datos</button>
+                        </div>
+                    </fieldset>
+
+                    <!-- =========================================
+                         PASO 2: TUS DATOS
+                         Campos del formulario de contacto:
+                         nombre, apellido, correo y teléfono.
+                    ========================================= -->
+                    <fieldset id="paso-2" class="paso-cita-caja" hidden>
+                        <h3 class="titulo-apartado-cita">2. Tus datos</h3>
+
+                        <div class="fila-cita">
+                            <div class="campo-cita">
+                                <label for="cita-nombre" class="etiqueta-cita">Nombre <span aria-hidden="true">*</span></label>
+                                <div class="caja-cita">
+                                    <input type="text" id="cita-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                                </div>
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-cita">
+                                <label for="cita-apellido" class="etiqueta-cita">Apellido <span aria-hidden="true">*</span></label>
+                                <div class="caja-cita">
+                                    <input type="text" id="cita-apellido" name="apellido" required aria-required="true" autocomplete="family-name" minlength="2">
+                                </div>
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+                        </div>
+
+                        <div class="fila-cita">
+                            <div class="campo-cita">
+                                <label for="cita-email" class="etiqueta-cita">Correo electrónico <span aria-hidden="true">*</span></label>
+                                <div class="caja-cita">
+                                    <input type="email" id="cita-email" name="email" required aria-required="true" autocomplete="email">
+                                </div>
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-cita">
+                                <label for="cita-telefono" class="etiqueta-cita">Teléfono <span aria-hidden="true">*</span></label>
+                                <div class="caja-cita">
+                                    <input type="tel" id="cita-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
+                                </div>
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+                        </div>
+
+                        <!-- Caja de comentarios -->
+                        <div class="campo-cita">
+                            <label for="cita-comentarios" class="etiqueta-cita">Comentarios</label>
+                            <div class="caja-comentarios-cita">
+                                <textarea id="cita-comentarios" name="comentarios" rows="5"></textarea>
+                            </div>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Volver / avanzar al paso 3 -->
+                        <div class="acciones-cita">
+                            <button type="button" class="btn-secundario btn-anterior" data-paso="1">Volver</button>
+                            <button type="button" class="btn-principal btn-siguiente" data-paso="3">Siguiente: Revisa y envía</button>
+                        </div>
+                    </fieldset>
+
+                    <!-- =========================================
+                         PASO 3: REVISA Y ENVÍA
+                         Resumen de la solicitud, RGPD y envío.
+                    ========================================= -->
+                    <fieldset id="paso-3" class="paso-cita-caja" hidden>
+                        <h3 class="titulo-apartado-cita">3. Revisa y envía</h3>
+
+                        <!-- Resumen de la solicitud (se rellena con JS) -->
+                        <div class="resumen-solicitud" id="resumen-solicitud">
+                            <h3>Resumen de tu solicitud</h3>
+                            <dl>
+                                <dt>Vehículo</dt>
+                                <dd id="resumen-vehiculo">—</dd>
+                                <dt>Fecha de la cita</dt>
+                                <dd id="resumen-fecha">—</dd>
+                                <dt>Hora de la cita</dt>
+                                <dd id="resumen-hora">—</dd>
+                                <dt>Nombre</dt>
+                                <dd id="resumen-nombre">—</dd>
+                                <dt>Correo electrónico</dt>
+                                <dd id="resumen-email">—</dd>
+                                <dt>Teléfono</dt>
+                                <dd id="resumen-telefono">—</dd>
+                            </dl>
+                        </div>
+
+                        <!-- Checkbox RGPD obligatorio -->
+                        <div class="checkbox-rgpd-cita" style="margin-top: var(--espaciado-xl);">
+                            <input type="checkbox" id="cita-rgpd" name="rgpd" required aria-required="true">
+                            <label for="cita-rgpd">
+                                He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud. <span aria-hidden="true">*</span>
+                            </label>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Volver / enviar -->
+                        <div class="acciones-cita">
+                            <button type="button" class="btn-secundario btn-anterior" data-paso="2">Volver</button>
+                            <button type="submit" class="btn-principal">Enviar solicitud</button>
+                        </div>
+                    </fieldset>
+
+                </form>
+
+                <!-- =========================================
+                     ESTADOS DEL FORMULARIO (C07)
+                     Estado: éxito con color de éxito.
+                ========================================= -->
+                <div class="estado-formulario estado-exito" id="estado-exito" hidden aria-live="polite">
+                    <div class="icono-exito" aria-hidden="true">&#10003;</div>
+                    <h2>Solicitud enviada</h2>
+                    <p>Tu solicitud fue enviada correctamente. Nuestro equipo la revisará y te contactará para confirmar la cita.</p>
+                    <a href="catalogo.html" class="btn-principal">Volver al catálogo</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =============================================
+         FOOTER (C02) – Versión completa
+    ============================================= -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="fila-footer">
+
+                <div class="columna-footer columna-marca">
+                    <p class="footer-brand">SUPERAUTOS CARBALLO</p>
+                    <p class="footer-desc">Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
+                </div>
+
+                <div class="columna-footer">
+                    <h3>CATÁLOGO</h3>
+                    <ul>
+                        <li><a href="catalogo.html">Deportivos</a></li>
+                        <li><a href="catalogo.html">SUV de lujo</a></li>
+                        <li><a href="catalogo.html">Ediciones limitadas</a></li>
+                        <li><a href="catalogo.html">Seminuevos certificados</a></li>
+                    </ul>
+                </div>
+
+                <div class="columna-footer">
+                    <h3>SERVICIOS</h3>
+                    <ul>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="servicios.html">Venta</a></li>
+                        <li><a href="servicios.html">Mantenimiento</a></li>
+                        <li><a href="servicios.html">Posventa</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                    </ul>
+                </div>
+
+                <div class="columna-footer">
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><a href="contacto.html">Av. A Coruña 45, 15100</a></li>
+                        <li><a href="contacto.html">Carballo, A Coruña</a></li>
+                        <li><a href="tel:+34981700200">+34 981 700 200</a></li>
+                        <li><a href="mailto:info@superautoscarballo.es">info@superautoscarballo.es</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-footer">
+                <p class="footer-copyright">&copy; 2026 Superautos Carballo</p>
+                <nav class="redes-sociales" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (bundle incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS principal del sitio (menú hamburguesa) -->
+    <script src="js/main.js"></script>
+
+    <!-- =============================================
+         Rellenado del vehículo desde la ficha
+         Lee ?vehiculo=<id> de la URL y coloca el
+         nombre del vehículo en la casilla (solo lectura).
+    ============================================= -->
+    <script>
+        // Base de datos de los vehículos del catálogo
+        var vehiculos = {
+            "ferrari-12-cilindri": { nombre: "Ferrari 12 Cilindri" },
+            "porsche-911-targa-4s": { nombre: "Porsche 911 Targa 4S" },
+            "audi-q8": { nombre: "Audi Q8" },
+            "lamborghini-revuelto": { nombre: "Lamborghini Revuelto" },
+            "lamborghini-urus": { nombre: "Lamborghini Urus" },
+            "porsche-taycan": { nombre: "Porsche Taycan" },
+            "mercedes-eqs": { nombre: "Mercedes EQS" },
+            "mercedes-amg-eqe": { nombre: "Mercedes AMG EQE" }
+        };
+
+        function cargarVehiculo() {
+            var params = new URLSearchParams(window.location.search);
+            var id = params.get("vehiculo");
+            var campo = document.getElementById("cita-vehiculo");
+            var campoId = document.getElementById("cita-vehiculo-id");
+
+            if (id && vehiculos[id]) {
+                campo.value = vehiculos[id].nombre;
+                campo.setAttribute("value", vehiculos[id].nombre);
+                campoId.value = id;
+                campoId.setAttribute("value", id);
+                document.title = vehiculos[id].nombre + " – Solicitar cita – Superautos Carballo";
+            }
+        }
+
+        // Mueve el punto naranja del indicador de pasos al paso señalado.
+        // Los pasos anteriores quedan completados; el actual se resalta.
+        function cambiarPaso(numPaso) {
+            var items = document.querySelectorAll(".paso-cita-item");
+            for (var i = 0; i < items.length; i++) {
+                var num = parseInt(items[i].getAttribute("data-paso"), 10);
+                items[i].classList.remove("paso-activo", "paso-completado");
+                if (num < numPaso) {
+                    items[i].classList.add("paso-completado");
+                } else if (num === numPaso) {
+                    items[i].classList.add("paso-activo");
+                    items[i].setAttribute("aria-current", "step");
+                } else {
+                    items[i].removeAttribute("aria-current");
+                }
+            }
+        }
+
+        // Mensajes de error propios (español)
+        var mensajesError = {
+            "cita-fecha": "Indica la fecha de la cita.",
+            "cita-hora": "Indica la hora de la cita.",
+            "cita-nombre": "Escribe tu nombre.",
+            "cita-apellido": "Escribe tu apellido.",
+            "cita-email": "Escribe un correo electrónico válido.",
+            "cita-telefono": "Escribe un teléfono válido (mínimo 9 dígitos).",
+            "cita-rgpd": "Debes aceptar la política de privacidad."
+        };
+
+        function limpiarError(campo) {
+            var contenedor = campo.closest(".campo-cita, .checkbox-rgpd-cita");
+            var error = contenedor ? contenedor.querySelector(".mensaje-error") : null;
+            campo.classList.remove("campo-error");
+            if (error) {
+                error.textContent = "";
+            }
+        }
+
+        // Devuelve true si todos los campos obligatorios del paso están completos.
+        function validarPaso(numPaso) {
+            var campoPaso = document.getElementById("paso-" + numPaso);
+            var campos = campoPaso.querySelectorAll("input, textarea, select");
+            var valido = true;
+
+            for (var i = 0; i < campos.length; i++) {
+                var campo = campos[i];
+                var contenedor = campo.closest(".campo-cita, .checkbox-rgpd-cita");
+                var error = contenedor ? contenedor.querySelector(".mensaje-error") : null;
+
+                if (campo.disabled || (campo.type === "hidden")) {
+                    continue;
+                }
+                if (!campo.checkValidity()) {
+                    valido = false;
+                    campo.classList.add("campo-error");
+                    if (error) {
+                        error.textContent = mensajesError[campo.id] || campo.validationMessage;
+                    }
+                } else {
+                    campo.classList.remove("campo-error");
+                    if (error) {
+                        error.textContent = "";
+                    }
+                }
+            }
+            return valido;
+        }
+
+        // Formatea la fecha (aaaa-mm-dd) a dd/mm/aaaa
+        function formatearFecha(valor) {
+            if (!valor) { return "—"; }
+            var partes = valor.split("-");
+            if (partes.length !== 3) { return valor; }
+            return partes[2] + "/" + partes[1] + "/" + partes[0];
+        }
+
+        // Rellena el resumen del paso 3 con los datos ya introducidos.
+        function rellenarResumen() {
+            document.getElementById("resumen-vehiculo").textContent =
+                document.getElementById("cita-vehiculo").value || "—";
+            document.getElementById("resumen-fecha").textContent =
+                formatearFecha(document.getElementById("cita-fecha").value);
+            document.getElementById("resumen-hora").textContent =
+                document.getElementById("cita-hora").value || "—";
+            document.getElementById("resumen-nombre").textContent =
+                (document.getElementById("cita-nombre").value || "—") + " " +
+                (document.getElementById("cita-apellido").value || "");
+            document.getElementById("resumen-email").textContent =
+                document.getElementById("cita-email").value || "—";
+            document.getElementById("resumen-telefono").textContent =
+                document.getElementById("cita-telefono").value || "—";
+        }
+
+        // Muestra el contenedor del paso indicado y actualiza el indicador.
+        function mostrarPaso(numPaso) {
+            var pasos = document.querySelectorAll(".paso-cita-caja");
+            for (var i = 0; i < pasos.length; i++) {
+                pasos[i].hidden = (i + 1) !== numPaso;
+            }
+            cambiarPaso(numPaso);
+            if (numPaso === 3) {
+                rellenarResumen();
+            }
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            cargarVehiculo();
+
+            // Avanzar: valida el paso actual antes de saltar al siguiente
+            var botonesSiguiente = document.querySelectorAll(".btn-siguiente");
+            for (var i = 0; i < botonesSiguiente.length; i++) {
+                (function (boton) {
+                    boton.addEventListener("click", function () {
+                        var destino = parseInt(boton.getAttribute("data-paso"), 10);
+                        var actual = destino - 1;
+                        if (validarPaso(actual)) {
+                            mostrarPaso(destino);
+                        }
+                    });
+                })(botonesSiguiente[i]);
+            }
+
+            // Volver: retrocede sin validar
+            var botonesAnterior = document.querySelectorAll(".btn-anterior");
+            for (var i = 0; i < botonesAnterior.length; i++) {
+                (function (boton) {
+                    boton.addEventListener("click", function () {
+                        var destino = parseInt(boton.getAttribute("data-paso"), 10);
+                        mostrarPaso(destino);
+                    });
+                })(botonesAnterior[i]);
+            }
+
+            // Limpia el error al corregir el campo
+            var obligatorios = document.querySelectorAll("#form-cita [required], #form-cita input[type='date'], #form-cita input[type='time']");
+            for (var i = 0; i < obligatorios.length; i++) {
+                obligatorios[i].addEventListener("input", function () { limpiarError(this); });
+                obligatorios[i].addEventListener("change", function () { limpiarError(this); });
+            }
+
+            // Envío: valida el paso 3 y muestra el estado de éxito
+            document.getElementById("form-cita").addEventListener("submit", function (evento) {
+                evento.preventDefault();
+                if (!validarPaso(3)) {
+                    return;
+                }
+                this.hidden = true;
+                document.getElementById("estado-exito").hidden = false;
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            // El paso 1 es el primero en completarse
+            mostrarPaso(1);
+        });
+    </script>
+</body>
+</html>

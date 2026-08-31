@@ -1,34 +1,37 @@
 # Plan de Desarrollo Web – Superautos Carballo
 
 - **Autor:** José Rafael García Torres
-- **Fecha:** 07/08/2026 (revisión tras el Fito 2)
+- **Fecha:** 14/08/2026 (reconstrucción tras el Fito 2, mapa web, flujograma y guía visual)
 - **Proyecto:** Diseño y desarrollo del sitio web corporativo de Superautos Carballo
-- **Documentos de referencia:**
-  - `Garcia_Torres_Jose_Rafael_Hito1_Brief.md` (Fito 1 – Brief)
-  - `Jose_Rafael_Garcia_torres_Fito2_DocumentoFuncional.md` (Fito 2 – Documento funcional)
-- **Diseño de origen:** archivo Pencil `diseño.pen` (3 resoluciones por página: 1440 / 768 / 390 px)
-- **Repositorio:** Git inicializado en local (05/08/2026); URL pública pendiente de subir a GitHub
+- **Documentos de referencia (estudiar antes del desarrollo):**
+  - Brief: `Garcia_Torres_Jose_Rafael_Hito1_Brief.md` (+ PDF `Garcia_Torres_Jose_Rafael_fito1_brief.pdf`)
+  - Documento funcional: `Jose_Rafael_Garcia_torres_Fito2_DocumentoFuncional.md` (+ PDF `Garcia_Torres_Jose_Rafael_Fito2_DocumentoFuncional.pdf`)
+  - Mapa web / sitemap: `jose_rafael_Garcia_Torres_sitemap.xlsx` (+ PDF `MAPA_WEB.pdf`)
+  - Flujograma de formularios: carpeta `flujograma/` (+ PDF `Garcia_Torres_Jose_Rafael_Flujograma.pdf`)
+  - Guía visual: `Plan_Guia_Visual.md`, `guia_visual.pen`, exportaciones en `guia_visual/` (12 PNG + PDF `guia_visual_superautos_carballo.pdf`)
+  - Wireframes / diseño: `diseño.pen` (diseño original), `diseño2.pen` (wireframes), `HIJAS.PEN`, exports `Garcia_Torres_Jose_Rafael_Diseño2.pdf` y `export1.pdf`
+- **Repositorio:** Git local inicializado; URL pública de GitHub pendiente (`https://github.com/<usuario>/superautos-carballo`)
+- **Archivos de solo lectura:** todos los anteriores. **El único documento que se edita en esta reconstrucción es `plan.md`.**
 
 ---
 
-## Sobre esta revisión
+## Sobre esta revisión (v3)
 
-Este plan actualiza la versión anterior (03/08/2026) para alinearla con las decisiones tomadas en el Fito 1 y, sobre todo, en el Fito 2. Los cambios principales:
+Esta versión reconstruye y completa el plan anterior (07/08/2026) con toda la información disponible del proyecto, para que sirva de única fuente de consulta en la fase de desarrollo:
 
-- **Estructura de páginas corregida:** los antiguos `servicio_de_ventas.html`, `mantenimiento.html` y `pos_ventas.html` se fusionan en **una única página `servicios.html`**. El sitemap pasa a ser el definitivo del Fito 2: **7 páginas** con dos páginas hijas (`ficha_vehiculo.html` hija del catálogo y `proba_conduccion.html` hija de la ficha).
-- **Catálogo fijado en 8 vehículos** de ejemplo (mezcla de gasolina, híbridos y eléctricos) para que los filtros tengan sentido sin inflar el trabajo de imágenes y datos.
-- **Tres formularios por contexto** (contacto con selector de motivo, prueba de conducción en 3 pasos y recambios), no un único formulario universal.
-- **El backend PHP y la base de datos pasan a fase posterior.** En esta fase los formularios validan en cliente y los estados de envío son **simulados**; ningún dato abandona el navegador.
-- **Accesibilidad WCAG 2.2 AA** (sustituye a 2.1) y rendimiento con objetivos de comprobación en Lighthouse.
-- Imágenes en **WebP con fallback JPEG** (no AVIF) y nombre correcto del archivo de diseño (`diseño.pen`).
+- **Guía visual integrada:** el plan incorpora ahora el **design system completo** (paleta principal y secundaria, tipografías y jerarquía, sistema de espaciado, componentes con estados y accesibilidad visual) definido en `guia_visual.pen` y exportado a `guia_visual/`. Sustituye a la sección 8 anterior.
+- **Sitemap definitivo:** se adopta el del mapa web (`jose_rafael_Garcia_Torres_sitemap.xlsx` / `MAPA_WEB.pdf`), con **identificadores de página (P01–P07)** y **componentes reutilizables (C01–C09)**. Se añade de forma explícita la página `404.html` (P06) y `privacidad.html` (P07) a la estructura.
+- **Flujograma documentado:** los tres formularios quedan ligados a su flujo (`flujograma/`), que define el recorrido completo (entrada, campos, validación, estados de envío y mensajes) del contacto, la prueba de conducción y los recambios.
+- **Wireframes como referencia de diseño:** se actualiza el origen de diseño (antes solo `diseño.pen`) para incluir `diseño2.pen` (wireframes) y `HIJAS.PEN`, con sus exports PDF. Las 3 resoluciones por página siguen siendo **390 / 768 / 1440 px**.
+- **Tokens finales del diseño:** los valores de color se han alineado con los tokens reales del diseño (p. ej. texto `#111111`, gris informativo `#6B7280`, error `#DC2626`, éxito `#16A34A`), que sustituyen a las propuestas previas.
 
 ---
 
 ## 1. Resumen ejecutivo
 
-Desarrollo de un sitio web corporativo moderno, responsive y orientado a la conversión para Superautos Carballo, concesionario multimarca de vehículos de alta gama con sede en Carballo. El sitio presenta el catálogo de vehículos (8 de ejemplo), explica los servicios de venta, mantenimiento y posventa, facilita la solicitud de recambios bajo pedido y ofrece canales de conversión: contacto con selector de motivo y solicitud de prueba de conducción en varios pasos.
+Desarrollo de un sitio web corporativo moderno, responsive y orientado a la conversión para **Superautos Carballo**, concesionario multimarca de vehículos de alta gama con sede en Carballo. El sitio presenta el catálogo de vehículos (8 de ejemplo), explica los servicios de venta, mantenimiento y posventa, facilita la solicitud de recambios bajo pedido y ofrece canales de conversión: contacto con selector de motivo y solicitud de prueba de conducción en 3 pasos.
 
-Esta fase desarrolla una **maqueta front-end funcional**: **7 páginas tipo**, un **catálogo de demostración** con los datos en el propio sitio (objeto JS), **tres formularios** con validación en cliente y estados simulados, y todo el trabajo de **diseño responsive, SEO, accesibilidad y rendimiento** preparado para conectarse en el futuro a una base de datos y a un backend PHP.
+Esta fase desarrolla una **maqueta front-end funcional**: **7 páginas tipo**, un **catálogo de demostración** con los datos en el propio sitio (objeto JS), **tres formularios** con validación en cliente y estados de envío **simulados**, y todo el trabajo de **diseño responsive, SEO, accesibilidad y rendimiento** preparado para conectarse en el futuro a una base de datos y a un backend PHP.
 
 La ficha de vehículo es la **plantilla reutilizable** del proyecto: no hay una página por coche; el catálogo y la home enlazan siempre a `ficha_vehiculo.html`, que se rellena según el vehículo seleccionado.
 
@@ -40,11 +43,11 @@ La ficha de vehículo es la **plantilla reutilizable** del proyecto: no hay una 
 
 | Bloque | Detalle |
 |---|---|
-| Páginas tipo | `index.html`, `catalogo.html`, `servicios.html`, `recambios.html`, `contacto.html` + 2 páginas hijas (`ficha_vehiculo.html`, `proba_conduccion.html`). **7 páginas en total** + `privacidad.html` (requerida por RGPD). |
+| Páginas tipo | `index.html`, `catalogo.html`, `servicios.html`, `recambios.html`, `contacto.html` + 2 páginas hijas (`ficha_vehiculo.html`, `proba_conduccion.html`). **7 páginas en total** + `privacidad.html` (RGPD, P07) y `404.html` (P06). |
 | Catálogo de demostración | **8 vehículos de ejemplo** con los datos en el propio sitio (objeto JS) y maquetado en HTML, sin servidor ni base de datos. |
-| Formularios | Contacto (con selector de motivo), prueba de conducción (varios pasos) y recambios. Validación en cliente y estados de envío **simulados**. |
+| Formularios | Contacto (con selector de motivo), prueba de conducción (3 pasos) y recambios. Validación en cliente y estados de envío **simulados**. Flujos definidos en `flujograma/`. |
 | Interacciones | Menú (con menú móvil por teclado), carrusel de destacados (Bootstrap 5), filtros del catálogo, galería con zoom en la ficha, microinteracciones y animaciones de entrada. |
-| Diseño | Adaptable (390 / 768 / 1440 px), accesible (WCAG 2.2 AA), SEO básico e imágenes optimizadas. |
+| Diseño | Adaptable (390 / 768 / 1440 px), accesible (WCAG 2.2 AA), SEO básico e imágenes optimizadas. Design system definido en la guía visual (sección 8 de este plan). |
 
 ### 2.2 Qué queda para una programación posterior
 
@@ -57,18 +60,19 @@ La ficha de vehículo es la **plantilla reutilizable** del proyecto: no hay una 
 
 ## 3. Sitemap y jerarquía de páginas
 
-### 3.1 Sitemap
+### 3.1 Sitemap con identificadores (fuente: mapa web, `jose_rafael_Garcia_Torres_sitemap.xlsx`)
 
 ```
 Superautos Carballo
-├── index.html                # Inicio: hero + carrusel, servicios, destacados, CTA
-├── catalogo.html             # Catálogo (cuadrícula con filtros)
-│   └── ficha_vehiculo.html   # Ficha del vehículo (página hija del catálogo) – plantilla reutilizable
-│       └── proba_conduccion.html   # Solicitud de prueba de conducción (hija de la ficha)
-├── servicios.html            # Venta, mantenimiento y posventa
-├── recambios.html            # Recambios + formulario de solicitud
-├── contacto.html             # Formulario de contacto, datos y mapa
-└── privacidad.html           # Política de privacidad (RGPD, enlazada desde los formularios)
+├── P01 index.html                 # Inicio: hero + carrusel, servicios, destacados, por qué elegirnos, CTA final
+├── P02 catalogo.html              # Catálogo (cabecera, filtros, cuadrícula 8 vehículos, estado vacío)
+│   └── P02.1 ficha_vehiculo.html  # Ficha del vehículo (plantilla reutilizable, hija del catálogo)
+│       └── P02.1.1 proba_conduccion.html   # Solicitud de prueba de conducción (3 pasos, hija de la ficha)
+├── P03 servicios.html             # Venta, mantenimiento y posventa
+├── P04 recambios.html             # Recambios + formulario de solicitud
+├── P05 contacto.html              # Formulario de contacto, datos y mapa
+├── P06 404.html                   # Página de error 404 personalizada
+└── P07 privacidad.html            # Política de privacidad y aviso legal (RGPD/LOPDGDD)
 ```
 
 ### 3.2 Relaciones entre páginas
@@ -82,64 +86,82 @@ Superautos Carballo
 | `servicios.html` | `contacto.html` (CTA de cada servicio) y `recambios.html` | Conversión |
 | `recambios.html` | `contacto.html` (datos alternativos) | Complementaria |
 | `contacto.html` | — (destino final de conversión) | — |
+| `404.html` | `index.html` | Recuperación de error |
+| `privacidad.html` | — (legal; enlazada desde los checkbox RGPD) | — |
 
 Reglas de relación:
 
-- Todas las páginas comparten el menú global y el footer. El logo del header enlaza siempre a `index.html`.
+- Todas las páginas comparten el **menú global (C01)** y el **footer (C02)**. El logo del header enlaza siempre a `index.html`.
 - **Dos páginas hijas** (requisito de la fase): `ficha_vehiculo.html` (hija del catálogo) y `proba_conduccion.html` (hija de la ficha).
 - La ficha es **siempre el mismo archivo**; se rellena según el vehículo seleccionado (no hay una página por coche).
-- **Breadcrumb** en las páginas hijas: *Inicio > Catálogo > [vehículo]* en la ficha e *Inicio > Catálogo > [vehículo] > Solicitar prueba* en la solicitud de prueba.
-- **Enlace «saltar al contenido»** en todas las páginas.
+- **Breadcrumb (C06)** en las páginas hijas: *Inicio > Catálogo > [vehículo]* en la ficha e *Inicio > Catálogo > [vehículo] > Solicitar prueba* en la solicitud de prueba.
+- **Enlace «saltar al contenido» (C08)** en todas las páginas.
+
+### 3.3 Componentes reutilizables (fuente: mapa web)
+
+| ID | Componente | Dónde se usa | Contenido |
+|---|---|---|---|
+| C01 | Menú de navegación global | Todas las páginas | Inicio, Catálogo, Servicios, Recambios, Contacto + CTA «Reservar cita»; hamburguesa en móvil |
+| C02 | Footer | Todas las páginas | Columnas de enlaces, datos del concesionario y redes sociales (Instagram, Facebook, YouTube) |
+| C03 | Tarjeta de vehículo | Catálogo y destacados de la home | Imagen, marca/modelo, etiquetas (año, km, combustible, cambio), precio y botón «Ver ficha» |
+| C04 | Carrusel de destacados | Inicio | Slides con imagen de gran formato, marca/modelo, datos, precio y CTA (Carousel Bootstrap 5) |
+| C05 | Bloque de servicio | Servicios y home (versión resumida) | Icono/imagen, título, descripción, lista de servicios y CTA |
+| C06 | Breadcrumb | Páginas hijas | Enlaces de texto con la jerarquía |
+| C07 | Estados de formularios | Contacto, prueba y recambios | Inicial, error de campo, envío (spinner), éxito, error general |
+| C08 | Saltar al contenido + SEO básico | Todas las páginas | Enlace de salto, `title`/`meta description` únicos, un `h1`, HTML semántico |
+| C09 | Bloque de confianza | Ficha de vehículo y home | Certificación, revisión y garantía del vehículo (en home: «Por qué elegirnos») |
 
 ---
 
 ## 4. Descripción de cada página
 
-### 4.1 Inicio (`index.html`)
+### 4.1 Inicio (`index.html`) — P01
 
 Puerta de entrada: presentar la marca, captar la atención de una clientela de alto poder adquisitivo y dirigir el tráfico hacia el catálogo, los servicios y el contacto.
 
-1. **Hero con carrusel de vehículos destacados.** Imagen de gran formato, marca/modelo, datos resumen, precio y botón de acción. Sobresombreado inferior para garantizar la legibilidad del texto.
-2. **Resumen de servicios.** Tres bloques (Venta, Mantenimiento, Posventa) con icono, título, descripción breve y botón hacia `servicios.html`.
-3. **Vehículos destacados.** Cuadrícula con las mismas tarjetas del catálogo, que enlazan a la ficha.
-4. **Por qué elegirnos.** Bloque de confianza: trato directo, certificación, garantía, servicio integral y entrega a domicilio en Galicia *(supuesto por confirmar, ver 12.4)*.
+1. **Hero con carrusel de vehículos destacados (C04).** Imagen de gran formato, marca/modelo, datos resumen, precio y botón de acción. Sobresombreado inferior para garantizar la legibilidad del texto.
+2. **Resumen de servicios (C05).** Tres bloques (Venta, Mantenimiento, Posventa) con icono, título, descripción breve y botón hacia `servicios.html`.
+3. **Vehículos destacados (C03).** Cuadrícula con las mismas tarjetas del catálogo, que enlazan a la ficha.
+4. **Por qué elegirnos (C09).** Bloque de confianza: trato directo, certificación, garantía, servicio integral y entrega a domicilio en Galicia *(supuesto por confirmar, ver 12.4)*.
 5. **CTA final.** Botón «Contactar» y datos de contacto resumidos.
 
 **CTAs.** «Ver catálogo», «Ver ficha», «Conocer servicios», «Contactar».
 
-### 4.2 Catálogo (`catalogo.html`)
+### 4.2 Catálogo (`catalogo.html`) — P02
 
-Mostrar los 8 vehículos de ejemplo en cuadrícula y permitir filtrarlos (ver sección 5). Estructura:
+Mostrar los 8 vehículos de ejemplo en cuadrícula y permitir filtrarlos. Estructura:
 
 1. **Cabecera.** Titular, descripción breve y número de vehículos disponibles.
-2. **Barra de filtros.** Por **marca**, **combustible** y **precio** (rango), y ordenación por precio (ascendente/descendente) y año. Los filtros se combinan entre sí y la cuadrícula se actualiza al momento.
-3. **Cuadrícula de resultados.** Tarjetas de vehículo reutilizables (1 columna en móvil, 2 en tablet, 3 en escritorio).
+2. **Barra de filtros.** Por **marca**, **combustible** y **precio** (rango), y ordenación por precio (ascendente/descendente) y año. Los filtros se combinan entre sí y la cuadrícula se actualiza al momento (respuesta visual con fade + contador de resultados).
+3. **Cuadrícula de resultados (C03).** Tarjetas de vehículo reutilizables (1 columna en móvil, 2 en tablet, 3 en escritorio).
 4. **Estado vacío.** Mensaje cuando ningún vehículo cumple los filtros, con botón «Limpiar filtros».
 
 **CTAs.** «Ver ficha» en cada tarjeta, «Limpiar filtros».
 
-### 4.3 Ficha de vehículo (`ficha_vehiculo.html`) — hija del catálogo
+### 4.3 Ficha de vehículo (`ficha_vehiculo.html`) — P02.1, hija del catálogo
 
 Muestra la información completa de un vehículo y ofrece las acciones de conversión. Es la **misma página para todos los vehículos**: lee el identificador de la URL, busca los datos en el catálogo front-end y los vuelca en los bloques. Si el identificador no existe, muestra un aviso con enlace al catálogo.
 
 | Bloque | Contenido |
 |---|---|
-| Galería | Fotografías del vehículo, con ampliación/zoom (lightbox) |
+| Breadcrumb (C06) | Inicio > Catálogo > [vehículo] |
+| Galería | Fotografías del vehículo (4–6), con ampliación/zoom (lightbox accesible) |
 | Resumen y precio | Marca, modelo, precio y etiquetas de año, kilometraje, combustible, cambio y potencia |
 | Datos técnicos | Garantía, equipamiento, estado y disponibilidad |
 | Equipamiento | Listado de extras incluidos |
-| Bloque de confianza | Certificación, revisión y garantía del vehículo |
-| CTAs | «Solicitar información» (→ `contacto.html` con el vehículo prefilled) y «Solicitar prueba» (→ `proba_conduccion.html` con el vehículo prefilled) |
+| Bloque de confianza (C09) | Certificación, revisión y garantía del vehículo |
+| CTAs | «Solicitar información» (→ `contacto.html?vehiculo=<id>&motivo=informacion`, prefilled) y «Solicitar prueba» (→ `proba_conduccion.html?vehiculo=<id>`, prefilled) |
+| Aviso de id inexistente | Mensaje de aviso y enlace a `catalogo.html` |
 
-### 4.4 Solicitud de prueba de conducción (`proba_conduccion.html`) — hija de la ficha
+### 4.4 Solicitud de prueba de conducción (`proba_conduccion.html`) — P02.1.1, hija de la ficha
 
-Formulario **en 3 pasos** para solicitar una prueba de conducción. Se accede desde la ficha con el vehículo ya seleccionado (detalles en la sección 7.2).
+Formulario **en 3 pasos** para solicitar una prueba de conducción (detalles en 7.2). Se accede desde la ficha con el vehículo ya seleccionado. Breadcrumb: *Inicio > Catálogo > [vehículo] > Solicitar prueba*.
 
 **Aviso importante mostrado en esta página:** la solicitud **no es una reserva automática**. Es una petición que el concesionario confirma por teléfono o correo antes de cerrar la cita, para gestionar expectativas y evitar reservas fantasma.
 
-### 4.5 Servicios (`servicios.html`)
+### 4.5 Servicios (`servicios.html`) — P03
 
-Presenta los tres servicios con la misma estructura (icono o imagen, título, descripción, lista de servicios incluidos y CTA):
+Presenta los tres servicios con la misma estructura (C05: icono o imagen, título, descripción, lista de servicios incluidos y CTA):
 
 - **Venta.** Asesoramiento, financiación, prueba de conducción y tramitación de la compra.
 - **Mantenimiento.** Revisiones oficiales, diagnóstico y reparación, preparación para la ITV y vehículo de sustitución *(supuesto, ver 12.4)*.
@@ -147,19 +169,23 @@ Presenta los tres servicios con la misma estructura (icono o imagen, título, de
 
 **CTAs.** «Contactar» en cada sección y enlace a `recambios.html` desde mantenimiento.
 
-### 4.6 Recambios (`recambios.html`)
+### 4.6 Recambios (`recambios.html`) — P04
 
-Página informativa + formulario independiente de solicitud de recambios (sección 7.3). Explica el proceso (consulta → confirmación → pedido al proveedor → aviso al cliente) y que las piezas son **bajo pedido**, con plazo estimado de **1–2 semanas** desde la confirmación *(supuesto, ver 12.4)*.
+Página informativa + formulario independiente de solicitud de recambios (sección 7.3). Explica el proceso (**consulta → confirmación → pedido al proveedor → aviso al cliente**) y que las piezas son **bajo pedido**, con plazo estimado de **1–2 semanas** desde la confirmación *(supuesto, ver 12.4)*.
 
-### 4.7 Contacto (`contacto.html`)
+### 4.7 Contacto (`contacto.html`) — P05
 
 1. **Formulario de contacto** con **selector obligatorio de motivo de la consulta** (sección 7.1). Cuando se llega desde la ficha con el botón «Solicitar información», el vehículo (identificador, marca y modelo) y el motivo llegan prefilled por la URL.
-2. **Datos del concesionario.** Dirección, teléfono, correo y horario.
-3. **Mapa e indicaciones.** Mapa **incrustado** (iframe interactivo de OpenStreetMap) con imagen estática de reserva, indicaciones de acceso en texto y botón «Cómo llegar» que **abre la app de navegación del móvil** (enlace `geo:` que abre Google Maps o Apple Maps). Si el cliente prefiere Google Maps, se cambia el iframe y se activa el aviso de cookies *(supuesto, ver 12.4)*.
+2. **Datos del concesionario.** Dirección, teléfono, correo y horario (coherentes con el footer y la home).
+3. **Mapa e indicaciones.** Mapa **incrustado** (iframe interactivo de OpenStreetMap, o Google Maps si el cliente lo prefiere) con imagen estática de reserva, indicaciones de acceso en texto y botón «Cómo llegar» que **abre la app de navegación del móvil** (enlace `geo:`). Si se usa Google Maps, se activa el banner de cookies.
 
-### 4.8 Política de privacidad (`privacidad.html`)
+### 4.8 Página 404 (`404.html`) — P06
 
-Página simple (no es página tipo): explica finalidad del tratamiento, legitimación (consentimiento), derechos ARCO+portabilidad, conservación y cookies. Enlazada desde el checkbox RGPD de los tres formularios.
+Página de error personalizada: mensaje claro, enlace de vuelta al inicio y (opcionalmente) al catálogo. Debe responder con estado HTTP 404.
+
+### 4.9 Política de privacidad y aviso legal (`privacidad.html`) — P07
+
+Página legal (no es página tipo): explica finalidad del tratamiento, legitimación (consentimiento), derechos (acceso, rectificación, supresión, oposición, limitación y portabilidad), conservación, cookies y aviso legal. Enlazada desde el checkbox RGPD de los tres formularios.
 
 ---
 
@@ -195,7 +221,7 @@ Datos y precios ficticios. La mezcla de combustibles y tipos es intencionada: co
 | Equipamiento | Asientos deportivos, techo panorámico, sistema BOSE… |
 | Disponibilidad | En stock / Bajo pedido |
 | Imágenes | Galería de fotografías del vehículo |
-| CTAs | «Solicitar información» y «Reservar prueba» |
+| CTAs | «Solicitar información» y «Solicitar prueba» |
 
 ### 5.3 Ficha como plantilla reutilizable
 
@@ -220,7 +246,7 @@ Cada vehículo dispone de 3 resoluciones en `assets/img/<marca>/<vehiculo>@<fact
 - **Tablet (768 px):** archivos terminados en `@2x.webp`.
 - **Móvil (390 px):** nombre base `.webp` (sin sufijo).
 
-Además: `assets/img/hero.webp` para el hero, los logos de marca (`.webp` + `.xcf` de origen en GIMP) y el logo corporativo de prueba. Las imágenes restantes de la carpeta `assets/img/` (modelos no incluidos en el catálogo) quedan como material disponible para el carrusel o futuras ampliaciones.
+Además: `assets/img/hero.webp` para el hero, los logos de marca (`.webp` + `.xcf` de origen en GIMP) y el logo corporativo de prueba. Las imágenes restantes de `assets/img/` (modelos no incluidos en el catálogo: Ferrari 849 Testarrosa, Porsche 718 Spyder RS, Audi Q7/A1, Mercedes CL, Lamborghini Temerario…) quedan como **material disponible para el carrusel o futuras ampliaciones**.
 
 ---
 
@@ -231,36 +257,37 @@ Además: `assets/img/hero.webp` para el hero, los logos de marca (`.webp` + `.xc
 | Área | Tecnología |
 |---|---|
 | Marcado | HTML5 semántico |
-| Estilos | **Bootstrap 5** + CSS personalizado (tokens/variables CSS) |
+| Estilos | **Bootstrap 5** + CSS personalizado (tokens/variables CSS de la guía visual, sección 8) |
 | Comportamiento | JavaScript vanilla (sin dependencias para el núcleo) + componentes de Bootstrap. **El carrusel de la home usa obligatoriamente el componente Carousel de Bootstrap 5** (`bootstrap.bundle.min.js`), sin JS propio |
 | Backend (fase futura) | **PHP** (procesamiento de formularios, envío de e-mail, seguridad) |
 | Imágenes | **WebP con fallback JPEG** (3 resoluciones por imagen) |
-| Fuentes | Google Fonts: Anton (titulares) + Inter (cuerpo) |
+| Fuentes | Google Fonts: **Inter** (títulos y cuerpo) + **Montserrat** (negrita y botones) |
 | Iconos | Lucide (SVG inline) / Bootstrap Icons |
+| Diseño | Bootstrap 5 (grid responsive 390/768/1440, menú colapsable, carrusel, modal de confirmación) |
 
 ### 6.2 Por qué Bootstrap 5
 
-- Es lo que viene en el **export del diseño Pencil** (`diseño.pen`).
+- Es lo que viene en el **export del diseño Pencil** (`diseño.pen` / `diseño2.pen`).
 - Resuelve con el componente oficial el **Carousel** (requisito del plan), la **cuadrícula responsive** (390/768/1440), el **menú colapsable** y el **modal** de confirmación, sin JS propio para eso.
 - Tiene buena accesibilidad base (ARIA en carrusel y collapse) y documentación amplia.
-- El resto (estilos, tokens, microinteracciones, animaciones) es CSS propio: Bootstrap es la base, no el estilo.
+- El resto (estilos, tokens de la guía visual, microinteracciones, animaciones) es CSS propio: Bootstrap es la base, no el estilo.
 
-### 6.3 Estructura de carpetas
+### 6.3 Estructura de carpetas prevista
 
 ```
 Proyecto/
-├── index.html                 # Inicio (hero + carrusel, servicios, destacados, CTA)
-├── catalogo.html              # Catálogo (cuadrícula con filtros)
-├── ficha_vehiculo.html        # Ficha del vehículo (plantilla reutilizable, hija del catálogo)
-├── proba_conduccion.html      # Solicitud de prueba de conducción (3 pasos, hija de la ficha)
-├── servicios.html             # Venta, mantenimiento y posventa
-├── recambios.html             # Recambios + formulario de solicitud
-├── contacto.html              # Formulario de contacto, datos y mapa
-├── privacidad.html            # Política de privacidad (RGPD)
-├── 404.html                   # Página 404 personalizada
+├── index.html                 # Inicio (P01)
+├── catalogo.html              # Catálogo (P02)
+├── ficha_vehiculo.html        # Ficha del vehículo (P02.1, plantilla reutilizable)
+├── proba_conduccion.html      # Solicitud de prueba (P02.1.1, 3 pasos)
+├── servicios.html             # Servicios (P03)
+├── recambios.html             # Recambios (P04)
+├── contacto.html              # Contacto (P05)
+├── 404.html                   # Página 404 (P06)
+├── privacidad.html            # Política de privacidad (P07)
 ├── assets/
 │   ├── css/
-│   │   ├── tokens.css         # Variables CSS (colores, tipografías, espaciado)
+│       │   ├── tokens.css         # Variables CSS de la guía visual (sección 8) — colores #0052FF, #FFFFFF, #CFD8E6, #000000, #6B7280, #0038B8, #DC2626, #16A34A + tipografía Inter/Montserrat
 │   │   ├── base.css           # Reset y estilos base
 │   │   ├── layout.css         # Header, footer, grid
 │   │   └── componentes.css    # Botones, tarjetas, formularios, carrusel
@@ -285,6 +312,8 @@ Proyecto/
 ├── favicon.svg
 ├── robots.txt
 ├── sitemap.xml
+├── guia_visual/               # Guía visual exportada (12 PNG + PDF) — referencia de diseño
+├── flujograma/                # Flujograma de formularios (referencia)
 └── plan.md
 ```
 
@@ -298,9 +327,11 @@ Decisión tomada en el Fito 2 tras revisar las webs de referencia: **no hay un �
 
 | Formulario | Página | Motivo | Cómo llega el vehículo |
 |---|---|---|---|
-| Contacto con selector de motivo | `contacto.html` | Información, prueba, financiación, mantenimiento, posventa, consulta general | Prefilled desde la ficha vía URL |
-| Prueba de conducción (3 pasos) | `proba_conduccion.html` | Reserva de una prueba | Prefilled desde la ficha vía URL |
-| Recambios | `recambios.html` | Solicitud de piezas | El usuario escribe marca/modelo de la pieza |
+| Contacto con selector de motivo | `contacto.html` (P05) | Información, prueba, financiación, mantenimiento, posventa, consulta general | Prefilled desde la ficha vía URL |
+| Prueba de conducción (3 pasos) | `proba_conduccion.html` (P02.1.1) | Reserva de una prueba | Prefilled desde la ficha vía URL |
+| Recambios | `recambios.html` (P04) | Solicitud de piezas | El usuario escribe marca/modelo de la pieza |
+
+> Los flujos completos de los tres formularios están definidos en el flujograma (`flujograma/` y `Garcia_Torres_Jose_Rafael_Flujograma.pdf`): entrada, campos, decisión de motivo, validación, envío, estados de éxito/error y fin. Este plan recoge el resumen operativo; el flujograma es la fuente detallada.
 
 ### 7.1 Formulario de contacto (`contacto.html`)
 
@@ -326,7 +357,7 @@ Decisión tomada en el Fito 2 tras revisar las webs de referencia: **no hay un �
 
 **Prefill desde la ficha.** El botón «Solicitar información» de la ficha enlaza a `contacto.html?vehiculo=<id>&motivo=informacion`. El formulario lee el parámetro, preselecciona el motivo y rellena el identificador, la marca y el modelo del vehículo. Al enviar, el identificador y el modelo van como campos ocultos (para que el concesionario sepa de qué coche se habla).
 
-**Estados.** Inicial, error de campo, envío en proceso (spinner), éxito (mensaje de confirmación y vaciado) y error general (se conservan los datos).
+**Estados (C07).** Inicial, error de campo, envío en proceso (spinner), éxito (mensaje de confirmación y vaciado) y error general (se conservan los datos). **Ningún dato abandona el navegador** (envío simulado).
 
 ### 7.2 Formulario de prueba de conducción (`proba_conduccion.html`)
 
@@ -340,7 +371,7 @@ Aviso destacado en la página y en el paso 1:
 
 > **Tu solicitud está pendiente de confirmación.** No se reserva nada automáticamente: el concesionario contactará contigo por teléfono o correo para confirmar la fecha y la hora de la prueba.
 
-En el estado de éxito se repite la misma idea: «Hemos recibido tu solicitud de prueba del *Porsche 911 Targa 4S*. En breve te confirmaremos la fecha y la hora».
+En el estado de éxito se repite la misma idea: «Hemos recibido tu solicitud de prueba del *Porsche 911 Targa 4S*. En breve te confirmaremos la fecha y la hora». El concesionario confirma por teléfono o correo antes de cerrar la cita (evita reservas fantasma).
 
 ### 7.3 Formulario de recambios (`recambios.html`)
 
@@ -374,7 +405,7 @@ Formulario independiente, con los campos ya definidos: referencia de la pieza, m
 
 ### 7.5 Reglas comunes a todos los formularios
 
-- Validación en cliente con `blur` y al enviar; mensajes junto al campo con `role="alert"` y `aria-describedby`.
+- Validación en cliente con `blur` y al enviar; mensajes en español junto al campo con `role="alert"` y `aria-describedby`.
 - `autocomplete` adecuado (`name`, `family-name`, `email`, `tel`).
 - Campos obligatorios con `required` + `aria-required`.
 - Checkbox de privacidad obligatorio y enlace a `privacidad.html`.
@@ -382,32 +413,87 @@ Formulario independiente, con los campos ya definidos: referencia de la pieza, m
 
 ---
 
-## 8. Identidad visual y colores del diseño
+## 8. Guía visual y design system
 
-Paleta extraída del diseño `diseño.pen` (variables del documento):
+Fuente: `guia_visual.pen`, `Plan_Guia_Visual.md` y exportaciones en `guia_visual/` (12 secciones en frames A4: portada, logotipo, paletas, tipografía, espaciado, botones, formularios, tarjetas, menús, accesibilidad y usos). **Los valores canónicos están en la guía; este plan los recoge para implementarlos como tokens CSS.**
+
+### 8.1 Paleta principal (tokens del diseño)
 
 | Token | Valor | Uso |
 |---|---|---|
-| `$surface-primary` | `#FFFFFF` | Fondo de contenido de las páginas interiores |
-| `$surface-inverse` | `#000000` | Fondo de la home, header y footer |
-| `$foreground-primary` | `#000000` | Titulares y cuerpo sobre fondo claro |
-| `$foreground-inverse` | `#FFFFFF` | Titulares y textos sobre negro |
-| `$foreground-muted` | `#9CA3AF` | Descripciones, footer, placeholders (solo decorativo) |
-| `$border-subtle` | `#E5E7EB` | Separadores, inputs, chips del menú |
-| `$accent` | `#FF9800` | Botones, acentos, resaltados, icono del logo |
+| `$accent` | `#0052FF` | **Azul eléctrico:** separadores, bordes, chips, **botones primarios** |
+| `$surface-primary` | `#FFFFFF` | **Blanco puro:** fondos de tarjetas y superficies |
+| `$border-subtle` | `#CFD8E6` | **Gris borde:** fondo home, cabecera, contraste |
+| `$surface-inverse` | `#000000` | **Negro puro:** color de fondo |
+| `$foreground-muted` | `#6B7280` | **Gris texto:** textos secundarios, subtítulos y metadata |
+| `$foreground-primary` | `#000000` | Texto principal sobre fondo claro |
+| `$foreground-inverse` | `#FFFFFF` | Textos sobre fondo negro |
 | Overlay de hero | `linear-gradient(180deg, #00000000 → #000000CC)` | Legibilidad del texto sobre imágenes |
 
-### Tipografías
+### 8.2 Paleta secundaria (confirmada en la guía visual)
 
-- **Anton** — titulares (tracking amplio, p. ej. `letter-spacing: 2px`), mayúsculas de marca.
-- **Inter** — cuerpo, UI, etiquetas y botones (pesos 400–700).
+| Token | Valor | Uso |
+|---|---|---|
+| `$accent-hover` | `#0038B8` | **Hover activo:** estado hover y activo de botones y enlaces con acento azul |
+| `$danger` | `#DC2626` | **Error:** mensajes de error y bordes de campos inválidos |
+| `$success` | `#16A34A` | **Éxito:** confirmaciones y estados correctos en formularios |
 
-### Reglas de uso
+> **Reglas de uso:** el azul eléctrico `#0052FF` se usa para botones, separadores, bordes y chips. El hover se oscurece a `#0038B8`. El gris `#6B7280` es para textos secundarios, subtítulos y metadata. El negro `#000000` es el color de fondo principal. El blanco `#FFFFFF` es para fondos de tarjetas y superficies. El gris borde `#CFD8E6` se usa para fondos de home, cabecera y contraste.
 
-- El naranja `#FF9800` se usa **solo para acciones y acentos** (CTA, pestaña activa, icono de marca).
-- Contraste garantizado: texto blanco sobre `#000000` (≈21:1) y texto negro sobre `#FF9800` (≈10:1) superan WCAG AA.
-- El gris `#9CA3AF` solo para texto decorativo; si el contraste AA no se supera en texto informativo, se sube el tono (p. ej. `#6B7280`).
-- Las páginas interiores usan fondo blanco; la home usa fondo negro (identidad del concesionario premium).
+### 8.3 Tipografías y jerarquía
+
+| Rol | Fuente | Peso | Tamaño | Uso |
+|---|---|---|---|---|
+| Título Gigante / Impacto | Inter | 400 (Regular) | 64 px | Títulos de impacto |
+| Título Impactante | Inter | 700 (Bold) | 40 px | Títulos de impactante normal |
+| Título Principal H1 | Inter | 700 (Bold) | 36 px | Texto H1 |
+| Subtítulo H2 | Inter | 700 (Bold) | 24 px | Etiquetas H2 en secciones |
+| Apartado H3 | Inter | 700 (Bold) | 20 px | Títulos H3 |
+| Texto Base | Inter | 700 (Bold) | 16 px | Texto normal body |
+| Párrafo Resaltado | Inter | 700 (Bold) | 16 px | Párrafo resaltado |
+| Texto Secundario | Inter | 700 (Bold) | 14 px | Texto secundario en negrita |
+| Texto Negrita | Montserrat | 700 (Bold) | 16 px | Etiqueta strong/bold en texto del body |
+| Texto Botón | Montserrat | 400 (Regular) | 12 px | Botones |
+| Notas / Pie de página | Inter | 400 (Regular) | 12 px | Notas pie de página y footer |
+
+**Fuentes:** **Inter** (Regular, Bold) + **Montserrat** (Regular, Bold). Cargar solo los pesos necesarios con `font-display: swap`.
+
+**Reglas:** **Inter** es la fuente principal para títulos y cuerpo. **Montserrat** se usa específicamente para texto en negrita (`<strong>`, `<b>`) y botones.
+
+### 8.4 Sistema de espaciado (base 8 px)
+
+- **Escala:** 4, 8, 12, 16, 24, 32, 48, 64, 96, 128 px (múltiplos de 8; la guía usa la base de Bootstrap).
+- **Padding de sección:** 96 px en escritorio / 48 px en móvil.
+- **Contenedor:** ancho máximo 1200 px (columna útil ≈ 1140 px), `gutter` de 24 px (16 px en móvil).
+- **Radios:** 4 px (inputs y campos), 8 px (tarjetas), 50 % (botones pill cuando aplique).
+- **Separación entre campos de un formulario:** 24 px verticales.
+
+### 8.5 Componentes (resumen de especificaciones)
+
+- **Botones:** primario (fondo `#0052FF`, texto `#FFFFFF`), secundario (outline/borde `#CFD8E6` o versión sobre negro), terciario (enlace con subrayado). Radio 8 px, altura mínima 44–48 px, icono opcional (Lucide inline).
+- **Campos de formulario:** fondo `#FFFFFF`, borde 1 px `#CFD8E6`, radio 4 px, placeholder `#6B7280`, foco con anillo 2 px `#0052FF` (o negro), error con borde `#DC2626` y mensaje junto al campo.
+- **Tarjetas de vehículo (C03):** fondo blanco, borde 1 px `#CFD8E6`, radio 8 px; hover con elevación (sombra) y leve zoom de la imagen.
+- **Menú (C01):** escritorio horizontal; enlace activo con `aria-current="page"` marcado en acento azul; móvil en menú hamburguesa operable por teclado.
+- **Estados de formulario (C07):** inicial, error de campo, envío (spinner), éxito, error general — definidos en la guía y en el flujograma.
+
+### 8.6 Estados de los componentes
+
+| Estado | Botones | Campos | Tarjetas |
+|---|---|---|---|
+| Normal | Fondo `#0052FF` / outline `#CFD8E6` | Borde `#CFD8E6` | Borde `#CFD8E6` |
+| Hover | Fondo `#0038B8` (primario) | Borde `#6B7280` | Elevación + sombra, zoom suave de imagen |
+| Foco (visible) | Anillo 2 px contrastado | Anillo 2 px `#0052FF`/negro | Anillo 2 px contrastado |
+| Activo | Acento `#0038B8` / presionado | `aria-invalid` si aplica | — |
+| Desactivado | Opacidad 50 % (`disabled`) | Opacidad 50 % (`disabled`) | — |
+| Error | — | Borde `#DC2626` + mensaje `role="alert"` | — |
+
+### 8.7 Accesibilidad visual (WCAG 2.2 AA)
+
+- **Contraste:** pares garantizados (blanco/negro ≈ 21:1; blanco/`#0052FF` ≈ 8,6:1; `#6B7280`/blanco ≈ 4,9:1). `#0052FF` sobre blanco supera WCAG AA para texto normal.
+- **Foco visible:** anillo de 2 px con contraste suficiente en todos los elementos interactivos (`:focus-visible`).
+- **Objetivos táctiles:** mínimo 24×24 px (WCAG 2.5.8); en la práctica 44–48 px en botones e iconos.
+- **Movimiento reducido:** todas las animaciones se reducen o desactivan con `prefers-reduced-motion`.
+- **Texto legible:** interlineados de la sección 8.3, anchos de línea ≤ 75 caracteres y párrafos breves.
 
 ---
 
@@ -415,11 +501,11 @@ Paleta extraída del diseño `diseño.pen` (variables del documento):
 
 ### 9.1 Menú y navegación
 
-- **Menú principal:** Inicio, Catálogo, Servicios, Recambios y Contacto + CTA «Reservar cita» (→ `contacto.html?motivo=prueba`). En escritorio horizontal; en tablet/móvil colapsa en un menú hamburguesa operable por teclado (`aria-expanded`, `aria-controls`, cierre con `Esc`).
+- **Menú principal (C01):** Inicio, Catálogo, Servicios, Recambios y Contacto + CTA «Reservar cita» (→ `contacto.html?motivo=prueba`). En escritorio horizontal; en tablet/móvil colapsa en un menú hamburguesa operable por teclado (`aria-expanded`, `aria-controls`, cierre con `Esc`).
 - **Enlace activo** marcado visualmente y con `aria-current="page"`.
-- **Breadcrumb** en las páginas hijas (ficha y prueba de conducción).
-- **Footer:** columnas de enlaces, datos del concesionario y **redes sociales**.
-- **Enlace «saltar al contenido»** en todas las páginas.
+- **Breadcrumb (C06)** en las páginas hijas (ficha y prueba de conducción).
+- **Footer (C02):** columnas de enlaces, datos del concesionario y **redes sociales**.
+- **Enlace «saltar al contenido» (C08)** en todas las páginas.
 
 ### 9.2 Redes sociales
 
@@ -432,7 +518,7 @@ Paleta extraída del diseño `diseño.pen` (variables del documento):
 
 ### 9.3 Carrusel de destacados (home)
 
-Componente **Carousel de Bootstrap 5** (sin JS propio). Controles anterior/siguiente, indicadores de posición y autoplay con pausa al pasar el ratón; en móvil admite arrastre. Con `prefers-reduced-motion` se reduce el desplazamiento y se detiene el autoplay.
+Componente **Carousel de Bootstrap 5** (sin JS propio). Controles anterior/siguiente, indicadores de posición y autoplay con pausa al pasar el ratón; en móvil admite arrastre. Con `prefers-reduced-motion` se reduce el desplazamiento y se detiene el autoplay. Máximo 8 slides (los 8 vehículos del catálogo).
 
 ### 9.4 Catálogo y filtros
 
@@ -443,7 +529,7 @@ Componente **Carousel de Bootstrap 5** (sin JS propio). Controles anterior/sigui
 
 ### 9.5 Galería de la ficha
 
-Imagen principal con miniaturas clicables, navegación por teclado y **ampliación/zoom** (lightbox accesible). `alt` descriptivo en cada imagen. En la demostración, cada vehículo dispone de su imagen principal en 3 resoluciones; si se dispone de más tomas propias, se añaden a la carpeta de la marca para ampliar la galería.
+Imagen principal con miniaturas clicables, navegación por teclado y **ampliación/zoom** (lightbox accesible). `alt` descriptivo en cada imagen. En la demostración, cada vehículo dispone de su imagen principal en 3 resoluciones; si se dispone de más tomas propias, se añaden a la carpeta de la marca para ampliar la galería (4–6 fotos por vehículo).
 
 ### 9.6 Mapa y acceso (contacto)
 
@@ -480,6 +566,7 @@ Cada página incluirá: `<title>` único (50–60 caracteres), `<meta name="desc
 | servicios.html | Servicios: venta, mantenimiento y posventa – Superautos Carballo | Asesoramiento en la compra, revisiones oficiales, preparación para la ITV y atención posventa en Carballo. |
 | recambios.html | Recambios para coches de alta gama – Superautos Carballo | Solicita recambios bajo pedido para tu vehículo. Plazo de entrega estimado de 1–2 semanas. |
 | contacto.html | Contacto – Superautos Carballo | Escríbenos, llámanos o visita nuestras instalaciones. Formulario de contacto y atención personalizada. |
+| 404.html | Página no encontrada – Superautos Carballo | La página que buscas no existe. Vuelve al inicio de Superautos Carballo. |
 
 La ficha y la prueba de conducción comparten URL única (la ficha lee el vehículo por parámetro), por lo que no se generan URLs duplicadas que indexar.
 
@@ -534,7 +621,7 @@ La ficha y la prueba de conducción comparten URL única (la ficha lee el vehíc
 ### 11.2 Carga de fuentes
 
 - `preconnect` a `fonts.googleapis.com` y `fonts.gstatic.com`.
-- Solo los pesos necesarios (Anton 400; Inter 400/500/600/700).
+- Solo los pesos necesarios (Inter 400/700; Montserrat 400/700).
 - `font-display: swap` (el export de Pencil ya usa `&display=swap`).
 
 ### 11.3 CSS y JS
@@ -563,7 +650,7 @@ LCP, INP, CLS, contraste y puntuación Lighthouse son **objetivos de comprobaci�
 ### 12.1 Accesibilidad (WCAG 2.2 AA)
 
 - **Estructura:** un `<h1>` por página, HTML semántico (`header`, `nav`, `main`, `section`, `article`, `footer`), botones reales (`<button>`) y enlaces reales (`<a href>`).
-- **Contraste AA:** texto blanco sobre negro y texto negro sobre `#FF9800`; el gris `#9CA3AF` solo decorativo y ajustado si no pasa.
+- **Contraste AA:** pares definidos en la sección 8.7 (blanco/negro, negro/`#FF9800`, `#6B7280`/blanco); `#9CA3AF` solo decorativo.
 - **Teclado:** saltar al contenido, foco visible (`:focus-visible`), orden de tabulación lógico, menú móvil por teclado, `aria-current="page"`.
 - **Foco no obstruido (WCAG 2.4.11):** el menú fijo no tapa el foco al navegar por teclado.
 - **Tamaño mínimo de objetivo (WCAG 2.5.8):** botones e iconos táctiles ≥ 24×24 px; los controles del carrusel y las miniaturas de la galería lo cumplen.
@@ -619,19 +706,27 @@ Si alguna condición no se confirma, se ajusta el texto correspondiente sin camb
 | Política de privacidad y aviso legal | Cliente / modelo adaptado | Por redactar (`privacidad.html`) |
 | Mapa e indicaciones de acceso | OpenStreetMap / Google | Por decidir con el cliente |
 | Vídeo corto o vista 360° (opcional) | Material propio autorizado | Solo si existe |
+| Design system (paleta, tipografía, componentes) | Guía visual (`guia_visual.pen`, `guia_visual/`) | Completado (14/08/2026) |
+| Flujograma de formularios | `flujograma/` + PDF | Completado |
 
 ---
 
 ## 14. Plan de fases
 
+### Fase 0 – Referencias (completado)
+1. Brief (Fito 1), documento funcional (Fito 2), mapa web y sitemap.
+2. Wireframes y diseño (`diseño.pen`, `diseño2.pen`, `HIJAS.PEN`).
+3. Flujograma de los 3 formularios (`flujograma/`).
+4. **Guía visual completa** (`guia_visual.pen`, PDF y PNG) — design system listo para aplicar.
+
 ### Fase 1 – Preparación
-1. Revisión final del diseño `diseño.pen` (1440 / 768 / 390 px) y extracción de assets.
+1. Revisión final del diseño (`diseño.pen` / `diseño2.pen`, 1440 / 768 / 390 px) y extracción de assets.
 2. Export de HTML del diseño y creación de la estructura de carpetas (`assets/css`, `assets/js`, `assets/bootstrap`, `assets/img`).
-3. Inclusión de Bootstrap 5 y definición de tokens (variables CSS) y archivos base.
+3. Inclusión de Bootstrap 5 y definición de **tokens de la guía visual** (sección 8: colores #0052FF/#FFFFFF/#CFD8E6/#000000/#6B7280/#0038B8/#DC2626/#16A34A + tipografía Inter/Montserrat) y archivos base.
 
 ### Fase 2 – Maquetación
 1. Header (nav + CTA «Reservar cita») y footer en las 3 resoluciones.
-2. Maquetación de las 7 páginas desde el diseño Pencil (incluyendo `privacidad.html`).
+2. Maquetación de las 7 páginas + `privacidad.html` y `404.html` desde el diseño Pencil.
 3. Responsive con Bootstrap + CSS propio: 390 / 768 / 1440 px.
 
 ### Fase 3 – Funcionalidad front-end
@@ -639,8 +734,8 @@ Si alguna condición no se confirma, se ajusta el texto correspondiente sin camb
 2. Carrusel de la home con el componente **Carousel de Bootstrap 5** (controles, indicadores y pausa automática; sin JS propio).
 3. **Catálogo:** objeto JS con los 8 vehículos, cuadrícula generada, filtros (marca, combustible, precio) y ordenación, estado vacío y contador.
 4. **Ficha:** carga por id desde la URL, relleno de bloques, galería con lightbox, CTAs con prefill a contacto y prueba, aviso de id inexistente.
-5. **Formularios:** contacto (motivo + condicionales + prefill), prueba de conducción (3 pasos + resumen) y recambios. Validación en cliente y estados de envío **simulados**.
-6. Microinteracciones (estados hover/focus) respetando `prefers-reduced-motion`.
+5. **Formularios (según el flujograma):** contacto (motivo + condicionales + prefill), prueba de conducción (3 pasos + resumen) y recambios. Validación en cliente y estados de envío **simulados**.
+6. Microinteracciones (estados hover/focus de la guía visual, sección 8.6) respetando `prefers-reduced-motion`.
 
 ### Fase 4 – Optimización y QA
 1. SEO: metadatos, Open Graph, JSON-LD, sitemap.xml, robots.txt, 404.html.
@@ -667,10 +762,11 @@ Si alguna condición no se confirma, se ajusta el texto correspondiente sin camb
 - **Lighthouse:** Performance, Accessibility, Best Practices, SEO (≥ 90 como objetivo de comprobación).
 - **W3C Validator:** HTML y CSS.
 - **Accesibilidad:** axe DevTools, navegación solo teclado, WCAG 2.2 AA.
-- **Formularios:** validación en cliente, errores accesibles, estados simulados (éxito/error/spinner), prefill desde la ficha.
+- **Formularios (frente al flujograma):** validación en cliente, errores accesibles, estados simulados (éxito/error/spinner), prefill desde la ficha.
 - **Filtros:** combinación, ordenación, contador y estado vacío.
 - **Enlaces:** comprobación de todos los enlaces internos (sin 404).
 - **Pesos:** bundle total de la página de entrada < 500 KB (imágenes aparte, optimizadas).
+- **Design system:** verificar que los tokens CSS coinciden con la guía visual (sección 8) y que los estados de los componentes son los definidos (8.6).
 
 ---
 
@@ -682,18 +778,21 @@ Si alguna condición no se confirma, se ajusta el texto correspondiente sin camb
 - Menú, logo, footer y breadcrumbs funcionando; enlaces activos marcados; sin 404 internos.
 - Adaptación correcta a 390 / 768 / 1440 px; contraste AA; navegación completa por teclado; HTML y CSS validados en el W3C.
 - Lighthouse y Core Web Vitals como comprobación final (objetivos de la sección 11.4).
+- Tokens de la guía visual aplicados (colores, tipografías, espaciado, estados).
 
 ### Por página
 
 | Página | Se comprueba que… |
 |---|---|
-| Inicio | El carrusel funciona en escritorio (controles, indicadores, pausa) y móvil (arrastre); las CTAs dirigen a los destinos correctos |
-| Catálogo | La cuadrícula muestra los 8 vehículos; los filtros se combinan; la ordenación funciona; el estado vacío muestra «Limpiar filtros»; cada tarjeta enlaza a la ficha con el id correcto |
-| Ficha | Se rellena con los datos del vehículo (precio, técnicos, equipamiento, disponibilidad); la galería hace zoom y es operable por teclado; id inexistente muestra aviso con enlace al catálogo; las CTAs llevan el vehículo **prefilled** |
-| Prueba | Los 3 pasos validan; el vehículo llega prefilled; se muestra el aviso de **solicitud pendiente de confirmación**; el envío con éxito muestra el mensaje correcto |
-| Servicios | Las tres secciones con la misma estructura y CTA funcionando |
-| Recambios | Información de bajo pedido y plazo visibles; el formulario valida y muestra los estados |
-| Contacto | El selector de motivo es obligatorio y cambia los campos; el prefill desde la ficha funciona; el mapa, las indicaciones y el botón «Cómo llegar» están y funcionan; los datos del concesionario son coherentes |
+| Inicio (P01) | El carrusel funciona en escritorio (controles, indicadores, pausa) y móvil (arrastre); las CTAs dirigen a los destinos correctos |
+| Catálogo (P02) | La cuadrícula muestra los 8 vehículos; los filtros se combinan; la ordenación funciona; el estado vacío muestra «Limpiar filtros»; cada tarjeta enlaza a la ficha con el id correcto |
+| Ficha (P02.1) | Se rellena con los datos del vehículo (precio, técnicos, equipamiento, disponibilidad); la galería hace zoom y es operable por teclado; id inexistente muestra aviso con enlace al catálogo; las CTAs llevan el vehículo **prefilled** |
+| Prueba (P02.1.1) | Los 3 pasos validan; el vehículo llega prefilled; se muestra el aviso de **solicitud pendiente de confirmación**; el envío con éxito muestra el mensaje correcto |
+| Servicios (P03) | Las tres secciones con la misma estructura y CTA funcionando |
+| Recambios (P04) | Información de bajo pedido y plazo visibles; el formulario valida y muestra los estados |
+| Contacto (P05) | El selector de motivo es obligatorio y cambia los campos; el prefill desde la ficha funciona; el mapa, las indicaciones y el botón «Cómo llegar» están y funcionan; los datos del concesionario son coherentes |
+| 404 (P06) | Muestra el mensaje y enlaza al inicio con estado HTTP 404 |
+| Privacidad (P07) | Contenido legal completo y enlazado desde los checkbox RGPD de los tres formularios |
 
 ---
 
@@ -706,11 +805,12 @@ Si alguna condición no se confirma, se ajusta el texto correspondiente sin camb
 - [ ] Google Search Console verificada y sitemap enviado.
 - [ ] Lighthouse ≥ 90 en las 4 categorías (objetivo de comprobación).
 - [ ] Imágenes WebP/JPEG con lazy loading y dimensiones definidas.
-- [ ] Tres formularios funcionales (validación cliente + estados simulados) y con RGPD.
+- [ ] Tres formularios funcionales (validación cliente + estados simulados, según flujograma) y con RGPD.
 - [ ] Política de privacidad publicada y enlazada desde todos los formularios.
 - [ ] Cabeceras de seguridad y compresión activadas.
 - [ ] Pruebas de accesibilidad (WCAG 2.2) y navegación por teclado superadas.
 - [ ] Página 404 personalizada.
+- [ ] Design system de la guía visual aplicado y verificado (tokens, componentes y estados).
 - [ ] Supuestos de la sección 12.4 confirmados con el cliente (textos ajustados).
 
 ---
@@ -728,11 +828,15 @@ Si alguna condición no se confirma, se ajusta el texto correspondiente sin camb
 | **Servicios unificados en una sola página** | Fito 1 (sección 10): fusión de venta, mantenimiento y posventa |
 | **8 vehículos de ejemplo** | Fito 2 (sección 3.2): catálogo fijado para que los filtros tengan sentido |
 | **Prueba de conducción como página hija en 3 pasos** | Fito 2 (sección 6.2): requisito de dos páginas hijas y formulario con pasos y resumen propios |
+| **Design system (paleta, tipografía, espaciado, componentes, estados)** | Guía visual (`guia_visual.pen`, `Plan_Guia_Visual.md`) |
+| **Sitemap e IDs de páginas y componentes (P01–P07, C01–C09)** | Mapa web (`jose_rafael_Garcia_Torres_sitemap.xlsx`, `MAPA_WEB.pdf`) |
+| **Flujos de los formularios** | Flujograma (`flujograma/`, `Garcia_Torres_Jose_Rafael_Flujograma.pdf`) |
 
 ---
 
 ## 19. Seguimiento y entrega
 
 - **Hoja de seguimiento:** `Folla_Seguimento_Fito2.md` (actualizada en cada fase) y Google Sheets.
-- **Control de versiones:** Git local; subida a GitHub pendiente (`https://github.com/<usuario>/superautos-carballo`).
+- **Control de versiones:** Git local; subida a GitHub pendiente (`https://github.com/<usuario>/superautos-carballo`). Incluye la guía visual (`.pen` + PNG + PDF) y el flujograma.
 - **Herramientas:** VS Code, Git, Pencil (diseño `.pen`), GIMP (logos e imágenes), WebP para optimización, Lighthouse para comprobaciones.
+- **Pendiente de la guía visual (entrega):** guardar el documento de trabajo como `guia_visual.pen` (ya presente en la raíz), subir el repo a GitHub con permisos de lectura para la persona evaluadora y documentar la ligazón editable (ver `Plan_Guia_Visual.md` secciones 3 y 8).

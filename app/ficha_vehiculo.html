@@ -1,41 +1,48 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Metadatos SEO (se actualizarán dinámicamente con JS según el vehículo) -->
+    <!-- Metadatos SEO -->
     <title>Ficha del vehículo – Superautos Carballo</title>
     <meta name="description" content="Ficha completa del vehículo: precio, año, kilometraje, datos técnicos y equipamiento. Solicita información o reserva una prueba.">
     <link rel="canonical" href="https://www.superautoscarballo.es/ficha_vehiculo.html">
 
-    <!-- Open Graph (se actualizará con JS) -->
-    <meta property="og:type" content="product">
-    <meta property="og:title" content="Ficha del vehículo – Superautos Carballo">
-    <meta property="og:site_name" content="Superautos Carballo">
-
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Fuentes -->
+    <!-- Fuentes: Inter + Montserrat de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Estilos base -->
+    <!-- Estilos base del proyecto -->
     <link rel="stylesheet" href="css/base.css">
 </head>
-<body>
+<body class="ficha-body">
 
-    <!-- Enlace saltar al contenido (C08) -->
+    <!-- =============================================
+         ENLACE "SALTAR AL CONTENIDO" (C08)
+    ============================================= -->
     <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
 
-    <!-- CABECERA (C01) -->
+    <!-- =============================================
+         CABECERA / HEADER (C01)
+         Igual que index.html: logo + menú + hamburguesa
+    ============================================= -->
     <header class="site-header">
         <div class="contenedor">
+            <!-- Logotipo del concesionario -->
             <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
-                <span class="logo-texto">Superautos Carballo</span>
+                <img src="assets/img/logo.jpg" alt="Superautos Carballo" class="logo-img">
+                <div class="logo-texto">
+                    <span class="logo-nombre">SUPERAUTOS</span>
+                    <span class="logo-sub">CARBALLO</span>
+                </div>
             </a>
+
+            <!-- Menú de navegación principal -->
             <nav aria-label="Navegación principal">
                 <ul class="menu-principal" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
@@ -45,7 +52,8 @@
                     <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="contacto.html?motivo=prueba" class="btn-cta-header">Reservar cita</a>
+
+            <!-- Botón hamburguesa para menú móvil -->
             <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
                 <span class="linea-hamburguesa"></span>
                 <span class="linea-hamburguesa"></span>
@@ -56,160 +64,112 @@
 
     <!-- =============================================
          CONTENIDO PRINCIPAL: FICHA DEL VEHÍCULO (P02.1)
-         Página hija del catálogo. Plantilla reutilizable
-         que se rellena según el vehículo seleccionado.
-         El id se lee de la URL: ficha_vehiculo.html?id=<id>
+         Plantilla reutilizable que se rellena según el
+         vehículo seleccionado desde el catálogo.
     ============================================= -->
     <main id="contenido-principal">
 
         <!-- =========================================
-             BREADCRUMB (C06)
-             Jerarquía: Inicio > Catálogo > [Vehículo]
+             FOTO + INFORMACIÓN DEL VEHÍCULO
+             Izquierda: foto del coche (650 x 430 px).
+             Derecha: recuadro de texto (526 px de alto,
+             fondo gris borde).
         ========================================= -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li aria-current="page" id="breadcrumb-vehiculo">Vehículo</li>
-            </ol>
-        </nav>
+        <section class="ficha-presentacion" aria-label="Fotografía e información del vehículo">
+            <div class="contenedor ficha-presentacion-fila">
 
-        <!-- =========================================
-             GALERÍA DEL VEHÍCULO
-             Imagen principal con miniaturas clicables.
-             Navegable por teclado. El lightbox de
-             ampliación se implementará con JS.
-        ========================================= -->
-        <section class="galeria-vehiculo" aria-label="Galería de imágenes">
-            <div class="contenedor">
-                <!-- Imagen principal (se actualizará con JS) -->
-                <div class="imagen-principal-galeria">
-                    <img id="imagen-principal" src="../assets/img/Ferrari/ferrari_12_cilindri@3x.webp" alt="Ferrari 12 Cilindri" width="900" height="500">
+                <!-- Recuadro izquierdo: foto del coche -->
+                <div class="ficha-foto">
+                    <img id="ficha-foto-img" src="assets/img/porche/porche_911_targa_4s.webp" alt="Porsche 911 Targa 4S" width="650" height="430">
                 </div>
-                <!-- Miniaturas de la galería -->
-                <div class="miniaturas-galeria" role="list">
-                    <button type="button" class="miniatura activa" role="listitem" aria-label="Mostrar imagen 1">
-                        <img src="../assets/img/Ferrari/ferrari_12_cilindri.webp" alt="Ferrari 12 Cilindri – Vista lateral" width="100" height="66">
-                    </button>
-                    <button type="button" class="miniatura" role="listitem" aria-label="Mostrar imagen 2">
-                        <img src="../assets/img/Ferrari/ferrari_12_cilindri@2x.webp" alt="Ferrari 12 Cilindri – Vista frontal" width="100" height="66">
-                    </button>
-                    <button type="button" class="miniatura" role="listitem" aria-label="Mostrar imagen 3">
-                        <img src="../assets/img/Ferrari/ferrari_12_cilindri@3x.webp" alt="Ferrari 12 Cilindri – Vista trasera" width="100" height="66">
-                    </button>
-                </div>
-            </div>
-        </section>
 
-        <!-- =========================================
-             RESUMEN Y PRECIO
-             Marca, modelo, precio y etiquetas de datos
-             básicos (año, km, combustible, cambio, CV).
-        ========================================= -->
-        <section class="resumen-vehiculo" aria-label="Resumen del vehículo">
-            <div class="contenedor">
-                <div class="fila-resumen">
-                    <div class="datos-principales">
-                        <h1 id="nombre-vehiculo">Ferrari 12 Cilindri</h1>
-                        <p class="precio-grande" id="precio-vehiculo">650.000 €</p>
-                        <!-- Etiquetas de datos básicos -->
-                        <ul class="etiquetas-vehiculo-detalle">
-                            <li id="etiqueta-año">2024</li>
-                            <li id="etiqueta-km">0 km</li>
-                            <li id="etiqueta-combustible">Gasolina</li>
-                            <li id="etiqueta-cambio">Automático</li>
-                            <li id="etiqueta-potencia">830 CV</li>
-                        </ul>
-                    </div>
-
-                    <!-- Botones de acción (CTA) -->
-                    <div class="acciones-vehiculo">
-                        <!-- Solicitar información: lleva a contacto con el vehículo preseleccionado -->
-                        <a id="btn-solicitar-info" href="contacto.html?vehiculo=ferrari-12-cilindri&motivo=informacion" class="btn-principal">Solicitar información</a>
-                        <!-- Solicitar prueba: lleva a proba_conduccion con el vehículo preseleccionado -->
-                        <a id="btn-solicitar-prueba" href="proba_conduccion.html?vehiculo=ferrari-12-cilindri" class="btn-secundario">Solicitar prueba de conducción</a>
-                    </div>
+                <!-- Recuadro derecho: texto del vehículo -->
+                <div class="ficha-info">
+                    <p class="ficha-certificado">SUPERAUTOS CARBALLO — VEHÍCULO CERTIFICADO</p>
+                    <h1 id="ficha-nombre">Porsche 911 Targa 4S</h1>
+                    <p class="ficha-descripcion" id="ficha-descripcion">El 911 Targa 4S combina la elegancia atemporal de su icónica barra antivuelco con las prestaciones más puras de la saga 911.</p>
+                    <a id="ficha-enlace-prueba" href="cita.html?vehiculo=porsche-911-targa-4s" class="btn-principal">Solicitar prueba</a>
                 </div>
+
             </div>
         </section>
 
         <!-- =========================================
              DATOS TÉCNICOS
-             Garantía, equipamiento, estado y
-             disponibilidad del vehículo.
+             Contenedor de 370 px de alto, fondo gris
+             borde. Cuadrícula 3 x 2 (1fr 1fr 1fr x
+             1fr 1fr), cada celda 385 x 92 px, fondo
+             blanco puro.
         ========================================= -->
         <section class="datos-tecnicos" aria-label="Datos técnicos">
             <div class="contenedor">
-                <h2>Datos técnicos</h2>
-                <dl class="lista-datos-tecnicos">
-                    <dt>Garantía</dt>
-                    <dd id="dato-garantia">24 meses</dd>
+                <h1>DATOS TÉCNICOS</h1>
+                <div class="cuadricula-datos">
 
-                    <dt>Estado</dt>
-                    <dd id="dato-estado">En stock</dd>
+                    <div class="celda-dato">
+                        <span class="dato-etiqueta">Año</span>
+                        <span class="dato-valor" id="dato-anio">2023</span>
+                    </div>
 
-                    <dt>Disponibilidad</dt>
-                    <dd id="dato-disponibilidad">Disponible inmediatamente</dd>
-                </dl>
-            </div>
-        </section>
+                    <div class="celda-dato">
+                        <span class="dato-etiqueta">Kilometraje</span>
+                        <span class="dato-valor" id="dato-km">12.500 km</span>
+                    </div>
 
-        <!-- =========================================
-             EQUIPAMIENTO
-             Listado de extras incluidos en el vehículo.
-        ========================================= -->
-        <section class="equipamiento-vehiculo" aria-label="Equipamiento">
-            <div class="contenedor">
-                <h2>Equipamiento</h2>
-                <ul class="lista-equipamiento" id="lista-equipamiento">
-                    <li>Asientos deportivos</li>
-                    <li>Techo panorámico</li>
-                    <li>Sistema de sonido premium</li>
-                    <li>Navegación GPS</li>
-                    <li>Cámara 360°</li>
-                    <li>Asistente de conducción</li>
-                </ul>
-            </div>
-        </section>
+                    <div class="celda-dato">
+                        <span class="dato-etiqueta">Combustible</span>
+                        <span class="dato-valor" id="dato-combustible">Gasolina</span>
+                    </div>
 
-        <!-- =========================================
-             BLOQUE DE CONFIANZA (C09)
-             Certificación, revisión y garantía del
-             vehículo para reforzar la seguridad del
-             comprador.
-        ========================================= -->
-        <section class="seccion-confianza" aria-label="Garantía y certificación">
-            <div class="contenedor">
-                <h2 class="titulo-seccion">Tu compra con total confianza</h2>
-                <div class="fila-confianza">
-                    <article class="bloque-confianza">
-                        <div class="icono-confianza" aria-hidden="true">&#128275;</div>
-                        <h3>Certificación</h3>
-                        <p>Cada vehículo pasa un control de calidad de más de 100 puntos.</p>
-                    </article>
-                    <article class="bloque-confianza">
-                        <div class="icono-confianza" aria-hidden="true">&#9881;</div>
-                        <h3>Revisión completa</h3>
-                        <p>Vehículo revisado y preparado para su entrega con todas las revisiones al día.</p>
-                    </article>
-                    <article class="bloque-confianza">
-                        <div class="icono-confianza" aria-hidden="true">&#128737;</div>
-                        <h3>Garantía 24 meses</h3>
-                        <p>Hasta 24 meses de garantía para que conduzcas sin preocupaciones.</p>
-                    </article>
+                    <div class="celda-dato">
+                        <span class="dato-etiqueta">Cambio</span>
+                        <span class="dato-valor" id="dato-cambio">Automático PDK</span>
+                    </div>
+
+                    <div class="celda-dato">
+                        <span class="dato-etiqueta">Potencia</span>
+                        <span class="dato-valor" id="dato-potencia">450 CV</span>
+                    </div>
+
+                    <div class="celda-dato">
+                        <span class="dato-etiqueta">Garantía</span>
+                        <span class="dato-valor" id="dato-garantia">24 meses</span>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- =========================================
-             AVISO DE ID INEXISTENTE
-             Se muestra con JS si el parámetro id de la
-             URL no corresponde a ningún vehículo del
-             catálogo.
+             EQUIPAMIENTO
+             Contenedor de 341 px de alto, fondo gris
+             borde. Cuadrícula 3 x 2 (1fr 1fr 1fr x
+             1fr 1fr), cada casilla 385 x 51 px.
+        ========================================= -->
+        <section class="equipamiento" aria-label="Equipamiento del vehículo">
+            <div class="contenedor">
+                <h1>EQUIPAMIENTO</h1>
+                <div class="cuadricula-equipamiento">
+
+                    <div class="celda-equip">Paquete deportivo de cromo</div>
+                    <div class="celda-equip">Asientos eléctricos de cuero</div>
+                    <div class="celda-equip">Sistema de sonido Bose</div>
+                    <div class="celda-equip">Cámara de 360º</div>
+                    <div class="celda-equip">Suspensión adaptativa</div>
+                    <div class="celda-equip">Faros de LED</div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             AVISO DE VEHÍCULO NO ENCONTRADO
+             Se muestra solo si el id de la URL no
+             corresponde a ningún vehículo del catálogo.
         ========================================= -->
         <section class="aviso-no-encontrado" id="aviso-no-encontrado" hidden aria-label="Vehículo no encontrado">
             <div class="contenedor">
-                <h2>Vehículo no encontrado</h2>
+                <h1>Vehículo no encontrado</h1>
                 <p>El vehículo que buscas no existe o ya no está disponible en nuestro catálogo.</p>
                 <a href="catalogo.html" class="btn-principal">Volver al catálogo</a>
             </div>
@@ -217,46 +177,67 @@
 
     </main>
 
-    <!-- FOOTER (C02) -->
+    <!-- =============================================
+         FOOTER (C02): Reglamentario, igual que index
+    ============================================= -->
     <footer class="site-footer">
         <div class="contenedor">
             <div class="fila-footer">
-                <div class="columna-footer">
-                    <h3>Superautos Carballo</h3>
-                    <p>Tu concesionario de confianza para vehículos de alta gama en Carballo, Galicia.</p>
+
+                <!-- Columna 1: Marca -->
+                <div class="columna-footer columna-marca">
+                    <p class="footer-brand">SUPERAUTOS CARBALLO</p>
+                    <p class="footer-desc">Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
                 </div>
+
+                <!-- Columna 2: Catálogo -->
                 <div class="columna-footer">
-                    <h3>Enlaces</h3>
+                    <h3>CATÁLOGO</h3>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Catálogo</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="recambios.html">Recambios</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="catalogo.html">Deportivos</a></li>
+                        <li><a href="catalogo.html">SUV de lujo</a></li>
+                        <li><a href="catalogo.html">Ediciones limitadas</a></li>
+                        <li><a href="catalogo.html">Seminuevos certificados</a></li>
                     </ul>
                 </div>
+
+                <!-- Columna 3: Servicios -->
                 <div class="columna-footer">
-                    <h3>Contacto</h3>
-                    <address>
-                        <p>📍 Carballo, A Coruña, Galicia</p>
-                        <p><a href="tel:+34981000000">📞 981 00 00 00</a></p>
-                        <p><a href="mailto:info@superautoscarballo.es">✉️ info@superautoscarballo.es</a></p>
-                        <p>🕐 Lun–Vie: 9:00–14:00 / 16:00–20:00<br>Sáb: 10:00–14:00</p>
-                    </address>
+                    <h3>SERVICIOS</h3>
+                    <ul>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="servicios.html">Venta</a></li>
+                        <li><a href="servicios.html">Mantenimiento</a></li>
+                        <li><a href="servicios.html">Posventa</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                    </ul>
                 </div>
+
+                <!-- Columna 4: Contacto -->
                 <div class="columna-footer">
-                    <h3>Síguenos</h3>
-                    <ul class="redes-sociales">
-                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a></li>
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><a href="contacto.html">Av. A Coruña 45, 15100</a></li>
+                        <li><a href="contacto.html">Carballo, A Coruña</a></li>
+                        <li><a href="tel:+34981700200">+34 981 700 200</a></li>
+                        <li><a href="mailto:info@superautoscarballo.es">info@superautoscarballo.es</a></li>
                     </ul>
                 </div>
             </div>
+
+            <!-- Línea inferior del footer -->
             <div class="pie-footer">
-                <p>&copy; 2026 Superautos Carballo. Todos los derechos reservados.</p>
-                <nav aria-label="Legal">
-                    <a href="privacidad.html">Política de privacidad</a>
+                <p class="footer-copyright">&copy; 2026 Superautos Carballo</p>
+                <nav class="redes-sociales" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -264,5 +245,144 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de la ficha: rellena la plantilla según el vehículo (?id=...) -->
+    <script>
+        // Base de datos de los vehículos del catálogo
+        var vehiculos = {
+            "ferrari-12-cilindri": {
+                nombre: "Ferrari 12 Cilindri",
+                imagen: "assets/img/Ferrari/ferrari_12_cilindri.webp",
+                descripcion: "La berlinetta V12 más pura de Maranello. Doce cilindros aspirados con 830 CV para una experiencia de conducción inigualable.",
+                anio: "2024",
+                km: "0 km",
+                combustible: "Gasolina",
+                cambio: "Automático DCT",
+                potencia: "830 CV",
+                garantia: "24 meses"
+            },
+            "porsche-911-targa-4s": {
+                nombre: "Porsche 911 Targa 4S",
+                imagen: "assets/img/porche/porche_911_targa_4s.webp",
+                descripcion: "El 911 Targa 4S combina la elegancia atemporal de su icónica barra antivuelco con las prestaciones más puras de la saga 911.",
+                anio: "2023",
+                km: "12.500 km",
+                combustible: "Gasolina",
+                cambio: "Automático PDK",
+                potencia: "450 CV",
+                garantia: "24 meses"
+            },
+            "audi-q8": {
+                nombre: "Audi Q8",
+                imagen: "assets/img/Audi/audi_q8_suv.webp",
+                descripcion: "El SUV de lujo con acabado S line. Combina presencia imponente, tecnología de vanguardia y confort para toda la familia.",
+                anio: "2023",
+                km: "9.300 km",
+                combustible: "Diésel",
+                cambio: "Automático Tiptronic",
+                potencia: "286 CV",
+                garantia: "24 meses"
+            },
+            "lamborghini-revuelto": {
+                nombre: "Lamborghini Revuelto",
+                imagen: "assets/img/Lamborghini/lamborghini_rebuelt.webp",
+                descripcion: "La primera superdeportiva híbrida enchufable de Lamborghini. V12 atmosférico y 1.015 CV de pura adrenalina.",
+                anio: "2024",
+                km: "0 km",
+                combustible: "Híbrido enchufable",
+                cambio: "Automático DCT",
+                potencia: "1.015 CV",
+                garantia: "24 meses"
+            },
+            "lamborghini-urus": {
+                nombre: "Lamborghini Urus",
+                imagen: "assets/img/Lamborghini/Lamborghini_urus.webp",
+                descripcion: "El primer SUV de lujo con ADN de superdeportivo. Presencia agresiva, prestaciones extremas y versatilidad diaria.",
+                anio: "2023",
+                km: "7.800 km",
+                combustible: "Híbrido enchufable",
+                cambio: "Automático",
+                potencia: "666 CV",
+                garantia: "24 meses"
+            },
+            "porsche-taycan": {
+                nombre: "Porsche Taycan",
+                imagen: "assets/img/porche/Taycan_electrico.webp",
+                descripcion: "Deportivo 100% eléctrico con gran autonomía y la dinámica de conducción característica de Porsche.",
+                anio: "2023",
+                km: "6.200 km",
+                combustible: "Eléctrico",
+                cambio: "Automático 2 veloc.",
+                potencia: "476 CV",
+                garantia: "24 meses"
+            },
+            "mercedes-eqs": {
+                nombre: "Mercedes EQS",
+                imagen: "assets/img/Mercedes/Mercedes_eqs_electrico.webp",
+                descripcion: "La berlina de lujo 100% eléctrica con la mejor tecnología, máxima autonomía y un confort excepcional.",
+                anio: "2023",
+                km: "8.900 km",
+                combustible: "Eléctrico",
+                cambio: "Automático",
+                potencia: "760 CV",
+                garantia: "24 meses"
+            },
+            "mercedes-amg-eqe": {
+                nombre: "Mercedes AMG EQE",
+                imagen: "assets/img/Mercedes/Mercedes_amg_eqe_electrico.webp",
+                descripcion: "Berlina eléctrica deportiva firmada por AMG. Potencia, deportividad y la elegancia de la estrella.",
+                anio: "2024",
+                km: "3.100 km",
+                combustible: "Eléctrico",
+                cambio: "Automático",
+                potencia: "687 CV",
+                garantia: "24 meses"
+            }
+        };
+
+        // Lee el id de la URL (?id=...)
+        function obtenerVehiculo() {
+            var params = new URLSearchParams(window.location.search);
+            return params.get("id");
+        }
+
+        // Rellena la ficha con los datos del vehículo seleccionado
+        function cargarFicha() {
+            var id = obtenerVehiculo() || "porsche-911-targa-4s";
+            var v = vehiculos[id];
+
+            if (v) {
+                // Rellena los campos de la plantilla
+                var img = document.getElementById("ficha-foto-img");
+                img.src = v.imagen;
+                img.alt = v.nombre;
+                document.getElementById("ficha-nombre").textContent = v.nombre;
+                document.getElementById("ficha-descripcion").textContent = v.descripcion;
+                document.title = v.nombre + " – Superautos Carballo";
+                document.getElementById("ficha-enlace-prueba").href = "cita.html?vehiculo=" + encodeURIComponent(id);
+
+                document.getElementById("dato-anio").textContent = v.anio;
+                document.getElementById("dato-km").textContent = v.km;
+                document.getElementById("dato-combustible").textContent = v.combustible;
+                document.getElementById("dato-cambio").textContent = v.cambio;
+                document.getElementById("dato-potencia").textContent = v.potencia;
+                document.getElementById("dato-garantia").textContent = v.garantia;
+            } else {
+                // Oculta la ficha y muestra el aviso de no encontrado
+                mostrarNoEncontrado();
+            }
+        }
+
+        // Oculta las secciones de la ficha y muestra el aviso
+        function mostrarNoEncontrado() {
+            document.querySelector(".ficha-presentacion").hidden = true;
+            document.querySelector(".datos-tecnicos").hidden = true;
+            document.querySelector(".equipamiento").hidden = true;
+            document.getElementById("aviso-no-encontrado").hidden = false;
+        }
+
+        // Ejecuta la carga al cargar la página
+        document.addEventListener("DOMContentLoaded", cargarFicha);
+    </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -17,16 +17,22 @@
     <meta property="og:site_name" content="Superautos Carballo">
     <meta property="og:image" content="https://www.superautoscarballo.es/assets/img/hero.webp">
 
+    <!-- Preconexión y precarga de recursos críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Fuentes: Inter + Montserrat de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Estilos base del proyecto -->
     <link rel="stylesheet" href="css/base.css">
+
+    <!-- Precarga de imagen hero (LCP) -->
+    <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
 </head>
 <body>
 
@@ -46,13 +52,16 @@
         <div class="contenedor">
             <!-- Logotipo del concesionario -->
             <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
-                <!-- Texto como placeholder del logo; se sustituirá por imagen -->
-                <span class="logo-texto">Superautos Carballo</span>
+                <img src="assets/img/logo.jpg" alt="Superautos Carballo" class="logo-img" width="50" height="50" decoding="async">
+                <div class="logo-texto">
+                    <span class="logo-nombre">SUPERAUTOS</span>
+                    <span class="logo-sub">CARBALLO</span>
+                </div>
             </a>
 
             <!-- Menú de navegación principal -->
             <nav aria-label="Navegación principal">
-                <ul class="menu-principal" role="menubar">
+                <ul class="menu-principal" id="menu-movil" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem" aria-current="page">Inicio</a></li>
                     <li role="none"><a href="catalogo.html" role="menuitem">Catálogo</a></li>
                     <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
@@ -60,9 +69,6 @@
                     <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
                 </ul>
             </nav>
-
-            <!-- Botón CTA principal: Reservar cita -->
-            <a href="contacto.html?motivo=prueba" class="btn-cta-header">Reservar cita</a>
 
             <!-- Botón hamburguesa para menú móvil (visible solo en pantallas pequeñas) -->
             <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
@@ -73,6 +79,18 @@
         </div>
     </header>
 
+    <!-- =========================================
+         HERO HOME – Imagen hero.webp a pantalla completa
+    ========================================= -->
+    <section class="hero-home" aria-label="Superautos Carballo">
+        <div class="hero-texto-centro">
+            <p class="hero-texto-superior">CONCESIONARIO PREMIUM EN CARBALLO</p>
+            <h1 class="hero-titulo-impacto">DONDE LA POTENCIA<br>ENCUENTRA SU HOGAR</h1>
+            <p class="hero-texto-descriptivo">Descubre los superautos más exclusivos del mercado, con<br>asesoramiento personalizado y un servicio posventa a la altura de la<br>leyenda.</p>
+        </div>
+        <img src="assets/img/hero.webp" alt="Superautos Carballo – Concesionario de vehículos de alta gama" width="1200" height="675" fetchpriority="high" decoding="async">
+    </section>
+
     <!-- =============================================
          CONTENIDO PRINCIPAL (C08)
          Aquí van todas las secciones de la página de
@@ -81,6 +99,9 @@
     ============================================= -->
     <main id="contenido-principal">
 
+        <!-- Título de sección: Vehículos destacados -->
+        <h2 class="titulo-destacados">Vehículos destacados</h2>
+
         <!-- =========================================
              SECCIÓN 1: HERO CON CARRUSEL DE DESTACADOS (C04)
              Carrusel Bootstrap 5 con los vehículos más
@@ -88,266 +109,57 @@
              de gran formato, marca/modelo, datos y CTA.
         ========================================= -->
         <section class="hero-carrusel" aria-label="Vehículos destacados">
-            <div id="carrusel-hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div id="carrusel-hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" aria-roledescription="carrusel">
 
-                <!-- Indicadores del carrusel -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carrusel-hero" data-bs-slide-to="0" class="active" aria-label="Mostrar vehículo 1 de 4"></button>
-                    <button type="button" data-bs-target="#carrusel-hero" data-bs-slide-to="1" aria-label="Mostrar vehículo 2 de 4"></button>
-                    <button type="button" data-bs-target="#carrusel-hero" data-bs-slide-to="2" aria-label="Mostrar vehículo 3 de 4"></button>
-                    <button type="button" data-bs-target="#carrusel-hero" data-bs-slide-to="3" aria-label="Mostrar vehículo 4 de 4"></button>
-                </div>
+                <!-- Carrusel Bootstrap 5: contenedor de diapositivas -->
+                <div class="carousel-inner" aria-live="polite">
 
-                <!-- Diapositivas del carrusel -->
-                <div class="carousel-inner">
-
-                    <!-- Diapositiva 1: Ferrari 12 Cilindri -->
-                    <div class="carousel-item active">
-                        <img src="../assets/img/Ferrari/ferrari_12_cilindri@3x.webp" class="d-block w-100" alt="Ferrari 12 Cilindri en color rojo" width="1440" height="600">
+                    <!-- Diapositiva Bootstrap 1: Ferrari 12 Cilindri -->
+                    <div class="carousel-item active" role="group" aria-roledescription="diapositiva" aria-label="Diapositiva 1 de 3">
+                        <img src="assets/img/Ferrari/ferrari_12_cilindri@3x.webp" class="d-block w-100" alt="Ferrari 12 Cilindri en color rojo" width="1200" height="600" loading="lazy" decoding="async">
                         <div class="carousel-caption">
-                            <h2>Ferrari 12 Cilindri</h2>
+                            <h3>Ferrari 12 Cilindri</h3>
                             <p>Deportivo · Gasolina · 830 CV</p>
                             <p class="precio-destacado">650.000 €</p>
                             <a href="ficha_vehiculo.html?id=ferrari-12-cilindri" class="btn-principal">Ver ficha</a>
                         </div>
                     </div>
 
-                    <!-- Diapositiva 2: Porsche 911 Targa 4S -->
-                    <div class="carousel-item">
-                        <img src="../assets/img/porche/porche_911_targa_4s@3x.webp" class="d-block w-100" alt="Porsche 911 Targa 4S en color blanco" width="1440" height="600">
+                    <!-- Diapositiva Bootstrap 3: Lamborghini Revuelto -->
+                    <div class="carousel-item" role="group" aria-roledescription="diapositiva" aria-label="Diapositiva 2 de 3">
+                        <img src="assets/img/Lamborghini/lamborghini_rebuelt@3x.webp" class="d-block w-100" alt="Lamborghini Revuelto en color verde" width="1200" height="600" loading="lazy" decoding="async">
                         <div class="carousel-caption">
-                            <h2>Porsche 911 Targa 4S</h2>
-                            <p>Deportivo · Gasolina · 450 CV</p>
-                            <p class="precio-destacado">179.900 €</p>
-                            <a href="ficha_vehiculo.html?id=porsche-911-targa-4s" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </div>
-
-                    <!-- Diapositiva 3: Lamborghini Revuelto -->
-                    <div class="carousel-item">
-                        <img src="../assets/img/Lamborghini/lamborghini_rebuelt@3x.webp" class="d-block w-100" alt="Lamborghini Revuelto en color verde" width="1440" height="600">
-                        <div class="carousel-caption">
-                            <h2>Lamborghini Revuelto</h2>
+                            <h3>Lamborghini Revuelto</h3>
                             <p>Deportivo · Híbrido · 1015 CV</p>
                             <p class="precio-destacado">520.000 €</p>
                             <a href="ficha_vehiculo.html?id=lamborghini-revuelto" class="btn-principal">Ver ficha</a>
                         </div>
                     </div>
 
-                    <!-- Diapositiva 4: Mercedes EQS -->
-                    <div class="carousel-item">
-                        <img src="../assets/img/Mercedes/Mercedes_eqs_electrico@3x.webp" class="d-block w-100" alt="Mercedes EQS eléctrico en color plata" width="1440" height="600">
+                    <!-- Diapositiva Bootstrap 2: Porsche 911 Targa 4S -->
+                    <div class="carousel-item" role="group" aria-roledescription="diapositiva" aria-label="Diapositiva 3 de 3">
+                        <img src="assets/img/porche/porche_911_targa_4s@3x.webp" class="d-block w-100" alt="Porsche 911 Targa 4S en color blanco" width="1200" height="600" loading="lazy" decoding="async">
                         <div class="carousel-caption">
-                            <h2>Mercedes EQS</h2>
-                            <p>Berlina de lujo · Eléctrico · 523 CV</p>
-                            <p class="precio-destacado">128.500 €</p>
-                            <a href="ficha_vehiculo.html?id=mercedes-eqs" class="btn-principal">Ver ficha</a>
+                            <h3>Porsche 911 Targa 4S</h3>
+                            <p>Deportivo · Gasolina · 450 CV</p>
+                            <p class="precio-destacado">179.900 €</p>
+                            <a href="ficha_vehiculo.html?id=porsche-911-targa-4s" class="btn-principal">Ver ficha</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Controles anterior / siguiente -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-hero" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carrusel-hero" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-        </section>
-
-        <!-- =========================================
-             SECCIÓN 2: RESUMEN DE SERVICIOS (C05)
-             Tres bloques: Venta, Mantenimiento y Posventa.
-             Cada uno con icono, título, descripción breve
-             y enlace a servicios.html
-        ========================================= -->
-        <section class="seccion-servicios" aria-label="Nuestros servicios">
-            <div class="contenedor">
-                <h2 class="titulo-seccion">Nuestros servicios</h2>
-                <p class="subtitulo-seccion">Todo lo que necesitas para tu vehículo de lujo en un solo lugar</p>
-
-                <div class="fila-servicios">
-                    <!-- Servicio: Venta -->
-                    <article class="bloque-servicio">
-                        <div class="icono-servicio" aria-hidden="true">
-                            <!-- Icono de coche (placeholder) -->
-                            &#128663;
-                        </div>
-                        <h3>Venta</h3>
-                        <p>Asesoramiento personalizado, financiación a medida, prueba de conducción y tramitación completa de la compra de tu próximo vehículo de alta gama.</p>
-                        <a href="servicios.html#venta" class="btn-secundario">Saber más</a>
-                    </article>
-
-                    <!-- Servicio: Mantenimiento -->
-                    <article class="bloque-servicio">
-                        <div class="icono-servicio" aria-hidden="true">
-                            <!-- Icono de llave inglesa (placeholder) -->
-                            &#128295;
-                        </div>
-                        <h3>Mantenimiento</h3>
-                        <p>Revisiones oficiales, diagnóstico avanzado, reparaciones especializadas y preparación para la ITV con los estándares del fabricante.</p>
-                        <a href="servicios.html#mantenimiento" class="btn-secundario">Saber más</a>
-                    </article>
-
-                    <!-- Servicio: Posventa -->
-                    <article class="bloque-servicio">
-                        <div class="icono-servicio" aria-hidden="true">
-                            <!-- Icono de escudo (placeholder) -->
-                            &#128737;
-                        </div>
-                        <h3>Posventa</h3>
-                        <p>Garantía, atención al cliente, soporte técnico continuado y consejos de mantenimiento para que disfrutes de tu vehículo sin preocupaciones.</p>
-                        <a href="servicios.html#posventa" class="btn-secundario">Saber más</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========================================
-             SECCIÓN 3: VEHÍCULOS DESTACADOS (C03)
-             Cuadrícula con 4 vehículos destacados del
-             catálogo. Cada tarjeta enlaza a la ficha
-             correspondiente con el id del vehículo.
-        ========================================= -->
-        <section class="seccion-destacados" aria-label="Vehículos destacados">
-            <div class="contenedor">
-                <h2 class="titulo-seccion">Vehículos destacados</h2>
-                <p class="subtitulo-seccion">Descubre nuestra selección de vehículos premium más populares</p>
-
-                <div class="fila-vehiculos">
-                    <!-- Tarjeta: Ferrari 12 Cilindri -->
-                    <article class="tarjeta-vehiculo">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Ferrari/ferrari_12_cilindri.webp" alt="Ferrari 12 Cilindri" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h3>Ferrari 12 Cilindri</h3>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2024</li>
-                                <li>Gasolina</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">650.000 €</p>
-                            <a href="ficha_vehiculo.html?id=ferrari-12-cilindri" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta: Porsche 911 Targa 4S -->
-                    <article class="tarjeta-vehiculo">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/porche/porche_911_targa_4s.webp" alt="Porsche 911 Targa 4S" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h3>Porsche 911 Targa 4S</h3>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2023</li>
-                                <li>12.500 km</li>
-                                <li>Gasolina</li>
-                                <li>Automático PDK</li>
-                            </ul>
-                            <p class="precio-vehiculo">179.900 €</p>
-                            <a href="ficha_vehiculo.html?id=porsche-911-targa-4s" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta: Audi Q8 -->
-                    <article class="tarjeta-vehiculo">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Audi/audi_q8_suv.webp" alt="Audi Q8" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h3>Audi Q8</h3>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2023</li>
-                                <li>SUV de lujo</li>
-                                <li>Gasolina</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">115.000 €</p>
-                            <a href="ficha_vehiculo.html?id=audi-q8" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta: Lamborghini Urus -->
-                    <article class="tarjeta-vehiculo">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Lamborghini/Lamborghini_urus.webp" alt="Lamborghini Urus" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h3>Lamborghini Urus</h3>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2024</li>
-                                <li>SUV de lujo</li>
-                                <li>Híbrido</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">260.000 €</p>
-                            <a href="ficha_vehiculo.html?id=lamborghini-urus" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Enlace al catálogo completo -->
-                <div class="texto-centrado">
-                    <a href="catalogo.html" class="btn-secundario">Ver todo el catálogo</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========================================
-             SECCIÓN 4: POR QUÉ ELEGIRNOS (C09)
-             Bloque de confianza que transmite seguridad
-             y credibilidad al cliente potencial.
-        ========================================= -->
-        <section class="seccion-confianza" aria-label="Por qué elegirnos">
-            <div class="contenedor">
-                <h2 class="titulo-seccion">Por qué elegirnos</h2>
-                <p class="subtitulo-seccion">Más de 20 años ofreciendo el mejor servicio a nuestros clientes</p>
-
-                <div class="fila-confianza">
-                    <article class="bloque-confianza">
-                        <div class="icono-confianza" aria-hidden="true">&#10003;</div>
-                        <h3>Trato directo</h3>
-                        <p>Asesoramiento personalizado sin intermediarios. Te escuchamos y te acompañamos en cada paso.</p>
-                    </article>
-
-                    <article class="bloque-confianza">
-                        <div class="icono-confianza" aria-hidden="true">&#128275;</div>
-                        <h3>Certificación</h3>
-                        <p>Cada vehículo pasa un riguroso control de calidad y viene con su historia verificada.</p>
-                    </article>
-
-                    <article class="bloque-confianza">
-                        <div class="icono-confianza" aria-hidden="true">&#128737;</div>
-                        <h3>Garantía</h3>
-                        <p>Hasta 24 meses de garantía en todos nuestros vehículos para tu total tranquilidad.</p>
-                    </article>
-
-                    <article class="bloque-confianza">
-                        <div class="icono-confianza" aria-hidden="true">&#9881;</div>
-                        <h3>Servicio integral</h3>
-                        <p>Venta, mantenimiento, posventa y recambios. Todo lo que necesitas en un solo concesionario.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========================================
-             SECCIÓN 5: LLAMADA A LA ACCIÓN FINAL (CTA)
-             Botón de contacto y datos de contacto resumidos
-             para facilitar la conversión.
-        ========================================= -->
-        <section class="seccion-cta-final" aria-label="Contacto">
-            <div class="contenedor">
-                <h2>¿Encontraste lo que buscabas?</h2>
-                <p>Contacta con nosotros sin compromiso. Estamos en Carballo, listos para ayudarte.</p>
-                <a href="contacto.html" class="btn-principal">Contactar</a>
-                <div class="datos-contacto-rapidos">
-                    <a href="tel:+34981000000">📞 981 00 00 00</a>
-                    <a href="mailto:info@superautoscarballo.es">✉️ info@superautoscarballo.es</a>
+                <!-- Controles Bootstrap inferior del carrusel: izquierda, pausa, derecha -->
+                <div class="controles-carrusel-abajo">
+                    <button class="btn-control-carrusel" type="button" data-bs-target="#carrusel-hero" data-bs-slide="prev" aria-label="Diapositiva anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="btn-control-carrusel btn-pausa" type="button" aria-label="Pausar carrusel" id="btn-pausa-carrusel">
+                        <svg class="icono-pausa" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                        <svg class="icono-play" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </button>
+                    <button class="btn-control-carrusel" type="button" data-bs-target="#carrusel-hero" data-bs-slide="next" aria-label="Diapositiva siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
                 </div>
             </div>
         </section>
@@ -364,51 +176,60 @@
         <div class="contenedor">
             <div class="fila-footer">
 
-                <!-- Columna 1: Información del concesionario -->
-                <div class="columna-footer">
-                    <h3>Superautos Carballo</h3>
-                    <p>Tu concesionario de confianza para vehículos de alta gama en Carballo, Galicia.</p>
+                <!-- Columna 1: Marca -->
+                <div class="columna-footer columna-marca">
+                    <p class="footer-brand">SUPERAUTOS CARBALLO</p>
+                    <p class="footer-desc">Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
                 </div>
 
-                <!-- Columna 2: Enlaces rápidos -->
+                <!-- Columna 2: Catálogo -->
                 <div class="columna-footer">
-                    <h3>Enlaces</h3>
+                    <h3>CATÁLOGO</h3>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Catálogo</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="recambios.html">Recambios</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="catalogo.html">Deportivos</a></li>
+                        <li><a href="catalogo.html">SUV de lujo</a></li>
+                        <li><a href="catalogo.html">Ediciones limitadas</a></li>
+                        <li><a href="catalogo.html">Seminuevos certificados</a></li>
                     </ul>
                 </div>
 
-                <!-- Columna 3: Contacto -->
+                <!-- Columna 3: Servicios -->
                 <div class="columna-footer">
-                    <h3>Contacto</h3>
-                    <address>
-                        <p>📍 Carballo, A Coruña, Galicia</p>
-                        <p><a href="tel:+34981000000">📞 981 00 00 00</a></p>
-                        <p><a href="mailto:info@superautoscarballo.es">✉️ info@superautoscarballo.es</a></p>
-                        <p>🕐 Lun–Vie: 9:00–14:00 / 16:00–20:00<br>Sáb: 10:00–14:00</p>
-                    </address>
+                    <h3>SERVICIOS</h3>
+                    <ul>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="servicios.html">Venta</a></li>
+                        <li><a href="servicios.html">Mantenimiento</a></li>
+                        <li><a href="servicios.html">Posventa</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                    </ul>
                 </div>
 
-                <!-- Columna 4: Redes sociales -->
+                <!-- Columna 4: Contacto -->
                 <div class="columna-footer">
-                    <h3>Síguenos</h3>
-                    <ul class="redes-sociales">
-                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a></li>
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><a href="contacto.html">Av. A Coruña 45, 15100</a></li>
+                        <li><a href="contacto.html">Carballo, A Coruña</a></li>
+                        <li><a href="tel:+34981700200">+34 981 700 200</a></li>
+                        <li><a href="mailto:info@superautoscarballo.es">info@superautoscarballo.es</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Línea inferior del footer -->
             <div class="pie-footer">
-                <p>&copy; 2026 Superautos Carballo. Todos los derechos reservados.</p>
-                <nav aria-label="Legal">
-                    <a href="privacidad.html">Política de privacidad</a>
+                <p class="footer-copyright">&copy; 2026 Superautos Carballo</p>
+                <nav class="redes-sociales" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -416,5 +237,8 @@
 
     <!-- Bootstrap 5 JS (bundle incluye Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS principal del sitio -->
+    <script src="js/main.js"></script>
 </body>
 </html>

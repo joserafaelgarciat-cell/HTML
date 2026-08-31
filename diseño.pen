@@ -1,5 +1,5 @@
 {
-  "version": "2.15",
+  "version": "2.17",
   "children": [
     {
       "type": "frame",
@@ -12710,9 +12710,9 @@
     {
       "type": "frame",
       "id": "1ckA4",
+      "x": 354,
+      "y": 20401,
       "name": "Superautos — Ficha Vehículo",
-      "x": 0,
-      "y": 20600,
       "clip": true,
       "width": 1440,
       "height": 2400,
@@ -12754,11 +12754,10 @@
               "type": "text",
               "id": "innZz",
               "name": "Inicio",
-              "content": "Inicio",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Inicio",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -12774,11 +12773,10 @@
               "type": "text",
               "id": "Z6HaX",
               "name": "Catálogo",
-              "content": "Catálogo",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Catálogo",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -12794,10 +12792,10 @@
               "type": "text",
               "id": "FB8xG",
               "name": "Porsche 911 Targa 4S",
-              "content": "Porsche 911 Targa 4S",
               "fill": "#111111",
-              "fontSize": 13,
+              "content": "Porsche 911 Targa 4S",
               "fontFamily": "Inter",
+              "fontSize": 13,
               "fontWeight": "600"
             }
           ]
@@ -12806,7 +12804,6 @@
           "type": "frame",
           "id": "qGlPQ",
           "name": "Hero",
-          "layout": "horizontal",
           "gap": 40,
           "padding": [
             48,
@@ -12827,13 +12824,13 @@
                   "name": "Main image",
                   "clip": true,
                   "width": "fill_container",
+                  "height": 430,
                   "fill": {
                     "type": "image",
                     "enabled": true,
                     "url": "assets/img/porche/porche_911_targa_4s.webp",
                     "mode": "fill"
                   },
-                  "height": 430,
                   "cornerRadius": 16
                 },
                 {
@@ -12848,13 +12845,13 @@
                       "name": "Thumb 1",
                       "clip": true,
                       "width": 150,
+                      "height": 94,
                       "fill": {
                         "type": "image",
                         "enabled": true,
                         "url": "assets/img/porche/porche_911_targa_4s.webp",
                         "mode": "fill"
                       },
-                      "height": 94,
                       "cornerRadius": 10,
                       "stroke": "#FF9800",
                       "strokeWidth": 2
@@ -12865,13 +12862,13 @@
                       "name": "Thumb 2",
                       "clip": true,
                       "width": 150,
+                      "height": 94,
                       "fill": {
                         "type": "image",
                         "enabled": true,
                         "url": "assets/img/porche/porche_718_spyder_rs.webp",
                         "mode": "fill"
                       },
-                      "height": 94,
                       "cornerRadius": 10
                     },
                     {
@@ -12880,13 +12877,13 @@
                       "name": "Thumb 3",
                       "clip": true,
                       "width": 150,
+                      "height": 94,
                       "fill": {
                         "type": "image",
                         "enabled": true,
                         "url": "assets/img/porche/Taycan_electrico.webp",
                         "mode": "fill"
                       },
-                      "height": 94,
                       "cornerRadius": 10
                     }
                   ]
@@ -12906,10 +12903,10 @@
                   "type": "text",
                   "id": "egbTo",
                   "name": "eyebrow",
-                  "content": "SUPERAUTOS CARBALLO — VEHÍCULO CERTIFICADO",
                   "fill": "#FF9800",
-                  "fontSize": 12,
+                  "content": "SUPERAUTOS CARBALLO — VEHÍCULO CERTIFICADO",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 4
                 },
@@ -12917,33 +12914,34 @@
                   "type": "text",
                   "id": "u2psA",
                   "name": "Porsche 911 Targa 4S",
-                  "content": "Porsche 911 Targa 4S",
                   "fill": "#000000",
-                  "fontSize": 48,
+                  "content": "Porsche 911 Targa 4S",
                   "fontFamily": "Anton",
+                  "fontSize": 48,
                   "fontWeight": "normal"
                 },
                 {
                   "type": "text",
                   "id": "R3k2n",
                   "name": "price",
-                  "content": "179.900 €",
                   "fill": "#FF9800",
-                  "fontSize": 32,
+                  "content": "179.900 €",
                   "fontFamily": "Inter",
+                  "fontSize": 32,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "tKNpv",
                   "name": "El 911 Targa 4S combina la elegancia atemporal de su icónica barra antivuelco con las prestaciones más puras de la saga 911.",
-                  "content": "El 911 Targa 4S combina la elegancia atemporal de su icónica barra antivuelco con las prestaciones más puras de la saga 911.",
                   "fill": "#6B7280",
-                  "fontSize": 15,
-                  "fontFamily": "Inter",
-                  "lineHeight": 1.6,
                   "textGrowth": "fixed-width",
-                  "width": 500
+                  "width": 500,
+                  "content": "El 911 Targa 4S combina la elegancia atemporal de su icónica barra antivuelco con las prestaciones más puras de la saga 911.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
@@ -12956,21 +12954,21 @@
                       "id": "Q2fKl",
                       "name": "chip2023",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "YSrXK",
                           "name": "2023 text",
-                          "content": "2023",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "2023",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -12980,21 +12978,21 @@
                       "id": "ZmYvR",
                       "name": "chipkm",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "IkFlD",
                           "name": "12.500 km text",
-                          "content": "12.500 km",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "12.500 km",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -13004,21 +13002,21 @@
                       "id": "2DlZG",
                       "name": "chipfuel",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "AI1Zl",
                           "name": "Gasolina text",
-                          "content": "Gasolina",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "Gasolina",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -13028,21 +13026,21 @@
                       "id": "RSaTJ",
                       "name": "chipgear",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "ByMK1",
                           "name": "Automático PDK text",
-                          "content": "Automático PDK",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "Automático PDK",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -13052,21 +13050,21 @@
                       "id": "32aoC",
                       "name": "chiphp",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "GTJ70",
                           "name": "450 CV text",
-                          "content": "450 CV",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "450 CV",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -13084,6 +13082,7 @@
                       "id": "owocI",
                       "name": "ctaProba",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         14,
@@ -13091,16 +13090,15 @@
                       ],
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "QV9wW",
                           "name": "SOLICITAR PRUEBA text",
-                          "content": "SOLICITAR PRUEBA",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "SOLICITAR PRUEBA",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700",
                           "letterSpacing": 1
                         },
@@ -13121,6 +13119,9 @@
                       "id": "0kOgh",
                       "name": "ctaInfo",
                       "fill": "#FFFFFF",
+                      "cornerRadius": 9999,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
@@ -13128,18 +13129,15 @@
                       ],
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "text",
                           "id": "l5EOK",
                           "name": "SOLICITAR INFORMACIÓN text",
-                          "content": "SOLICITAR INFORMACIÓN",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "SOLICITAR INFORMACIÓN",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700",
                           "letterSpacing": 1
                         }
@@ -13166,10 +13164,10 @@
               "type": "text",
               "id": "TA40Q",
               "name": "DATOS TÉCNICOS",
-              "content": "DATOS TÉCNICOS",
               "fill": "#000000",
-              "fontSize": 36,
+              "content": "DATOS TÉCNICOS",
               "fontFamily": "Anton",
+              "fontSize": 36,
               "fontWeight": "normal"
             },
             {
@@ -13184,21 +13182,21 @@
                   "name": "stAño",
                   "width": 385,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "Nnziv",
                       "name": "AÑO label",
-                      "content": "AÑO",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "AÑO",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -13206,10 +13204,10 @@
                       "type": "text",
                       "id": "ZMZNc",
                       "name": "2023 value",
-                      "content": "2023",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "2023",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -13220,21 +13218,21 @@
                   "name": "stKm",
                   "width": 385,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "SPJPt",
                       "name": "KILOMETRAJE label",
-                      "content": "KILOMETRAJE",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "KILOMETRAJE",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -13242,10 +13240,10 @@
                       "type": "text",
                       "id": "lXfyI",
                       "name": "12.500 km value",
-                      "content": "12.500 km",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "12.500 km",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -13256,21 +13254,21 @@
                   "name": "stFuel",
                   "width": 385,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "PEWiO",
                       "name": "COMBUSTIBLE label",
-                      "content": "COMBUSTIBLE",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "COMBUSTIBLE",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -13278,10 +13276,10 @@
                       "type": "text",
                       "id": "tcl7n",
                       "name": "Gasolina value",
-                      "content": "Gasolina",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "Gasolina",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -13300,21 +13298,21 @@
                   "name": "stGear",
                   "width": 385,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "Ykxif",
                       "name": "CAMBIO label",
-                      "content": "CAMBIO",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "CAMBIO",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -13322,10 +13320,10 @@
                       "type": "text",
                       "id": "T5DwP",
                       "name": "Automático PDK value",
-                      "content": "Automático PDK",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "Automático PDK",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -13336,21 +13334,21 @@
                   "name": "stHp",
                   "width": 385,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "hxHz1",
                       "name": "POTENCIA label",
-                      "content": "POTENCIA",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "POTENCIA",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -13358,10 +13356,10 @@
                       "type": "text",
                       "id": "pCxdj",
                       "name": "450 CV value",
-                      "content": "450 CV",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "450 CV",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -13372,21 +13370,21 @@
                   "name": "stGar",
                   "width": 385,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "tXKv7",
                       "name": "GARANTÍA label",
-                      "content": "GARANTÍA",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "GARANTÍA",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -13394,10 +13392,10 @@
                       "type": "text",
                       "id": "LCHXE",
                       "name": "24 meses value",
-                      "content": "24 meses",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "24 meses",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -13421,10 +13419,10 @@
               "type": "text",
               "id": "jFAZT",
               "name": "EQUIPAMIENTO",
-              "content": "EQUIPAMIENTO",
               "fill": "#000000",
-              "fontSize": 36,
+              "content": "EQUIPAMIENTO",
               "fontFamily": "Anton",
+              "fontSize": 36,
               "fontWeight": "normal"
             },
             {
@@ -13439,15 +13437,15 @@
                   "name": "eq1",
                   "width": 385,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -13463,10 +13461,10 @@
                       "type": "text",
                       "id": "zBoTz",
                       "name": "Paquete deportivo Chrono text",
-                      "content": "Paquete deportivo Chrono",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Paquete deportivo Chrono",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -13477,15 +13475,15 @@
                   "name": "eq2",
                   "width": 385,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -13501,10 +13499,10 @@
                       "type": "text",
                       "id": "E9NEh",
                       "name": "Asientos eléctricos de cuero text",
-                      "content": "Asientos eléctricos de cuero",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Asientos eléctricos de cuero",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -13515,15 +13513,15 @@
                   "name": "eq3",
                   "width": 385,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -13539,10 +13537,10 @@
                       "type": "text",
                       "id": "FDwRs",
                       "name": "Sistema de sonido Bose text",
-                      "content": "Sistema de sonido Bose",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Sistema de sonido Bose",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -13561,15 +13559,15 @@
                   "name": "eq4",
                   "width": 385,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -13585,10 +13583,10 @@
                       "type": "text",
                       "id": "1QlyG",
                       "name": "Cámara 360º text",
-                      "content": "Cámara 360º",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Cámara 360º",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -13599,15 +13597,15 @@
                   "name": "eq5",
                   "width": 385,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -13623,10 +13621,10 @@
                       "type": "text",
                       "id": "wYtRP",
                       "name": "Suspensión adaptativa text",
-                      "content": "Suspensión adaptativa",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Suspensión adaptativa",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -13637,15 +13635,15 @@
                   "name": "eq6",
                   "width": 385,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -13661,10 +13659,10 @@
                       "type": "text",
                       "id": "N7DUR",
                       "name": "Faros LED Matrix text",
-                      "content": "Faros LED Matrix",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Faros LED Matrix",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -13678,13 +13676,11 @@
           "id": "UUZkE",
           "name": "Confianza",
           "fill": "#000000",
-          "layout": "horizontal",
           "gap": 30,
           "padding": [
             64,
             120
           ],
-          "alignItems": "flex-start",
           "children": [
             {
               "type": "frame",
@@ -13693,7 +13689,6 @@
               "width": 360,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -13709,22 +13704,23 @@
                   "type": "text",
                   "id": "mIKVI",
                   "name": "Certificación title",
-                  "content": "Certificación",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Certificación",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "m8Isb",
                   "name": "Vehículo certificado y verificado por nuestro taller, con informe técnico completo. desc",
-                  "content": "Vehículo certificado y verificado por nuestro taller, con informe técnico completo.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 360
+                  "width": 360,
+                  "content": "Vehículo certificado y verificado por nuestro taller, con informe técnico completo.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -13735,7 +13731,6 @@
               "width": 360,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -13751,22 +13746,23 @@
                   "type": "text",
                   "id": "6tvjQ",
                   "name": "Revisión completa title",
-                  "content": "Revisión completa",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Revisión completa",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "lYlcj",
                   "name": "Revisión integral de 120 puntos realizada por mecánicos especialistas. desc",
-                  "content": "Revisión integral de 120 puntos realizada por mecánicos especialistas.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 360
+                  "width": 360,
+                  "content": "Revisión integral de 120 puntos realizada por mecánicos especialistas.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -13777,7 +13773,6 @@
               "width": 360,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -13793,22 +13788,23 @@
                   "type": "text",
                   "id": "YynUw",
                   "name": "Garantía 24 meses title",
-                  "content": "Garantía 24 meses",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Garantía 24 meses",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "V7EBu",
                   "name": "Incluye garantía de 24 meses y asistencia en carretera en todo el territorio. desc",
-                  "content": "Incluye garantía de 24 meses y asistencia en carretera en todo el territorio.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 360
+                  "width": 360,
+                  "content": "Incluye garantía de 24 meses y asistencia en carretera en todo el territorio.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -13819,18 +13815,23 @@
           "type": "ref",
           "ref": "lPNIu",
           "name": "Footer",
-          "width": "fill_container"
+          "width": 1384,
+          "height": "fit_content",
+          "flipX": false,
+          "flipY": false,
+          "x": 0,
+          "y": 1752
         }
       ]
     },
     {
       "type": "frame",
       "id": "djc6G",
+      "x": 452,
+      "y": 22959,
       "name": "Superautos — Ficha Vehículo Tablet 768",
-      "x": 0,
-      "y": 23200,
       "clip": true,
-      "width": 768,
+      "width": 726,
       "height": 1850,
       "layout": "vertical",
       "children": [
@@ -13855,11 +13856,10 @@
               "type": "text",
               "id": "w7I2g",
               "name": "Inicio",
-              "content": "Inicio",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Inicio",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -13875,11 +13875,10 @@
               "type": "text",
               "id": "V1fPm",
               "name": "Catálogo",
-              "content": "Catálogo",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Catálogo",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -13895,10 +13894,10 @@
               "type": "text",
               "id": "ZeQPB",
               "name": "Porsche 911 Targa 4S",
-              "content": "Porsche 911 Targa 4S",
               "fill": "#111111",
-              "fontSize": 13,
+              "content": "Porsche 911 Targa 4S",
               "fontFamily": "Inter",
+              "fontSize": 13,
               "fontWeight": "600"
             }
           ]
@@ -13907,7 +13906,6 @@
           "type": "frame",
           "id": "rpPr4",
           "name": "Hero",
-          "layout": "horizontal",
           "gap": 24,
           "padding": [
             40,
@@ -13920,13 +13918,13 @@
               "name": "Main image",
               "clip": true,
               "width": 330,
+              "height": 300,
               "fill": {
                 "type": "image",
                 "enabled": true,
                 "url": "assets/img/porche/porche_911_targa_4s.webp",
                 "mode": "fill"
               },
-              "height": 300,
               "cornerRadius": 12
             },
             {
@@ -13942,10 +13940,10 @@
                   "type": "text",
                   "id": "e9psF",
                   "name": "eyebrow",
-                  "content": "SUPERAUTOS CARBALLO",
                   "fill": "#FF9800",
-                  "fontSize": 11,
+                  "content": "SUPERAUTOS CARBALLO",
                   "fontFamily": "Inter",
+                  "fontSize": 11,
                   "fontWeight": "600",
                   "letterSpacing": 3
                 },
@@ -13953,33 +13951,34 @@
                   "type": "text",
                   "id": "v7QyJ",
                   "name": "Porsche 911 Targa 4S",
-                  "content": "Porsche 911 Targa 4S",
                   "fill": "#000000",
-                  "fontSize": 34,
+                  "content": "Porsche 911 Targa 4S",
                   "fontFamily": "Anton",
+                  "fontSize": 34,
                   "fontWeight": "normal"
                 },
                 {
                   "type": "text",
                   "id": "ojP4q",
                   "name": "price",
-                  "content": "179.900 €",
                   "fill": "#FF9800",
-                  "fontSize": 26,
+                  "content": "179.900 €",
                   "fontFamily": "Inter",
+                  "fontSize": 26,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "eWU1P",
                   "name": "· 2023 · 12.500 km · Gasolina · Automático PDK · 450 CV",
-                  "content": "· 2023 · 12.500 km · Gasolina · Automático PDK · 450 CV",
                   "fill": "#6B7280",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
-                  "lineHeight": 1.5,
                   "textGrowth": "fixed-width",
-                  "width": 320
+                  "width": 320,
+                  "content": "· 2023 · 12.500 km · Gasolina · Automático PDK · 450 CV",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
@@ -13992,6 +13991,7 @@
                       "id": "dWYBl",
                       "name": "ctaProba",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         14,
@@ -13999,16 +13999,15 @@
                       ],
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "xBdrL",
                           "name": "SOLICITAR PRUEBA text",
-                          "content": "SOLICITAR PRUEBA",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "SOLICITAR PRUEBA",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700",
                           "letterSpacing": 1
                         }
@@ -14019,6 +14018,9 @@
                       "id": "XxlXu",
                       "name": "ctaInfo",
                       "fill": "#FFFFFF",
+                      "cornerRadius": 9999,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
@@ -14026,18 +14028,15 @@
                       ],
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "text",
                           "id": "9ySgH",
                           "name": "SOLICITAR INFORMACIÓN text",
-                          "content": "SOLICITAR INFORMACIÓN",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "SOLICITAR INFORMACIÓN",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700",
                           "letterSpacing": 1
                         }
@@ -14064,10 +14063,10 @@
               "type": "text",
               "id": "kuflK",
               "name": "DATOS TÉCNICOS",
-              "content": "DATOS TÉCNICOS",
               "fill": "#000000",
-              "fontSize": 28,
+              "content": "DATOS TÉCNICOS",
               "fontFamily": "Anton",
+              "fontSize": 28,
               "fontWeight": "normal"
             },
             {
@@ -14082,21 +14081,21 @@
                   "name": "stAño",
                   "width": 220,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "XxOdE",
                       "name": "AÑO label",
-                      "content": "AÑO",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "AÑO",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -14104,10 +14103,10 @@
                       "type": "text",
                       "id": "efhUY",
                       "name": "2023 value",
-                      "content": "2023",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "2023",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -14118,21 +14117,21 @@
                   "name": "stKm",
                   "width": 220,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "YHAeV",
                       "name": "KILOMETRAJE label",
-                      "content": "KILOMETRAJE",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "KILOMETRAJE",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -14140,10 +14139,10 @@
                       "type": "text",
                       "id": "uE5Lg",
                       "name": "12.500 km value",
-                      "content": "12.500 km",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "12.500 km",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -14154,21 +14153,21 @@
                   "name": "stFuel",
                   "width": 220,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "r3EN6",
                       "name": "COMBUSTIBLE label",
-                      "content": "COMBUSTIBLE",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "COMBUSTIBLE",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -14176,10 +14175,10 @@
                       "type": "text",
                       "id": "KDUDQ",
                       "name": "Gasolina value",
-                      "content": "Gasolina",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "Gasolina",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -14198,21 +14197,21 @@
                   "name": "stGear",
                   "width": 220,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "GdY9V",
                       "name": "CAMBIO label",
-                      "content": "CAMBIO",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "CAMBIO",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -14220,10 +14219,10 @@
                       "type": "text",
                       "id": "MVBxm",
                       "name": "Automático PDK value",
-                      "content": "Automático PDK",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "Automático PDK",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -14234,21 +14233,21 @@
                   "name": "stHp",
                   "width": 220,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "zEtb8",
                       "name": "POTENCIA label",
-                      "content": "POTENCIA",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "POTENCIA",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -14256,10 +14255,10 @@
                       "type": "text",
                       "id": "X6fwH",
                       "name": "450 CV value",
-                      "content": "450 CV",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "450 CV",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -14270,21 +14269,21 @@
                   "name": "stGar",
                   "width": 220,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "bRKWC",
                       "name": "GARANTÍA label",
-                      "content": "GARANTÍA",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "GARANTÍA",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -14292,10 +14291,10 @@
                       "type": "text",
                       "id": "Fi5uJ",
                       "name": "24 meses value",
-                      "content": "24 meses",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "24 meses",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -14319,10 +14318,10 @@
               "type": "text",
               "id": "6dkZs",
               "name": "EQUIPAMIENTO",
-              "content": "EQUIPAMIENTO",
               "fill": "#000000",
-              "fontSize": 28,
+              "content": "EQUIPAMIENTO",
               "fontFamily": "Anton",
+              "fontSize": 28,
               "fontWeight": "normal"
             },
             {
@@ -14337,15 +14336,15 @@
                   "name": "eq1",
                   "width": 220,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -14361,10 +14360,10 @@
                       "type": "text",
                       "id": "QDcwp",
                       "name": "Paquete deportivo Chrono text",
-                      "content": "Paquete deportivo Chrono",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Paquete deportivo Chrono",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -14375,15 +14374,15 @@
                   "name": "eq2",
                   "width": 220,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -14399,10 +14398,10 @@
                       "type": "text",
                       "id": "LdoWL",
                       "name": "Asientos eléctricos text",
-                      "content": "Asientos eléctricos",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Asientos eléctricos",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -14413,15 +14412,15 @@
                   "name": "eq3",
                   "width": 220,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -14437,10 +14436,10 @@
                       "type": "text",
                       "id": "LOF7N",
                       "name": "Sistema Bose text",
-                      "content": "Sistema Bose",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Sistema Bose",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -14459,15 +14458,15 @@
                   "name": "eq4",
                   "width": 220,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -14483,10 +14482,10 @@
                       "type": "text",
                       "id": "q3nrf",
                       "name": "Cámara 360º text",
-                      "content": "Cámara 360º",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Cámara 360º",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -14497,15 +14496,15 @@
                   "name": "eq5",
                   "width": 220,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -14521,10 +14520,10 @@
                       "type": "text",
                       "id": "tIu9A",
                       "name": "Suspensión adaptativa text",
-                      "content": "Suspensión adaptativa",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Suspensión adaptativa",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -14535,15 +14534,15 @@
                   "name": "eq6",
                   "width": 220,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -14559,10 +14558,10 @@
                       "type": "text",
                       "id": "oAXrG",
                       "name": "Faros LED Matrix text",
-                      "content": "Faros LED Matrix",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Faros LED Matrix",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -14576,13 +14575,11 @@
           "id": "PZJeo",
           "name": "Confianza",
           "fill": "#000000",
-          "layout": "horizontal",
           "gap": 16,
           "padding": [
             48,
             32
           ],
-          "alignItems": "flex-start",
           "children": [
             {
               "type": "frame",
@@ -14591,7 +14588,6 @@
               "width": 210,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -14607,22 +14603,23 @@
                   "type": "text",
                   "id": "Dx32w",
                   "name": "Certificación title",
-                  "content": "Certificación",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Certificación",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "GkQ2I",
                   "name": "Vehículo certificado con informe técnico. desc",
-                  "content": "Vehículo certificado con informe técnico.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 210
+                  "width": 210,
+                  "content": "Vehículo certificado con informe técnico.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -14633,7 +14630,6 @@
               "width": 210,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -14649,22 +14645,23 @@
                   "type": "text",
                   "id": "oVWE3",
                   "name": "Revisión completa title",
-                  "content": "Revisión completa",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Revisión completa",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "OIInb",
                   "name": "Revisión de 120 puntos. desc",
-                  "content": "Revisión de 120 puntos.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 210
+                  "width": 210,
+                  "content": "Revisión de 120 puntos.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -14675,7 +14672,6 @@
               "width": 210,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -14691,22 +14687,23 @@
                   "type": "text",
                   "id": "vPrZe",
                   "name": "Garantía 24 meses title",
-                  "content": "Garantía 24 meses",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Garantía 24 meses",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "8OLlo",
                   "name": "Garantía y asistencia. desc",
-                  "content": "Garantía y asistencia.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 210
+                  "width": 210,
+                  "content": "Garantía y asistencia.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -14723,9 +14720,9 @@
     {
       "type": "frame",
       "id": "2pCxf",
+      "x": 1347,
+      "y": 22975,
       "name": "Superautos — Ficha Vehículo Móvil 390",
-      "x": 848,
-      "y": 20600,
       "clip": true,
       "width": 390,
       "height": 2400,
@@ -14752,11 +14749,10 @@
               "type": "text",
               "id": "8q7IY",
               "name": "Inicio",
-              "content": "Inicio",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Inicio",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -14772,11 +14768,10 @@
               "type": "text",
               "id": "iZNrv",
               "name": "Catálogo",
-              "content": "Catálogo",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Catálogo",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -14792,10 +14787,10 @@
               "type": "text",
               "id": "D6kE2",
               "name": "911 Targa 4S",
-              "content": "911 Targa 4S",
               "fill": "#111111",
-              "fontSize": 13,
+              "content": "911 Targa 4S",
               "fontFamily": "Inter",
+              "fontSize": 13,
               "fontWeight": "600"
             }
           ]
@@ -14817,13 +14812,13 @@
               "name": "Main image",
               "clip": true,
               "width": "fill_container",
+              "height": 220,
               "fill": {
                 "type": "image",
                 "enabled": true,
                 "url": "assets/img/porche/porche_911_targa_4s.webp",
                 "mode": "fill"
               },
-              "height": 220,
               "cornerRadius": 12
             },
             {
@@ -14838,13 +14833,13 @@
                   "name": "Thumb 1",
                   "clip": true,
                   "width": 105,
+                  "height": 74,
                   "fill": {
                     "type": "image",
                     "enabled": true,
                     "url": "assets/img/porche/porche_911_targa_4s.webp",
                     "mode": "fill"
                   },
-                  "height": 74,
                   "cornerRadius": 8,
                   "stroke": "#FF9800",
                   "strokeWidth": 2
@@ -14855,13 +14850,13 @@
                   "name": "Thumb 2",
                   "clip": true,
                   "width": 105,
+                  "height": 74,
                   "fill": {
                     "type": "image",
                     "enabled": true,
                     "url": "assets/img/porche/porche_718_spyder_rs.webp",
                     "mode": "fill"
                   },
-                  "height": 74,
                   "cornerRadius": 8
                 },
                 {
@@ -14870,13 +14865,13 @@
                   "name": "Thumb 3",
                   "clip": true,
                   "width": 105,
+                  "height": 74,
                   "fill": {
                     "type": "image",
                     "enabled": true,
                     "url": "assets/img/porche/Taycan_electrico.webp",
                     "mode": "fill"
                   },
-                  "height": 74,
                   "cornerRadius": 8
                 }
               ]
@@ -14892,10 +14887,10 @@
                   "type": "text",
                   "id": "zJaYR",
                   "name": "eyebrow",
-                  "content": "SUPERAUTOS CARBALLO",
                   "fill": "#FF9800",
-                  "fontSize": 11,
+                  "content": "SUPERAUTOS CARBALLO",
                   "fontFamily": "Inter",
+                  "fontSize": 11,
                   "fontWeight": "600",
                   "letterSpacing": 3
                 },
@@ -14903,20 +14898,20 @@
                   "type": "text",
                   "id": "J0Djl",
                   "name": "Porsche 911 Targa 4S",
-                  "content": "Porsche 911 Targa 4S",
                   "fill": "#000000",
-                  "fontSize": 30,
+                  "content": "Porsche 911 Targa 4S",
                   "fontFamily": "Anton",
+                  "fontSize": 30,
                   "fontWeight": "normal"
                 },
                 {
                   "type": "text",
                   "id": "daYjr",
                   "name": "price",
-                  "content": "179.900 €",
                   "fill": "#FF9800",
-                  "fontSize": 26,
+                  "content": "179.900 €",
                   "fontFamily": "Inter",
+                  "fontSize": 26,
                   "fontWeight": "700"
                 },
                 {
@@ -14930,21 +14925,21 @@
                       "id": "En9Du",
                       "name": "chip1",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "Qf3rl",
                           "name": "2023 text",
-                          "content": "2023",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "2023",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -14954,21 +14949,21 @@
                       "id": "vlo3C",
                       "name": "chip2",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "NVRdP",
                           "name": "12.500 km text",
-                          "content": "12.500 km",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "12.500 km",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -14978,21 +14973,21 @@
                       "id": "w10LM",
                       "name": "chip3",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "Luu8Z",
                           "name": "Gasolina text",
-                          "content": "Gasolina",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "Gasolina",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -15010,21 +15005,21 @@
                       "id": "fMxW0",
                       "name": "chip4",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "qrt3C",
                           "name": "Automático PDK text",
-                          "content": "Automático PDK",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "Automático PDK",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -15034,21 +15029,21 @@
                       "id": "inxjj",
                       "name": "chip5",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         8,
                         14
                       ],
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "Kh5p1",
                           "name": "450 CV text",
-                          "content": "450 CV",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "450 CV",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700"
                         }
                       ]
@@ -15059,13 +15054,14 @@
                   "type": "text",
                   "id": "FM5Wz",
                   "name": "Perfectamente mantenido y certificado. Incluye garantía de 24 meses.",
-                  "content": "Perfectamente mantenido y certificado. Incluye garantía de 24 meses.",
                   "fill": "#6B7280",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
-                  "lineHeight": 1.5,
                   "textGrowth": "fixed-width",
-                  "width": 340
+                  "width": 340,
+                  "content": "Perfectamente mantenido y certificado. Incluye garantía de 24 meses.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
@@ -15079,6 +15075,7 @@
                       "id": "pyJux",
                       "name": "ctaProba",
                       "fill": "#FF9800",
+                      "cornerRadius": 9999,
                       "gap": 8,
                       "padding": [
                         14,
@@ -15086,16 +15083,15 @@
                       ],
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "A4Btl",
                           "name": "SOLICITAR PRUEBA text",
-                          "content": "SOLICITAR PRUEBA",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "SOLICITAR PRUEBA",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700",
                           "letterSpacing": 1
                         }
@@ -15106,6 +15102,9 @@
                       "id": "LSnEX",
                       "name": "ctaInfo",
                       "fill": "#FFFFFF",
+                      "cornerRadius": 9999,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
@@ -15113,18 +15112,15 @@
                       ],
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "text",
                           "id": "Oc5zb",
                           "name": "SOLICITAR INFORMACIÓN text",
-                          "content": "SOLICITAR INFORMACIÓN",
                           "fill": "#000000",
-                          "fontSize": 13,
+                          "content": "SOLICITAR INFORMACIÓN",
                           "fontFamily": "Inter",
+                          "fontSize": 13,
                           "fontWeight": "700",
                           "letterSpacing": 1
                         }
@@ -15151,10 +15147,10 @@
               "type": "text",
               "id": "MEWnQ",
               "name": "DATOS TÉCNICOS",
-              "content": "DATOS TÉCNICOS",
               "fill": "#000000",
-              "fontSize": 26,
+              "content": "DATOS TÉCNICOS",
               "fontFamily": "Anton",
+              "fontSize": 26,
               "fontWeight": "normal"
             },
             {
@@ -15169,21 +15165,21 @@
                   "name": "stAño",
                   "width": 166,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "CzgYI",
                       "name": "AÑO label",
-                      "content": "AÑO",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "AÑO",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -15191,10 +15187,10 @@
                       "type": "text",
                       "id": "fI0Pt",
                       "name": "2023 value",
-                      "content": "2023",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "2023",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -15205,21 +15201,21 @@
                   "name": "stKm",
                   "width": 166,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "HElj5",
                       "name": "KM label",
-                      "content": "KM",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "KM",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -15227,10 +15223,10 @@
                       "type": "text",
                       "id": "NImeQ",
                       "name": "12.500 value",
-                      "content": "12.500",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "12.500",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -15249,21 +15245,21 @@
                   "name": "stFuel",
                   "width": 166,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "nRbBa",
                       "name": "COMBUSTIBLE label",
-                      "content": "COMBUSTIBLE",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "COMBUSTIBLE",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -15271,10 +15267,10 @@
                       "type": "text",
                       "id": "orfEN",
                       "name": "Gasolina value",
-                      "content": "Gasolina",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "Gasolina",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -15285,21 +15281,21 @@
                   "name": "stGear",
                   "width": 166,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "yY8oL",
                       "name": "CAMBIO label",
-                      "content": "CAMBIO",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "CAMBIO",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -15307,10 +15303,10 @@
                       "type": "text",
                       "id": "zDowd",
                       "name": "Automático value",
-                      "content": "Automático",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "Automático",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -15329,21 +15325,21 @@
                   "name": "stHp",
                   "width": 166,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "RzGGX",
                       "name": "POTENCIA label",
-                      "content": "POTENCIA",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "POTENCIA",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -15351,10 +15347,10 @@
                       "type": "text",
                       "id": "8Ap2F",
                       "name": "450 CV value",
-                      "content": "450 CV",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "450 CV",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -15365,21 +15361,21 @@
                   "name": "stGar",
                   "width": 166,
                   "fill": "#FFFFFF",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 20,
                   "cornerRadius": 12,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
                   "children": [
                     {
                       "type": "text",
                       "id": "JAaFr",
                       "name": "GARANTÍA label",
-                      "content": "GARANTÍA",
                       "fill": "#6B7280",
-                      "fontSize": 12,
+                      "content": "GARANTÍA",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 2
                     },
@@ -15387,10 +15383,10 @@
                       "type": "text",
                       "id": "oZr58",
                       "name": "24 meses value",
-                      "content": "24 meses",
                       "fill": "#000000",
-                      "fontSize": 22,
+                      "content": "24 meses",
                       "fontFamily": "Inter",
+                      "fontSize": 22,
                       "fontWeight": "700"
                     }
                   ]
@@ -15414,10 +15410,10 @@
               "type": "text",
               "id": "tuTx7",
               "name": "EQUIPAMIENTO",
-              "content": "EQUIPAMIENTO",
               "fill": "#000000",
-              "fontSize": 26,
+              "content": "EQUIPAMIENTO",
               "fontFamily": "Anton",
+              "fontSize": 26,
               "fontWeight": "normal"
             },
             {
@@ -15432,15 +15428,15 @@
                   "name": "eq1",
                   "width": 166,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -15456,10 +15452,10 @@
                       "type": "text",
                       "id": "Xuqly",
                       "name": "Paquete deportivo text",
-                      "content": "Paquete deportivo",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Paquete deportivo",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -15470,15 +15466,15 @@
                   "name": "eq2",
                   "width": 166,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -15494,10 +15490,10 @@
                       "type": "text",
                       "id": "6yTim",
                       "name": "Asientos cuero text",
-                      "content": "Asientos cuero",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Asientos cuero",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -15516,15 +15512,15 @@
                   "name": "eq3",
                   "width": 166,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -15540,10 +15536,10 @@
                       "type": "text",
                       "id": "mdwaf",
                       "name": "Bose text",
-                      "content": "Bose",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Bose",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -15554,15 +15550,15 @@
                   "name": "eq4",
                   "width": 166,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -15578,10 +15574,10 @@
                       "type": "text",
                       "id": "hXw9Q",
                       "name": "Cámara 360º text",
-                      "content": "Cámara 360º",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Cámara 360º",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -15600,15 +15596,15 @@
                   "name": "eq5",
                   "width": 166,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -15624,10 +15620,10 @@
                       "type": "text",
                       "id": "k1Hz5",
                       "name": "Suspensión adapt. text",
-                      "content": "Suspensión adapt.",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Suspensión adapt.",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -15638,15 +15634,15 @@
                   "name": "eq6",
                   "width": 166,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 12,
                   "padding": [
                     16,
                     20
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -15662,10 +15658,10 @@
                       "type": "text",
                       "id": "xVQct",
                       "name": "Faros LED text",
-                      "content": "Faros LED",
                       "fill": "#111111",
-                      "fontSize": 14,
+                      "content": "Faros LED",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -15685,7 +15681,6 @@
             40,
             20
           ],
-          "alignItems": "flex-start",
           "children": [
             {
               "type": "frame",
@@ -15694,7 +15689,6 @@
               "width": 340,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -15710,22 +15704,23 @@
                   "type": "text",
                   "id": "AuDfE",
                   "name": "Certificación title",
-                  "content": "Certificación",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Certificación",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "KuM43",
                   "name": "Vehículo certificado. desc",
-                  "content": "Vehículo certificado.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 340
+                  "width": 340,
+                  "content": "Vehículo certificado.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -15736,7 +15731,6 @@
               "width": 340,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -15752,22 +15746,23 @@
                   "type": "text",
                   "id": "oysXC",
                   "name": "Revisión completa title",
-                  "content": "Revisión completa",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Revisión completa",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "1e3O5",
                   "name": "Revisión de 120 puntos. desc",
-                  "content": "Revisión de 120 puntos.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 340
+                  "width": 340,
+                  "content": "Revisión de 120 puntos.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -15778,7 +15773,6 @@
               "width": 340,
               "layout": "vertical",
               "gap": 12,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "icon",
@@ -15794,22 +15788,23 @@
                   "type": "text",
                   "id": "JKT7c",
                   "name": "Garantía 24 meses title",
-                  "content": "Garantía 24 meses",
                   "fill": "#FFFFFF",
-                  "fontSize": 18,
+                  "content": "Garantía 24 meses",
                   "fontFamily": "Inter",
+                  "fontSize": 18,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "bc0Nt",
                   "name": "Garantía y asistencia. desc",
-                  "content": "Garantía y asistencia.",
                   "fill": "#9CA3AF",
-                  "fontSize": 14,
-                  "fontFamily": "Inter",
                   "textGrowth": "fixed-width",
-                  "width": 340
+                  "width": 340,
+                  "content": "Garantía y asistencia.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -15819,16 +15814,22 @@
           "id": "mlc5c",
           "type": "ref",
           "ref": "In5np",
-          "name": "Footer"
+          "name": "Footer",
+          "width": 382,
+          "height": "fit_content",
+          "flipX": false,
+          "flipY": false,
+          "x": 0,
+          "y": 2026
         }
       ]
     },
     {
       "type": "frame",
       "id": "5XsGm",
+      "x": 21,
+      "y": 25435,
       "name": "Superautos — Proba Conducción",
-      "x": 0,
-      "y": 25250,
       "clip": true,
       "width": 1440,
       "height": 2100,
@@ -15870,11 +15871,10 @@
               "type": "text",
               "id": "PBOQU",
               "name": "Inicio",
-              "content": "Inicio",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Inicio",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -15890,11 +15890,10 @@
               "type": "text",
               "id": "ULgWr",
               "name": "Catálogo",
-              "content": "Catálogo",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Catálogo",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -15913,14 +15912,9 @@
                 "txt": "911 Targa 4S",
                 "last": false
               },
-              "content": {
-                "txt": "911 Targa 4S",
-                "last": false
-              },
               "fill": "#6B7280",
-              "fontSize": 13,
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -15936,10 +15930,10 @@
               "type": "text",
               "id": "AOP4j",
               "name": "Solicitar prueba",
-              "content": "Solicitar prueba",
               "fill": "#111111",
-              "fontSize": 13,
+              "content": "Solicitar prueba",
               "fontFamily": "Inter",
+              "fontSize": 13,
               "fontWeight": "600"
             }
           ]
@@ -15960,10 +15954,10 @@
               "type": "text",
               "id": "AeNTX",
               "name": "eyebrow",
-              "content": "SUPERAUTOS CARBALLO",
               "fill": "#FF9800",
-              "fontSize": 12,
+              "content": "SUPERAUTOS CARBALLO",
               "fontFamily": "Inter",
+              "fontSize": 12,
               "fontWeight": "600",
               "letterSpacing": 4
             },
@@ -15971,25 +15965,26 @@
               "type": "text",
               "id": "50e3v",
               "name": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
-              "content": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
               "fill": "#000000",
-              "fontSize": 52,
+              "content": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
+              "textAlign": "center",
               "fontFamily": "Anton",
-              "fontWeight": "normal",
-              "textAlign": "center"
+              "fontSize": 52,
+              "fontWeight": "normal"
             },
             {
               "type": "text",
               "id": "xSg1R",
               "name": "Rellena el formulario en tres pasos y concierta la cita para probar el vehículo en nuestro concesionario de Carballo.",
-              "content": "Rellena el formulario en tres pasos y concierta la cita para probar el vehículo en nuestro concesionario de Carballo.",
               "fill": "#6B7280",
-              "fontSize": 16,
-              "fontFamily": "Inter",
-              "textAlign": "center",
-              "lineHeight": 1.6,
               "textGrowth": "fixed-width",
-              "width": 640
+              "width": 640,
+              "content": "Rellena el formulario en tres pasos y concierta la cita para probar el vehículo en nuestro concesionario de Carballo.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
             }
           ]
         },
@@ -15998,15 +15993,15 @@
           "id": "lu7pQ",
           "name": "Aviso",
           "fill": "#FFF4E5",
+          "cornerRadius": 12,
+          "stroke": "#FF9800",
+          "strokeWidth": 1,
           "gap": 12,
           "padding": [
             16,
             20
           ],
           "alignItems": "center",
-          "cornerRadius": 12,
-          "stroke": "#FF9800",
-          "strokeWidth": 1,
           "children": [
             {
               "type": "icon",
@@ -16022,12 +16017,13 @@
               "type": "text",
               "id": "6Xmf7",
               "name": "Aviso: tu solicitud quedará pendiente de confirmación. Nos pondremos en contacto contigo por teléfono o correo para confirmar fecha y hora.",
-              "content": "Aviso: tu solicitud quedará pendiente de confirmación. Nos pondremos en contacto contigo por teléfono o correo para confirmar fecha y hora.",
               "fill": "#111111",
-              "fontSize": 14,
-              "fontFamily": "Inter",
               "textGrowth": "fixed-width",
-              "width": 1100
+              "width": 1100,
+              "content": "Aviso: tu solicitud quedará pendiente de confirmación. Nos pondremos en contacto contigo por teléfono o correo para confirmar fecha y hora.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
             }
           ]
         },
@@ -16036,12 +16032,12 @@
           "id": "pFbGk",
           "name": "Form",
           "fill": "#FFFFFF",
-          "layout": "vertical",
-          "gap": 32,
-          "padding": 40,
           "cornerRadius": 16,
           "stroke": "#E5E7EB",
           "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 40,
           "children": [
             {
               "type": "frame",
@@ -16064,19 +16060,18 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FF9800",
-                      "layout": "horizontal",
+                      "cornerRadius": 9999,
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "VyPXB",
                           "name": 1,
-                          "content": "1",
                           "fill": "#000000",
-                          "fontSize": 15,
+                          "content": "1",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -16085,10 +16080,10 @@
                       "type": "text",
                       "id": "nRmSB",
                       "name": "El vehículo y la cita",
-                      "content": "El vehículo y la cita",
                       "fill": "#111111",
-                      "fontSize": 13,
+                      "content": "El vehículo y la cita",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "700"
                     }
                   ]
@@ -16115,21 +16110,20 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FFFFFF",
-                      "layout": "horizontal",
-                      "justifyContent": "center",
-                      "alignItems": "center",
                       "cornerRadius": 9999,
                       "stroke": "#E5E7EB",
                       "strokeWidth": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
                           "id": "Ulp2f",
                           "name": 2,
-                          "content": "2",
                           "fill": "#9CA3AF",
-                          "fontSize": 15,
+                          "content": "2",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -16138,10 +16132,10 @@
                       "type": "text",
                       "id": "eyjvk",
                       "name": "Tus datos",
-                      "content": "Tus datos",
                       "fill": "#6B7280",
-                      "fontSize": 13,
+                      "content": "Tus datos",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "500"
                     }
                   ]
@@ -16168,21 +16162,20 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FFFFFF",
-                      "layout": "horizontal",
-                      "justifyContent": "center",
-                      "alignItems": "center",
                       "cornerRadius": 9999,
                       "stroke": "#E5E7EB",
                       "strokeWidth": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
                           "id": "TsLjQ",
                           "name": 3,
-                          "content": "3",
                           "fill": "#9CA3AF",
-                          "fontSize": 15,
+                          "content": "3",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -16191,10 +16184,10 @@
                       "type": "text",
                       "id": "ETj9S",
                       "name": "Revisa y envía",
-                      "content": "Revisa y envía",
                       "fill": "#6B7280",
-                      "fontSize": 13,
+                      "content": "Revisa y envía",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "500"
                     }
                   ]
@@ -16212,10 +16205,10 @@
                   "type": "text",
                   "id": "Xa1s9",
                   "name": "1. EL VEHÍCULO Y LA CITA",
-                  "content": "1. EL VEHÍCULO Y LA CITA",
                   "fill": "#000000",
-                  "fontSize": 24,
+                  "content": "1. EL VEHÍCULO Y LA CITA",
                   "fontFamily": "Anton",
+                  "fontSize": 24,
                   "fontWeight": "normal"
                 },
                 {
@@ -16230,10 +16223,10 @@
                       "type": "text",
                       "id": "UlOQR",
                       "name": "vehiculo label",
-                      "content": "Vehículo",
                       "fill": "#111111",
-                      "fontSize": 12,
+                      "content": "Vehículo",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 1
                     },
@@ -16244,15 +16237,15 @@
                       "width": "fill_container",
                       "height": 50,
                       "fill": "#F3F4F6",
+                      "cornerRadius": 10,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
                         16
                       ],
                       "alignItems": "center",
-                      "cornerRadius": 10,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "icon",
@@ -16268,10 +16261,10 @@
                           "type": "text",
                           "id": "ze7mV",
                           "name": "vehiculo value",
-                          "content": "Porsche 911 Targa 4S",
                           "fill": "#111111",
-                          "fontSize": 15,
+                          "content": "Porsche 911 Targa 4S",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "600"
                         }
                       ]
@@ -16296,10 +16289,10 @@
                           "type": "text",
                           "id": "lntxM",
                           "name": "fecha label",
-                          "content": "Fecha preferente",
                           "fill": "#111111",
-                          "fontSize": 12,
+                          "content": "Fecha preferente",
                           "fontFamily": "Inter",
+                          "fontSize": 12,
                           "fontWeight": "600",
                           "letterSpacing": 1
                         },
@@ -16310,24 +16303,25 @@
                           "width": 550,
                           "height": 50,
                           "fill": "#FFFFFF",
+                          "cornerRadius": 10,
+                          "stroke": "#E5E7EB",
+                          "strokeWidth": 1,
                           "gap": 8,
                           "padding": [
                             14,
                             16
                           ],
                           "alignItems": "center",
-                          "cornerRadius": 10,
-                          "stroke": "#E5E7EB",
-                          "strokeWidth": 1,
                           "children": [
                             {
                               "type": "text",
                               "id": "mWe0q",
                               "name": "fecha ph",
-                              "content": "Selecciona una fecha",
                               "fill": "#9CA3AF",
+                              "content": "Selecciona una fecha",
+                              "fontFamily": "Inter",
                               "fontSize": 15,
-                              "fontFamily": "Inter"
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -16345,10 +16339,10 @@
                           "type": "text",
                           "id": "Yqj2m",
                           "name": "franja label",
-                          "content": "Franja horaria",
                           "fill": "#111111",
-                          "fontSize": 12,
+                          "content": "Franja horaria",
                           "fontFamily": "Inter",
+                          "fontSize": 12,
                           "fontWeight": "600",
                           "letterSpacing": 1
                         },
@@ -16359,24 +16353,25 @@
                           "width": 550,
                           "height": 50,
                           "fill": "#FFFFFF",
+                          "cornerRadius": 10,
+                          "stroke": "#E5E7EB",
+                          "strokeWidth": 1,
                           "gap": 8,
                           "padding": [
                             14,
                             16
                           ],
                           "alignItems": "center",
-                          "cornerRadius": 10,
-                          "stroke": "#E5E7EB",
-                          "strokeWidth": 1,
                           "children": [
                             {
                               "type": "text",
                               "id": "C2pj8",
                               "name": "franja ph",
-                              "content": "Mañana 9:00-14:00",
                               "fill": "#9CA3AF",
+                              "content": "Mañana 9:00-14:00",
+                              "fontFamily": "Inter",
                               "fontSize": 15,
-                              "fontFamily": "Inter"
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -16397,10 +16392,10 @@
                   "type": "text",
                   "id": "MeDC6",
                   "name": "2. TUS DATOS",
-                  "content": "2. TUS DATOS",
                   "fill": "#000000",
-                  "fontSize": 24,
+                  "content": "2. TUS DATOS",
                   "fontFamily": "Anton",
+                  "fontSize": 24,
                   "fontWeight": "normal"
                 },
                 {
@@ -16421,10 +16416,10 @@
                           "type": "text",
                           "id": "ANB3M",
                           "name": "nombre label",
-                          "content": "Nombre",
                           "fill": "#111111",
-                          "fontSize": 12,
+                          "content": "Nombre",
                           "fontFamily": "Inter",
+                          "fontSize": 12,
                           "fontWeight": "600",
                           "letterSpacing": 1
                         },
@@ -16435,24 +16430,25 @@
                           "width": 550,
                           "height": 50,
                           "fill": "#FFFFFF",
+                          "cornerRadius": 10,
+                          "stroke": "#E5E7EB",
+                          "strokeWidth": 1,
                           "gap": 8,
                           "padding": [
                             14,
                             16
                           ],
                           "alignItems": "center",
-                          "cornerRadius": 10,
-                          "stroke": "#E5E7EB",
-                          "strokeWidth": 1,
                           "children": [
                             {
                               "type": "text",
                               "id": "stdMB",
                               "name": "nombre ph",
-                              "content": "Tu nombre",
                               "fill": "#9CA3AF",
+                              "content": "Tu nombre",
+                              "fontFamily": "Inter",
                               "fontSize": 15,
-                              "fontFamily": "Inter"
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -16470,10 +16466,10 @@
                           "type": "text",
                           "id": "FwHgW",
                           "name": "apellidos label",
-                          "content": "Apellidos",
                           "fill": "#111111",
-                          "fontSize": 12,
+                          "content": "Apellidos",
                           "fontFamily": "Inter",
+                          "fontSize": 12,
                           "fontWeight": "600",
                           "letterSpacing": 1
                         },
@@ -16484,24 +16480,25 @@
                           "width": 550,
                           "height": 50,
                           "fill": "#FFFFFF",
+                          "cornerRadius": 10,
+                          "stroke": "#E5E7EB",
+                          "strokeWidth": 1,
                           "gap": 8,
                           "padding": [
                             14,
                             16
                           ],
                           "alignItems": "center",
-                          "cornerRadius": 10,
-                          "stroke": "#E5E7EB",
-                          "strokeWidth": 1,
                           "children": [
                             {
                               "type": "text",
                               "id": "ZX1gt",
                               "name": "apellidos ph",
-                              "content": "Tus apellidos",
                               "fill": "#9CA3AF",
+                              "content": "Tus apellidos",
+                              "fontFamily": "Inter",
                               "fontSize": 15,
-                              "fontFamily": "Inter"
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -16527,10 +16524,10 @@
                           "type": "text",
                           "id": "tSlFf",
                           "name": "correo label",
-                          "content": "Correo electrónico",
                           "fill": "#111111",
-                          "fontSize": 12,
+                          "content": "Correo electrónico",
                           "fontFamily": "Inter",
+                          "fontSize": 12,
                           "fontWeight": "600",
                           "letterSpacing": 1
                         },
@@ -16541,24 +16538,25 @@
                           "width": 550,
                           "height": 50,
                           "fill": "#FFFFFF",
+                          "cornerRadius": 10,
+                          "stroke": "#E5E7EB",
+                          "strokeWidth": 1,
                           "gap": 8,
                           "padding": [
                             14,
                             16
                           ],
                           "alignItems": "center",
-                          "cornerRadius": 10,
-                          "stroke": "#E5E7EB",
-                          "strokeWidth": 1,
                           "children": [
                             {
                               "type": "text",
                               "id": "gzhts",
                               "name": "correo ph",
-                              "content": "tucorreo@email.com",
                               "fill": "#9CA3AF",
+                              "content": "tucorreo@email.com",
+                              "fontFamily": "Inter",
                               "fontSize": 15,
-                              "fontFamily": "Inter"
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -16576,10 +16574,10 @@
                           "type": "text",
                           "id": "yVjoH",
                           "name": "telefono label",
-                          "content": "Teléfono",
                           "fill": "#111111",
-                          "fontSize": 12,
+                          "content": "Teléfono",
                           "fontFamily": "Inter",
+                          "fontSize": 12,
                           "fontWeight": "600",
                           "letterSpacing": 1
                         },
@@ -16590,24 +16588,25 @@
                           "width": 550,
                           "height": 50,
                           "fill": "#FFFFFF",
+                          "cornerRadius": 10,
+                          "stroke": "#E5E7EB",
+                          "strokeWidth": 1,
                           "gap": 8,
                           "padding": [
                             14,
                             16
                           ],
                           "alignItems": "center",
-                          "cornerRadius": 10,
-                          "stroke": "#E5E7EB",
-                          "strokeWidth": 1,
                           "children": [
                             {
                               "type": "text",
                               "id": "TmMwL",
                               "name": "telefono ph",
-                              "content": "600 000 000",
                               "fill": "#9CA3AF",
+                              "content": "600 000 000",
+                              "fontFamily": "Inter",
                               "fontSize": 15,
-                              "fontFamily": "Inter"
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -16623,30 +16622,30 @@
               "name": "Step 3",
               "layout": "vertical",
               "gap": 16,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "text",
                   "id": "DVaiq",
                   "name": "3. REVISA Y ENVÍA",
-                  "content": "3. REVISA Y ENVÍA",
                   "fill": "#000000",
-                  "fontSize": 24,
+                  "content": "3. REVISA Y ENVÍA",
                   "fontFamily": "Anton",
+                  "fontSize": 24,
                   "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
                   "id": "f49NY",
                   "name": "Summary",
+                  "width": "fit_content(0)",
                   "fill": "#000000",
+                  "cornerRadius": 12,
                   "layout": "vertical",
                   "gap": 14,
                   "padding": [
                     20,
                     24
                   ],
-                  "cornerRadius": 12,
                   "children": [
                     {
                       "type": "frame",
@@ -16659,19 +16658,20 @@
                           "type": "text",
                           "id": "uDcAM",
                           "name": "Vehículo",
-                          "content": "Vehículo",
                           "fill": "#9CA3AF",
+                          "content": "Vehículo",
+                          "fontFamily": "Inter",
                           "fontSize": 14,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
                           "id": "KQmVS",
                           "name": "Porsche 911 Targa 4S",
-                          "content": "Porsche 911 Targa 4S",
                           "fill": "#FFFFFF",
-                          "fontSize": 14,
+                          "content": "Porsche 911 Targa 4S",
                           "fontFamily": "Inter",
+                          "fontSize": 14,
                           "fontWeight": "600"
                         }
                       ]
@@ -16687,19 +16687,20 @@
                           "type": "text",
                           "id": "Qi8RJ",
                           "name": "Fecha",
-                          "content": "Fecha",
                           "fill": "#9CA3AF",
+                          "content": "Fecha",
+                          "fontFamily": "Inter",
                           "fontSize": 14,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
                           "id": "4tmb9",
                           "name": "A confirmar",
-                          "content": "A confirmar",
                           "fill": "#FFFFFF",
-                          "fontSize": 14,
+                          "content": "A confirmar",
                           "fontFamily": "Inter",
+                          "fontSize": 14,
                           "fontWeight": "600"
                         }
                       ]
@@ -16715,19 +16716,20 @@
                           "type": "text",
                           "id": "n99pa",
                           "name": "Franja horaria",
-                          "content": "Franja horaria",
                           "fill": "#9CA3AF",
+                          "content": "Franja horaria",
+                          "fontFamily": "Inter",
                           "fontSize": 14,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
                           "id": "DxWUx",
                           "name": "A confirmar",
-                          "content": "A confirmar",
                           "fill": "#FFFFFF",
-                          "fontSize": 14,
+                          "content": "A confirmar",
                           "fontFamily": "Inter",
+                          "fontSize": 14,
                           "fontWeight": "600"
                         }
                       ]
@@ -16743,19 +16745,20 @@
                           "type": "text",
                           "id": "oYNIl",
                           "name": "Solicitante",
-                          "content": "Solicitante",
                           "fill": "#9CA3AF",
+                          "content": "Solicitante",
+                          "fontFamily": "Inter",
                           "fontSize": 14,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
                           "id": "S0Pd9",
                           "name": "Tus datos personales",
-                          "content": "Tus datos personales",
                           "fill": "#FFFFFF",
-                          "fontSize": 14,
+                          "content": "Tus datos personales",
                           "fontFamily": "Inter",
+                          "fontSize": 14,
                           "fontWeight": "600"
                         }
                       ]
@@ -16767,7 +16770,6 @@
                   "id": "6mVmO",
                   "name": "RGPD",
                   "gap": 12,
-                  "alignItems": "flex-start",
                   "children": [
                     {
                       "type": "frame",
@@ -16775,12 +16777,11 @@
                       "name": "checkbox",
                       "width": 18,
                       "height": 18,
-                      "layout": "horizontal",
-                      "justifyContent": "center",
-                      "alignItems": "center",
                       "cornerRadius": 4,
                       "stroke": "#E5E7EB",
                       "strokeWidth": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
                       "children": [
                         {
                           "type": "icon",
@@ -16798,10 +16799,11 @@
                       "type": "text",
                       "id": "4S5j0",
                       "name": "He leído y acepto la política de privacidad y las condiciones de tratamiento de datos según el RGPD.",
-                      "content": "He leído y acepto la política de privacidad y las condiciones de tratamiento de datos según el RGPD.",
                       "fill": "#111111",
+                      "content": "He leído y acepto la política de privacidad y las condiciones de tratamiento de datos según el RGPD.",
+                      "fontFamily": "Inter",
                       "fontSize": 14,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -16810,6 +16812,7 @@
                   "id": "rFjjU",
                   "name": "submit",
                   "fill": "#FF9800",
+                  "cornerRadius": 9999,
                   "gap": 8,
                   "padding": [
                     14,
@@ -16817,16 +16820,15 @@
                   ],
                   "justifyContent": "center",
                   "alignItems": "center",
-                  "cornerRadius": 9999,
                   "children": [
                     {
                       "type": "text",
                       "id": "rTVbT",
                       "name": "ENVIAR SOLICITUD text",
-                      "content": "ENVIAR SOLICITUD",
                       "fill": "#000000",
-                      "fontSize": 13,
+                      "content": "ENVIAR SOLICITUD",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "700",
                       "letterSpacing": 1
                     },
@@ -16858,9 +16860,9 @@
     {
       "type": "frame",
       "id": "Kr83U",
-      "name": "Superautos — Proba Conducción Tablet 768",
       "x": 0,
       "y": 27600,
+      "name": "Superautos — Proba Conducción Tablet 768",
       "clip": true,
       "width": 768,
       "height": 1800,
@@ -16887,11 +16889,10 @@
               "type": "text",
               "id": "Kz4se",
               "name": "Inicio",
-              "content": "Inicio",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Inicio",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -16907,11 +16908,10 @@
               "type": "text",
               "id": "9aVX0",
               "name": "Catálogo",
-              "content": "Catálogo",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Catálogo",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -16930,14 +16930,9 @@
                 "txt": "911 Targa 4S",
                 "last": false
               },
-              "content": {
-                "txt": "911 Targa 4S",
-                "last": false
-              },
               "fill": "#6B7280",
-              "fontSize": 13,
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -16953,10 +16948,10 @@
               "type": "text",
               "id": "IVwvY",
               "name": "Solicitar prueba",
-              "content": "Solicitar prueba",
               "fill": "#111111",
-              "fontSize": 13,
+              "content": "Solicitar prueba",
               "fontFamily": "Inter",
+              "fontSize": 13,
               "fontWeight": "600"
             }
           ]
@@ -16977,10 +16972,10 @@
               "type": "text",
               "id": "cWHHA",
               "name": "eyebrow",
-              "content": "SUPERAUTOS CARBALLO",
               "fill": "#FF9800",
-              "fontSize": 11,
+              "content": "SUPERAUTOS CARBALLO",
               "fontFamily": "Inter",
+              "fontSize": 11,
               "fontWeight": "600",
               "letterSpacing": 3
             },
@@ -16988,25 +16983,26 @@
               "type": "text",
               "id": "0uJcF",
               "name": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
-              "content": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
               "fill": "#000000",
-              "fontSize": 40,
+              "content": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
+              "textAlign": "center",
               "fontFamily": "Anton",
-              "fontWeight": "normal",
-              "textAlign": "center"
+              "fontSize": 40,
+              "fontWeight": "normal"
             },
             {
               "type": "text",
               "id": "hxGqa",
               "name": "Rellena el formulario y concierta tu cita de prueba.",
-              "content": "Rellena el formulario y concierta tu cita de prueba.",
               "fill": "#6B7280",
-              "fontSize": 15,
-              "fontFamily": "Inter",
-              "textAlign": "center",
-              "lineHeight": 1.6,
               "textGrowth": "fixed-width",
-              "width": 560
+              "width": 560,
+              "content": "Rellena el formulario y concierta tu cita de prueba.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
             }
           ]
         },
@@ -17015,15 +17011,15 @@
           "id": "EyYfW",
           "name": "Aviso",
           "fill": "#FFF4E5",
+          "cornerRadius": 10,
+          "stroke": "#FF9800",
+          "strokeWidth": 1,
           "gap": 10,
           "padding": [
             14,
             18
           ],
           "alignItems": "center",
-          "cornerRadius": 10,
-          "stroke": "#FF9800",
-          "strokeWidth": 1,
           "children": [
             {
               "type": "icon",
@@ -17039,10 +17035,11 @@
               "type": "text",
               "id": "8I7SX",
               "name": "Tu solicitud quedará pendiente de confirmación. Te llamaremos para confirmar la cita.",
-              "content": "Tu solicitud quedará pendiente de confirmación. Te llamaremos para confirmar la cita.",
               "fill": "#111111",
+              "content": "Tu solicitud quedará pendiente de confirmación. Te llamaremos para confirmar la cita.",
+              "fontFamily": "Inter",
               "fontSize": 13,
-              "fontFamily": "Inter"
+              "fontWeight": "normal"
             }
           ]
         },
@@ -17051,12 +17048,12 @@
           "id": "fpN0F",
           "name": "Form",
           "fill": "#FFFFFF",
-          "layout": "vertical",
-          "gap": 20,
-          "padding": 32,
           "cornerRadius": 14,
           "stroke": "#E5E7EB",
           "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 32,
           "children": [
             {
               "type": "frame",
@@ -17079,19 +17076,18 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FF9800",
-                      "layout": "horizontal",
+                      "cornerRadius": 9999,
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "KS6Bf",
                           "name": 1,
-                          "content": "1",
                           "fill": "#000000",
-                          "fontSize": 15,
+                          "content": "1",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -17100,10 +17096,10 @@
                       "type": "text",
                       "id": "Bkwpk",
                       "name": "El vehículo",
-                      "content": "El vehículo",
                       "fill": "#111111",
-                      "fontSize": 13,
+                      "content": "El vehículo",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "700"
                     }
                   ]
@@ -17130,21 +17126,20 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FFFFFF",
-                      "layout": "horizontal",
-                      "justifyContent": "center",
-                      "alignItems": "center",
                       "cornerRadius": 9999,
                       "stroke": "#E5E7EB",
                       "strokeWidth": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
                           "id": "MKgsM",
                           "name": 2,
-                          "content": "2",
                           "fill": "#9CA3AF",
-                          "fontSize": 15,
+                          "content": "2",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -17153,10 +17148,10 @@
                       "type": "text",
                       "id": "mHXNi",
                       "name": "Tus datos",
-                      "content": "Tus datos",
                       "fill": "#6B7280",
-                      "fontSize": 13,
+                      "content": "Tus datos",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "500"
                     }
                   ]
@@ -17183,21 +17178,20 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FFFFFF",
-                      "layout": "horizontal",
-                      "justifyContent": "center",
-                      "alignItems": "center",
                       "cornerRadius": 9999,
                       "stroke": "#E5E7EB",
                       "strokeWidth": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
                           "id": "ShgVp",
                           "name": 3,
-                          "content": "3",
                           "fill": "#9CA3AF",
-                          "fontSize": 15,
+                          "content": "3",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -17206,10 +17200,10 @@
                       "type": "text",
                       "id": "R1RXC",
                       "name": "Envía",
-                      "content": "Envía",
                       "fill": "#6B7280",
-                      "fontSize": 13,
+                      "content": "Envía",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "500"
                     }
                   ]
@@ -17228,10 +17222,10 @@
                   "type": "text",
                   "id": "1gG6J",
                   "name": "vehiculo label",
-                  "content": "Vehículo",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Vehículo",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -17242,15 +17236,15 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#F3F4F6",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -17266,10 +17260,10 @@
                       "type": "text",
                       "id": "Rt2ZV",
                       "name": "vehiculo value",
-                      "content": "Porsche 911 Targa 4S",
                       "fill": "#111111",
-                      "fontSize": 15,
+                      "content": "Porsche 911 Targa 4S",
                       "fontFamily": "Inter",
+                      "fontSize": 15,
                       "fontWeight": "600"
                     }
                   ]
@@ -17294,10 +17288,10 @@
                       "type": "text",
                       "id": "L9Ohu",
                       "name": "fecha label",
-                      "content": "Fecha preferente",
                       "fill": "#111111",
-                      "fontSize": 12,
+                      "content": "Fecha preferente",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 1
                     },
@@ -17308,24 +17302,25 @@
                       "width": 332,
                       "height": 50,
                       "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
                         16
                       ],
                       "alignItems": "center",
-                      "cornerRadius": 10,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "text",
                           "id": "iON6U",
                           "name": "fecha ph",
-                          "content": "Selecciona una fecha",
                           "fill": "#9CA3AF",
+                          "content": "Selecciona una fecha",
+                          "fontFamily": "Inter",
                           "fontSize": 15,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -17343,10 +17338,10 @@
                       "type": "text",
                       "id": "a8BcV",
                       "name": "franja label",
-                      "content": "Franja horaria",
                       "fill": "#111111",
-                      "fontSize": 12,
+                      "content": "Franja horaria",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 1
                     },
@@ -17357,24 +17352,25 @@
                       "width": 332,
                       "height": 50,
                       "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
                         16
                       ],
                       "alignItems": "center",
-                      "cornerRadius": 10,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "text",
                           "id": "TdwGK",
                           "name": "franja ph",
-                          "content": "Mañana 9:00-14:00",
                           "fill": "#9CA3AF",
+                          "content": "Mañana 9:00-14:00",
+                          "fontFamily": "Inter",
                           "fontSize": 15,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -17394,10 +17390,10 @@
                   "type": "text",
                   "id": "rF6vF",
                   "name": "nombre label",
-                  "content": "Nombre",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Nombre",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -17408,24 +17404,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "gkZTd",
                       "name": "nombre ph",
-                      "content": "Tu nombre",
                       "fill": "#9CA3AF",
+                      "content": "Tu nombre",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -17443,10 +17440,10 @@
                   "type": "text",
                   "id": "i9oMf",
                   "name": "apellidos label",
-                  "content": "Apellidos",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Apellidos",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -17457,24 +17454,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "1Tdq0",
                       "name": "apellidos ph",
-                      "content": "Tus apellidos",
                       "fill": "#9CA3AF",
+                      "content": "Tus apellidos",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -17498,10 +17496,10 @@
                       "type": "text",
                       "id": "rBpnA",
                       "name": "correo label",
-                      "content": "Correo electrónico",
                       "fill": "#111111",
-                      "fontSize": 12,
+                      "content": "Correo electrónico",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 1
                     },
@@ -17512,24 +17510,25 @@
                       "width": 332,
                       "height": 50,
                       "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
                         16
                       ],
                       "alignItems": "center",
-                      "cornerRadius": 10,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "text",
                           "id": "wJDkS",
                           "name": "correo ph",
-                          "content": "tucorreo@email.com",
                           "fill": "#9CA3AF",
+                          "content": "tucorreo@email.com",
+                          "fontFamily": "Inter",
                           "fontSize": 15,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -17547,10 +17546,10 @@
                       "type": "text",
                       "id": "vdG7t",
                       "name": "telefono label",
-                      "content": "Teléfono",
                       "fill": "#111111",
-                      "fontSize": 12,
+                      "content": "Teléfono",
                       "fontFamily": "Inter",
+                      "fontSize": 12,
                       "fontWeight": "600",
                       "letterSpacing": 1
                     },
@@ -17561,24 +17560,25 @@
                       "width": 332,
                       "height": 50,
                       "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": "#E5E7EB",
+                      "strokeWidth": 1,
                       "gap": 8,
                       "padding": [
                         14,
                         16
                       ],
                       "alignItems": "center",
-                      "cornerRadius": 10,
-                      "stroke": "#E5E7EB",
-                      "strokeWidth": 1,
                       "children": [
                         {
                           "type": "text",
                           "id": "rujJ5",
                           "name": "telefono ph",
-                          "content": "600 000 000",
                           "fill": "#9CA3AF",
+                          "content": "600 000 000",
+                          "fontFamily": "Inter",
                           "fontSize": 15,
-                          "fontFamily": "Inter"
+                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -17590,14 +17590,15 @@
               "type": "frame",
               "id": "bFAoc",
               "name": "Summary",
+              "width": "fit_content(0)",
               "fill": "#000000",
+              "cornerRadius": 10,
               "layout": "vertical",
               "gap": 12,
               "padding": [
                 18,
                 20
               ],
-              "cornerRadius": 10,
               "children": [
                 {
                   "type": "frame",
@@ -17610,19 +17611,20 @@
                       "type": "text",
                       "id": "XYIMb",
                       "name": "Vehículo",
-                      "content": "Vehículo",
                       "fill": "#9CA3AF",
+                      "content": "Vehículo",
+                      "fontFamily": "Inter",
                       "fontSize": 14,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
                       "id": "bl14M",
                       "name": "Porsche 911 Targa 4S",
-                      "content": "Porsche 911 Targa 4S",
                       "fill": "#FFFFFF",
-                      "fontSize": 14,
+                      "content": "Porsche 911 Targa 4S",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -17638,19 +17640,20 @@
                       "type": "text",
                       "id": "zfmmm",
                       "name": "Fecha",
-                      "content": "Fecha",
                       "fill": "#9CA3AF",
+                      "content": "Fecha",
+                      "fontFamily": "Inter",
                       "fontSize": 14,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
                       "id": "kNwc3",
                       "name": "A confirmar",
-                      "content": "A confirmar",
                       "fill": "#FFFFFF",
-                      "fontSize": 14,
+                      "content": "A confirmar",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -17666,19 +17669,20 @@
                       "type": "text",
                       "id": "xPJ4D",
                       "name": "Solicitante",
-                      "content": "Solicitante",
                       "fill": "#9CA3AF",
+                      "content": "Solicitante",
+                      "fontFamily": "Inter",
                       "fontSize": 14,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
                       "id": "zmmdh",
                       "name": "Tus datos personales",
-                      "content": "Tus datos personales",
                       "fill": "#FFFFFF",
-                      "fontSize": 14,
+                      "content": "Tus datos personales",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -17690,7 +17694,6 @@
               "id": "lszlo",
               "name": "RGPD",
               "gap": 10,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "frame",
@@ -17698,12 +17701,11 @@
                   "name": "checkbox",
                   "width": 18,
                   "height": 18,
-                  "layout": "horizontal",
-                  "justifyContent": "center",
-                  "alignItems": "center",
                   "cornerRadius": 4,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "justifyContent": "center",
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "icon",
@@ -17721,10 +17723,11 @@
                   "type": "text",
                   "id": "Swc4l",
                   "name": "Acepto la política de privacidad y el RGPD.",
-                  "content": "Acepto la política de privacidad y el RGPD.",
                   "fill": "#111111",
+                  "content": "Acepto la política de privacidad y el RGPD.",
+                  "fontFamily": "Inter",
                   "fontSize": 13,
-                  "fontFamily": "Inter"
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -17733,6 +17736,7 @@
               "id": "ciqqp",
               "name": "submit",
               "fill": "#FF9800",
+              "cornerRadius": 9999,
               "gap": 8,
               "padding": [
                 14,
@@ -17740,16 +17744,15 @@
               ],
               "justifyContent": "center",
               "alignItems": "center",
-              "cornerRadius": 9999,
               "children": [
                 {
                   "type": "text",
                   "id": "irbMl",
                   "name": "ENVIAR SOLICITUD text",
-                  "content": "ENVIAR SOLICITUD",
                   "fill": "#000000",
-                  "fontSize": 13,
+                  "content": "ENVIAR SOLICITUD",
                   "fontFamily": "Inter",
+                  "fontSize": 13,
                   "fontWeight": "700",
                   "letterSpacing": 1
                 },
@@ -17778,9 +17781,9 @@
     {
       "type": "frame",
       "id": "ha8ka",
+      "x": 942,
+      "y": 27621,
       "name": "Superautos — Proba Conducción Móvil 390",
-      "x": 848,
-      "y": 23200,
       "clip": true,
       "width": 390,
       "height": 1900,
@@ -17807,11 +17810,10 @@
               "type": "text",
               "id": "oNIT9",
               "name": "Inicio",
-              "content": "Inicio",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Inicio",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -17827,11 +17829,10 @@
               "type": "text",
               "id": "EC0JQ",
               "name": "Catálogo",
-              "content": "Catálogo",
               "fill": "#6B7280",
-              "fontSize": 13,
+              "content": "Catálogo",
               "fontFamily": "Inter",
-              "fontWeight": "400"
+              "fontSize": 13
             },
             {
               "type": "icon",
@@ -17847,10 +17848,10 @@
               "type": "text",
               "id": "1EfKE",
               "name": "Solicitar prueba",
-              "content": "Solicitar prueba",
               "fill": "#111111",
-              "fontSize": 13,
+              "content": "Solicitar prueba",
               "fontFamily": "Inter",
+              "fontSize": 13,
               "fontWeight": "600"
             }
           ]
@@ -17871,10 +17872,10 @@
               "type": "text",
               "id": "8Mqdi",
               "name": "eyebrow",
-              "content": "SUPERAUTOS CARBALLO",
               "fill": "#FF9800",
-              "fontSize": 11,
+              "content": "SUPERAUTOS CARBALLO",
               "fontFamily": "Inter",
+              "fontSize": 11,
               "fontWeight": "600",
               "letterSpacing": 3
             },
@@ -17882,22 +17883,23 @@
               "type": "text",
               "id": "IawMq",
               "name": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
-              "content": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
               "fill": "#000000",
-              "fontSize": 30,
+              "content": "SOLICITA UNA PRUEBA\nDE CONDUCCIÓN",
+              "textAlign": "center",
               "fontFamily": "Anton",
-              "fontWeight": "normal",
-              "textAlign": "center"
+              "fontSize": 30,
+              "fontWeight": "normal"
             },
             {
               "type": "text",
               "id": "RF166",
               "name": "Rellena el formulario para concertar tu cita.",
-              "content": "Rellena el formulario para concertar tu cita.",
               "fill": "#6B7280",
-              "fontSize": 14,
+              "content": "Rellena el formulario para concertar tu cita.",
+              "textAlign": "center",
               "fontFamily": "Inter",
-              "textAlign": "center"
+              "fontSize": 14,
+              "fontWeight": "normal"
             }
           ]
         },
@@ -17906,15 +17908,15 @@
           "id": "hbH05",
           "name": "Aviso",
           "fill": "#FFF4E5",
+          "cornerRadius": 10,
+          "stroke": "#FF9800",
+          "strokeWidth": 1,
           "gap": 8,
           "padding": [
             12,
             16
           ],
           "alignItems": "center",
-          "cornerRadius": 10,
-          "stroke": "#FF9800",
-          "strokeWidth": 1,
           "children": [
             {
               "type": "icon",
@@ -17930,10 +17932,11 @@
               "type": "text",
               "id": "hMuMb",
               "name": "Solicitud pendiente de confirmación: te llamaremos para cerrar la cita.",
-              "content": "Solicitud pendiente de confirmación: te llamaremos para cerrar la cita.",
               "fill": "#111111",
+              "content": "Solicitud pendiente de confirmación: te llamaremos para cerrar la cita.",
+              "fontFamily": "Inter",
               "fontSize": 12,
-              "fontFamily": "Inter"
+              "fontWeight": "normal"
             }
           ]
         },
@@ -17942,12 +17945,12 @@
           "id": "XqVvH",
           "name": "Form",
           "fill": "#FFFFFF",
-          "layout": "vertical",
-          "gap": 16,
-          "padding": 20,
           "cornerRadius": 14,
           "stroke": "#E5E7EB",
           "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 20,
           "children": [
             {
               "type": "frame",
@@ -17970,19 +17973,18 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FF9800",
-                      "layout": "horizontal",
+                      "cornerRadius": 9999,
                       "justifyContent": "center",
                       "alignItems": "center",
-                      "cornerRadius": 9999,
                       "children": [
                         {
                           "type": "text",
                           "id": "J1eR8",
                           "name": 1,
-                          "content": "1",
                           "fill": "#000000",
-                          "fontSize": 15,
+                          "content": "1",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -17991,10 +17993,10 @@
                       "type": "text",
                       "id": "rO9km",
                       "name": "Cita",
-                      "content": "Cita",
                       "fill": "#111111",
-                      "fontSize": 13,
+                      "content": "Cita",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "700"
                     }
                   ]
@@ -18021,21 +18023,20 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FFFFFF",
-                      "layout": "horizontal",
-                      "justifyContent": "center",
-                      "alignItems": "center",
                       "cornerRadius": 9999,
                       "stroke": "#E5E7EB",
                       "strokeWidth": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
                           "id": "Lbj6V",
                           "name": 2,
-                          "content": "2",
                           "fill": "#9CA3AF",
-                          "fontSize": 15,
+                          "content": "2",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -18044,10 +18045,10 @@
                       "type": "text",
                       "id": "1dPIN",
                       "name": "Datos",
-                      "content": "Datos",
                       "fill": "#6B7280",
-                      "fontSize": 13,
+                      "content": "Datos",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "500"
                     }
                   ]
@@ -18074,21 +18075,20 @@
                       "width": 36,
                       "height": 36,
                       "fill": "#FFFFFF",
-                      "layout": "horizontal",
-                      "justifyContent": "center",
-                      "alignItems": "center",
                       "cornerRadius": 9999,
                       "stroke": "#E5E7EB",
                       "strokeWidth": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
                           "id": "VOy72",
                           "name": 3,
-                          "content": "3",
                           "fill": "#9CA3AF",
-                          "fontSize": 15,
+                          "content": "3",
                           "fontFamily": "Inter",
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -18097,10 +18097,10 @@
                       "type": "text",
                       "id": "hhnPv",
                       "name": "Envía",
-                      "content": "Envía",
                       "fill": "#6B7280",
-                      "fontSize": 13,
+                      "content": "Envía",
                       "fontFamily": "Inter",
+                      "fontSize": 13,
                       "fontWeight": "500"
                     }
                   ]
@@ -18119,10 +18119,10 @@
                   "type": "text",
                   "id": "OspK6",
                   "name": "vehiculo label",
-                  "content": "Vehículo",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Vehículo",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -18133,15 +18133,15 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#F3F4F6",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "icon",
@@ -18157,10 +18157,10 @@
                       "type": "text",
                       "id": "rOGYS",
                       "name": "vehiculo value",
-                      "content": "Porsche 911 Targa 4S",
                       "fill": "#111111",
-                      "fontSize": 15,
+                      "content": "Porsche 911 Targa 4S",
                       "fontFamily": "Inter",
+                      "fontSize": 15,
                       "fontWeight": "600"
                     }
                   ]
@@ -18179,10 +18179,10 @@
                   "type": "text",
                   "id": "3QsGj",
                   "name": "fecha label",
-                  "content": "Fecha preferente",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Fecha preferente",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -18193,24 +18193,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "JvDjJ",
                       "name": "fecha ph",
-                      "content": "Selecciona una fecha",
                       "fill": "#9CA3AF",
+                      "content": "Selecciona una fecha",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -18228,10 +18229,10 @@
                   "type": "text",
                   "id": "i4v9P",
                   "name": "franja label",
-                  "content": "Franja horaria",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Franja horaria",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -18242,24 +18243,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "lSnvx",
                       "name": "franja ph",
-                      "content": "Mañana 9:00-14:00",
                       "fill": "#9CA3AF",
+                      "content": "Mañana 9:00-14:00",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -18277,10 +18279,10 @@
                   "type": "text",
                   "id": "qozwo",
                   "name": "nombre label",
-                  "content": "Nombre",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Nombre",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -18291,24 +18293,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "0ahBl",
                       "name": "nombre ph",
-                      "content": "Tu nombre",
                       "fill": "#9CA3AF",
+                      "content": "Tu nombre",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -18326,10 +18329,10 @@
                   "type": "text",
                   "id": "PDFMJ",
                   "name": "apellidos label",
-                  "content": "Apellidos",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Apellidos",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -18340,24 +18343,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "6hqiW",
                       "name": "apellidos ph",
-                      "content": "Tus apellidos",
                       "fill": "#9CA3AF",
+                      "content": "Tus apellidos",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -18375,10 +18379,10 @@
                   "type": "text",
                   "id": "xuYSX",
                   "name": "correo label",
-                  "content": "Correo electrónico",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Correo electrónico",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -18389,24 +18393,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "hwWD4",
                       "name": "correo ph",
-                      "content": "tucorreo@email.com",
                       "fill": "#9CA3AF",
+                      "content": "tucorreo@email.com",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -18424,10 +18429,10 @@
                   "type": "text",
                   "id": "Z08lM",
                   "name": "telefono label",
-                  "content": "Teléfono",
                   "fill": "#111111",
-                  "fontSize": 12,
+                  "content": "Teléfono",
                   "fontFamily": "Inter",
+                  "fontSize": 12,
                   "fontWeight": "600",
                   "letterSpacing": 1
                 },
@@ -18438,24 +18443,25 @@
                   "width": "fill_container",
                   "height": 50,
                   "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": 1,
                   "gap": 8,
                   "padding": [
                     14,
                     16
                   ],
                   "alignItems": "center",
-                  "cornerRadius": 10,
-                  "stroke": "#E5E7EB",
-                  "strokeWidth": 1,
                   "children": [
                     {
                       "type": "text",
                       "id": "1LAJU",
                       "name": "telefono ph",
-                      "content": "600 000 000",
                       "fill": "#9CA3AF",
+                      "content": "600 000 000",
+                      "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -18465,14 +18471,15 @@
               "type": "frame",
               "id": "uJfZ5",
               "name": "Summary",
+              "width": "fit_content(0)",
               "fill": "#000000",
+              "cornerRadius": 10,
               "layout": "vertical",
               "gap": 12,
               "padding": [
                 16,
                 18
               ],
-              "cornerRadius": 10,
               "children": [
                 {
                   "type": "frame",
@@ -18485,19 +18492,20 @@
                       "type": "text",
                       "id": "I4Pgn",
                       "name": "Vehículo",
-                      "content": "Vehículo",
                       "fill": "#9CA3AF",
+                      "content": "Vehículo",
+                      "fontFamily": "Inter",
                       "fontSize": 14,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
                       "id": "8fYye",
                       "name": "911 Targa 4S",
-                      "content": "911 Targa 4S",
                       "fill": "#FFFFFF",
-                      "fontSize": 14,
+                      "content": "911 Targa 4S",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -18513,19 +18521,20 @@
                       "type": "text",
                       "id": "6Hs9Z",
                       "name": "Fecha",
-                      "content": "Fecha",
                       "fill": "#9CA3AF",
+                      "content": "Fecha",
+                      "fontFamily": "Inter",
                       "fontSize": 14,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
                       "id": "eODjF",
                       "name": "A confirmar",
-                      "content": "A confirmar",
                       "fill": "#FFFFFF",
-                      "fontSize": 14,
+                      "content": "A confirmar",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -18541,19 +18550,20 @@
                       "type": "text",
                       "id": "NhNGG",
                       "name": "Solicitante",
-                      "content": "Solicitante",
                       "fill": "#9CA3AF",
+                      "content": "Solicitante",
+                      "fontFamily": "Inter",
                       "fontSize": 14,
-                      "fontFamily": "Inter"
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
                       "id": "iuFVv",
                       "name": "Tus datos",
-                      "content": "Tus datos",
                       "fill": "#FFFFFF",
-                      "fontSize": 14,
+                      "content": "Tus datos",
                       "fontFamily": "Inter",
+                      "fontSize": 14,
                       "fontWeight": "600"
                     }
                   ]
@@ -18565,7 +18575,6 @@
               "id": "GW1Fl",
               "name": "RGPD",
               "gap": 10,
-              "alignItems": "flex-start",
               "children": [
                 {
                   "type": "frame",
@@ -18573,12 +18582,11 @@
                   "name": "checkbox",
                   "width": 18,
                   "height": 18,
-                  "layout": "horizontal",
-                  "justifyContent": "center",
-                  "alignItems": "center",
                   "cornerRadius": 4,
                   "stroke": "#E5E7EB",
                   "strokeWidth": 1,
+                  "justifyContent": "center",
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "icon",
@@ -18596,10 +18604,11 @@
                   "type": "text",
                   "id": "5KQ7n",
                   "name": "Acepto la política de privacidad y el RGPD.",
-                  "content": "Acepto la política de privacidad y el RGPD.",
                   "fill": "#111111",
+                  "content": "Acepto la política de privacidad y el RGPD.",
+                  "fontFamily": "Inter",
                   "fontSize": 12,
-                  "fontFamily": "Inter"
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -18608,6 +18617,7 @@
               "id": "7rnZv",
               "name": "submit",
               "fill": "#FF9800",
+              "cornerRadius": 9999,
               "gap": 8,
               "padding": [
                 14,
@@ -18615,16 +18625,15 @@
               ],
               "justifyContent": "center",
               "alignItems": "center",
-              "cornerRadius": 9999,
               "children": [
                 {
                   "type": "text",
                   "id": "uVU6h",
                   "name": "ENVIAR SOLICITUD text",
-                  "content": "ENVIAR SOLICITUD",
                   "fill": "#000000",
-                  "fontSize": 13,
+                  "content": "ENVIAR SOLICITUD",
                   "fontFamily": "Inter",
+                  "fontSize": 13,
                   "fontWeight": "700",
                   "letterSpacing": 1
                 },

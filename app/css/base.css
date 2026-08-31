@@ -12,18 +12,16 @@
 ----------------------------------------------- */
 :root {
     /* Paleta principal */
-    --color-acento: #0052FF;
-    --color-superficie: #FFFFFF;
-    --color-borde: #CFD8E6;
-    --color-superficie-inversa: #000000;
-    --color-texto-secundario: #6B7280;
-    --color-texto-principal: #000000;
-    --color-texto-inverso: #FFFFFF;
+    --azul-electrico: #0052FF;
+    --blanco: #FFFFFF;
+    --gris-borde: #CFD8E6;
+    --negro: #000000;
+    --text-gray: #6B7280;
 
     /* Paleta secundaria */
-    --color-acento-hover: #0038B8;
-    --color-peligro: #DC2626;
-    --color-exito: #16A34A;
+    --hover-activo: #0038B8;
+    --error: #DC2626;
+    --exito: #16A34A;
 
     /* Tipografía */
     --fuente-principal: 'Inter', sans-serif;
@@ -66,8 +64,8 @@ html {
 body {
     font-family: var(--fuente-principal);
     font-weight: 700;
-    color: var(--color-texto-principal);
-    background-color: var(--color-superficie);
+    color: var(--negro);
+    background-color: var(--blanco);
     line-height: 1.6;
 }
 
@@ -95,8 +93,8 @@ body {
     position: absolute;
     top: -100%;
     left: var(--gutter);
-    background: var(--color-acento);
-    color: var(--color-texto-inverso);
+    background: var(--azul-electrico);
+    color: var(--blanco);
     padding: var(--espaciado-sm) var(--espaciado-md);
     z-index: 1000;
     font-size: 0.875rem;
@@ -106,7 +104,7 @@ body {
 
 .saltar-al-contenido:focus {
     top: 0;
-    outline: 2px solid var(--color-texto-principal);
+    outline: 2px solid var(--negro);
     outline-offset: 2px;
 }
 
@@ -114,7 +112,7 @@ body {
    CABECERA / HEADER
 ----------------------------------------------- */
 .site-header {
-    background-color: var(--color-superficie-inversa);
+    background-color: var(--negro);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     height: 88px;
     display: flex;
@@ -139,7 +137,7 @@ body {
 /* Logotipo */
 .logo {
     text-decoration: none;
-    color: var(--color-texto-inverso);
+    color: var(--blanco);
     display: flex;
     align-items: center;
     gap: var(--espaciado-sm);
@@ -161,7 +159,7 @@ body {
     font-family: var(--fuente-principal);
     font-weight: 400;
     font-size: 20px;
-    color: var(--color-texto-inverso);
+    color: var(--blanco);
     letter-spacing: 1px;
 }
 
@@ -169,7 +167,7 @@ body {
     font-family: var(--fuente-principal);
     font-weight: 400;
     font-size: 10px;
-    color: var(--color-texto-inverso);
+    color: var(--blanco);
     letter-spacing: 1px;
 }
 
@@ -182,7 +180,7 @@ body {
 
 .menu-principal a {
     text-decoration: none;
-    color: var(--color-texto-inverso);
+    color: var(--blanco);
     font-size: 0.9375rem;
     padding: var(--espaciado-xs) var(--espaciado-sm);
     transition: color 0.15s ease-out;
@@ -190,19 +188,19 @@ body {
 
 .menu-principal a:hover,
 .menu-principal a:focus {
-    color: var(--color-acento-hover);
+    color: var(--hover-activo);
 }
 
 .menu-principal a[aria-current="page"] {
-    color: var(--color-acento);
+    color: var(--azul-electrico);
     font-weight: 700;
 }
 
 /* Botón CTA del header */
 .btn-cta-header {
     display: inline-block;
-    background-color: var(--color-acento);
-    color: var(--color-texto-inverso);
+    background-color: var(--azul-electrico);
+    color: var(--blanco);
     text-decoration: none;
     padding: var(--espaciado-sm) var(--espaciado-md);
     border-radius: var(--radio-tarjeta);
@@ -215,7 +213,7 @@ body {
 
 .btn-cta-header:hover,
 .btn-cta-header:focus {
-    background-color: var(--color-acento-hover);
+    background-color: var(--hover-activo);
 }
 
 /* Botón hamburguesa (móvil) */
@@ -233,7 +231,7 @@ body {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--color-texto-inverso);
+    background-color: var(--blanco);
 }
 
 /* -----------------------------------------------
@@ -316,7 +314,7 @@ body {
 }
 
 .hero-carrusel .carousel-item img {
-    object-fit: cover;
+    object-fit: contain;
     height: 702px;
     width: calc(100% - 80px);
     margin: 0 auto;
@@ -329,7 +327,7 @@ body {
     border-radius: 0;
 }
 
-.hero-carrusel .carousel-caption h2 {
+.hero-carrusel .carousel-caption h3 {
     font-size: 2rem;
     margin-bottom: var(--espaciado-sm);
 }
@@ -377,7 +375,7 @@ body {
 }
 
 .btn-control-carrusel:focus-visible {
-    outline: 2px solid var(--color-acento);
+    outline: 2px solid var(--azul-electrico);
     outline-offset: 2px;
 }
 
@@ -395,8 +393,8 @@ body {
 ----------------------------------------------- */
 .btn-principal {
     display: inline-block;
-    background-color: var(--color-acento);
-    color: var(--color-texto-inverso);
+    background-color: var(--azul-electrico);
+    color: var(--blanco);
     text-decoration: none;
     padding: 12px var(--espaciado-lg);
     border-radius: var(--radio-tarjeta);
@@ -410,8 +408,8 @@ body {
 
 .btn-principal:hover,
 .btn-principal:focus {
-    background-color: var(--color-acento-hover);
-    outline: 2px solid var(--color-acento);
+    background-color: var(--hover-activo);
+    outline: 2px solid var(--azul-electrico);
     outline-offset: 2px;
 }
 
@@ -419,8 +417,8 @@ body {
    FOOTER
 ----------------------------------------------- */
 .site-footer {
-    background-color: var(--color-superficie-inversa);
-    color: var(--color-texto-inverso);
+    background-color: var(--negro);
+    color: var(--blanco);
     height: 382px;
     display: flex;
     flex-direction: column;
@@ -450,7 +448,7 @@ body {
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--color-acento);
+    color: var(--azul-electrico);
     margin: 0 0 var(--espaciado-md);
 }
 
@@ -464,7 +462,7 @@ body {
 }
 
 .columna-footer a {
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     text-decoration: none;
     font-weight: 400;
     font-size: 14px;
@@ -472,7 +470,7 @@ body {
 
 .columna-footer a:hover,
 .columna-footer a:focus {
-    color: var(--color-texto-inverso);
+    color: var(--blanco);
 }
 
 .columna-footer address {
@@ -494,7 +492,7 @@ body {
     letter-spacing: 2px;
     line-height: 1.2;
     text-transform: uppercase;
-    color: var(--color-texto-inverso);
+    color: var(--blanco);
     margin: 0;
 }
 
@@ -502,7 +500,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
     font-weight: 400;
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     margin: 0;
 }
 
@@ -519,7 +517,7 @@ body {
 }
 
 .footer-copyright {
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     margin: 0;
 }
 
@@ -535,19 +533,19 @@ body {
     justify-content: center;
     width: 34px;
     height: 34px;
-    color: var(--color-texto-inverso);
+    color: var(--blanco);
 }
 
 .redes-sociales a:hover,
 .redes-sociales a:focus {
-    color: var(--color-acento);
+    color: var(--azul-electrico);
 }
 
 /* -----------------------------------------------
    FOCO VISIBLE (WCAG 2.2 AA)
 ----------------------------------------------- */
 :focus-visible {
-    outline: 2px solid var(--color-acento);
+    outline: 2px solid var(--azul-electrico);
     outline-offset: 2px;
 }
 
@@ -573,7 +571,7 @@ a, button {
     width: 100%;
     height: 560px;
     overflow: hidden;
-    background-color: var(--color-superficie-inversa);
+    background-color: var(--negro);
 }
 
 .hero-catalogo > img {
@@ -628,7 +626,7 @@ a, button {
    "Catálogo" en impacto y descripción base.
 ----------------------------------------------- */
 .intro-catalogo {
-    background-color: var(--color-superficie);
+    background-color: var(--blanco);
 }
 
 .intro-catalogo .contenedor {
@@ -645,7 +643,7 @@ a, button {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-acento);
+    color: var(--azul-electrico);
     margin: 0 0 var(--espaciado-sm);
 }
 
@@ -655,7 +653,7 @@ a, button {
     font-size: 40px;
     line-height: 1.1;
     text-transform: uppercase;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     margin: 0 0 var(--espaciado-md);
 }
 
@@ -664,7 +662,7 @@ a, button {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     max-width: 62ch;
     margin: 0;
 }
@@ -677,7 +675,7 @@ a, button {
 ----------------------------------------------- */
 .seccion-catalogo {
     padding: 0 0 var(--espaciado-seccion);
-    background-color: var(--color-borde);
+    background-color: var(--gris-borde);
 }
 
 .cuadricula-catalogo {
@@ -687,8 +685,8 @@ a, button {
 }
 
 .cuadro-vehiculo {
-    background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
     border-radius: var(--radio-tarjeta);
     width: 100%;
     max-width: 387px;
@@ -708,7 +706,7 @@ a, button {
     width: 100%;
     height: 270px;
     overflow: hidden;
-    background-color: var(--color-superficie);
+    background-color: var(--blanco);
 }
 
 .cuadro-imagen img {
@@ -736,7 +734,7 @@ a, button {
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     margin: 0 0 var(--espaciado-sm);
 }
 
@@ -745,7 +743,7 @@ a, button {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     margin: 0 0 var(--espaciado-sm);
 }
 
@@ -753,7 +751,7 @@ a, button {
     font-family: var(--fuente-principal);
     font-weight: 700;
     font-size: 22px;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     margin-top: auto;
     margin-bottom: var(--espaciado-sm) !important;
 }
@@ -768,7 +766,7 @@ a, button {
    Fondo del body en gris borde, según la guía.
 ----------------------------------------------- */
 .ficha-body {
-    background-color: var(--color-borde);
+    background-color: var(--gris-borde);
 }
 
 /* -----------------------------------------------
@@ -790,7 +788,7 @@ a, button {
 .ficha-foto {
     width: 650px;
     height: 430px;
-    background-color: var(--color-superficie);
+    background-color: var(--blanco);
     border-radius: var(--radio-tarjeta);
     overflow: hidden;
 }
@@ -804,9 +802,9 @@ a, button {
 
 .ficha-info {
     height: 526px;
-    background-color: var(--color-borde);
+    background-color: var(--gris-borde);
     border-radius: var(--radio-tarjeta);
-    border: 1px solid var(--color-borde);
+    border: 1px solid var(--gris-borde);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -829,7 +827,7 @@ a, button {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     margin: 0 0 var(--espaciado-md);
 }
 
@@ -838,7 +836,7 @@ a, button {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     max-width: 46ch;
     margin: 0 0 var(--espaciado-xl);
 }
@@ -850,7 +848,7 @@ a, button {
    cada celda 385 x 92 px, fondo blanco puro.
 ----------------------------------------------- */
 .datos-tecnicos {
-    background-color: var(--color-borde);
+    background-color: var(--gris-borde);
     padding: var(--espaciado-xl) 0;
 }
 
@@ -867,7 +865,7 @@ a, button {
     font-size: 36px;
     line-height: 1.1;
     text-transform: uppercase;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     margin: 0 0 var(--espaciado-lg);
 }
 
@@ -883,8 +881,8 @@ a, button {
 .celda-dato {
     width: 385px;
     height: 92px;
-    background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
     border-radius: var(--radio-input);
     display: flex;
     flex-direction: column;
@@ -898,7 +896,7 @@ a, button {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     margin-bottom: var(--espaciado-xs);
 }
 
@@ -906,7 +904,7 @@ a, button {
     font-family: var(--fuente-principal);
     font-weight: 700;
     font-size: 20px;
-    color: var(--color-texto-principal);
+    color: var(--negro);
 }
 
 /* -----------------------------------------------
@@ -916,7 +914,7 @@ a, button {
    cada casilla 385 x 51 px.
 ----------------------------------------------- */
 .equipamiento {
-    background-color: var(--color-borde);
+    background-color: var(--gris-borde);
     padding: 0 0 var(--espaciado-seccion);
 }
 
@@ -933,7 +931,7 @@ a, button {
     font-size: 36px;
     line-height: 1.1;
     text-transform: uppercase;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     margin: 0 0 var(--espaciado-lg);
 }
 
@@ -949,8 +947,8 @@ a, button {
 .celda-equip {
     width: 385px;
     height: 51px;
-    background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
     border-radius: var(--radio-input);
     display: flex;
     align-items: center;
@@ -958,7 +956,7 @@ a, button {
     font-family: var(--fuente-principal);
     font-weight: 400;
     font-size: 16px;
-    color: var(--color-texto-principal);
+    color: var(--negro);
 }
 
 /* -----------------------------------------------
@@ -972,7 +970,7 @@ a, button {
     width: 100%;
     height: 577px;
     overflow: hidden;
-    background-color: var(--color-superficie-inversa);
+    background-color: var(--negro);
 }
 
 .hero-servicio > img {
@@ -1014,7 +1012,7 @@ a, button {
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--color-acento);
+    color: var(--azul-electrico);
     margin: 0 0 var(--espaciado-md);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
 }
@@ -1052,7 +1050,7 @@ a, button {
     width: 100%;
     height: 560px;
     overflow: hidden;
-    background-color: var(--color-superficie-inversa);
+    background-color: var(--negro);
 }
 
 .hero-recambios > img {
@@ -1122,7 +1120,7 @@ a, button {
 ----------------------------------------------- */
 .seccion-formulario-recambios {
     padding: var(--espaciado-seccion) 0;
-    background-color: var(--color-superficie);
+    background-color: var(--gris-borde);
 }
 
 /* Contenedor ampliado a 1400px: las casillas de la
@@ -1149,7 +1147,7 @@ a, button {
     line-height: 1.6;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     padding: 0;
     margin: 0 0 var(--espaciado-lg);
 }
@@ -1176,7 +1174,7 @@ a, button {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.4;
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
     margin-bottom: var(--espaciado-sm);
 }
 
@@ -1184,29 +1182,29 @@ a, button {
     width: 100%;
     height: 54px;
     padding: 0 var(--espaciado-md);
-    background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
     border-radius: var(--radio-input);
     font-family: var(--fuente-principal);
     font-weight: 400;
     font-size: 16px;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     transition: border-color 0.15s ease-out;
 }
 
 .campo-formulario-recambio input:hover {
-    border-color: var(--color-acento);
+    border-color: var(--azul-electrico);
 }
 
 .campo-formulario-recambio input:focus,
 .campo-formulario-recambio input:focus-visible {
-    outline: 2px solid var(--color-acento);
+    outline: 2px solid var(--azul-electrico);
     outline-offset: 2px;
-    border-color: var(--color-acento);
+    border-color: var(--azul-electrico);
 }
 
 .campo-formulario-recambio input::placeholder {
-    color: var(--color-texto-secundario);
+    color: var(--text-gray);
 }
 
 /* Caja de comentarios: ancho 1400px, alto 135px */
@@ -1220,26 +1218,26 @@ a, button {
     width: 100%;
     height: 135px;
     padding: var(--espaciado-md);
-    background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
     border-radius: var(--radio-input);
     font-family: var(--fuente-principal);
     font-weight: 400;
     font-size: 16px;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     resize: vertical;
     transition: border-color 0.15s ease-out;
 }
 
 .campo-comentarios-recambio textarea:hover {
-    border-color: var(--color-acento);
+    border-color: var(--azul-electrico);
 }
 
 .campo-comentarios-recambio textarea:focus,
 .campo-comentarios-recambio textarea:focus-visible {
-    outline: 2px solid var(--color-acento);
+    outline: 2px solid var(--azul-electrico);
     outline-offset: 2px;
-    border-color: var(--color-acento);
+    border-color: var(--azul-electrico);
 }
 
 /* Checkbox RGPD */
@@ -1256,7 +1254,7 @@ a, button {
     width: 20px;
     height: 20px;
     margin: 2px 0 0;
-    accent-color: var(--color-acento);
+    accent-color: var(--azul-electrico);
     cursor: pointer;
 }
 
@@ -1265,18 +1263,18 @@ a, button {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
-    color: var(--color-texto-principal);
+    color: var(--negro);
     margin: 0;
     cursor: pointer;
 }
 
 .checkbox-rgpd-recambio label a {
-    color: var(--color-acento);
+    color: var(--azul-electrico);
 }
 
 .checkbox-rgpd-recambio label a:hover,
 .checkbox-rgpd-recambio label a:focus {
-    color: var(--color-acento-hover);
+    color: var(--hover-activo);
 }
 
 /* Acciones del formulario */
@@ -1284,6 +1282,540 @@ a, button {
     display: flex;
     justify-content: center;
     margin-top: var(--espaciado-xl);
+}
+
+/* Botón de envío: extremos totalmente redondos (pill) */
+.acciones-formulario-recambios .btn-principal {
+    border-radius: 9999px;
+}
+
+/* -----------------------------------------------
+   CITA (P02.1.1) – Paso 1: "El vehículo y la cita"
+   Título principal (Anton) + casilla del vehículo
+   de 1120 x 50 px, de solo lectura (viene de ficha).
+----------------------------------------------- */
+.paso-cita {
+    background-color: var(--gris-borde);
+    padding: var(--espaciado-seccion) 0;
+}
+
+.titulo-paso-cita {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-xl);
+}
+
+.etiqueta-cita {
+    display: block;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-sm);
+}
+
+/* Casilla genérica del formulario de cita: 50 px de alto */
+.caja-cita {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--espaciado-md);
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    transition: border-color 0.15s ease-out;
+}
+
+.caja-cita input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--negro);
+}
+
+.caja-cita input::placeholder {
+    color: #9CA3AF;
+}
+
+.caja-cita input:focus-visible {
+    outline: none;
+}
+
+.caja-cita:focus-within {
+    outline: 2px solid var(--azul-electrico);
+    outline-offset: 2px;
+    border-color: var(--azul-electrico);
+}
+
+/* Casilla del vehículo: solo lectura, fondo gris */
+.caja-cita-vehiculo {
+    width: 100%;
+    max-width: 1120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-sm);
+    padding: 0 var(--espaciado-md);
+    background-color: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    transition: border-color 0.15s ease-out;
+}
+
+.caja-cita-vehiculo svg {
+    flex-shrink: 0;
+    color: #9CA3AF;
+    stroke-width: 2.5;
+}
+
+.caja-cita-vehiculo input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--negro);
+}
+
+.caja-cita-vehiculo input:focus-visible {
+    outline: none;
+}
+
+.caja-cita-vehiculo:focus-within {
+    outline: 2px solid var(--azul-electrico);
+    outline-offset: 2px;
+    border-color: var(--azul-electrico);
+}
+
+.caja-cita-vehiculo input::placeholder {
+    color: #9CA3AF;
+}
+
+/* Fila fecha + hora: dos casillas de 550 px (550 + 20 + 550 = 1120) */
+.fila-cita {
+    margin-top: var(--espaciado-xl);
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    gap: 20px;
+    justify-content: start;
+}
+
+/* -----------------------------------------------
+   INDICADOR DE PASOS DE LA CITA
+   Tres pasos con círculo y etiqueta. El punto
+   naranja (círculo) avanza al completar cada paso.
+----------------------------------------------- */
+.pasos-cita {
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: var(--espaciado-lg) 0;
+}
+
+.lista-pasos-cita {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaciado-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.paso-cita-item {
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-sm);
+}
+
+/* Conector entre pasos */
+.paso-cita-item + .paso-cita-item::before {
+    content: "";
+    width: 44px;
+    height: 1px;
+    background-color: #E5E7EB;
+    margin-right: var(--espaciado-md);
+}
+
+.paso-circulo {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 15px;
+    color: #9CA3AF;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.paso-etiqueta {
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    font-size: 13px;
+    color: #6B7280;
+    white-space: nowrap;
+    transition: color 0.3s ease-out;
+}
+
+/* Paso actual: punto naranja */
+.paso-cita-item.paso-activo .paso-circulo {
+    background-color: #FF9800;
+    border-color: #FF9800;
+    color: #FFFFFF;
+}
+
+.paso-cita-item.paso-activo .paso-etiqueta {
+    color: #111111;
+    font-weight: 700;
+}
+
+/* Pasos ya completados */
+.paso-cita-item.paso-completado .paso-circulo {
+    background-color: #FF9800;
+    border-color: #FF9800;
+    color: #FFFFFF;
+}
+
+.paso-cita-item.paso-completado .paso-etiqueta {
+    color: #111111;
+}
+
+/* -----------------------------------------------
+   CITA – Apartado "2. Tus datos"
+   Título h3 en negrita, campos del formulario de
+   contacto (550 px) y caja de comentarios (1120 px).
+----------------------------------------------- */
+.titulo-apartado-cita {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin: var(--espaciado-xl) 0 var(--espaciado-xl);
+}
+
+/* Caja de comentarios: ancho 1120 px, alto 135 px */
+.caja-comentarios-cita {
+    width: 100%;
+    max-width: 1120px;
+    height: 135px;
+    padding: var(--espaciado-md);
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    transition: border-color 0.15s ease-out;
+}
+
+.caja-comentarios-cita textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    resize: vertical;
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--negro);
+}
+
+.caja-comentarios-cita textarea::placeholder {
+    color: #9CA3AF;
+}
+
+.caja-comentarios-cita textarea:focus-visible {
+    outline: none;
+}
+
+.caja-comentarios-cita:focus-within {
+    outline: 2px solid var(--azul-electrico);
+    outline-offset: 2px;
+    border-color: var(--azul-electrico);
+}
+
+/* Checkbox RGPD */
+.checkbox-rgpd-cita {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--espaciado-md);
+    max-width: 1120px;
+    margin-top: var(--espaciado-lg);
+    text-align: left;
+}
+
+.checkbox-rgpd-cita input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 2px 0 0;
+    accent-color: var(--azul-electrico);
+    cursor: pointer;
+}
+
+.checkbox-rgpd-cita label {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--negro);
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-rgpd-cita label a {
+    color: var(--azul-electrico);
+}
+
+.checkbox-rgpd-cita label a:hover,
+.checkbox-rgpd-cita label a:focus {
+    color: var(--hover-activo);
+}
+
+.checkbox-rgpd-cita .mensaje-error {
+    flex-basis: 100%;
+}
+
+/* Acciones del formulario de cita */
+.acciones-cita {
+    display: flex;
+    justify-content: center;
+    gap: var(--espaciado-md);
+    margin-top: var(--espaciado-xl);
+}
+
+.acciones-cita .btn-principal,
+.acciones-cita .btn-secundario {
+    border-radius: 9999px;
+}
+
+/* Cada paso del asistente es un fieldset sin bordes */
+.paso-cita-caja {
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.paso-cita-caja:disabled {
+    opacity: inherit;
+}
+
+/* Botón secundario (Volver) */
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--azul-electrico);
+    text-decoration: none;
+    padding: 12px var(--espaciado-lg);
+    border-radius: var(--radio-tarjeta);
+    border: 1px solid var(--azul-electrico);
+    font-family: var(--fuente-acento);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-out, color 0.15s ease-out;
+}
+
+.btn-secundario:hover,
+.btn-secundario:focus-visible {
+    background-color: var(--azul-electrico);
+    color: var(--blanco);
+    outline: 2px solid var(--azul-electrico);
+    outline-offset: 2px;
+}
+
+/* Mensaje de error de un campo en rojo */
+.mensaje-error {
+    display: block;
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--error);
+    min-height: 0;
+}
+
+.caja-cita:has(.campo-error),
+.caja-cita:has(.campo-error):focus-within {
+    border-color: var(--error);
+    outline-color: var(--error);
+}
+
+/* Resumen de la solicitud (paso 3) */
+.resumen-solicitud {
+    width: 100%;
+    max-width: 1120px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: var(--espaciado-lg);
+}
+
+.resumen-solicitud h3 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-md);
+}
+
+.resumen-solicitud dl {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    row-gap: var(--espaciado-sm);
+    column-gap: var(--espaciado-lg);
+    margin: 0;
+}
+
+.resumen-solicitud dt {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.resumen-solicitud dd {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--negro);
+}
+
+/* Estados del formulario: éxito (verde) y error (rojo) */
+.estado-formulario {
+    width: 100%;
+    max-width: 700px;
+    margin: var(--espaciado-xl) auto 0;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radio-tarjeta);
+    padding: var(--espaciado-xxl) var(--espaciado-lg);
+}
+
+.estado-formulario h2 {
+    font-family: var(--fuente-acento);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--negro);
+    margin: var(--espaciado-md) 0 var(--espaciado-sm);
+}
+
+.estado-formulario p {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin: 0 0 var(--espaciado-lg);
+}
+
+.icono-exito,
+.icono-error {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.icono-exito {
+    background-color: var(--exito);
+}
+
+.icono-error {
+    background-color: var(--error);
+}
+
+/* Spinner durante el envío (si se precisa) */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #E5E7EB;
+    border-top-color: var(--azul-electrico);
+    border-radius: 50%;
+    margin: 0 auto var(--espaciado-md);
+    animation: giro 0.8s linear infinite;
+}
+
+@keyframes giro {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spinner {
+        animation-duration: 2s;
+    }
+}
+
+/* Responsivo: resumen en una sola columna */
+@media (max-width: 767px) {
+    .resumen-solicitud dl {
+        grid-template-columns: 1fr;
+        row-gap: var(--espaciado-xs);
+    }
+
+    .resumen-solicitud dt {
+        margin-top: var(--espaciado-sm);
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-paso-cita {
+        font-size: 20px;
+    }
+
+    .fila-cita {
+        grid-template-columns: 1fr;
+        gap: var(--espaciado-md);
+    }
+
+    .paso-cita-item + .paso-cita-item::before {
+        display: none;
+    }
+
+    .paso-circulo {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .paso-etiqueta {
+        font-size: 12px;
+    }
 }
 
 /* ===============================================
@@ -1303,7 +1835,7 @@ a, button {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--color-superficie-inversa);
+        background-color: var(--negro);
         flex-direction: column;
         padding: var(--espaciado-md);
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -1361,7 +1893,7 @@ a, button {
         width: calc(100% - 40px);
     }
 
-    .hero-carrusel .carousel-caption h2 {
+    .hero-carrusel .carousel-caption h3 {
         font-size: 1.5rem;
     }
 
@@ -1545,7 +2077,7 @@ a, button {
         padding: var(--espaciado-md);
     }
 
-    .hero-carrusel .carousel-caption h2 {
+    .hero-carrusel .carousel-caption h3 {
         font-size: 1.25rem;
     }
 

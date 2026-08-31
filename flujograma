@@ -1,0 +1,2108 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "zDpPe",
+      "x": 0,
+      "y": 0,
+      "name": "Nodo Proceso",
+      "reusable": true,
+      "width": 260,
+      "fill": "$surface-primary",
+      "cornerRadius": 8,
+      "stroke": "$border-subtle",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "padding": [
+        14,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "UABXs",
+          "name": "Texto",
+          "fill": "$foreground-primary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Proceso",
+          "lineHeight": 1.35,
+          "textAlign": "center",
+          "fontFamily": "$font-body",
+          "fontSize": 13,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "eIPi9",
+      "x": 300,
+      "y": 0,
+      "name": "Nodo Inicio/Fin",
+      "reusable": true,
+      "width": 240,
+      "fill": "$surface-inverse",
+      "cornerRadius": 30,
+      "layout": "vertical",
+      "padding": [
+        14,
+        18
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "wW6VC",
+          "name": "Texto",
+          "fill": "$foreground-inverse",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Inicio",
+          "textAlign": "center",
+          "fontFamily": "$font-body",
+          "fontSize": 13,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QrA8m",
+      "x": 580,
+      "y": 0,
+      "name": "Nodo Decisión",
+      "reusable": true,
+      "width": 240,
+      "height": 104,
+      "layout": "none",
+      "children": [
+        {
+          "type": "polygon",
+          "polygonCount": 4,
+          "cornerRadius": 4,
+          "id": "Ur9mO",
+          "x": 0,
+          "y": 0,
+          "name": "Rombo",
+          "fill": "$surface-primary",
+          "width": 240,
+          "height": 104,
+          "stroke": "$border-subtle",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "id": "a6PlUI",
+          "x": 25,
+          "y": 32,
+          "name": "Texto",
+          "fill": "$foreground-primary",
+          "textGrowth": "fixed-width",
+          "width": 190,
+          "content": "Decisión",
+          "lineHeight": 1.3,
+          "textAlign": "center",
+          "fontFamily": "$font-body",
+          "fontSize": 12.5,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "iVHTd",
+      "x": 860,
+      "y": 0,
+      "name": "Nodo Nota",
+      "reusable": true,
+      "width": 290,
+      "fill": "#FFF4E5",
+      "cornerRadius": 8,
+      "stroke": "$accent",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "padding": [
+        12,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "BxmXc",
+          "name": "Texto",
+          "fill": "#B45309",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Nota",
+          "lineHeight": 1.35,
+          "textAlign": "center",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "qmBUA",
+      "x": 1190,
+      "y": 0,
+      "name": "Nodo Error",
+      "reusable": true,
+      "width": 290,
+      "fill": "#FEF2F2",
+      "cornerRadius": 8,
+      "stroke": "$danger",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "padding": [
+        12,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "PTDEi",
+          "name": "Texto",
+          "fill": "#B91C1C",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Error",
+          "lineHeight": 1.35,
+          "textAlign": "center",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MOZHg",
+      "x": 1520,
+      "y": 0,
+      "name": "Nodo Éxito",
+      "reusable": true,
+      "width": 290,
+      "fill": "#F0FDF4",
+      "cornerRadius": 8,
+      "stroke": "$success",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "padding": [
+        12,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "ChrDY",
+          "name": "Texto",
+          "fill": "#15803D",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Éxito",
+          "lineHeight": 1.35,
+          "textAlign": "center",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "H2ZO0i",
+      "x": 1520,
+      "y": 120,
+      "name": "1 · Sitemap y navegación",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "$surface-primary",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "V2VnoD",
+          "x": 0,
+          "y": 0,
+          "name": "Fondo tablero",
+          "fill": "$surface-primary",
+          "width": 1440,
+          "height": 900,
+          "stroke": "$border-subtle",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "id": "KawVz",
+          "x": 48,
+          "y": 36,
+          "name": "Título 1",
+          "fill": "$foreground-primary",
+          "content": "SITEMAP · NAVEGACIÓN",
+          "fontFamily": "$font-heading",
+          "fontSize": 34,
+          "fontWeight": "normal",
+          "letterSpacing": 1
+        },
+        {
+          "type": "text",
+          "id": "Mmuq3",
+          "x": 48,
+          "y": 88,
+          "name": "Subtítulo 1",
+          "fill": "$foreground-muted",
+          "content": "7 páginas · el menú y el footer se comparten en todas; el logo enlaza a index.html",
+          "fontFamily": "$font-body",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "zsEIq",
+          "x": 48,
+          "y": 128,
+          "name": "Aviso sitemap",
+          "fill": "$foreground-muted",
+          "content": "→ dos páginas hijas: ficha_vehiculo (hija del catálogo) y proba_conduccion (hija de la ficha)",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "500"
+        },
+        {
+          "id": "VzRto",
+          "type": "ref",
+          "ref": "eIPi9",
+          "name": "Inicio",
+          "x": 600,
+          "y": 150,
+          "width": 240,
+          "descendants": {
+            "wW6VC": {
+              "content": "Inicio · index.html"
+            }
+          }
+        },
+        {
+          "id": "FxO8w",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Catálogo",
+          "x": 150,
+          "y": 320,
+          "width": 240,
+          "descendants": {
+            "UABXs": {
+              "content": "Catálogo\ncatalogo.html"
+            }
+          }
+        },
+        {
+          "id": "U68WR",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Servicios",
+          "x": 450,
+          "y": 320,
+          "width": 240,
+          "descendants": {
+            "UABXs": {
+              "content": "Servicios\nservicios.html"
+            }
+          }
+        },
+        {
+          "id": "hMloF",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Recambios",
+          "x": 750,
+          "y": 320,
+          "width": 240,
+          "descendants": {
+            "UABXs": {
+              "content": "Recambios\nrecambios.html"
+            }
+          }
+        },
+        {
+          "id": "rABCz",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Contacto",
+          "x": 1050,
+          "y": 320,
+          "width": 240,
+          "descendants": {
+            "UABXs": {
+              "content": "Contacto\ncontacto.html"
+            }
+          }
+        },
+        {
+          "id": "uVBiC",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Ficha de vehículo",
+          "x": 150,
+          "y": 520,
+          "width": 240,
+          "descendants": {
+            "UABXs": {
+              "content": "Ficha de vehículo\nficha_vehiculo.html"
+            }
+          }
+        },
+        {
+          "id": "H4rVKD",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Prueba de conducción",
+          "x": 150,
+          "y": 720,
+          "width": 240,
+          "descendants": {
+            "UABXs": {
+              "content": "Prueba de conducción\nproba_conduccion.html"
+            }
+          }
+        },
+        {
+          "id": "bpEML",
+          "type": "ref",
+          "ref": "iVHTd",
+          "name": "Privacidad",
+          "x": 1030,
+          "y": 520,
+          "width": 340,
+          "descendants": {
+            "BxmXc": {
+              "content": "privacidad.html · política RGPD\nenlazada desde los 3 formularios"
+            }
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "wNNSy",
+          "x": 719,
+          "y": 194,
+          "name": "Línea inicio",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 38
+        },
+        {
+          "type": "rectangle",
+          "id": "syzky",
+          "x": 270,
+          "y": 230,
+          "name": "Tronco",
+          "fill": "$foreground-muted",
+          "width": 900,
+          "height": 2
+        },
+        {
+          "type": "rectangle",
+          "id": "XyXfY",
+          "x": 269,
+          "y": 232,
+          "name": "Bajada",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 88
+        },
+        {
+          "type": "path",
+          "id": "hLZvb",
+          "x": 262,
+          "y": 320,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "NXzqk",
+          "x": 569,
+          "y": 232,
+          "name": "Bajada",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 88
+        },
+        {
+          "type": "path",
+          "id": "vtZdQ",
+          "x": 562,
+          "y": 320,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "vjRUz",
+          "x": 869,
+          "y": 232,
+          "name": "Bajada",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 88
+        },
+        {
+          "type": "path",
+          "id": "pfPHf",
+          "x": 862,
+          "y": 320,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "XbdV2",
+          "x": 1169,
+          "y": 232,
+          "name": "Bajada",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 88
+        },
+        {
+          "type": "path",
+          "id": "RzzFv",
+          "x": 1162,
+          "y": 320,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "Y2sZ32",
+          "x": 269,
+          "y": 366,
+          "name": "Línea ficha",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 154
+        },
+        {
+          "type": "path",
+          "id": "IoY87",
+          "x": 262,
+          "y": 520,
+          "name": "Flecha ficha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "aCvAV",
+          "x": 269,
+          "y": 566,
+          "name": "Línea prueba",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 154
+        },
+        {
+          "type": "path",
+          "id": "VdfRC",
+          "x": 262,
+          "y": 720,
+          "name": "Flecha prueba",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "B4DzwA",
+          "x": 1169,
+          "y": 366,
+          "name": "Línea privacidad",
+          "fill": "#D1D5DB",
+          "width": 2,
+          "height": 154
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "gfdjo",
+      "x": 1520,
+      "y": 1080,
+      "name": "2 · Flujo formulario contacto",
+      "clip": true,
+      "width": 1100,
+      "height": 1560,
+      "fill": "$surface-primary",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "m60iBU",
+          "x": 0,
+          "y": 0,
+          "name": "Fondo 2",
+          "fill": "$surface-primary",
+          "width": 1100,
+          "height": 1560,
+          "stroke": "$border-subtle",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "id": "XSd5A",
+          "x": 48,
+          "y": 36,
+          "name": "Título 2",
+          "fill": "$foreground-primary",
+          "content": "FORMULARIO DE CONTACTO",
+          "fontFamily": "$font-heading",
+          "fontSize": 34,
+          "fontWeight": "normal",
+          "letterSpacing": 1
+        },
+        {
+          "type": "text",
+          "id": "UGt7n",
+          "x": 48,
+          "y": 88,
+          "name": "Sub 2",
+          "fill": "$foreground-muted",
+          "content": "contacto.html · selector de motivo obligatorio · prefill desde la ficha vía URL",
+          "fontFamily": "$font-body",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "qWg5m",
+          "type": "ref",
+          "ref": "eIPi9",
+          "name": "Inicio contacto",
+          "x": 60,
+          "y": 140,
+          "width": 260,
+          "descendants": {
+            "wW6VC": {
+              "content": "Usuario entra en contacto.html"
+            }
+          }
+        },
+        {
+          "id": "y080fD",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Campos comunes",
+          "x": 60,
+          "y": 260,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "Rellena campos comunes\n(nombre, apellidos, correo,\nteléfono, mensaje)"
+            }
+          }
+        },
+        {
+          "id": "t6zT4",
+          "type": "ref",
+          "ref": "QrA8m",
+          "name": "¿Motivo?",
+          "x": 60,
+          "y": 410,
+          "width": 260,
+          "descendants": {
+            "a6PlUI": {
+              "content": "¿Motivo de la\nconsulta elegido?"
+            }
+          }
+        },
+        {
+          "id": "WZgeA",
+          "type": "ref",
+          "ref": "QrA8m",
+          "name": "¿Qué motivo?",
+          "x": 60,
+          "y": 580,
+          "width": 260,
+          "descendants": {
+            "a6PlUI": {
+              "content": "¿Qué motivo?"
+            }
+          }
+        },
+        {
+          "id": "QTgyr",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Validación",
+          "x": 60,
+          "y": 900,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "Validación en cliente\n(blur y al enviar)"
+            }
+          }
+        },
+        {
+          "id": "dwz6Y",
+          "type": "ref",
+          "ref": "QrA8m",
+          "name": "¿Válido?",
+          "x": 60,
+          "y": 1040,
+          "width": 260,
+          "descendants": {
+            "a6PlUI": {
+              "content": "¿Datos válidos\ny RGPD aceptado?"
+            }
+          }
+        },
+        {
+          "id": "x7urX",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Envío",
+          "x": 60,
+          "y": 1200,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "Envío en proceso\n(spinner)"
+            }
+          }
+        },
+        {
+          "id": "o8V5t",
+          "type": "ref",
+          "ref": "MOZHg",
+          "name": "Éxito",
+          "x": 60,
+          "y": 1340,
+          "width": 290,
+          "descendants": {
+            "ChrDY": {
+              "content": "Éxito: mensaje de confirmación y formulario vaciado"
+            }
+          }
+        },
+        {
+          "id": "gvMiR",
+          "type": "ref",
+          "ref": "qmBUA",
+          "name": "Error general",
+          "x": 420,
+          "y": 1340,
+          "width": 290,
+          "descendants": {
+            "PTDEi": {
+              "content": "Error general: se conservan los datos"
+            }
+          }
+        },
+        {
+          "id": "HQPiv",
+          "type": "ref",
+          "ref": "eIPi9",
+          "name": "Fin contacto",
+          "x": 60,
+          "y": 1460,
+          "width": 260,
+          "descendants": {
+            "wW6VC": {
+              "content": "Fin · ningún dato sale del navegador"
+            }
+          }
+        },
+        {
+          "id": "VCl8m",
+          "type": "ref",
+          "ref": "iVHTd",
+          "name": "Error motivo",
+          "x": 440,
+          "y": 400,
+          "width": 300,
+          "descendants": {
+            "BxmXc": {
+              "content": "Error: «debe elegirse una opción»"
+            }
+          }
+        },
+        {
+          "id": "iT2go",
+          "type": "ref",
+          "ref": "iVHTd",
+          "name": "Condicionales",
+          "x": 430,
+          "y": 600,
+          "width": 330,
+          "descendants": {
+            "BxmXc": {
+              "content": "Según motivo:\n· Información → Vehículo (prefilled y solo lectura)\n· Prueba → Vehículo + fecha + franja + aviso\n· Financiación / Mantenimiento / Posventa / General → solo mensaje"
+            }
+          }
+        },
+        {
+          "id": "FzWjq",
+          "type": "ref",
+          "ref": "qmBUA",
+          "name": "Errores campo",
+          "x": 440,
+          "y": 1030,
+          "width": 300,
+          "descendants": {
+            "PTDEi": {
+              "content": "Mensajes de error junto al campo (role=\"alert\")"
+            }
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "a6jRwp",
+          "x": 189,
+          "y": 184,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 76
+        },
+        {
+          "type": "path",
+          "id": "nKyyW",
+          "x": 182,
+          "y": 260,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "JaAjv",
+          "x": 189,
+          "y": 306,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 104
+        },
+        {
+          "type": "path",
+          "id": "RP0pj",
+          "x": 182,
+          "y": 410,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "D2ZRbx",
+          "x": 189,
+          "y": 514,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 66
+        },
+        {
+          "type": "path",
+          "id": "I341v",
+          "x": 182,
+          "y": 580,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "Zs502",
+          "x": 189,
+          "y": 684,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 216
+        },
+        {
+          "type": "path",
+          "id": "KgXra",
+          "x": 182,
+          "y": 900,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "d5LIb",
+          "x": 189,
+          "y": 946,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 94
+        },
+        {
+          "type": "path",
+          "id": "UMLBr",
+          "x": 182,
+          "y": 1040,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "BIexA",
+          "x": 189,
+          "y": 1144,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 56
+        },
+        {
+          "type": "path",
+          "id": "kHnZM",
+          "x": 182,
+          "y": 1200,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "C78YuQ",
+          "x": 204,
+          "y": 1246,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 94
+        },
+        {
+          "type": "path",
+          "id": "za9tb",
+          "x": 197,
+          "y": 1340,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "ar9mk",
+          "x": 564,
+          "y": 1246,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 94
+        },
+        {
+          "type": "path",
+          "id": "hdPX5",
+          "x": 557,
+          "y": 1340,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "l2caPi",
+          "x": 189,
+          "y": 1386,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 74
+        },
+        {
+          "type": "path",
+          "id": "uwvlv",
+          "x": 182,
+          "y": 1460,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "H0Bhu",
+          "x": 319,
+          "y": 462,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 16
+        },
+        {
+          "type": "path",
+          "id": "otl2P",
+          "x": 312,
+          "y": 478,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "dHV92",
+          "x": 319,
+          "y": 632,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 20
+        },
+        {
+          "type": "path",
+          "id": "NoYit",
+          "x": 312,
+          "y": 652,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "XbfPv",
+          "x": 319,
+          "y": 1092,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 20
+        },
+        {
+          "type": "path",
+          "id": "XLGJS",
+          "x": 312,
+          "y": 1112,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "text",
+          "id": "SihUS",
+          "x": 336,
+          "y": 452,
+          "name": "No",
+          "fill": "$danger",
+          "content": "no",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "DffPB",
+          "x": 336,
+          "y": 622,
+          "name": "Sí",
+          "fill": "$success",
+          "content": "sí",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "ysQWR",
+          "x": 336,
+          "y": 1082,
+          "name": "No2",
+          "fill": "$danger",
+          "content": "no",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KKEzT",
+      "x": 2680,
+      "y": 1080,
+      "name": "3 · Flujo prueba de conducción",
+      "clip": true,
+      "width": 1100,
+      "height": 1700,
+      "fill": "$surface-primary",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "EENSm",
+          "x": 0,
+          "y": 0,
+          "name": "Fondo 3",
+          "fill": "$surface-primary",
+          "width": 1100,
+          "height": 1700,
+          "stroke": "$border-subtle",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "id": "ddNtF",
+          "x": 48,
+          "y": 36,
+          "name": "Título 3",
+          "fill": "$foreground-primary",
+          "content": "PRUEBA DE CONDUCCIÓN · 3 PASOS",
+          "fontFamily": "$font-heading",
+          "fontSize": 34,
+          "fontWeight": "normal",
+          "letterSpacing": 1
+        },
+        {
+          "type": "text",
+          "id": "oY7vP",
+          "x": 48,
+          "y": 88,
+          "name": "Sub 3",
+          "fill": "$foreground-muted",
+          "content": "proba_conduccion.html · solicitud, NO reserva automática · el vehículo llega prefilled desde la ficha",
+          "fontFamily": "$font-body",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "BCeNn",
+          "type": "ref",
+          "ref": "eIPi9",
+          "name": "Inicio prueba",
+          "x": 60,
+          "y": 150,
+          "width": 260,
+          "descendants": {
+            "wW6VC": {
+              "content": "Viene de ficha_vehiculo.html\ncon ?vehiculo=<id>"
+            }
+          }
+        },
+        {
+          "id": "R12qD",
+          "type": "ref",
+          "ref": "iVHTd",
+          "name": "Aviso 1",
+          "x": 430,
+          "y": 130,
+          "width": 330,
+          "descendants": {
+            "BxmXc": {
+              "content": "AVISO · solicitud pendiente de confirmación: el concesionario contactará para cerrar fecha y hora"
+            }
+          }
+        },
+        {
+          "id": "aEMF6",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Paso 1",
+          "x": 60,
+          "y": 290,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "PASO 1 · El vehículo y la cita\nvehículo (prefilled, solo lectura)\n+ fecha preferente + franja"
+            }
+          }
+        },
+        {
+          "id": "xSIUa",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Paso 2",
+          "x": 60,
+          "y": 480,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "PASO 2 · Tus datos\nnombre, apellidos, correo y teléfono"
+            }
+          }
+        },
+        {
+          "id": "E5fPvV",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Paso 3",
+          "x": 60,
+          "y": 670,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "PASO 3 · Revisa y envía\nresumen + checkbox RGPD + enviar"
+            }
+          }
+        },
+        {
+          "id": "F8Cdn3",
+          "type": "ref",
+          "ref": "QrA8m",
+          "name": "¿Válido?",
+          "x": 60,
+          "y": 850,
+          "width": 260,
+          "descendants": {
+            "a6PlUI": {
+              "content": "¿Datos válidos\ny RGPD aceptado?"
+            }
+          }
+        },
+        {
+          "id": "K01i6A",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Envío",
+          "x": 60,
+          "y": 1010,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "Envío en proceso (spinner)"
+            }
+          }
+        },
+        {
+          "id": "MzhKE",
+          "type": "ref",
+          "ref": "MOZHg",
+          "name": "Éxito",
+          "x": 60,
+          "y": 1150,
+          "width": 290,
+          "descendants": {
+            "ChrDY": {
+              "content": "Éxito: «hemos recibido tu solicitud de prueba del [vehículo]. En breve te confirmaremos la fecha y la hora»"
+            }
+          }
+        },
+        {
+          "id": "Iu8IA",
+          "type": "ref",
+          "ref": "eIPi9",
+          "name": "Fin prueba",
+          "x": 60,
+          "y": 1300,
+          "width": 260,
+          "descendants": {
+            "wW6VC": {
+              "content": "Fin · ningún dato sale del navegador"
+            }
+          }
+        },
+        {
+          "id": "cy9oW",
+          "type": "ref",
+          "ref": "qmBUA",
+          "name": "Errores",
+          "x": 440,
+          "y": 840,
+          "width": 300,
+          "descendants": {
+            "PTDEi": {
+              "content": "Mensajes de error en el paso correspondiente"
+            }
+          }
+        },
+        {
+          "id": "t1SQc",
+          "type": "ref",
+          "ref": "iVHTd",
+          "name": "Confirmación",
+          "x": 430,
+          "y": 1330,
+          "width": 330,
+          "descendants": {
+            "BxmXc": {
+              "content": "El concesionario confirma por teléfono o correo antes de cerrar la cita (evita reservas fantasma)"
+            }
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "b7ieL",
+          "x": 189,
+          "y": 194,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 96
+        },
+        {
+          "type": "path",
+          "id": "vKvrq",
+          "x": 182,
+          "y": 290,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "Jc8KP",
+          "x": 189,
+          "y": 336,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 144
+        },
+        {
+          "type": "path",
+          "id": "c1Kwem",
+          "x": 182,
+          "y": 480,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "qnOMf",
+          "x": 189,
+          "y": 526,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 144
+        },
+        {
+          "type": "path",
+          "id": "dLowW",
+          "x": 182,
+          "y": 670,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "oeizb",
+          "x": 189,
+          "y": 716,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 134
+        },
+        {
+          "type": "path",
+          "id": "KeGJ7",
+          "x": 182,
+          "y": 850,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "LcM7A",
+          "x": 189,
+          "y": 954,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 56
+        },
+        {
+          "type": "path",
+          "id": "Hi1On",
+          "x": 182,
+          "y": 1010,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "B40dH",
+          "x": 189,
+          "y": 1056,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 94
+        },
+        {
+          "type": "path",
+          "id": "CU2BM",
+          "x": 182,
+          "y": 1150,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "glTTG",
+          "x": 189,
+          "y": 1196,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 104
+        },
+        {
+          "type": "path",
+          "id": "xTtr6",
+          "x": 182,
+          "y": 1300,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "aBtVw",
+          "x": 319,
+          "y": 902,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 20
+        },
+        {
+          "type": "path",
+          "id": "QZ1pt",
+          "x": 312,
+          "y": 922,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "text",
+          "id": "J0q9m",
+          "x": 336,
+          "y": 892,
+          "name": "No",
+          "fill": "$danger",
+          "content": "no",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "BDh2w",
+          "x": 150,
+          "y": 1030,
+          "name": "Sí",
+          "fill": "$success",
+          "content": "sí",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hshq0",
+      "x": 2680,
+      "y": 2840,
+      "name": "4 · Flujo formulario recambios",
+      "clip": true,
+      "width": 1100,
+      "height": 1500,
+      "fill": "$surface-primary",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "eKnue",
+          "x": 0,
+          "y": 0,
+          "name": "Fondo 4",
+          "fill": "$surface-primary",
+          "width": 1100,
+          "height": 1500,
+          "stroke": "$border-subtle",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "id": "s4DdHl",
+          "x": 48,
+          "y": 36,
+          "name": "Título 4",
+          "fill": "$foreground-primary",
+          "content": "RECAMBIOS BAJO PEDIDO",
+          "fontFamily": "$font-heading",
+          "fontSize": 34,
+          "fontWeight": "normal",
+          "letterSpacing": 1
+        },
+        {
+          "type": "text",
+          "id": "D2eXX",
+          "x": 48,
+          "y": 88,
+          "name": "Sub 4",
+          "fill": "$foreground-muted",
+          "content": "recambios.html · piezas bajo pedido · plazo estimado de 1–2 semanas desde la confirmación",
+          "fontFamily": "$font-body",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "Xwy5h",
+          "type": "ref",
+          "ref": "eIPi9",
+          "name": "Inicio recambios",
+          "x": 60,
+          "y": 140,
+          "width": 260,
+          "descendants": {
+            "wW6VC": {
+              "content": "Usuario entra en recambios.html"
+            }
+          }
+        },
+        {
+          "id": "tuVS9",
+          "type": "ref",
+          "ref": "iVHTd",
+          "name": "Proceso",
+          "x": 430,
+          "y": 120,
+          "width": 330,
+          "descendants": {
+            "BxmXc": {
+              "content": "PROCESO: consulta → confirmación → pedido al proveedor → aviso al cliente"
+            }
+          }
+        },
+        {
+          "id": "nyYIS",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Datos vehículo",
+          "x": 60,
+          "y": 270,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "DATOS DEL VEHÍCULO\nreferencia de la pieza (*), marca,\nmodelo y año (1980–2026)"
+            }
+          }
+        },
+        {
+          "id": "uce6I",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Datos contacto",
+          "x": 60,
+          "y": 450,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "DATOS DE CONTACTO\nnombre (*), apellidos (*),\ne-mail (*) y teléfono (*)"
+            }
+          }
+        },
+        {
+          "id": "GrxDx",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Comentarios",
+          "x": 60,
+          "y": 620,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "Comentarios (opcional)"
+            }
+          }
+        },
+        {
+          "id": "XzHgT",
+          "type": "ref",
+          "ref": "QrA8m",
+          "name": "¿Válido?",
+          "x": 60,
+          "y": 770,
+          "width": 260,
+          "descendants": {
+            "a6PlUI": {
+              "content": "¿Datos válidos\ny RGPD aceptado?"
+            }
+          }
+        },
+        {
+          "id": "ieia7",
+          "type": "ref",
+          "ref": "zDpPe",
+          "name": "Envío",
+          "x": 60,
+          "y": 930,
+          "width": 260,
+          "descendants": {
+            "UABXs": {
+              "content": "Envío en proceso (spinner)"
+            }
+          }
+        },
+        {
+          "id": "l5Zpxy",
+          "type": "ref",
+          "ref": "MOZHg",
+          "name": "Éxito",
+          "x": 60,
+          "y": 1070,
+          "width": 290,
+          "descendants": {
+            "ChrDY": {
+              "content": "Éxito: solicitud recibida\nplazo de respuesta 1–2 semanas"
+            }
+          }
+        },
+        {
+          "id": "vzh4G",
+          "type": "ref",
+          "ref": "eIPi9",
+          "name": "Fin recambios",
+          "x": 60,
+          "y": 1220,
+          "width": 260,
+          "descendants": {
+            "wW6VC": {
+              "content": "Fin · ningún dato sale del navegador"
+            }
+          }
+        },
+        {
+          "id": "WBTQB",
+          "type": "ref",
+          "ref": "qmBUA",
+          "name": "Errores",
+          "x": 440,
+          "y": 760,
+          "width": 300,
+          "descendants": {
+            "PTDEi": {
+              "content": "Mensajes de error junto al campo"
+            }
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "qIetc",
+          "x": 189,
+          "y": 184,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 86
+        },
+        {
+          "type": "path",
+          "id": "co7TF",
+          "x": 182,
+          "y": 270,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "d90bT",
+          "x": 189,
+          "y": 316,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 134
+        },
+        {
+          "type": "path",
+          "id": "obvjO",
+          "x": 182,
+          "y": 450,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "SRz38",
+          "x": 189,
+          "y": 496,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 124
+        },
+        {
+          "type": "path",
+          "id": "lXod7",
+          "x": 182,
+          "y": 620,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "X2GLG",
+          "x": 189,
+          "y": 666,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 104
+        },
+        {
+          "type": "path",
+          "id": "RPQan",
+          "x": 182,
+          "y": 770,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "E9g56y",
+          "x": 189,
+          "y": 874,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 56
+        },
+        {
+          "type": "path",
+          "id": "G0Vku0",
+          "x": 182,
+          "y": 930,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "jH9sO",
+          "x": 189,
+          "y": 976,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 94
+        },
+        {
+          "type": "path",
+          "id": "iriYX",
+          "x": 182,
+          "y": 1070,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "bb328",
+          "x": 189,
+          "y": 1116,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 104
+        },
+        {
+          "type": "path",
+          "id": "F12CI",
+          "x": 182,
+          "y": 1220,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "id": "sPJk3",
+          "x": 319,
+          "y": 822,
+          "name": "Línea",
+          "fill": "$foreground-muted",
+          "width": 2,
+          "height": 20
+        },
+        {
+          "type": "path",
+          "id": "XBtCN",
+          "x": 312,
+          "y": 842,
+          "name": "Flecha",
+          "geometry": "M0 0l16 0-8 10z",
+          "viewBox": [
+            0,
+            0,
+            16,
+            10
+          ],
+          "fill": "$foreground-muted",
+          "width": 16,
+          "height": 10
+        },
+        {
+          "type": "text",
+          "id": "i3Ns1",
+          "x": 336,
+          "y": 812,
+          "name": "No",
+          "fill": "$danger",
+          "content": "no",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "Z3wCGA",
+          "x": 150,
+          "y": 950,
+          "name": "Sí",
+          "fill": "$success",
+          "content": "sí",
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "600"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "surface-primary": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "surface-inverse": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "foreground-primary": {
+      "type": "color",
+      "value": "#111111"
+    },
+    "foreground-muted": {
+      "type": "color",
+      "value": "#6B7280"
+    },
+    "foreground-inverse": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "border-subtle": {
+      "type": "color",
+      "value": "#E5E7EB"
+    },
+    "accent": {
+      "type": "color",
+      "value": "#FF9800"
+    },
+    "success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "danger": {
+      "type": "color",
+      "value": "#DC2626"
+    },
+    "font-heading": {
+      "type": "string",
+      "value": "Anton"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "Inter"
+    }
+  },
+  "fileToken": "6ce6cb78-d7ff-4672-a1d1-80c4c87d98cb"
+}

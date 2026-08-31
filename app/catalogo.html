@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,31 +15,42 @@
     <meta property="og:description" content="Explora deportivos, SUV de lujo, híbridos y eléctricos. Filtra por marca, combustible y precio.">
     <meta property="og:url" content="https://www.superautoscarballo.es/catalogo.html">
     <meta property="og:site_name" content="Superautos Carballo">
+    <meta property="og:image" content="https://www.superautoscarballo.es/assets/img/porche/porche_911_targa_4s.webp">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Fuentes -->
+    <!-- Fuentes: Inter + Montserrat de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Estilos base -->
+    <!-- Estilos base del proyecto -->
     <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
 
-    <!-- Enlace saltar al contenido (C08) -->
+    <!-- =============================================
+         ENLACE "SALTAR AL CONTENIDO" (C08)
+    ============================================= -->
     <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
 
     <!-- =============================================
-         CABECERA (C01): Logo + menú + CTA
+         CABECERA / HEADER (C01)
+         Igual que index.html: logo + menú + hamburguesa
     ============================================= -->
     <header class="site-header">
         <div class="contenedor">
+            <!-- Logotipo del concesionario -->
             <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
-                <span class="logo-texto">Superautos Carballo</span>
+                <img src="assets/img/logo.jpg" alt="Superautos Carballo" class="logo-img">
+                <div class="logo-texto">
+                    <span class="logo-nombre">SUPERAUTOS</span>
+                    <span class="logo-sub">CARBALLO</span>
+                </div>
             </a>
+
+            <!-- Menú de navegación principal -->
             <nav aria-label="Navegación principal">
                 <ul class="menu-principal" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
@@ -49,7 +60,8 @@
                     <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="contacto.html?motivo=prueba" class="btn-cta-header">Reservar cita</a>
+
+            <!-- Botón hamburguesa para menú móvil -->
             <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
                 <span class="linea-hamburguesa"></span>
                 <span class="linea-hamburguesa"></span>
@@ -59,248 +71,171 @@
     </header>
 
     <!-- =============================================
-         CONTENIDO PRINCIPAL: CATÁLOGO (P02)
-         Cabecera, filtros, cuadrícula de vehículos
-         y estado vacío.
+         HERO DEL CATÁLOGO (P02)
+         Fondo Porsche Targa 4S, título de impacto y
+         texto descriptivo base.
+    ============================================= -->
+    <section class="hero-catalogo" aria-label="Catálogo de vehículos">
+        <img src="assets/img/porche/porche_911_targa_4s.webp" alt="Porsche 911 Targa 4S" width="1440" height="560">
+        <div class="hero-catalogo-contenido contenedor">
+            <h1>CATÁLOGO DE<br>VEHÍCULOS</h1>
+            <p>Explora una selección exclusiva de superdeportivos y vehículos de alta gama. Cada unidad incluye ficha técnica detallada, historial certificado y la garantía de un concesionario premium.</p>
+        </div>
+    </section>
+
+    <!-- =============================================
+         CONTENIDO PRINCIPAL (C08)
     ============================================= -->
     <main id="contenido-principal">
 
-        <!-- Cabecera del catálogo -->
-        <section class="cabecera-pagina">
+        <!-- =========================================
+             INTRODUCCIÓN DEL CATÁLOGO
+             Título "nuestra flota" (negrita) y
+             "Catálogo" (tipografía impacto) con texto
+             base. Alineado a la izquierda, alto 235px.
+        ========================================= -->
+        <section class="intro-catalogo" aria-label="Presentación del catálogo">
             <div class="contenedor">
-                <h1>Nuestro catálogo</h1>
-                <p>Explora nuestra selección de vehículos de alta gama. Filtra por marca, combustible o precio para encontrar el vehículo ideal.</p>
-                <!-- Contador de resultados (se actualizará con JS) -->
-                <p class="contador-resultados" aria-live="polite">8 vehículos disponibles</p>
+                <p class="intro-etiqueta">Nuestra flota</p>
+                <h2 class="intro-titulo">Catálogo</h2>
+                <p class="intro-descripcion">Explora nuestra selección de superdeportivos, SUV y vehículos eléctricos de alta gama. Todos revisados y con garantía oficial.</p>
             </div>
         </section>
 
         <!-- =========================================
-             BARRA DE FILTROS
-             Filtros combinables: marca, combustible
-             y rango de precio. La ordenación se hará
-             con JS.
+             CUADRÍCULA DE VEHÍCULOS (C03)
+             Cuadrícula Bootstrap (row + col-*).
+             Cada cuadro mide 463px de alto x 387px de
+             ancho, con precio, breve descripción y
+             enlace "Ver ficha". El noveno hueco queda
+             vacío.
         ========================================= -->
-        <section class="barra-filtros" aria-label="Filtros de búsqueda">
+        <section class="seccion-catalogo" aria-label="Vehículos del catálogo">
             <div class="contenedor">
-                <form class="form-filtros" role="search" aria-label="Filtrar vehículos">
+                <div class="row cuadricula-catalogo" id="contenedor-vehiculos">
 
-                    <!-- Filtro por marca -->
-                    <div class="campo-filtro">
-                        <label for="filtro-marca">Marca</label>
-                        <select id="filtro-marca" name="marca">
-                            <option value="">Todas las marcas</option>
-                            <option value="ferrari">Ferrari</option>
-                            <option value="porsche">Porsche</option>
-                            <option value="audi">Audi</option>
-                            <option value="lamborghini">Lamborghini</option>
-                            <option value="mercedes">Mercedes-Benz</option>
-                        </select>
+                    <!-- Cuadro 1: Ferrari 12 Cilindri -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/Ferrari/ferrari_12_cilindri.webp" alt="Ferrari 12 Cilindri" width="600" height="337" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Ferrari 12 Cilindri</h2>
+                                <p>Deportivo V12 de la casa de Maranello con 830 CV. Gasolina.</p>
+                                <p class="cuadro-precio">650.000 €</p>
+                                <a href="ficha_vehiculo.html?id=ferrari-12-cilindri" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
                     </div>
 
-                    <!-- Filtro por tipo de combustible -->
-                    <div class="campo-filtro">
-                        <label for="filtro-combustible">Combustible</label>
-                        <select id="filtro-combustible" name="combustible">
-                            <option value="">Todos</option>
-                            <option value="gasolina">Gasolina</option>
-                            <option value="diesel">Diésel</option>
-                            <option value="hibrido">Híbrido</option>
-                            <option value="electrico">Eléctrico</option>
-                        </select>
+                    <!-- Cuadro 2: Porsche 911 Targa 4S -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/porche/porche_911_targa_4s.webp" alt="Porsche 911 Targa 4S" width="600" height="164" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Porsche 911 Targa 4S</h2>
+                                <p>El icónico deportivo alemán con 450 CV. Gasolina.</p>
+                                <p class="cuadro-precio">179.900 €</p>
+                                <a href="ficha_vehiculo.html?id=porsche-911-targa-4s" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
                     </div>
 
-                    <!-- Filtro por rango de precio -->
-                    <div class="campo-filtro">
-                        <label for="filtro-precio">Precio máximo</label>
-                        <select id="filtro-precio" name="precio">
-                            <option value="">Sin límite</option>
-                            <option value="100000">Hasta 100.000 €</option>
-                            <option value="150000">Hasta 150.000 €</option>
-                            <option value="200000">Hasta 200.000 €</option>
-                            <option value="300000">Hasta 300.000 €</option>
-                            <option value="500000">Hasta 500.000 €</option>
-                        </select>
+                    <!-- Cuadro 3: Audi Q8 -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/Audi/audi_q8_suv.webp" alt="Audi Q8" width="600" height="338" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Audi Q8</h2>
+                                <p>SUV de lujo con acabado S line. Todoterreno y confort.</p>
+                                <p class="cuadro-precio">115.000 €</p>
+                                <a href="ficha_vehiculo.html?id=audi-q8" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
                     </div>
 
-                    <!-- Ordenación -->
-                    <div class="campo-filtro">
-                        <label for="ordenar">Ordenar por</label>
-                        <select id="ordenar" name="ordenar">
-                            <option value="precio-asc">Precio: menor a mayor</option>
-                            <option value="precio-desc">Precio: mayor a menor</option>
-                            <option value="año-desc">Más recientes</option>
-                        </select>
+                    <!-- Cuadro 4: Lamborghini Revuelto -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/Lamborghini/lamborghini_rebuelt.webp" alt="Lamborghini Revuelto" width="600" height="173" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Lamborghini Revuelto</h2>
+                                <p>Híbrido enchufable con 1015 CV. La nueva superdeportiva.</p>
+                                <p class="cuadro-precio">520.000 €</p>
+                                <a href="ficha_vehiculo.html?id=lamborghini-revuelto" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
                     </div>
 
-                    <!-- Botón limpiar filtros -->
-                    <button type="reset" class="btn-limpiar-filtros">Limpiar filtros</button>
-                </form>
-            </div>
-        </section>
+                    <!-- Cuadro 5: Lamborghini Urus -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/Lamborghini/Lamborghini_urus.webp" alt="Lamborghini Urus" width="600" height="173" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Lamborghini Urus</h2>
+                                <p>SUV de lujo híbrido con ADN de superdeportivo.</p>
+                                <p class="cuadro-precio">260.000 €</p>
+                                <a href="ficha_vehiculo.html?id=lamborghini-urus" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
+                    </div>
 
-        <!-- =========================================
-             CUADRÍCULA DE RESULTADOS (C03)
-             Tarjetas reutilizables de vehículo. Cada
-             una enlaza a ficha_vehiculo.html?id=<id>.
-        ========================================= -->
-        <section class="seccion-catalogo" aria-label="Resultados del catálogo">
-            <div class="contenedor">
-                <div class="fila-vehiculos" id="contenedor-vehiculos">
+                    <!-- Cuadro 6: Porsche Taycan -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/porche/Taycan_electrico.webp" alt="Porsche Taycan" width="600" height="224" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Porsche Taycan</h2>
+                                <p>Deportivo 100% eléctrico con gran autonomía.</p>
+                                <p class="cuadro-precio">145.000 €</p>
+                                <a href="ficha_vehiculo.html?id=porsche-taycan" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
+                    </div>
 
-                    <!-- Tarjeta: Ferrari 12 Cilindri -->
-                    <article class="tarjeta-vehiculo" data-marca="ferrari" data-combustible="gasolina" data-precio="650000" data-año="2024">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Ferrari/ferrari_12_cilindri.webp" alt="Ferrari 12 Cilindri" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Ferrari 12 Cilindri</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2024</li>
-                                <li>Gasolina</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">650.000 €</p>
-                            <a href="ficha_vehiculo.html?id=ferrari-12-cilindri" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
+                    <!-- Cuadro 7: Mercedes EQS -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/Mercedes/Mercedes_eqs_electrico.webp" alt="Mercedes EQS" width="600" height="271" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Mercedes EQS</h2>
+                                <p>Berlina de lujo 100% eléctrica con la mejor tecnología.</p>
+                                <p class="cuadro-precio">128.500 €</p>
+                                <a href="ficha_vehiculo.html?id=mercedes-eqs" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
+                    </div>
 
-                    <!-- Tarjeta: Porsche 911 Targa 4S -->
-                    <article class="tarjeta-vehiculo" data-marca="porsche" data-combustible="gasolina" data-precio="179900" data-año="2023">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/porche/porche_911_targa_4s.webp" alt="Porsche 911 Targa 4S" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Porsche 911 Targa 4S</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2023</li>
-                                <li>12.500 km</li>
-                                <li>Gasolina</li>
-                                <li>Automático PDK</li>
-                            </ul>
-                            <p class="precio-vehiculo">179.900 €</p>
-                            <a href="ficha_vehiculo.html?id=porsche-911-targa-4s" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
+                    <!-- Cuadro 8: Mercedes AMG EQE -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="cuadro-vehiculo">
+                            <div class="cuadro-imagen">
+                                <img src="assets/img/Mercedes/Mercedes_amg_eqe_electrico.webp" alt="Mercedes AMG EQE" width="600" height="260" loading="lazy">
+                            </div>
+                            <div class="cuadro-info">
+                                <h2>Mercedes AMG EQE</h2>
+                                <p>Berlina eléctrica deportiva firmada por AMG.</p>
+                                <p class="cuadro-precio">135.000 €</p>
+                                <a href="ficha_vehiculo.html?id=mercedes-amg-eqe" class="btn-principal">Ver ficha</a>
+                            </div>
+                        </article>
+                    </div>
 
-                    <!-- Tarjeta: Audi Q8 -->
-                    <article class="tarjeta-vehiculo" data-marca="audi" data-combustible="gasolina" data-precio="115000" data-año="2023">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Audi/audi_q8_suv.webp" alt="Audi Q8" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Audi Q8</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2023</li>
-                                <li>SUV de lujo</li>
-                                <li>Gasolina</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">115.000 €</p>
-                            <a href="ficha_vehiculo.html?id=audi-q8" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
+                    <!-- Cuadro 9: vacío (reservado) -->
 
-                    <!-- Tarjeta: Lamborghini Revuelto -->
-                    <article class="tarjeta-vehiculo" data-marca="lamborghini" data-combustible="hibrido" data-precio="520000" data-año="2024">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Lamborghini/lamborghini_rebuelt.webp" alt="Lamborghini Revuelto" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Lamborghini Revuelto</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2024</li>
-                                <li>Híbrido</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">520.000 €</p>
-                            <a href="ficha_vehiculo.html?id=lamborghini-revuelto" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta: Lamborghini Urus -->
-                    <article class="tarjeta-vehiculo" data-marca="lamborghini" data-combustible="hibrido" data-precio="260000" data-año="2024">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Lamborghini/Lamborghini_urus.webp" alt="Lamborghini Urus" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Lamborghini Urus</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2024</li>
-                                <li>SUV de lujo</li>
-                                <li>Híbrido</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">260.000 €</p>
-                            <a href="ficha_vehiculo.html?id=lamborghini-urus" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta: Porsche Taycan -->
-                    <article class="tarjeta-vehiculo" data-marca="porsche" data-combustible="electrico" data-precio="145000" data-año="2024">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/porche/Taycan_electrico.webp" alt="Porsche Taycan" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Porsche Taycan</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2024</li>
-                                <li>Eléctrico</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">145.000 €</p>
-                            <a href="ficha_vehiculo.html?id=porsche-taycan" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta: Mercedes EQS -->
-                    <article class="tarjeta-vehiculo" data-marca="mercedes" data-combustible="electrico" data-precio="128500" data-año="2023">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Mercedes/Mercedes_eqs_electrico.webp" alt="Mercedes EQS" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Mercedes EQS</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2023</li>
-                                <li>Berlina de lujo</li>
-                                <li>Eléctrico</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">128.500 €</p>
-                            <a href="ficha_vehiculo.html?id=mercedes-eqs" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta: Mercedes AMG EQE -->
-                    <article class="tarjeta-vehiculo" data-marca="mercedes" data-combustible="electrico" data-precio="135000" data-año="2024">
-                        <div class="imagen-vehiculo">
-                            <img src="../assets/img/Mercedes/Mercedes_amg_eqe_electrico.webp" alt="Mercedes AMG EQE" width="410" height="270" loading="lazy">
-                        </div>
-                        <div class="info-vehiculo">
-                            <h2 class="nombre-vehiculo">Mercedes AMG EQE</h2>
-                            <ul class="etiquetas-vehiculo">
-                                <li>2024</li>
-                                <li>Berlina de lujo</li>
-                                <li>Eléctrico</li>
-                                <li>Automático</li>
-                            </ul>
-                            <p class="precio-vehiculo">135.000 €</p>
-                            <a href="ficha_vehiculo.html?id=mercedes-amg-eqe" class="btn-principal">Ver ficha</a>
-                        </div>
-                    </article>
-
-                </div>
-
-                <!-- =========================================
-                     ESTADO VACÍO
-                     Se muestra cuando ningún vehículo cumple
-                     los filtros seleccionados. Se oculta por
-                     defecto con CSS.
-                ========================================= -->
-                <div class="estado-vacio" id="estado-vacio" hidden>
-                    <h3>No se encontraron vehículos</h3>
-                    <p>No hay vehículos que coincidan con los filtros seleccionados. Prueba a modificar tu búsqueda.</p>
-                    <button type="button" class="btn-secundario" id="btn-limpiar-filtros">Limpiar filtros</button>
                 </div>
             </div>
         </section>
@@ -308,47 +243,66 @@
     </main>
 
     <!-- =============================================
-         FOOTER (C02): Repetido en todas las páginas
+         FOOTER (C02): Igual que index.html
     ============================================= -->
     <footer class="site-footer">
         <div class="contenedor">
             <div class="fila-footer">
-                <div class="columna-footer">
-                    <h3>Superautos Carballo</h3>
-                    <p>Tu concesionario de confianza para vehículos de alta gama en Carballo, Galicia.</p>
+
+                <!-- Columna 1: Marca -->
+                <div class="columna-footer columna-marca">
+                    <p class="footer-brand">SUPERAUTOS CARBALLO</p>
+                    <p class="footer-desc">Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
                 </div>
+
+                <!-- Columna 2: Catálogo -->
                 <div class="columna-footer">
-                    <h3>Enlaces</h3>
+                    <h3>CATÁLOGO</h3>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Catálogo</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="recambios.html">Recambios</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="catalogo.html">Deportivos</a></li>
+                        <li><a href="catalogo.html">SUV de lujo</a></li>
+                        <li><a href="catalogo.html">Ediciones limitadas</a></li>
+                        <li><a href="catalogo.html">Seminuevos certificados</a></li>
                     </ul>
                 </div>
+
+                <!-- Columna 3: Servicios -->
                 <div class="columna-footer">
-                    <h3>Contacto</h3>
-                    <address>
-                        <p>📍 Carballo, A Coruña, Galicia</p>
-                        <p><a href="tel:+34981000000">📞 981 00 00 00</a></p>
-                        <p><a href="mailto:info@superautoscarballo.es">✉️ info@superautoscarballo.es</a></p>
-                        <p>🕐 Lun–Vie: 9:00–14:00 / 16:00–20:00<br>Sáb: 10:00–14:00</p>
-                    </address>
+                    <h3>SERVICIOS</h3>
+                    <ul>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="servicios.html">Venta</a></li>
+                        <li><a href="servicios.html">Mantenimiento</a></li>
+                        <li><a href="servicios.html">Posventa</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                    </ul>
                 </div>
+
+                <!-- Columna 4: Contacto -->
                 <div class="columna-footer">
-                    <h3>Síguenos</h3>
-                    <ul class="redes-sociales">
-                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a></li>
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><a href="contacto.html">Av. A Coruña 45, 15100</a></li>
+                        <li><a href="contacto.html">Carballo, A Coruña</a></li>
+                        <li><a href="tel:+34981700200">+34 981 700 200</a></li>
+                        <li><a href="mailto:info@superautoscarballo.es">info@superautoscarballo.es</a></li>
                     </ul>
                 </div>
             </div>
+
+            <!-- Línea inferior del footer -->
             <div class="pie-footer">
-                <p>&copy; 2026 Superautos Carballo. Todos los derechos reservados.</p>
-                <nav aria-label="Legal">
-                    <a href="privacidad.html">Política de privacidad</a>
+                <p class="footer-copyright">&copy; 2026 Superautos Carballo</p>
+                <nav class="redes-sociales" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
                 </nav>
             </div>
         </div>
