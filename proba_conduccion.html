@@ -1,1 +1,223 @@
-﻿<!DOCTYPE html><html lang="es"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Solicitar prueba de conducci├│n ÔÇô Superautos Carballo</title></head><body>    <a href="#contenido-principal">Saltar al contenido</a>    <!-- CABECERA / HEADER -->    <header>        <div>            <a href="index.html">                <span>SUPERAUTOS</span>                <span>CARBALLO</span>            </a>            <nav aria-label="Navegaci├│n principal">                <ul>                    <li><a href="index.html">Inicio</a></li>                    <li><a href="catalogo.html" aria-current="page">Cat├ílogo</a></li>                    <li><a href="servicios.html">Servicios</a></li>                    <li><a href="recambios.html">Recambios</a></li>                    <li><a href="contacto.html">Contacto</a></li>                </ul>            </nav>            <a href="contacto.html?motivo=prueba">Reservar cita</a>            <button type="button" aria-label="Abrir men├║ de navegaci├│n" aria-expanded="false" aria-controls="menu-movil">                <span></span>                <span></span>                <span></span>            </button>        </div>    </header>    <main id="contenido-principal">        <!-- BREADCRUMB -->        <nav aria-label="Breadcrumb">            <ol>                <li><a href="index.html">Inicio</a></li>                <li><a href="catalogo.html">Cat├ílogo</a></li>                <li><a href="ficha_vehiculo.html">Veh├¡culo</a></li>                <li aria-current="page">Solicitar prueba</li>            </ol>        </nav>        <!-- CABECERA DE LA P├üGINA -->        <section aria-label="Solicitar prueba de conducci├│n">            <div>                <h1>Solicitar prueba de conducci├│n</h1>                <p>Rellena el formulario para solicitar una prueba. <strong>Esta solicitud no es una reserva autom├ítica:</strong> el concesionario te contactar├í por tel├®fono o correo para confirmar la fecha y la hora.</p>            </div>        </section>        <!-- AVISO IMPORTANTE -->        <div>            <div>                <p><strong>Aviso:</strong> Tu solicitud est├í pendiente de confirmaci├│n. No se reserva nada autom├íticamente. El concesionario contactar├í contigo para confirmar la fecha y la hora de la prueba.</p>            </div>        </div>        <!-- FORMULARIO EN 3 PASOS -->        <section aria-label="Formulario de prueba de conducci├│n">            <div>                <!-- Indicador de pasos -->                <div aria-label="Progreso del formulario">                    <ol>                        <li>1. El veh├¡culo y la cita</li>                        <li>2. Tus datos</li>                        <li>3. Revisa y env├¡a</li>                    </ol>                </div>                <form>                    <fieldset>                        <legend>Paso 1: El veh├¡culo y la cita</legend>                        <input type="hidden" id="prueba-vehiculo-id" name="vehiculo_id" value="">                        <div>                            <label for="prueba-vehiculo">Veh├¡culo</label>                            <input type="text" id="prueba-vehiculo" name="vehiculo" readonly>                            <small>El veh├¡culo se rellena autom├íticamente desde la ficha.</small>                        </div>                        <div>                            <label for="prueba-fecha">Fecha preferente *</label>                            <input type="date" id="prueba-fecha" name="fecha" required aria-required="true">                        </div>                        <div>                            <label for="prueba-franja">Franja horaria *</label>                            <select id="prueba-franja" name="franja" required aria-required="true">                                <option value="">Selecciona una franja</option>                                <option value="manana">Ma├▒ana (9:00 ÔÇô 14:00)</option>                                <option value="tarde">Tarde (15:00 ÔÇô 20:00)</option>                            </select>                        </div>                    </fieldset>                    <fieldset>                        <legend>Paso 2: Tus datos</legend>                        <div>                            <label for="prueba-nombre">Nombre *</label>                            <input type="text" id="prueba-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">                        </div>                        <div>                            <label for="prueba-apellidos">Apellidos *</label>                            <input type="text" id="prueba-apellidos" name="apellidos" required aria-required="true" autocomplete="family-name" minlength="2">                        </div>                        <div>                            <label for="prueba-email">Correo electr├│nico *</label>                            <input type="email" id="prueba-email" name="email" required aria-required="true" autocomplete="email">                        </div>                        <div>                            <label for="prueba-telefono">Tel├®fono *</label>                            <input type="tel" id="prueba-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">                        </div>                    </fieldset>                    <fieldset>                        <legend>Paso 3: Revisa y env├¡a</legend>                        <div>                            <h3>Resumen de tu solicitud</h3>                            <dl>                                <dt>Veh├¡culo</dt>                                <dd>ÔÇö</dd>                                <dt>Fecha preferente</dt>                                <dd>ÔÇö</dd>                                <dt>Franja horaria</dt>                                <dd>ÔÇö</dd>                                <dt>Nombre</dt>                                <dd>ÔÇö</dd>                                <dt>Correo electr├│nico</dt>                                <dd>ÔÇö</dd>                                <dt>Tel├®fono</dt>                                <dd>ÔÇö</dd>                            </dl>                        </div>                        <div>                            <input type="checkbox" id="prueba-rgpd" name="rgpd" required aria-required="true">                            <label for="prueba-rgpd">                                He le├¡do y acepto la <a href="privacidad.html" target="_blank">pol├¡tica de privacidad</a>. Mis datos ser├ín tratados para gestionar esta solicitud. *                            </label>                        </div>                        <button type="submit">Enviar solicitud</button>                    </fieldset>                </form>            </div>        </section>    </main>    <!-- FOOTER -->    <footer>        <div>            <div>                <div>                    <p>SUPERAUTOS CARBALLO</p>                    <p>Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducci├│n de alta gama.</p>                </div>                <div>                    <h3>CAT├üLOGO</h3>                    <ul>                        <li><a href="catalogo.html">Deportivos</a></li>                        <li><a href="catalogo.html">SUV de lujo</a></li>                        <li><a href="catalogo.html">Ediciones limitadas</a></li>                        <li><a href="catalogo.html">Seminuevos certificados</a></li>                    </ul>                </div>                <div>                    <h3>SERVICIOS</h3>                    <ul>                        <li><a href="servicios.html">Servicios</a></li>                        <li><a href="servicios.html">Venta</a></li>                        <li><a href="servicios.html">Mantenimiento</a></li>                        <li><a href="servicios.html">Posventa</a></li>                        <li><a href="recambios.html">Recambios</a></li>                    </ul>                </div>                <div>                    <h3>CONTACTO</h3>                    <ul>                        <li><a href="contacto.html">Av. A Coru├▒a 45, 15100</a></li>                        <li><a href="contacto.html">Carballo, A Coru├▒a</a></li>                        <li><a href="tel:+34981700200">+34 981 700 200</a></li>                        <li><a href="mailto:info@superautoscarballo.es">info@superautoscarballo.es</a></li>                    </ul>                </div>            </div>            <div>                <p>&copy; 2026 Superautos Carballo</p>                <nav aria-label="Redes sociales">                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a>                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a>                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a>                </nav>            </div>        </div>    </footer></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar prueba de conducción – Superautos Carballo</title>
+</head>
+<body>
+
+    <a href="#contenido-principal">Saltar al contenido</a>
+
+    <!-- CABECERA / HEADER -->
+    <header>
+        <div>
+            <a href="index.html">
+                <span>SUPERAUTOS</span>
+                <span>CARBALLO</span>
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="recambios.html">Recambios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <a href="contacto.html?motivo=prueba">Reservar cita</a>
+
+            <button type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="contenido-principal">
+
+        <!-- BREADCRUMB -->
+        <nav aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="ficha_vehiculo.html">Vehículo</a></li>
+                <li aria-current="page">Solicitar prueba</li>
+            </ol>
+        </nav>
+
+        <!-- CABECERA DE LA PÁGINA -->
+        <section aria-label="Solicitar prueba de conducción">
+            <div>
+                <h1>Solicitar prueba de conducción</h1>
+                <p>Rellena el formulario para solicitar una prueba. <strong>Esta solicitud no es una reserva automática:</strong> el concesionario te contactará por teléfono o correo para confirmar la fecha y la hora.</p>
+            </div>
+        </section>
+
+        <!-- AVISO IMPORTANTE -->
+        <div>
+            <div>
+                <p><strong>Aviso:</strong> Tu solicitud está pendiente de confirmación. No se reserva nada automáticamente. El concesionario contactará contigo para confirmar la fecha y la hora de la prueba.</p>
+            </div>
+        </div>
+
+        <!-- FORMULARIO EN 3 PASOS -->
+        <section aria-label="Formulario de prueba de conducción">
+            <div>
+
+                <!-- Indicador de pasos -->
+                <div aria-label="Progreso del formulario">
+                    <ol>
+                        <li>1. El vehículo y la cita</li>
+                        <li>2. Tus datos</li>
+                        <li>3. Revisa y envía</li>
+                    </ol>
+                </div>
+
+                <form>
+
+                    <fieldset>
+                        <legend>Paso 1: El vehículo y la cita</legend>
+
+                        <input type="hidden" id="prueba-vehiculo-id" name="vehiculo_id" value="">
+
+                        <div>
+                            <label for="prueba-vehiculo">Vehículo</label>
+                            <input type="text" id="prueba-vehiculo" name="vehiculo" readonly>
+                            <small>El vehículo se rellena automáticamente desde la ficha.</small>
+                        </div>
+
+                        <div>
+                            <label for="prueba-fecha">Fecha preferente *</label>
+                            <input type="date" id="prueba-fecha" name="fecha" required aria-required="true">
+                        </div>
+
+                        <div>
+                            <label for="prueba-franja">Franja horaria *</label>
+                            <select id="prueba-franja" name="franja" required aria-required="true">
+                                <option value="">Selecciona una franja</option>
+                                <option value="manana">Mañana (9:00 – 14:00)</option>
+                                <option value="tarde">Tarde (15:00 – 20:00)</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Paso 2: Tus datos</legend>
+
+                        <div>
+                            <label for="prueba-nombre">Nombre *</label>
+                            <input type="text" id="prueba-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                        </div>
+
+                        <div>
+                            <label for="prueba-apellidos">Apellidos *</label>
+                            <input type="text" id="prueba-apellidos" name="apellidos" required aria-required="true" autocomplete="family-name" minlength="2">
+                        </div>
+
+                        <div>
+                            <label for="prueba-email">Correo electrónico *</label>
+                            <input type="email" id="prueba-email" name="email" required aria-required="true" autocomplete="email">
+                        </div>
+
+                        <div>
+                            <label for="prueba-telefono">Teléfono *</label>
+                            <input type="tel" id="prueba-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Paso 3: Revisa y envía</legend>
+
+                        <div>
+                            <h3>Resumen de tu solicitud</h3>
+                            <dl>
+                                <dt>Vehículo</dt>
+                                <dd>—</dd>
+                                <dt>Fecha preferente</dt>
+                                <dd>—</dd>
+                                <dt>Franja horaria</dt>
+                                <dd>—</dd>
+                                <dt>Nombre</dt>
+                                <dd>—</dd>
+                                <dt>Correo electrónico</dt>
+                                <dd>—</dd>
+                                <dt>Teléfono</dt>
+                                <dd>—</dd>
+                            </dl>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="prueba-rgpd" name="rgpd" required aria-required="true">
+                            <label for="prueba-rgpd">
+                                He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud. *
+                            </label>
+                        </div>
+
+                        <button type="submit">Enviar solicitud</button>
+                    </fieldset>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <div>
+                <div>
+                    <p>SUPERAUTOS CARBALLO</p>
+                    <p>Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
+                </div>
+
+                <div>
+                    <h3>CATÁLOGO</h3>
+                    <ul>
+                        <li><a href="catalogo.html">Deportivos</a></li>
+                        <li><a href="catalogo.html">SUV de lujo</a></li>
+                        <li><a href="catalogo.html">Ediciones limitadas</a></li>
+                        <li><a href="catalogo.html">Seminuevos certificados</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>SERVICIOS</h3>
+                    <ul>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="servicios.html">Venta</a></li>
+                        <li><a href="servicios.html">Mantenimiento</a></li>
+                        <li><a href="servicios.html">Posventa</a></li>
+                        <li><a href="recambios.html">Recambios</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><a href="contacto.html">Av. A Coruña 45, 15100</a></li>
+                        <li><a href="contacto.html">Carballo, A Coruña</a></li>
+                        <li><a href="tel:+34981700200">+34 981 700 200</a></li>
+                        <li><a href="mailto:info@superautoscarballo.es">info@superautoscarballo.es</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <p>&copy; 2026 Superautos Carballo</p>
+                <nav aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
