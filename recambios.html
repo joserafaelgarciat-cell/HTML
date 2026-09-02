@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recambios para coches de alta gama – Superautos Carballo</title>
+
+    <!-- Metadatos SEO -->
+    <title>Solicitud de recambios – Superautos Carballo</title>
+    <meta name="description" content="Solicita piezas originales y recambios de primeras marcas para tu vehículo de alta gama. Gestionamos tu solicitud con rapidez y garantizamos disponibilidad.">
+    <link rel="canonical" href="https://www.superautoscarballo.es/recambios.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Solicitud de recambios – Superautos Carballo">
+    <meta property="og:description" content="Solicita piezas originales y recambios de primeras marcas. Gestionamos tu solicitud con rapidez.">
+    <meta property="og:url" content="https://www.superautoscarballo.es/recambios.html">
+    <meta property="og:site_name" content="Superautos Carballo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -56,90 +67,81 @@
         <section class="seccion-formulario-recambios" aria-label="Formulario de solicitud de recambios">
             <div class="contenedor">
 
-                <form id="form-recambios" class="formulario-recambios" novalidate>
+                <form id="form-recambios" class="formulario-recambios needs-validation" novalidate>
 
-                    <!-- =========================================
-                         PRIMERA CUADRÍCULA: DATOS DEL VEHÍCULO
-                         Grid 2x2, casillas 688x54px.
-                    ========================================= -->
+                    <!-- PRIMERA CUADRÍCULA: DATOS DEL VEHÍCULO -->
                     <fieldset class="grupo-campos-recambios">
                         <legend class="titulo-grupo-recambios">DATOS DEL VEHÍCULO</legend>
 
                         <div class="cuadricula-recambios">
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-referencia">Referencia de la pieza <span aria-hidden="true">*</span></label>
-                                <input type="text" id="recambio-referencia" name="referencia" required aria-required="true" autocomplete="off" placeholder="Ej. PIE-12345">
+                                <label for="recambio-referencia" class="form-label">Referencia de la pieza <span aria-hidden="true">*</span></label>
+                                <input type="text" class="form-control" id="recambio-referencia" name="referencia" required aria-required="true" autocomplete="off" placeholder="Ej. PIE-12345">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
 
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-marca">Marca del vehículo</label>
-                                <input type="text" id="recambio-marca" name="marca" autocomplete="organization" placeholder="Ej. Ferrari">
+                                <label for="recambio-marca" class="form-label">Marca del vehículo</label>
+                                <input type="text" class="form-control" id="recambio-marca" name="marca" autocomplete="organization" placeholder="Ej. Ferrari">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
 
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-modelo">Modelo del vehículo</label>
-                                <input type="text" id="recambio-modelo" name="modelo" placeholder="Ej. 12 Cilindri">
+                                <label for="recambio-modelo" class="form-label">Modelo del vehículo</label>
+                                <input type="text" class="form-control" id="recambio-modelo" name="modelo" placeholder="Ej. 12 Cilindri">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
 
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-anio">Año del vehículo</label>
-                                <input type="number" id="recambio-anio" name="anio" min="1980" max="2026" placeholder="Ej. 2024">
+                                <label for="recambio-anio" class="form-label">Año del vehículo</label>
+                                <input type="number" class="form-control" id="recambio-anio" name="anio" min="1980" max="2026" placeholder="Ej. 2024">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
                         </div>
                     </fieldset>
 
-                    <!-- =========================================
-                         SEGUNDA CUADRÍCULA: DATOS DEL CONTACTO
-                         Grid 2x2, casillas 688x54px.
-                    ========================================= -->
+                    <!-- SEGUNDA CUADRÍCULA: DATOS DEL CONTACTO -->
                     <fieldset class="grupo-campos-recambios">
                         <legend class="titulo-grupo-recambios">DATOS DEL CONTACTO</legend>
 
                         <div class="cuadricula-recambios">
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-nombre">Nombre <span aria-hidden="true">*</span></label>
-                                <input type="text" id="recambio-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2" placeholder="Ej. Juan">
+                                <label for="recambio-nombre" class="form-label">Nombre <span aria-hidden="true">*</span></label>
+                                <input type="text" class="form-control" id="recambio-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2" placeholder="Ej. Juan">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
 
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-apellido">Apellido <span aria-hidden="true">*</span></label>
-                                <input type="text" id="recambio-apellido" name="apellido" required aria-required="true" autocomplete="family-name" minlength="2" placeholder="Ej. García">
+                                <label for="recambio-apellido" class="form-label">Apellido <span aria-hidden="true">*</span></label>
+                                <input type="text" class="form-control" id="recambio-apellido" name="apellido" required aria-required="true" autocomplete="family-name" minlength="2" placeholder="Ej. García">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
 
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-email">Correo electrónico <span aria-hidden="true">*</span></label>
-                                <input type="email" id="recambio-email" name="email" required aria-required="true" autocomplete="email" placeholder="Ej. juan@email.com">
+                                <label for="recambio-email" class="form-label">Correo electrónico <span aria-hidden="true">*</span></label>
+                                <input type="email" class="form-control" id="recambio-email" name="email" required aria-required="true" autocomplete="email" placeholder="Ej. juan@email.com">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
 
                             <div class="campo-formulario-recambio">
-                                <label for="recambio-telefono">Teléfono <span aria-hidden="true">*</span></label>
-                                <input type="tel" id="recambio-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15" placeholder="Ej. 600 123 456">
+                                <label for="recambio-telefono" class="form-label">Teléfono <span aria-hidden="true">*</span></label>
+                                <input type="tel" class="form-control" id="recambio-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15" placeholder="Ej. 600 123 456">
                                 <span class="mensaje-error" role="alert" aria-live="polite"></span>
                             </div>
                         </div>
                     </fieldset>
 
-                    <!-- =========================================
-                         CAJA DE COMENTARIOS
-                         Ancho 1400px, alto 135px.
-                    ========================================= -->
+                    <!-- CAJA DE COMENTARIOS -->
                     <div class="campo-formulario-recambio campo-comentarios-recambio">
-                        <label for="recambio-comentarios">COMENTARIOS</label>
-                        <textarea id="recambio-comentarios" name="comentarios" rows="5"></textarea>
+                        <label for="recambio-comentarios" class="form-label">COMENTARIOS</label>
+                        <textarea class="form-control" id="recambio-comentarios" name="comentarios" rows="5"></textarea>
                         <span class="mensaje-error" role="alert" aria-live="polite"></span>
                     </div>
 
                     <!-- Checkbox RGPD obligatorio -->
-                    <div class="campo-formulario-recambio checkbox-rgpd-recambio">
-                        <input type="checkbox" id="recambio-rgpd" name="rgpd" required aria-required="true">
-                        <label for="recambio-rgpd">
+                    <div class="campo-formulario-recambio checkbox-rgpd-recambio form-check">
+                        <input type="checkbox" class="form-check-input" id="recambio-rgpd" name="rgpd" required aria-required="true">
+                        <label class="form-check-label" for="recambio-rgpd">
                             He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud de recambio. <span aria-hidden="true">*</span>
                         </label>
                         <span class="mensaje-error" role="alert" aria-live="polite"></span>
@@ -151,6 +153,29 @@
                     </div>
 
                 </form>
+
+                <!-- Estado: envío en proceso -->
+                <div class="estado-formulario" id="estado-enviando" hidden aria-live="polite">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <p>Enviando tu solicitud...</p>
+                </div>
+
+                <!-- Estado: éxito -->
+                <div class="estado-formulario estado-exito" id="estado-exito" hidden aria-live="polite">
+                    <div class="icono-exito" aria-hidden="true">&#10003;</div>
+                    <h2>Solicitud recibida</h2>
+                    <p>Hemos recibido tu solicitud de recambio. Nuestro equipo la revisará y te contactará en un plazo de <strong>1 a 2 semanas</strong> para confirmar la disponibilidad y el plazo de entrega.</p>
+                    <a href="index.html" class="btn-principal">Volver al inicio</a>
+                </div>
+
+                <!-- Estado: error general -->
+                <div class="estado-formulario estado-error" id="estado-error" hidden aria-live="polite">
+                    <div class="icono-error" aria-hidden="true">&#10007;</div>
+                    <h2>Error al enviar</h2>
+                    <p>Ha habido un problema al enviar tu solicitud. Por favor, revisa los datos e inténtalo de nuevo.</p>
+                    <button type="button" class="btn-principal" id="btn-reintentar">Reintentar</button>
+                </div>
+
             </div>
         </section>
 
@@ -215,5 +240,154 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        const form = document.getElementById('form-recambios');
+        const estadoEnviando = document.getElementById('estado-enviando');
+        const estadoExito = document.getElementById('estado-exito');
+        const estadoError = document.getElementById('estado-error');
+        const btnReintentar = document.getElementById('btn-reintentar');
+
+        // Mensajes de error por campo
+        const mensajes = {
+            'recambio-referencia': 'Introduce la referencia de la pieza.',
+            'recambio-nombre': 'Introduce tu nombre.',
+            'recambio-apellido': 'Introduce tu apellido.',
+            'recambio-email': 'Introduce un correo electrónico válido.',
+            'recambio-telefono': 'Introduce un teléfono válido (mínimo 9 caracteres).',
+            'recambio-rgpd': 'Debes aceptar la política de privacidad.'
+        };
+
+        function validarCampo(input) {
+            let valido = true;
+            let mensaje = '';
+
+            if (input.required && !input.value.trim()) {
+                valido = false;
+                mensaje = mensajes[input.id] || 'Este campo es obligatorio.';
+            } else if (input.type === 'email' && input.value.trim()) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!re.test(input.value.trim())) {
+                    valido = false;
+                    mensaje = 'Introduce un correo electrónico válido.';
+                }
+            } else if (input.minlength && input.value.trim().length < parseInt(input.minLength)) {
+                valido = false;
+                mensaje = 'Mínimo ' + input.minLength + ' caracteres.';
+            } else if (input.maxlength && input.value.trim().length > parseInt(input.maxLength)) {
+                valido = false;
+                mensaje = 'Máximo ' + input.maxLength + ' caracteres.';
+            } else if (input.type === 'number' && input.value.trim()) {
+                const val = parseFloat(input.value);
+                if (input.min && val < parseFloat(input.min)) {
+                    valido = false;
+                    mensaje = 'El valor mínimo es ' + input.min + '.';
+                } else if (input.max && val > parseFloat(input.max)) {
+                    valido = false;
+                    mensaje = 'El valor máximo es ' + input.max + '.';
+                }
+            }
+
+            const span = input.parentElement.querySelector('.mensaje-error');
+            if (valido) {
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+                if (span) span.textContent = '';
+            } else {
+                input.classList.remove('is-valid');
+                input.classList.add('is-invalid');
+                if (span) span.textContent = mensaje;
+            }
+
+            return valido;
+        }
+
+        // Validar en tiempo real al salir del campo
+        form.querySelectorAll('input, textarea').forEach(function (input) {
+            input.addEventListener('blur', function () {
+                if (input.type === 'checkbox') {
+                    if (input.required && !input.checked) {
+                        input.classList.add('is-invalid');
+                        const span = input.parentElement.querySelector('.mensaje-error');
+                        if (span) span.textContent = mensajes[input.id] || 'Este campo es obligatorio.';
+                    } else {
+                        input.classList.remove('is-invalid');
+                        const span = input.parentElement.querySelector('.mensaje-error');
+                        if (span) span.textContent = '';
+                    }
+                } else {
+                    validarCampo(input);
+                }
+            });
+
+            // Quitar error al escribir
+            input.addEventListener('input', function () {
+                if (input.classList.contains('is-invalid')) {
+                    if (input.type === 'checkbox') {
+                        if (input.checked) {
+                            input.classList.remove('is-invalid');
+                            const span = input.parentElement.querySelector('.mensaje-error');
+                            if (span) span.textContent = '';
+                        }
+                    } else {
+                        validarCampo(input);
+                    }
+                }
+            });
+        });
+
+        // Envío del formulario
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let todoValido = true;
+
+            form.querySelectorAll('input[required], textarea[required]').forEach(function (input) {
+                if (input.type === 'checkbox') {
+                    if (!input.checked) {
+                        todoValido = false;
+                        input.classList.add('is-invalid');
+                        const span = input.parentElement.querySelector('.mensaje-error');
+                        if (span) span.textContent = mensajes[input.id] || 'Este campo es obligatorio.';
+                    }
+                } else {
+                    if (!validarCampo(input)) todoValido = false;
+                }
+            });
+
+            if (!todoValido) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            // Simular envío
+            form.hidden = true;
+            estadoEnviando.hidden = false;
+
+            setTimeout(function () {
+                estadoEnviando.hidden = true;
+                estadoExito.hidden = false;
+            }, 2000);
+        });
+
+        // Botón reintentar
+        if (btnReintentar) {
+            btnReintentar.addEventListener('click', function () {
+                estadoError.hidden = true;
+                form.hidden = false;
+                form.reset();
+                form.classList.remove('was-validated');
+                form.querySelectorAll('.is-valid, .is-invalid').forEach(function (el) {
+                    el.classList.remove('is-valid', 'is-invalid');
+                });
+                form.querySelectorAll('.mensaje-error').forEach(function (el) {
+                    el.textContent = '';
+                });
+            });
+        }
+    })();
+    </script>
 </body>
 </html>
