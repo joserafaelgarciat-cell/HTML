@@ -35,6 +35,15 @@
             background-color: var(--negro);
         }
 
+        .hero-servicio > img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .hero-servicio-contenido {
             position: relative;
             z-index: 2;
@@ -187,12 +196,12 @@
              HERO 2: SERVICIOS DE VENTA
              Fondo ventas con texto encima.
         ========================================= -->
-        <section aria-label="Servicios de venta">
+        <section class="hero-servicio" aria-label="Servicios de venta">
             <img src="assets/img/ventas.webp" alt="Servicios de venta" srcset="assets/img/ventas.webp 1x, assets/img/ventas@2x.webp 2x, assets/img/ventas@3x.webp 3x" width="1536" height="1024" fetchpriority="high">
-            <div class="contenedor">
-                <p>SUPERAUTOS CARBALLO</p>
-                <h1>SERVICIOS DE VENTA</h1>
-                <p>Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
+            <div class="hero-servicio-contenido contenedor">
+                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
+                <h1 class="hero-servicio-titulo">SERVICIOS DE VENTA</h1>
+                <p class="hero-servicio-texto">Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
             </div>
         </section>
 
