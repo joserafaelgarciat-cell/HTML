@@ -2,7 +2,8 @@
    base.css – Estilos base del proyecto
    Superautos Carballo
 
-   Solo contiene los estilos usados por index.html.
+   Contiene los estilos usados por index.html y
+   catalogo.html.
    =================================================== */
 
 /* -----------------------------------------------
@@ -192,6 +193,26 @@ body {
 .menu-principal a[aria-current="page"] {
     color: var(--azul-electrico);
     font-weight: 700;
+}
+
+/* Botón CTA del header */
+.btn-cta-header {
+    display: inline-block;
+    background-color: var(--azul-electrico);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: var(--espaciado-sm) var(--espaciado-md);
+    border-radius: var(--radio-tarjeta);
+    font-family: var(--fuente-acento);
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background-color 0.15s ease-out;
+}
+
+.btn-cta-header:hover,
+.btn-cta-header:focus {
+    background-color: var(--hover-activo);
 }
 
 /* Botón hamburguesa (móvil) */
@@ -539,8 +560,209 @@ a, button {
     transition: color 0.15s ease-out, background-color 0.15s ease-out;
 }
 
-/* ===============================================
-   RESPONSIVE – TABLET (≤ 768px)
+/* -----------------------------------------------
+   HERO DEL CATÁLOGO (P02)
+   Fondo Porsche Targa 4S, 560px de alto.
+   Título con tipografía de impacto y texto base.
+----------------------------------------------- */
+.hero-catalogo {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+    background-color: var(--negro);
+}
+
+.hero-catalogo > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-catalogo-contenido {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Sombreado inferior para garantizar legibilidad */
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.45) 45%,
+        rgba(0, 0, 0, 0) 70%
+    );
+}
+
+.hero-catalogo-contenido h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.05;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 0 0 var(--espaciado-md);
+}
+
+.hero-catalogo-contenido p {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    max-width: 46ch;
+    margin: 0;
+}
+
+/* -----------------------------------------------
+   INTRODUCCIÓN DEL CATÁLOGO
+   Contenedor de texto alineado a la izquierda,
+   alto 235px. "Nuestra flota" en negrita, título
+   "Catálogo" en impacto y descripción base.
+----------------------------------------------- */
+.intro-catalogo {
+    background-color: var(--blanco);
+}
+
+.intro-catalogo .contenedor {
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro-etiqueta {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--azul-electrico);
+    margin: 0 0 var(--espaciado-sm);
+}
+
+.intro-titulo {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-md);
+}
+
+.intro-descripcion {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    max-width: 62ch;
+    margin: 0;
+}
+
+/* -----------------------------------------------
+   CUADRÍCULA DE CATÁLOGO (C03)
+   Cuadrícula Bootstrap (row + col-*), 3 columnas
+   en escritorio. Cada cuadro: 387px de ancho y
+   463px de alto.
+----------------------------------------------- */
+.seccion-catalogo {
+    padding: 0 0 var(--espaciado-seccion);
+    background-color: var(--gris-borde);
+}
+
+.cuadricula-catalogo {
+    height: 1534px;
+    margin-top: var(--espaciado-xxl);
+    --bs-gutter-x: var(--espaciado-lg);
+}
+
+.cuadro-vehiculo {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio-tarjeta);
+    width: 100%;
+    max-width: 387px;
+    height: 463px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: box-shadow 0.15s ease-out;
+}
+
+.cuadro-vehiculo:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cuadro-imagen {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    background-color: var(--blanco);
+}
+
+.cuadro-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform 0.15s ease-out;
+}
+
+.cuadro-vehiculo:hover .cuadro-imagen img {
+    transform: scale(1.04);
+}
+
+.cuadro-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--espaciado-md) var(--espaciado-md) 0;
+}
+
+.cuadro-info h2 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-sm);
+}
+
+.cuadro-info > p {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-gray);
+    margin: 0 0 var(--espaciado-sm);
+}
+
+.cuadro-precio {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--negro);
+    margin-top: auto;
+    margin-bottom: var(--espaciado-sm) !important;
+}
+
+.cuadro-info .btn-principal {
+    align-self: flex-start;
+    margin-bottom: var(--espaciado-md);
+}
+
+
+/* ==================================================
+   RESPONSIVE – TABLET (<= 768px)
    =============================================== */
 @media (max-width: 768px) {
 
@@ -549,7 +771,7 @@ a, button {
         --espaciado-seccion: 48px;
     }
 
-    /* Header: menú colapsado, hamburguesa visible */
+    /* Header: menu colapsado, hamburguesa visible */
     .menu-principal {
         display: none;
         position: absolute;
@@ -575,6 +797,10 @@ a, button {
 
     .btn-hamburguesa {
         display: flex;
+    }
+
+    .btn-cta-header {
+        display: none;
     }
 
     /* Hero */
@@ -633,10 +859,39 @@ a, button {
         grid-template-columns: 1fr 1fr;
         gap: var(--espaciado-lg);
     }
+
+    /* Catalogo: hero y cuadricula en tablet */
+    .hero-catalogo {
+        height: 400px;
+    }
+
+    .hero-catalogo > img {
+        height: 400px;
+    }
+
+    .hero-catalogo-contenido h1 {
+        font-size: 40px;
+    }
+
+    .intro-catalogo .contenedor {
+        height: auto;
+        padding: var(--espaciado-xl) var(--gutter);
+    }
+
+    .cuadricula-catalogo {
+        height: auto;
+        margin-top: var(--espaciado-lg);
+    }
+
+    .cuadro-vehiculo {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: var(--espaciado-sm);
+    }
 }
 
-/* ===============================================
-   RESPONSIVE – MÓVIL (≤ 480px)
+/* ==================================================
+   RESPONSIVE – MOVIL (<= 480px)
    =============================================== */
 @media (max-width: 480px) {
 
@@ -658,7 +913,7 @@ a, button {
         white-space: normal;
     }
 
-    /* Footer: apilado y altura flexible para móvil */
+    /* Footer: apilado y altura flexible para movil */
     .site-footer {
         height: auto;
         padding-top: var(--espaciado-xxl);
@@ -710,5 +965,46 @@ a, button {
     .btn-pausa {
         width: 40px;
         height: 40px;
+    }
+
+    /* Catalogo: hero y cuadricula en movil */
+    .hero-catalogo {
+        height: 320px;
+    }
+
+    .hero-catalogo > img {
+        height: 320px;
+    }
+
+    .hero-catalogo-contenido h1 {
+        font-size: 28px;
+    }
+
+    .hero-catalogo-contenido p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .intro-etiqueta {
+        font-size: 13px;
+    }
+
+    .intro-titulo {
+        font-size: 28px;
+    }
+
+    .intro-descripcion {
+        font-size: 14px;
+    }
+
+    .cuadricula-catalogo {
+        height: auto;
+        margin-top: var(--espaciado-lg);
+    }
+
+    .cuadro-vehiculo {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: var(--espaciado-sm);
     }
 }
