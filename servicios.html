@@ -24,6 +24,102 @@
 
     <!-- Estilos base del proyecto -->
     <link rel="stylesheet" href="assets/css/base.css">
+
+    <!-- Estilos del primer hero de servicios (Héroe 1: presentación) -->
+    <style>
+        .hero-servicio {
+            position: relative;
+            width: 100%;
+            height: 577px;
+            overflow: hidden;
+            background-color: var(--negro);
+        }
+
+        .hero-servicio-contenido {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-servicio-intro {
+            background: linear-gradient(
+                135deg,
+                #000000 0%,
+                #1a1a1a 100%
+            );
+        }
+
+        .hero-servicio-etiqueta {
+            font-family: var(--fuente-acento);
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--azul-electrico);
+            margin: 0 0 var(--espaciado-md);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-servicio-titulo {
+            font-family: var(--fuente-principal);
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 1.05;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 0 0 var(--espaciado-md);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+        }
+
+        .hero-servicio-texto {
+            font-family: var(--fuente-principal);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #FFFFFF;
+            max-width: 52ch;
+            margin: 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+        }
+
+        @media (max-width: 768px) {
+            .hero-servicio {
+                height: 420px;
+            }
+
+            .hero-servicio-titulo {
+                font-size: 40px;
+            }
+
+            .hero-servicio-texto {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-servicio {
+                height: 320px;
+            }
+
+            .hero-servicio-etiqueta {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            .hero-servicio-titulo {
+                font-size: 30px;
+            }
+
+            .hero-servicio-texto {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -91,12 +187,12 @@
              HERO 2: SERVICIOS DE VENTA
              Fondo ventas con texto encima.
         ========================================= -->
-        <section class="hero-servicio" aria-label="Servicios de venta">
+        <section aria-label="Servicios de venta">
             <img src="assets/img/ventas.webp" alt="Servicios de venta" srcset="assets/img/ventas.webp 1x, assets/img/ventas@2x.webp 2x, assets/img/ventas@3x.webp 3x" width="1536" height="1024" fetchpriority="high">
-            <div class="hero-servicio-contenido contenedor">
-                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
-                <h1 class="hero-servicio-titulo">SERVICIOS DE VENTA</h1>
-                <p class="hero-servicio-texto">Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
+            <div class="contenedor">
+                <p>SUPERAUTOS CARBALLO</p>
+                <h1>SERVICIOS DE VENTA</h1>
+                <p>Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
             </div>
         </section>
 
@@ -104,12 +200,12 @@
              HERO 3: MANTENIMIENTO ESPECIALIZADO
              Fondo mantenimiento con texto encima.
         ========================================= -->
-        <section class="hero-servicio" aria-label="Mantenimiento especializado">
+        <section aria-label="Mantenimiento especializado">
             <img src="assets/img/mantenimiento.webp" alt="Mantenimiento especializado" srcset="assets/img/mantenimiento.webp 1x, assets/img/mantenimiento@2x.webp 2x, assets/img/mantenimiento@3x.webp 3x" width="1200" height="717" loading="lazy">
-            <div class="hero-servicio-contenido contenedor">
-                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
-                <h1 class="hero-servicio-titulo">MANTENIMIENTO ESPECIALIZADO</h1>
-                <p class="hero-servicio-texto">NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
+            <div class="contenedor">
+                <p>SUPERAUTOS CARBALLO</p>
+                <h1>MANTENIMIENTO ESPECIALIZADO</h1>
+                <p>NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
             </div>
         </section>
 
@@ -117,12 +213,12 @@
              HERO 4: SERVICIOS POSVENTA
              Fondo posventa con texto encima.
         ========================================= -->
-        <section class="hero-servicio" aria-label="Servicios posventa">
+        <section aria-label="Servicios posventa">
             <img src="assets/img/posventa.webp" alt="Servicios posventa" srcset="assets/img/posventa.webp 1x, assets/img/posventa@2x.webp 2x, assets/img/posventa@3x.webp 3x" width="1536" height="1024" loading="lazy">
-            <div class="hero-servicio-contenido contenedor">
-                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
-                <h1 class="hero-servicio-titulo">SERVICIOS POSVENTA</h1>
-                <p class="hero-servicio-texto">NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
+            <div class="contenedor">
+                <p>SUPERAUTOS CARBALLO</p>
+                <h1>SERVICIOS POSVENTA</h1>
+                <p>NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
             </div>
         </section>
 
@@ -152,6 +248,7 @@
                     </ul>
                 </div>
 
+                
                 <!-- Columna 3: Servicios -->
                 <div class="columna-footer">
                     <h3>SERVICIOS</h3>
