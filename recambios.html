@@ -53,78 +53,105 @@
             </div>
         </section>
 
-        <section aria-label="Formulario de solicitud de recambios">
-            <form id="form-recambios" novalidate>
+        <section class="seccion-formulario-recambios" aria-label="Formulario de solicitud de recambios">
+            <div class="contenedor">
 
-                <fieldset>
-                    <legend>DATOS DEL VEHÍCULO</legend>
+                <form id="form-recambios" class="formulario-recambios" novalidate>
 
-                    <div>
-                        <div>
-                            <label for="recambio-referencia">Referencia de la pieza <span>*</span></label>
-                            <input type="text" id="recambio-referencia" name="referencia" required aria-required="true" autocomplete="off">
+                    <!-- =========================================
+                         PRIMERA CUADRÍCULA: DATOS DEL VEHÍCULO
+                         Grid 2x2, casillas 688x54px.
+                    ========================================= -->
+                    <fieldset class="grupo-campos-recambios">
+                        <legend class="titulo-grupo-recambios">DATOS DEL VEHÍCULO</legend>
+
+                        <div class="cuadricula-recambios">
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-referencia">Referencia de la pieza <span aria-hidden="true">*</span></label>
+                                <input type="text" id="recambio-referencia" name="referencia" required aria-required="true" autocomplete="off">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-marca">Marca del vehículo</label>
+                                <input type="text" id="recambio-marca" name="marca" autocomplete="organization">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-modelo">Modelo del vehículo</label>
+                                <input type="text" id="recambio-modelo" name="modelo">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-anio">Año del vehículo</label>
+                                <input type="number" id="recambio-anio" name="anio" min="1980" max="2026">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
                         </div>
+                    </fieldset>
 
-                        <div>
-                            <label for="recambio-marca">Marca del vehículo</label>
-                            <input type="text" id="recambio-marca" name="marca" autocomplete="organization">
-                        </div>
+                    <!-- =========================================
+                         SEGUNDA CUADRÍCULA: DATOS DEL CONTACTO
+                         Grid 2x2, casillas 688x54px.
+                    ========================================= -->
+                    <fieldset class="grupo-campos-recambios">
+                        <legend class="titulo-grupo-recambios">DATOS DEL CONTACTO</legend>
 
-                        <div>
-                            <label for="recambio-modelo">Modelo del vehículo</label>
-                            <input type="text" id="recambio-modelo" name="modelo">
-                        </div>
+                        <div class="cuadricula-recambios">
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-nombre">Nombre <span aria-hidden="true">*</span></label>
+                                <input type="text" id="recambio-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
 
-                        <div>
-                            <label for="recambio-anio">Año del vehículo</label>
-                            <input type="number" id="recambio-anio" name="anio" min="1980" max="2026">
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-apellido">Apellido <span aria-hidden="true">*</span></label>
+                                <input type="text" id="recambio-apellido" name="apellido" required aria-required="true" autocomplete="family-name" minlength="2">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                                <input type="email" id="recambio-email" name="email" required aria-required="true" autocomplete="email">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="recambio-telefono">Teléfono <span aria-hidden="true">*</span></label>
+                                <input type="tel" id="recambio-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
                         </div>
+                    </fieldset>
+
+                    <!-- =========================================
+                         CAJA DE COMENTARIOS
+                         Ancho 1400px, alto 135px.
+                    ========================================= -->
+                    <div class="campo-formulario-recambio campo-comentarios-recambio">
+                        <label for="recambio-comentarios">COMENTARIOS</label>
+                        <textarea id="recambio-comentarios" name="comentarios" rows="5"></textarea>
+                        <span class="mensaje-error" role="alert" aria-live="polite"></span>
                     </div>
-                </fieldset>
 
-                <fieldset>
-                    <legend>DATOS DEL CONTACTO</legend>
-
-                    <div>
-                        <div>
-                            <label for="recambio-nombre">Nombre <span>*</span></label>
-                            <input type="text" id="recambio-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
-                        </div>
-
-                        <div>
-                            <label for="recambio-apellido">Apellido <span>*</span></label>
-                            <input type="text" id="recambio-apellido" name="apellido" required aria-required="true" autocomplete="family-name" minlength="2">
-                        </div>
-
-                        <div>
-                            <label for="recambio-email">Correo electrónico <span>*</span></label>
-                            <input type="email" id="recambio-email" name="email" required aria-required="true" autocomplete="email">
-                        </div>
-
-                        <div>
-                            <label for="recambio-telefono">Teléfono <span>*</span></label>
-                            <input type="tel" id="recambio-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
-                        </div>
+                    <!-- Checkbox RGPD obligatorio -->
+                    <div class="campo-formulario-recambio checkbox-rgpd-recambio">
+                        <input type="checkbox" id="recambio-rgpd" name="rgpd" required aria-required="true">
+                        <label for="recambio-rgpd">
+                            He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud de recambio. <span aria-hidden="true">*</span>
+                        </label>
+                        <span class="mensaje-error" role="alert" aria-live="polite"></span>
                     </div>
-                </fieldset>
 
-                <div>
-                    <label for="recambio-comentarios">COMENTARIOS</label>
-                    <textarea id="recambio-comentarios" name="comentarios" rows="5"></textarea>
-                </div>
+                    <!-- Botón de envío -->
+                    <div class="acciones-formulario-recambios">
+                        <button type="submit" class="btn-principal">Enviar solicitud &#10140;</button>
+                    </div>
 
-                <div>
-                    <input type="checkbox" id="recambio-rgpd" name="rgpd" required aria-required="true">
-                    <label for="recambio-rgpd">
-                        He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud de recambio. <span>*</span>
-                    </label>
-                </div>
-
-                <div>
-                    <button type="submit">Enviar solicitud &#10140;</button>
-                </div>
-
-            </form>
+                </form>
+            </div>
         </section>
 
     </main>
