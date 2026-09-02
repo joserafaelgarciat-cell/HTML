@@ -2,8 +2,8 @@
    base.css – Estilos base del proyecto
    Superautos Carballo
 
-   Contiene los estilos usados por index.html y
-   catalogo.html.
+   Contiene los estilos usados por index.html,
+   catalogo.html y servicios.html.
    =================================================== */
 
 /* -----------------------------------------------
@@ -761,6 +761,8 @@ a, button {
 }
 
 
+
+
 /* ==================================================
    RESPONSIVE – TABLET (<= 768px)
    =============================================== */
@@ -888,6 +890,7 @@ a, button {
         max-width: 100%;
         margin-bottom: var(--espaciado-sm);
     }
+
 }
 
 /* ==================================================
@@ -1007,4 +1010,5 @@ a, button {
         max-width: 100%;
         margin-bottom: var(--espaciado-sm);
     }
+
 }
