@@ -3,86 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadatos SEO -->
+    <link rel="icon" type="image/jpeg" href="assets/img/logo.jpg">
     <title>Servicios: venta, mantenimiento y posventa – Superautos Carballo</title>
+    <meta name="description" content="Un solo concesionario para venta, mantenimiento y posventa de superautos en Carballo. Atención premium, vehículos certificados y garantía respaldada por un equipo local.">
+    <link rel="canonical" href="https://www.superautoscarballo.es/servicios.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Servicios: venta, mantenimiento y posventa – Superautos Carballo">
+    <meta property="og:description" content="Un solo concesionario para venta, mantenimiento y posventa de superautos.">
+    <meta property="og:url" content="https://www.superautoscarballo.es/servicios.html">
+    <meta property="og:site_name" content="Superautos Carballo">
+
+    <!-- Fuentes: Inter + Montserrat de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos base del proyecto -->
+    <link rel="stylesheet" href="assets/css/base.css">
 </head>
 <body>
 
-    <a href="#contenido-principal">Saltar al contenido</a>
+    <!-- =============================================
+         ENLACE "SALTAR AL CONTENIDO" (C08)
+    ============================================= -->
+    <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
 
-    <header>
-        <div>
-            <a href="index.html">
+    <!-- =============================================
+         CABECERA / HEADER (C01)
+         Igual que index.html: logo + menú + hamburguesa
+    ============================================= -->
+    <header class="site-header">
+        <div class="contenedor">
+            <!-- Logotipo del concesionario -->
+            <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
                 <img src="assets/img/logo.jpg" alt="Superautos Carballo" class="logo-img" width="50" height="50" decoding="async">
-                <span>SUPERAUTOS</span>
-                <span>CARBALLO</span>
+                <div class="logo-texto">
+                    <span class="logo-nombre">SUPERAUTOS</span>
+                    <span class="logo-sub">CARBALLO</span>
+                </div>
             </a>
 
+            <!-- Menú de navegación principal -->
             <nav aria-label="Navegación principal">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catálogo</a></li>
-                    <li><a href="servicios.html" aria-current="page">Servicios</a></li>
-                    <li><a href="recambios.html">Recambios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <ul class="menu-principal" id="menu-movil" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="catalogo.html" role="menuitem">Catálogo</a></li>
+                    <li role="none"><a href="servicios.html" role="menuitem" aria-current="page">Servicios</a></li>
+                    <li role="none"><a href="recambios.html" role="menuitem">Recambios</a></li>
+                    <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
                 </ul>
             </nav>
 
-            <button type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Botón hamburguesa para menú móvil (visible solo en pantallas pequeñas) -->
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
             </button>
         </div>
     </header>
 
+    <!-- =============================================
+         CONTENIDO PRINCIPAL: SERVICIOS (P03)
+         4 heroes de 577 px de alto: el primero como
+         presentación y los tres siguientes con fondo
+         de imagen (venta, mantenimiento y posventa).
+    ============================================= -->
     <main id="contenido-principal">
 
-        <section aria-label="Nuestros servicios">
-            <div>
-                <p>SUPERAUTOS CARBALLO</p>
-                <h1>NUESTROS SERVICIOS</h1>
-                <p>Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
+        <!-- =========================================
+             HERO 1: PRESENTACIÓN DE SERVICIOS
+             Fondo oscuro con texto de marca.
+        ========================================= -->
+        <section class="hero-servicio hero-servicio-intro" aria-label="Nuestros servicios">
+            <div class="hero-servicio-contenido contenedor">
+                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
+                <h1 class="hero-servicio-titulo">NUESTROS SERVICIOS</h1>
+                <p class="hero-servicio-texto">Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
             </div>
         </section>
 
-        <section aria-label="Servicios de venta">
+        <!-- =========================================
+             HERO 2: SERVICIOS DE VENTA
+             Fondo ventas con texto encima.
+        ========================================= -->
+        <section class="hero-servicio" aria-label="Servicios de venta">
             <img src="assets/img/ventas.webp" alt="Servicios de venta" srcset="assets/img/ventas.webp 1x, assets/img/ventas@2x.webp 2x, assets/img/ventas@3x.webp 3x" width="1536" height="1024" fetchpriority="high">
-            <div>
-                <p>SUPERAUTOS CARBALLO</p>
-                <h1>SERVICIOS DE VENTA</h1>
-                <p>Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
+            <div class="hero-servicio-contenido contenedor">
+                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
+                <h1 class="hero-servicio-titulo">SERVICIOS DE VENTA</h1>
+                <p class="hero-servicio-texto">Un solo concesionario para venta, mantenimiento y posventa de superautos. Atención premium, vehículos certificados y garantía respaldada por un equipo local.</p>
             </div>
         </section>
 
-        <section aria-label="Mantenimiento especializado">
+        <!-- =========================================
+             HERO 3: MANTENIMIENTO ESPECIALIZADO
+             Fondo mantenimiento con texto encima.
+        ========================================= -->
+        <section class="hero-servicio" aria-label="Mantenimiento especializado">
             <img src="assets/img/mantenimiento.webp" alt="Mantenimiento especializado" srcset="assets/img/mantenimiento.webp 1x, assets/img/mantenimiento@2x.webp 2x, assets/img/mantenimiento@3x.webp 3x" width="1200" height="717" loading="lazy">
-            <div>
-                <p>SUPERAUTOS CARBALLO</p>
-                <h1>MANTENIMIENTO ESPECIALIZADO</h1>
-                <p>NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
+            <div class="hero-servicio-contenido contenedor">
+                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
+                <h1 class="hero-servicio-titulo">MANTENIMIENTO ESPECIALIZADO</h1>
+                <p class="hero-servicio-texto">NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
             </div>
         </section>
 
-        <section aria-label="Servicios posventa">
+        <!-- =========================================
+             HERO 4: SERVICIOS POSVENTA
+             Fondo posventa con texto encima.
+        ========================================= -->
+        <section class="hero-servicio" aria-label="Servicios posventa">
             <img src="assets/img/posventa.webp" alt="Servicios posventa" srcset="assets/img/posventa.webp 1x, assets/img/posventa@2x.webp 2x, assets/img/posventa@3x.webp 3x" width="1536" height="1024" loading="lazy">
-            <div>
-                <p>SUPERAUTOS CARBALLO</p>
-                <h1>SERVICIOS POSVENTA</h1>
-                <p>NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
+            <div class="hero-servicio-contenido contenedor">
+                <p class="hero-servicio-etiqueta">SUPERAUTOS CARBALLO</p>
+                <h1 class="hero-servicio-titulo">SERVICIOS POSVENTA</h1>
+                <p class="hero-servicio-texto">NOS PREOCUPAMOS Y DAMOS ATENCIÓN A NUESTROS CLIENTES LUEGO DE LA VENTA, OFRECIENDO SERVICIOS DE RECAMBIOS Y MANTENIMIENTO.</p>
             </div>
         </section>
 
     </main>
 
-    <footer>
-        <div>
-            <div>
-                <div>
-                    <p>SUPERAUTOS CARBALLO</p>
-                    <p>Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
+    <!-- =============================================
+         FOOTER (C02): Reglamentario, igual que index
+    ============================================= -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="fila-footer">
+
+                <!-- Columna 1: Marca -->
+                <div class="columna-footer columna-marca">
+                    <p class="footer-brand">SUPERAUTOS CARBALLO</p>
+                    <p class="footer-desc">Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
                 </div>
 
-                <div>
+                <!-- Columna 2: Catálogo -->
+                <div class="columna-footer">
                     <h3>CATÁLOGO</h3>
                     <ul>
                         <li><a href="catalogo.html">Deportivos</a></li>
@@ -92,7 +152,8 @@
                     </ul>
                 </div>
 
-                <div>
+                <!-- Columna 3: Servicios -->
+                <div class="columna-footer">
                     <h3>SERVICIOS</h3>
                     <ul>
                         <li><a href="servicios.html">Servicios</a></li>
@@ -103,7 +164,8 @@
                     </ul>
                 </div>
 
-                <div>
+                <!-- Columna 4: Contacto -->
+                <div class="columna-footer">
                     <h3>CONTACTO</h3>
                     <ul>
                         <li><a href="contacto.html">Av. A Coruña 45, 15100</a></li>
@@ -114,12 +176,19 @@
                 </div>
             </div>
 
-            <div>
-                <p>&copy; 2026 Superautos Carballo</p>
-                <nav aria-label="Redes sociales">
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">Instagram</a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">Facebook</a>
-                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">YouTube</a>
+            <!-- Línea inferior del footer -->
+            <div class="pie-footer">
+                <p class="footer-copyright">&copy; 2026 Superautos Carballo</p>
+                <nav class="redes-sociales" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube de Superautos Carballo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
                 </nav>
             </div>
         </div>
