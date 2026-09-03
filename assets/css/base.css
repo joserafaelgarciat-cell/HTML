@@ -1105,7 +1105,340 @@ a, button {
     margin-top: var(--espaciado-xs);
 }
 
-/* Estado del formulario (enviando / éxito / error): tarjeta */
+/* -----------------------------------------------
+   FORMULARIO PRUEBA DE CONDUCCIÓN (P02.1.1)
+   Cabecera de página, aviso, indicador de pasos,
+   campos del formulario, acciones y estados.
+----------------------------------------------- */
+.cabecera-pagina {
+    background-color: var(--gris-borde);
+    padding: var(--espaciado-seccion) 0 var(--espaciado-xl);
+}
+
+.cabecera-pagina h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-md);
+}
+
+.cabecera-pagina p {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    max-width: 62ch;
+    margin: 0;
+}
+
+.aviso-importante {
+    background-color: #FEF3C7;
+    border: 1px solid #F59E0B;
+    border-radius: var(--radio-tarjeta);
+    padding: var(--espaciado-md) var(--espaciado-lg);
+    margin-bottom: var(--espaciado-xl);
+}
+
+.aviso-importante p {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #92400E;
+    margin: 0;
+}
+
+/* Sección del formulario */
+.seccion-formulario {
+    padding: 0 0 var(--espaciado-seccion);
+    background-color: var(--gris-borde);
+}
+
+/* Indicador de pasos */
+.pasos-formulario {
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: var(--espaciado-lg) 0;
+    margin-bottom: var(--espaciado-xl);
+}
+
+.pasos-formulario ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaciado-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pasos-formulario li {
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-sm);
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text-gray);
+    white-space: nowrap;
+}
+
+.pasos-formulario li + li::before {
+    content: "";
+    width: 44px;
+    height: 1px;
+    background-color: #E5E7EB;
+    margin-right: var(--espaciado-md);
+}
+
+.pasos-formulario .paso-activo {
+    color: var(--negro);
+    font-weight: 700;
+}
+
+.pasos-formulario .paso-activo::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--azul-electrico);
+    color: var(--blanco);
+    margin-right: var(--espaciado-sm);
+}
+
+/* Formulario */
+.formulario-prueba {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Cada paso del formulario */
+.paso-formulario {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.paso-formulario legend {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin-bottom: var(--espaciado-xl);
+    width: 100%;
+}
+
+/* Campo del formulario */
+.campo-formulario {
+    margin-bottom: var(--espaciado-lg);
+}
+
+.campo-formulario label {
+    display: block;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text-gray);
+    margin-bottom: var(--espaciado-sm);
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    height: 50px;
+    padding: 0 var(--espaciado-md);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio-input);
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--negro);
+    transition: border-color 0.15s ease-out;
+}
+
+.campo-formulario input:hover,
+.campo-formulario select:hover {
+    border-color: var(--azul-electrico);
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+    outline: 2px solid var(--azul-electrico);
+    outline-offset: 2px;
+    border-color: var(--azul-electrico);
+}
+
+.campo-formulario input[readonly] {
+    background-color: #F3F4F6;
+    color: var(--text-gray);
+    cursor: default;
+}
+
+.campo-formulario select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.ayuda-campo {
+    display: block;
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--text-gray);
+    margin-top: var(--espaciado-xs);
+}
+
+/* Checkbox RGPD */
+.checkbox-rgpd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--espaciado-md);
+    margin-top: var(--espaciado-lg);
+    text-align: left;
+}
+
+.checkbox-rgpd input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 2px 0 0;
+    accent-color: var(--azul-electrico);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-rgpd label {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--negro);
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-rgpd label a {
+    color: var(--azul-electrico);
+}
+
+.checkbox-rgpd label a:hover,
+.checkbox-rgpd label a:focus {
+    color: var(--hover-activo);
+}
+
+.checkbox-rgpd .mensaje-error {
+    flex-basis: 100%;
+}
+
+/* Acciones del formulario (botones) */
+.acciones-formulario {
+    display: flex;
+    justify-content: center;
+    gap: var(--espaciado-md);
+    margin-top: var(--espaciado-xl);
+}
+
+.acciones-formulario .btn-principal,
+.acciones-formulario .btn-secundario {
+    border-radius: 9999px;
+}
+
+/* Botón secundario (Volver) */
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--azul-electrico);
+    text-decoration: none;
+    padding: 12px var(--espaciado-lg);
+    border-radius: var(--radio-tarjeta);
+    border: 1px solid var(--azul-electrico);
+    font-family: var(--fuente-acento);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-out, color 0.15s ease-out;
+}
+
+.btn-secundario:hover,
+.btn-secundario:focus-visible {
+    background-color: var(--azul-electrico);
+    color: var(--blanco);
+    outline: 2px solid var(--azul-electrico);
+    outline-offset: 2px;
+}
+
+/* Resumen de la solicitud (paso 3) */
+.resumen-solicitud {
+    width: 100%;
+    background-color: var(--blanco);
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: var(--espaciado-lg);
+}
+
+.resumen-solicitud h3 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-md);
+}
+
+.resumen-solicitud dl {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    row-gap: var(--espaciado-sm);
+    column-gap: var(--espaciado-lg);
+    margin: 0;
+}
+
+.resumen-solicitud dt {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.resumen-solicitud dd {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--negro);
+}
+
+/* Bootstrap validation */
+.formulario-prueba .was-validated .form-control:invalid,
+.formulario-prueba .is-invalid {
+    border-color: var(--error);
+}
+
+.formulario-prueba .was-validated .form-control:valid,
+.formulario-prueba .is-valid {
+    border-color: var(--exito);
+}
+
+/* Estado del formulario (enviando / éxito / error) */
 .estado-formulario {
     width: 100%;
     max-width: 700px;
@@ -1346,6 +1679,19 @@ a, button {
 
     .campo-formulario-recambio {
         max-width: 100%;
+    }
+
+    /* Formulario prueba conducción */
+    .cabecera-pagina h1 {
+        font-size: 28px;
+    }
+
+    .pasos-formulario li + li::before {
+        width: 32px;
+    }
+
+    .resumen-solicitud dl {
+        grid-template-columns: 140px 1fr;
     }
 
 }

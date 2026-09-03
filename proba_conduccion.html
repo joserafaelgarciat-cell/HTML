@@ -18,10 +18,12 @@
     <meta property="og:site_name" content="Superautos Carballo">
     <meta property="og:image" content="https://www.superautoscarballo.es/assets/img/hero.webp">
 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Fuentes: Inter + Montserrat de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Estilos base del proyecto -->
@@ -29,17 +31,12 @@
 </head>
 <body>
 
-    <!-- =============================================
-         ENLACE "SALTAR AL CONTENIDO" (C08)
-    ============================================= -->
+    <!-- Enlace saltar al contenido (C08) -->
     <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
 
-    <!-- =============================================
-         CABECERA / HEADER (C01)
-    ============================================= -->
+    <!-- CABECERA (C01) -->
     <header class="site-header">
         <div class="contenedor">
-            <!-- Logotipo del concesionario -->
             <a href="index.html" class="logo" aria-label="Superautos Carballo – Ir al inicio">
                 <img src="assets/img/logo.jpg" alt="Superautos Carballo" class="logo-img" width="50" height="50" decoding="async">
                 <div class="logo-texto">
@@ -48,7 +45,6 @@
                 </div>
             </a>
 
-            <!-- Menú de navegación principal -->
             <nav aria-label="Navegación principal">
                 <ul class="menu-principal" id="menu-movil" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
@@ -59,7 +55,6 @@
                 </ul>
             </nav>
 
-            <!-- Botón hamburguesa para menú móvil -->
             <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil">
                 <span class="linea-hamburguesa"></span>
                 <span class="linea-hamburguesa"></span>
@@ -68,139 +63,172 @@
         </div>
     </header>
 
-    <!-- =============================================
-         CONTENIDO PRINCIPAL
-    ============================================= -->
+    <!-- CONTENIDO PRINCIPAL: PRUEBA DE CONDUCCIÓN -->
     <main id="contenido-principal">
 
-        <section aria-label="Solicitar prueba de conducción">
-            <div>
+        <!-- Cabecera de la página -->
+        <section class="cabecera-pagina">
+            <div class="contenedor">
                 <h1>Solicitar prueba de conducción</h1>
                 <p>Rellena el formulario para solicitar una prueba. <strong>Esta solicitud no es una reserva automática:</strong> el concesionario te contactará por teléfono o correo para confirmar la fecha y la hora.</p>
             </div>
         </section>
 
-        <div>
-            <div>
-                <p><strong>Aviso:</strong> Tu solicitud está pendiente de confirmación. No se reserva nada automáticamente. El concesionario contactará contigo para confirmar la fecha y la hora de la prueba.</p>
-            </div>
-        </div>
+        <!-- Formulario en 3 pasos -->
+        <section class="seccion-formulario" aria-label="Formulario de prueba de conducción">
+            <div class="contenedor">
 
-        <section aria-label="Formulario de prueba de conducción">
-            <div>
-
-                <div aria-label="Progreso del formulario">
+                <!-- Indicador de pasos -->
+                <div class="pasos-formulario" aria-label="Progreso del formulario">
                     <ol>
-                        <li>1. El vehículo y la cita</li>
+                        <li class="paso-activo" aria-current="step">1. El vehículo y la cita</li>
                         <li>2. Tus datos</li>
                         <li>3. Revisa y envía</li>
                     </ol>
                 </div>
 
-                <form>
+                <form id="form-prueba" class="formulario-prueba needs-validation" novalidate>
 
-                    <fieldset>
+                    <!-- PASO 1: El vehículo y la cita -->
+                    <fieldset id="paso-1" class="paso-formulario">
                         <legend>Paso 1: El vehículo y la cita</legend>
 
                         <input type="hidden" id="prueba-vehiculo-id" name="vehiculo_id" value="">
 
-                        <div>
-                            <label for="prueba-vehiculo">Vehículo</label>
-                            <input type="text" id="prueba-vehiculo" name="vehiculo" readonly>
-                            <small>El vehículo se rellena automáticamente desde la ficha.</small>
+                        <div class="campo-formulario mb-3">
+                            <label for="prueba-vehiculo" class="form-label">Vehículo</label>
+                            <input type="text" class="form-control" id="prueba-vehiculo" name="vehiculo" readonly aria-describedby="prueba-vehiculo-ayuda">
+                            <small id="prueba-vehiculo-ayuda" class="ayuda-campo">El vehículo se rellena automáticamente desde la ficha.</small>
                         </div>
 
-                        <div>
-                            <label for="prueba-fecha">Fecha preferente *</label>
-                            <input type="date" id="prueba-fecha" name="fecha" required aria-required="true">
+                        <div class="campo-formulario mb-3">
+                            <label for="prueba-fecha" class="form-label">Fecha preferente <span aria-hidden="true">*</span></label>
+                            <input type="date" class="form-control" id="prueba-fecha" name="fecha" required aria-required="true">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
                         </div>
 
-                        <div>
-                            <label for="prueba-franja">Franja horaria *</label>
-                            <select id="prueba-franja" name="franja" required aria-required="true">
+                        <div class="campo-formulario mb-3">
+                            <label for="prueba-franja" class="form-label">Franja horaria <span aria-hidden="true">*</span></label>
+                            <select class="form-select" id="prueba-franja" name="franja" required aria-required="true">
                                 <option value="">Selecciona una franja</option>
                                 <option value="manana">Mañana (9:00 – 14:00)</option>
                                 <option value="tarde">Tarde (15:00 – 20:00)</option>
                             </select>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="acciones-formulario">
+                            <button type="button" class="btn-principal btn-siguiente" data-paso="2">Siguiente: Tus datos</button>
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <!-- PASO 2: Tus datos -->
+                    <fieldset id="paso-2" class="paso-formulario" hidden>
                         <legend>Paso 2: Tus datos</legend>
 
-                        <div>
-                            <label for="prueba-nombre">Nombre *</label>
-                            <input type="text" id="prueba-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                        <div class="campo-formulario mb-3">
+                            <label for="prueba-nombre" class="form-label">Nombre <span aria-hidden="true">*</span></label>
+                            <input type="text" class="form-control" id="prueba-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
                         </div>
 
-                        <div>
-                            <label for="prueba-apellidos">Apellidos *</label>
-                            <input type="text" id="prueba-apellidos" name="apellidos" required aria-required="true" autocomplete="family-name" minlength="2">
+                        <div class="campo-formulario mb-3">
+                            <label for="prueba-apellidos" class="form-label">Apellidos <span aria-hidden="true">*</span></label>
+                            <input type="text" class="form-control" id="prueba-apellidos" name="apellidos" required aria-required="true" autocomplete="family-name" minlength="2">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
                         </div>
 
-                        <div>
-                            <label for="prueba-email">Correo electrónico *</label>
-                            <input type="email" id="prueba-email" name="email" required aria-required="true" autocomplete="email">
+                        <div class="campo-formulario mb-3">
+                            <label for="prueba-email" class="form-label">Correo electrónico <span aria-hidden="true">*</span></label>
+                            <input type="email" class="form-control" id="prueba-email" name="email" required aria-required="true" autocomplete="email">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
                         </div>
 
-                        <div>
-                            <label for="prueba-telefono">Teléfono *</label>
-                            <input type="tel" id="prueba-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
+                        <div class="campo-formulario mb-3">
+                            <label for="prueba-telefono" class="form-label">Teléfono <span aria-hidden="true">*</span></label>
+                            <input type="tel" class="form-control" id="prueba-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="acciones-formulario">
+                            <button type="button" class="btn-secundario btn-anterior" data-paso="1">Volver</button>
+                            <button type="button" class="btn-principal btn-siguiente" data-paso="3">Siguiente: Revisa</button>
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <!-- PASO 3: Revisa y envía -->
+                    <fieldset id="paso-3" class="paso-formulario" hidden>
                         <legend>Paso 3: Revisa y envía</legend>
 
-                        <div>
+                        <div class="resumen-solicitud" id="resumen-solicitud">
                             <h3>Resumen de tu solicitud</h3>
                             <dl>
                                 <dt>Vehículo</dt>
-                                <dd>—</dd>
+                                <dd id="resumen-vehiculo">—</dd>
                                 <dt>Fecha preferente</dt>
-                                <dd>—</dd>
+                                <dd id="resumen-fecha">—</dd>
                                 <dt>Franja horaria</dt>
-                                <dd>—</dd>
+                                <dd id="resumen-franja">—</dd>
                                 <dt>Nombre</dt>
-                                <dd>—</dd>
+                                <dd id="resumen-nombre">—</dd>
                                 <dt>Correo electrónico</dt>
-                                <dd>—</dd>
+                                <dd id="resumen-email">—</dd>
                                 <dt>Teléfono</dt>
-                                <dd>—</dd>
+                                <dd id="resumen-telefono">—</dd>
                             </dl>
                         </div>
 
-                        <div>
-                            <input type="checkbox" id="prueba-rgpd" name="rgpd" required aria-required="true">
-                            <label for="prueba-rgpd">
-                                He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud. *
+                        <div class="campo-formulario checkbox-rgpd form-check mt-4">
+                            <input type="checkbox" class="form-check-input" id="prueba-rgpd" name="rgpd" required aria-required="true">
+                            <label class="form-check-label" for="prueba-rgpd">
+                                He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta solicitud. <span aria-hidden="true">*</span>
                             </label>
+                            <span class="mensaje-error" role="alert" aria-live="polite"></span>
                         </div>
 
-                        <button type="submit">Enviar solicitud</button>
+                        <div class="acciones-formulario">
+                            <button type="button" class="btn-secundario btn-anterior" data-paso="2">Volver</button>
+                            <button type="submit" class="btn-principal">Enviar solicitud</button>
+                        </div>
                     </fieldset>
 
                 </form>
+
+                <!-- Estado: envío en proceso -->
+                <div class="estado-formulario" id="estado-enviando" hidden aria-live="polite">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <p>Enviando tu solicitud...</p>
+                </div>
+
+                <!-- Estado: éxito -->
+                <div class="estado-formulario estado-exito" id="estado-exito" hidden aria-live="polite">
+                    <div class="icono-exito" aria-hidden="true">&#10003;</div>
+                    <h2>Solicitud enviada</h2>
+                    <p>Hemos recibido tu solicitud de prueba. En breve te confirmaremos la fecha y la hora por teléfono o correo electrónico.</p>
+                    <a href="catalogo.html" class="btn-principal">Volver al catálogo</a>
+                </div>
+
+                <!-- Estado: error general -->
+                <div class="estado-formulario estado-error" id="estado-error" hidden aria-live="polite">
+                    <div class="icono-error" aria-hidden="true">&#10007;</div>
+                    <h2>Error al enviar</h2>
+                    <p>Ha habido un problema al enviar tu solicitud. Por favor, revisa los datos e inténtalo de nuevo.</p>
+                    <button type="button" class="btn-principal" id="btn-reintentar">Reintentar</button>
+                </div>
 
             </div>
         </section>
 
     </main>
 
-    <!-- =============================================
-         FOOTER (C02)
-    ============================================= -->
+    <!-- FOOTER (C02) -->
     <footer class="site-footer">
         <div class="contenedor">
             <div class="fila-footer">
-
-                <!-- Columna 1: Marca -->
                 <div class="columna-footer columna-marca">
                     <p class="footer-brand">SUPERAUTOS CARBALLO</p>
                     <p class="footer-desc">Concesionario premium de superautos en Carballo. Venta, mantenimiento, recambios y posventa para los amantes de la conducción de alta gama.</p>
                 </div>
-
-                <!-- Columna 2: Catálogo -->
                 <div class="columna-footer">
                     <h3>CATÁLOGO</h3>
                     <ul>
@@ -210,8 +238,6 @@
                         <li><a href="catalogo.html">Seminuevos certificados</a></li>
                     </ul>
                 </div>
-
-                <!-- Columna 3: Servicios -->
                 <div class="columna-footer">
                     <h3>SERVICIOS</h3>
                     <ul>
@@ -222,8 +248,6 @@
                         <li><a href="recambios.html">Recambios</a></li>
                     </ul>
                 </div>
-
-                <!-- Columna 4: Contacto -->
                 <div class="columna-footer">
                     <h3>CONTACTO</h3>
                     <ul>
@@ -234,8 +258,6 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Línea inferior del footer -->
             <div class="pie-footer">
                 <p class="footer-copyright">&copy; 2026 Superautos Carballo</p>
                 <nav class="redes-sociales" aria-label="Redes sociales">
@@ -253,7 +275,9 @@
         </div>
     </footer>
 
+    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/proba_conduccion.js"></script>
 </body>
 </html>
