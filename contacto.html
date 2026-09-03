@@ -56,60 +56,89 @@
 
     <main id="contenido-principal">
 
-        <section aria-label="Contacto">
-            <div>
-                <p>Escríbenos</p>
-                <h1>Contacto</h1>
-                <p>Cuéntanos qué necesitas y nuestro equipo de Superautos Carballo se pondrá en contacto contigo a la mayor brevedad posible.</p>
+        <section class="intro-catalogo" aria-label="Contacto">
+            <div class="contenedor">
+                <p class="intro-etiqueta">Escríbenos</p>
+                <h1 class="intro-titulo">Contacto</h1>
+                <p class="intro-descripcion">Cuéntanos qué necesitas y nuestro equipo de Superautos Carballo se pondrá en contacto contigo a la mayor brevedad posible.</p>
             </div>
         </section>
 
-        <section aria-label="Formulario de contacto">
-            <form id="form-contacto" novalidate>
+        <section class="seccion-formulario-recambios" aria-label="Formulario de contacto">
+            <div class="contenedor">
 
-                <fieldset>
-                    <legend>DATOS PERSONALES</legend>
+                <form id="form-contacto" class="formulario-recambios" novalidate>
 
-                    <div>
-                        <div>
-                            <label for="contacto-nombre">Nombre <span>*</span></label>
-                            <input type="text" id="contacto-nombre" name="nombre" required aria-required="true" autocomplete="name" minlength="2">
+                    <fieldset class="grupo-campos-recambios">
+                        <legend class="titulo-grupo-recambios">DATOS PERSONALES</legend>
+
+                        <div class="cuadricula-recambios">
+                            <div class="campo-formulario-recambio">
+                                <label for="contacto-nombre">Nombre <span aria-hidden="true">*</span></label>
+                                <input type="text" id="contacto-nombre" name="nombre" class="form-control" required aria-required="true" autocomplete="name" minlength="2">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="contacto-apellido">Apellido <span aria-hidden="true">*</span></label>
+                                <input type="text" id="contacto-apellido" name="apellido" class="form-control" required aria-required="true" autocomplete="family-name" minlength="2">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="contacto-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                                <input type="email" id="contacto-email" name="email" class="form-control" required aria-required="true" autocomplete="email">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="campo-formulario-recambio">
+                                <label for="contacto-telefono">Teléfono <span aria-hidden="true">*</span></label>
+                                <input type="tel" id="contacto-telefono" name="telefono" class="form-control" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
+                                <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </div>
                         </div>
+                    </fieldset>
 
-                        <div>
-                            <label for="contacto-apellido">Apellido <span>*</span></label>
-                            <input type="text" id="contacto-apellido" name="apellido" required aria-required="true" autocomplete="family-name" minlength="2">
-                        </div>
-
-                        <div>
-                            <label for="contacto-email">Correo electrónico <span>*</span></label>
-                            <input type="email" id="contacto-email" name="email" required aria-required="true" autocomplete="email">
-                        </div>
-
-                        <div>
-                            <label for="contacto-telefono">Teléfono <span>*</span></label>
-                            <input type="tel" id="contacto-telefono" name="telefono" required aria-required="true" autocomplete="tel" minlength="9" maxlength="15">
-                        </div>
+                    <div class="campo-formulario-recambio campo-comentarios-recambio">
+                        <label for="contacto-comentarios">COMENTARIOS</label>
+                        <textarea id="contacto-comentarios" name="comentarios" class="form-control" rows="5"></textarea>
+                        <span class="mensaje-error" role="alert" aria-live="polite"></span>
                     </div>
-                </fieldset>
 
-                <div>
-                    <label for="contacto-comentarios">COMENTARIOS</label>
-                    <textarea id="contacto-comentarios" name="comentarios" rows="5"></textarea>
+                    <div class="campo-formulario-recambio checkbox-rgpd-recambio">
+                        <input type="checkbox" id="contacto-rgpd" name="rgpd" class="form-check-input" required aria-required="true">
+                        <label for="contacto-rgpd" class="form-check-label">
+                            He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta consulta. <span aria-hidden="true">*</span>
+                        </label>
+                        <span class="mensaje-error" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="acciones-formulario-recambios">
+                        <button type="submit" class="btn btn-principal">Enviar mensaje &#10140;</button>
+                    </div>
+
+                </form>
+
+                <div class="estado-formulario" id="estado-enviando" hidden aria-live="polite">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <p>Enviando tu mensaje...</p>
                 </div>
 
-                <div>
-                    <input type="checkbox" id="contacto-rgpd" name="rgpd" required aria-required="true">
-                    <label for="contacto-rgpd">
-                        He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Mis datos serán tratados para gestionar esta consulta. <span>*</span>
-                    </label>
+                <div class="estado-formulario estado-exito" id="estado-exito" hidden aria-live="polite">
+                    <div class="icono-exito" aria-hidden="true">&#10003;</div>
+                    <h2>Mensaje enviado</h2>
+                    <p>Hemos recibido tu consulta. Nuestro equipo la revisará y se pondrá en contacto contigo a la mayor brevedad posible.</p>
+                    <a href="index.html" class="btn btn-principal">Volver al inicio</a>
                 </div>
 
-                <div>
-                    <button type="submit">Enviar mensaje &#10140;</button>
+                <div class="estado-formulario estado-error" id="estado-error" hidden aria-live="polite">
+                    <div class="icono-error" aria-hidden="true">&#10007;</div>
+                    <h2>Error al enviar</h2>
+                    <p>Ha habido un problema al enviar tu mensaje. Por favor, revisa los datos e inténtalo de nuevo.</p>
+                    <button type="button" class="btn btn-principal" id="btn-reintentar">Reintentar</button>
                 </div>
 
-            </form>
+            </div>
         </section>
 
     </main>
@@ -173,5 +202,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
