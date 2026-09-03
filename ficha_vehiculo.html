@@ -56,70 +56,126 @@
 
     <main id="contenido-principal">
 
-        <section aria-label="Fotografía e información del vehículo">
-            <img id="ficha-foto-img" src="assets/img/porche/porche_911_targa_4s.webp" alt="Porsche 911 Targa 4S" width="650" height="430">
-            <div>
-                <div>
-                    <p>SUPERAUTOS CARBALLO — VEHÍCULO CERTIFICADO</p>
-                    <h1>Porsche 911 Targa 4S</h1>
-                    <p>El 911 Targa 4S combina la elegancia atemporal de su icónica barra antivuelco con las prestaciones más puras de la saga 911.</p>
-                    <a href="proba_conduccion.html?vehiculo=porsche-911-targa-4s">Solicitar prueba</a>
-                </div>
-            </div>
-        </section>
+        <!-- =========================================
+             FOTO + INFORMACIÓN DEL VEHÍCULO
+             Bootstrap: fila con foto (col) y texto (col)
+        ========================================= -->
+        <section class="py-4 section-ficha-presentacion" aria-label="Fotografía e información del vehículo">
+            <div class="contenedor">
+                <div class="row align-items-center g-4">
 
-        <section aria-label="Datos técnicos">
-            <div>
-                <h1>DATOS TÉCNICOS</h1>
-                <div>
-
-                    <div>
-                        <span>Año</span>
-                        <span>2023</span>
+                    <div class="col-12 col-lg-6">
+                        <img id="ficha-foto-img" src="assets/img/porche/porche_911_targa_4s.webp" alt="Porsche 911 Targa 4S" class="img-fluid rounded w-100" width="650" height="430">
                     </div>
 
-                    <div>
-                        <span>Kilometraje</span>
-                        <span>12.500 km</span>
-                    </div>
-
-                    <div>
-                        <span>Combustible</span>
-                        <span>Gasolina</span>
-                    </div>
-
-                    <div>
-                        <span>Cambio</span>
-                        <span>Automático PDK</span>
-                    </div>
-
-                    <div>
-                        <span>Potencia</span>
-                        <span>450 CV</span>
-                    </div>
-
-                    <div>
-                        <span>Garantía</span>
-                        <span>24 meses</span>
+                    <div class="col-12 col-lg-6">
+                        <p class="text-uppercase fw-bold text-warning mb-2">SUPERAUTOS CARBALLO — VEHÍCULO CERTIFICADO</p>
+                        <h1 id="ficha-nombre" class="mb-3">Porsche 911 Targa 4S</h1>
+                        <p id="ficha-descripcion" class="text-muted lead">El 911 Targa 4S combina la elegancia atemporal de su icónica barra antivuelco con las prestaciones más puras de la saga 911.</p>
+                        <a id="ficha-enlace-prueba" href="proba_conduccion.html?vehiculo=porsche-911-targa-4s" class="btn-principal">Solicitar prueba</a>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <section aria-label="Equipamiento del vehículo">
-            <div>
-                <h1>EQUIPAMIENTO</h1>
-                <div>
+        <!-- =========================================
+             DATOS TÉCNICOS
+             Bootstrap: fila de tarjetas (3 columnas)
+        ========================================= -->
+        <section class="py-5 section-ficha-datos" style="background-color: var(--gris-borde);" aria-label="Datos técnicos">
+            <div class="contenedor">
+                <h1 class="mb-4">DATOS TÉCNICOS</h1>
+                <div class="row g-4">
 
-                    <div>Paquete deportivo de cromo</div>
-                    <div>Asientos eléctricos de cuero</div>
-                    <div>Sistema de sonido Bose</div>
-                    <div>Cámara de 360º</div>
-                    <div>Suspensión adaptativa</div>
-                    <div>Faros de LED</div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-3 bg-white h-100">
+                            <span class="text-muted d-block small">Año</span>
+                            <span class="fw-bold fs-5" id="dato-anio">2023</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-3 bg-white h-100">
+                            <span class="text-muted d-block small">Kilometraje</span>
+                            <span class="fw-bold fs-5" id="dato-km">12.500 km</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-3 bg-white h-100">
+                            <span class="text-muted d-block small">Combustible</span>
+                            <span class="fw-bold fs-5" id="dato-combustible">Gasolina</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-3 bg-white h-100">
+                            <span class="text-muted d-block small">Cambio</span>
+                            <span class="fw-bold fs-5" id="dato-cambio">Automático PDK</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-3 bg-white h-100">
+                            <span class="text-muted d-block small">Potencia</span>
+                            <span class="fw-bold fs-5" id="dato-potencia">450 CV</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-3 bg-white h-100">
+                            <span class="text-muted d-block small">Garantía</span>
+                            <span class="fw-bold fs-5" id="dato-garantia">24 meses</span>
+                        </div>
+                    </div>
 
                 </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             EQUIPAMIENTO
+             Bootstrap: fila de etiquetas (3 columnas)
+        ========================================= -->
+        <section class="pb-5 section-ficha-equipamiento" style="background-color: var(--gris-borde);" aria-label="Equipamiento del vehículo">
+            <div class="contenedor">
+                <h1 class="mb-4">EQUIPAMIENTO</h1>
+                <div class="row g-3">
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-2 bg-white">Paquete deportivo de cromo</div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-2 bg-white">Asientos eléctricos de cuero</div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-2 bg-white">Sistema de sonido Bose</div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-2 bg-white">Cámara de 360º</div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-2 bg-white">Suspensión adaptativa</div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="border rounded p-2 bg-white">Faros de LED</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             AVISO DE VEHÍCULO NO ENCONTRADO
+             Se muestra solo si el id de la URL no
+             corresponde a ningún vehículo.
+        ========================================= -->
+        <section class="py-5 text-center" id="aviso-no-encontrado" hidden aria-label="Vehículo no encontrado">
+            <div class="contenedor">
+                <h1>Vehículo no encontrado</h1>
+                <p>El vehículo que buscas no existe o ya no está disponible en nuestro catálogo.</p>
+                <a href="catalogo.html" class="btn-principal">Volver al catálogo</a>
             </div>
         </section>
 
@@ -186,5 +242,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/ficha_vehiculo.js"></script>
 </body>
 </html>
