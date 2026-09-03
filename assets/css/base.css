@@ -842,6 +842,79 @@ a, button {
 }
 
 /* -----------------------------------------------
+   HERO RECAMBIOS (P04)
+   Hero dedicado de 560 px de alto con texto
+   centrado sobre la imagen.
+----------------------------------------------- */
+.hero-recambios {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+    background-color: var(--negro);
+}
+
+.hero-recambios > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-recambios-contenido {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--espaciado-xl);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.35) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+.hero-recambios-titulo {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 var(--espaciado-sm);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.hero-recambios-subtitulo {
+    font-family: var(--fuente-acento);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 var(--espaciado-md);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.hero-recambios-texto {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    max-width: 62ch;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
+/* -----------------------------------------------
    FORMULARIO RECAMBIOS (P04) – Bootstrap 5
    Formulario con dos cuadrículas 2x2 y caja de
    comentarios ancha (1400px).
@@ -1028,20 +1101,29 @@ a, button {
     font-size: 13px;
     line-height: 1.4;
     color: var(--error);
-    min-height: 1.2em;
+    min-height: 0;
     margin-top: var(--espaciado-xs);
 }
 
-/* Estado del formulario (enviando / éxito / error) */
+/* Estado del formulario (enviando / éxito / error): tarjeta */
 .estado-formulario {
+    width: 100%;
+    max-width: 700px;
+    margin: var(--espaciado-xl) auto 0;
     text-align: center;
-    padding: var(--espaciado-xxl) 0;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radio-tarjeta);
+    padding: var(--espaciado-xxl) var(--espaciado-lg);
 }
 
 .estado-formulario h2 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-acento);
     font-weight: 700;
     font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: var(--negro);
     margin: var(--espaciado-md) 0 var(--espaciado-sm);
 }
@@ -1049,52 +1131,53 @@ a, button {
 .estado-formulario p {
     font-family: var(--fuente-principal);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
     color: var(--text-gray);
-    max-width: 48ch;
-    margin: 0 auto var(--espaciado-lg);
+    margin: 0 0 var(--espaciado-lg);
+}
+
+/* Iconos de éxito y error (base común) */
+.icono-exito,
+.icono-error {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.icono-exito {
+    background-color: var(--exito);
+}
+
+.icono-error {
+    background-color: var(--error);
 }
 
 /* Spinner de carga */
 .spinner {
     width: 40px;
     height: 40px;
-    border: 4px solid var(--gris-borde);
+    border: 4px solid #E5E7EB;
     border-top-color: var(--azul-electrico);
     border-radius: 50%;
-    margin: 0 auto;
-    animation: girar-spin 0.8s linear infinite;
+    margin: 0 auto var(--espaciado-md);
+    animation: giro 0.8s linear infinite;
 }
 
-@keyframes girar-spin {
+@keyframes giro {
     to { transform: rotate(360deg); }
 }
 
-/* Icono de éxito */
-.icono-exito {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: var(--exito);
-    color: var(--blanco);
-    font-size: 28px;
-    line-height: 56px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-/* Icono de error */
-.icono-error {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: var(--error);
-    color: var(--blanco);
-    font-size: 28px;
-    line-height: 56px;
-    text-align: center;
-    margin: 0 auto;
+@media (prefers-reduced-motion: reduce) {
+    .spinner {
+        animation-duration: 2s;
+    }
 }
 
 /* ==================================================
@@ -1235,6 +1318,23 @@ a, button {
     }
 
     .hero-servicio-texto {
+        font-size: 15px;
+    }
+
+    /* Recambios: hero en tablet */
+    .hero-recambios {
+        height: 400px;
+    }
+
+    .hero-recambios > img {
+        height: 400px;
+    }
+
+    .hero-recambios-subtitulo {
+        font-size: 40px;
+    }
+
+    .hero-recambios-texto {
         font-size: 15px;
     }
 
@@ -1383,6 +1483,32 @@ a, button {
     }
 
     .hero-servicio-texto {
+        font-size: 14px;
+    }
+
+    /* Recambios: hero y formulario en móvil */
+    .hero-recambios {
+        height: 320px;
+    }
+
+    .hero-recambios > img {
+        height: 320px;
+    }
+
+    .hero-recambios-contenido {
+        padding: var(--espaciado-md);
+    }
+
+    .hero-recambios-titulo {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .hero-recambios-subtitulo {
+        font-size: 26px;
+    }
+
+    .hero-recambios-texto {
         font-size: 14px;
     }
 
