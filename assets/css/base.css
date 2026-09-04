@@ -1736,15 +1736,15 @@ a, button {
 
     /* Formulario prueba conducción */
     .cabecera-pagina h1 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .pasos-formulario li + li::before {
-        width: 44px;
+        width: 32px;
     }
 
     .resumen-solicitud dl {
-        grid-template-columns: 180px 1fr;
+        grid-template-columns: 140px 1fr;
     }
 
 }
@@ -1928,6 +1928,35 @@ a, button {
 
     .campo-comentarios-recambio textarea {
         font-size: 15px;
+    }
+
+    /* Formulario prueba conducción */
+    .cabecera-pagina h1 {
+        font-size: 24px;
+    }
+
+    .pasos-formulario ol {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--espaciado-sm);
+    }
+
+    .pasos-formulario li + li::before {
+        content: none;
+    }
+
+    .resumen-solicitud dl {
+        grid-template-columns: 1fr;
+        row-gap: var(--espaciado-sm);
+    }
+
+    .acciones-formulario {
+        flex-direction: column;
+    }
+
+    .acciones-formulario .btn-principal,
+    .acciones-formulario .btn-secundario {
+        width: 100%;
     }
 
 }
