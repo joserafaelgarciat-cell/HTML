@@ -1696,15 +1696,15 @@ a, button {
 
     /* Servicios */
     .hero-servicio {
-        height: 577px;
+        height: 420px;
     }
 
     .hero-servicio-titulo {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .hero-servicio-texto {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     /* Recambios: hero en tablet */
@@ -1853,20 +1853,20 @@ a, button {
 
     /* Servicios */
     .hero-servicio {
-        height: 577px;
+        height: 320px;
     }
 
     .hero-servicio-etiqueta {
-        font-size: 16px;
-        letter-spacing: 3px;
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 
     .hero-servicio-titulo {
-        font-size: 64px;
+        font-size: 30px;
     }
 
     .hero-servicio-texto {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* Recambios: hero y formulario en móvil */
