@@ -1,0 +1,9 @@
+# robots.txt – Superautos Carballo
+# https://www.superautoscarballo.es
+
+User-agent: *
+Allow: /
+
+Disallow: /404.html
+
+Sitemap: https://www.superautoscarballo.es/sitemap.xml
