@@ -541,7 +541,60 @@ body {
 }
 
 /* -----------------------------------------------
-   FOCO VISIBLE (WCAG 2.2 AA)
+    PÁGINA 404
+----------------------------------------------- */
+.pagina-404 {
+    background-color: var(--gris-borde);
+    padding: var(--espaciado-seccion) 0;
+    text-align: center;
+}
+
+.pagina-404 .contenedor {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio-tarjeta);
+    padding: var(--espaciado-xxl) var(--espaciado-xl);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pagina-404 h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 96px;
+    color: var(--azul-electrico);
+    margin: 0 0 var(--espaciado-sm);
+    line-height: 1;
+}
+
+.pagina-404 h2 {
+    font-family: var(--fuente-acento);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--negro);
+    margin: 0 0 var(--espaciado-md);
+}
+
+.pagina-404 p {
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin: 0 0 var(--espaciado-xl);
+}
+
+.acciones-404 {
+    display: flex;
+    justify-content: center;
+    gap: var(--espaciado-md);
+    flex-wrap: wrap;
+}
+
+/* -----------------------------------------------
+    FOCO VISIBLE (WCAG 2.2 AA)
 ----------------------------------------------- */
 :focus-visible {
     outline: 2px solid var(--azul-electrico);
