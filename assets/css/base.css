@@ -1667,30 +1667,30 @@ a, button {
 
     /* Catalogo: hero y cuadricula en tablet */
     .hero-catalogo {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-catalogo > img {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-catalogo-contenido h1 {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .intro-catalogo .contenedor {
-        height: 235px;
-        padding: 0 var(--gutter);
+        height: auto;
+        padding: var(--espaciado-xl) var(--gutter);
     }
 
     .cuadricula-catalogo {
-        height: 1534px;
-        margin-top: var(--espaciado-xxl);
+        height: auto;
+        margin-top: var(--espaciado-lg);
     }
 
     .cuadro-vehiculo {
         width: 100%;
-        max-width: 387px;
+        max-width: 100%;
         margin-bottom: var(--espaciado-sm);
     }
 
@@ -1810,44 +1810,44 @@ a, button {
         height: 40px;
     }
 
-    /* Catalogo: se mantiene igual que escritorio */
+    /* Catalogo: hero y cuadricula en movil */
     .hero-catalogo {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-catalogo > img {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-catalogo-contenido h1 {
-        font-size: 64px;
+        font-size: 28px;
     }
 
     .hero-catalogo-contenido p {
-        font-size: 16px;
-        max-width: 46ch;
+        font-size: 14px;
+        max-width: 100%;
     }
 
     .intro-etiqueta {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .intro-titulo {
-        font-size: 40px;
+        font-size: 28px;
     }
 
     .intro-descripcion {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .cuadricula-catalogo {
-        height: 1534px;
-        margin-top: var(--espaciado-xxl);
+        height: auto;
+        margin-top: var(--espaciado-lg);
     }
 
     .cuadro-vehiculo {
         width: 100%;
-        max-width: 387px;
+        max-width: 100%;
         margin-bottom: var(--espaciado-sm);
     }
 
