@@ -1659,92 +1659,92 @@ a, button {
         height: 44px;
     }
 
-    /* Footer: se queda en 4 columnas */
+    /* Footer: 2 columnas */
     .fila-footer {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: var(--espaciado-xxl);
+        grid-template-columns: 1fr 1fr;
+        gap: var(--espaciado-lg);
     }
 
     /* Catalogo: hero y cuadricula en tablet */
     .hero-catalogo {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-catalogo > img {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-catalogo-contenido h1 {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .intro-catalogo .contenedor {
-        height: 235px;
-        padding: 0 var(--gutter);
+        height: auto;
+        padding: var(--espaciado-xl) var(--gutter);
     }
 
     .cuadricula-catalogo {
-        height: 1534px;
-        margin-top: var(--espaciado-xxl);
+        height: auto;
+        margin-top: var(--espaciado-lg);
     }
 
     .cuadro-vehiculo {
         width: 100%;
-        max-width: 387px;
+        max-width: 100%;
         margin-bottom: var(--espaciado-sm);
     }
 
     /* Servicios */
     .hero-servicio {
-        height: 577px;
+        height: 420px;
     }
 
     .hero-servicio-titulo {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .hero-servicio-texto {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     /* Recambios: hero en tablet */
     .hero-recambios {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-recambios > img {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-recambios-subtitulo {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .hero-recambios-texto {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     /* Formulario recambios */
     .cuadricula-recambios {
-        column-gap: var(--espaciado-lg);
-        row-gap: 28px;
+        column-gap: var(--espaciado-md);
+        row-gap: var(--espaciado-lg);
     }
 
     .campo-formulario-recambio {
-        max-width: 688px;
+        max-width: 100%;
     }
 
     /* Formulario prueba conducción */
     .cabecera-pagina h1 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .pasos-formulario li + li::before {
-        width: 44px;
+        width: 32px;
     }
 
     .resumen-solicitud dl {
-        grid-template-columns: 180px 1fr;
+        grid-template-columns: 140px 1fr;
     }
 
 }
@@ -1770,6 +1770,22 @@ a, button {
     .hero-texto-descriptivo {
         font-size: 13px;
         white-space: normal;
+    }
+
+    /* Footer: apilado y altura flexible para movil */
+    .site-footer {
+        height: auto;
+        padding-top: var(--espaciado-xxl);
+    }
+
+    .fila-footer {
+        grid-template-columns: 1fr;
+        gap: var(--espaciado-lg);
+    }
+
+    .pie-footer {
+        height: auto;
+        padding: var(--espaciado-lg) 0;
     }
 
     /* Carrusel */
@@ -1810,108 +1826,108 @@ a, button {
         height: 40px;
     }
 
-    /* Catalogo: se mantiene igual que escritorio */
+    /* Catalogo: hero y cuadricula en movil */
     .hero-catalogo {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-catalogo > img {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-catalogo-contenido h1 {
-        font-size: 64px;
+        font-size: 28px;
     }
 
     .hero-catalogo-contenido p {
-        font-size: 16px;
-        max-width: 46ch;
+        font-size: 14px;
+        max-width: 100%;
     }
 
     .intro-etiqueta {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .intro-titulo {
-        font-size: 40px;
+        font-size: 28px;
     }
 
     .intro-descripcion {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .cuadricula-catalogo {
-        height: 1534px;
-        margin-top: var(--espaciado-xxl);
+        height: auto;
+        margin-top: var(--espaciado-lg);
     }
 
     .cuadro-vehiculo {
         width: 100%;
-        max-width: 387px;
+        max-width: 100%;
         margin-bottom: var(--espaciado-sm);
     }
 
     /* Servicios */
     .hero-servicio {
-        height: 577px;
+        height: 320px;
     }
 
     .hero-servicio-etiqueta {
-        font-size: 16px;
-        letter-spacing: 3px;
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 
     .hero-servicio-titulo {
-        font-size: 64px;
+        font-size: 30px;
     }
 
     .hero-servicio-texto {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* Recambios: hero y formulario en móvil */
     .hero-recambios {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-recambios > img {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-recambios-contenido {
-        padding: var(--espaciado-xl);
+        padding: var(--espaciado-md);
     }
 
     .hero-recambios-titulo {
-        font-size: 20px;
-        letter-spacing: 3px;
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 
     .hero-recambios-subtitulo {
-        font-size: 64px;
+        font-size: 26px;
     }
 
     .hero-recambios-texto {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* Formulario recambios */
     .seccion-formulario-recambios {
-        padding: var(--espaciado-seccion) 0;
+        padding: var(--espaciado-xxl) 0;
     }
 
     .cuadricula-recambios {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 28px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        row-gap: var(--espaciado-lg);
     }
 
     .campo-formulario-recambio input {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .campo-comentarios-recambio textarea {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 }
