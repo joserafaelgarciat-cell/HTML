@@ -1709,29 +1709,29 @@ a, button {
 
     /* Recambios: hero en tablet */
     .hero-recambios {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-recambios > img {
-        height: 560px;
+        height: 400px;
     }
 
     .hero-recambios-subtitulo {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .hero-recambios-texto {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     /* Formulario recambios */
     .cuadricula-recambios {
-        column-gap: var(--espaciado-lg);
-        row-gap: 28px;
+        column-gap: var(--espaciado-md);
+        row-gap: var(--espaciado-lg);
     }
 
     .campo-formulario-recambio {
-        max-width: 688px;
+        max-width: 100%;
     }
 
     /* Formulario prueba conducción */
@@ -1871,47 +1871,47 @@ a, button {
 
     /* Recambios: hero y formulario en móvil */
     .hero-recambios {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-recambios > img {
-        height: 560px;
+        height: 320px;
     }
 
     .hero-recambios-contenido {
-        padding: var(--espaciado-xl);
+        padding: var(--espaciado-md);
     }
 
     .hero-recambios-titulo {
-        font-size: 20px;
-        letter-spacing: 3px;
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 
     .hero-recambios-subtitulo {
-        font-size: 64px;
+        font-size: 26px;
     }
 
     .hero-recambios-texto {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* Formulario recambios */
     .seccion-formulario-recambios {
-        padding: var(--espaciado-seccion) 0;
+        padding: var(--espaciado-xxl) 0;
     }
 
     .cuadricula-recambios {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 28px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        row-gap: var(--espaciado-lg);
     }
 
     .campo-formulario-recambio input {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .campo-comentarios-recambio textarea {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 }
