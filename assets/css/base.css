@@ -1659,10 +1659,10 @@ a, button {
         height: 44px;
     }
 
-    /* Footer: se queda en 4 columnas */
+    /* Footer: 2 columnas */
     .fila-footer {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: var(--espaciado-xxl);
+        grid-template-columns: 1fr 1fr;
+        gap: var(--espaciado-lg);
     }
 
     /* Catalogo: hero y cuadricula en tablet */
@@ -1753,6 +1753,22 @@ a, button {
    RESPONSIVE – MOVIL (<= 480px)
    =============================================== */
 @media (max-width: 480px) {
+
+    /* Footer: apilado y altura flexible para movil */
+    .site-footer {
+        height: auto;
+        padding-top: var(--espaciado-xxl);
+    }
+
+    .fila-footer {
+        grid-template-columns: 1fr;
+        gap: var(--espaciado-lg);
+    }
+
+    .pie-footer {
+        height: auto;
+        padding: var(--espaciado-lg) 0;
+    }
 
     .hero-home {
         height: 360px;
